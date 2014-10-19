@@ -1,0 +1,36 @@
+itemGroup.tabMillstone=Millstone Mod
+item.woodGear.name=Wooden Gear
+item.stoneGear.name=Stone Gear
+item.ironGear.name=Iron Gear
+item.goldGear.name=Golden Gear
+item.diamondGear.name=Diamond Gear
+item.flour.name=Flour
+item.stoneDust.name=Stone Dust
+item.goldDust.name=Gold Dust
+item.ironDust.name=Iron Dust
+item.ObsidianDust.name=Obsidian Dust
+item.obsidianSword.name=Obsidian Sword
+item.obsidianHoe.name=Obsidian Hoe
+item.obsidianAxe.name=Obsidian Axe
+item.obsidianPickaxe.name=Obsidian Pickaxe
+item.obsidianShovel.name=Obsidian Shovel
+item.riceCrop.name=Rice
+item.riceSeeds.name=Rice Seeds
+item.riceBowl.name=Bowl of Rice
+item.sushi.name=Sushi Roll
+item.ricePaper.name=Rice Paper
+item.copperDust.name=Copper Dust
+item.copperIngot.name=Copper Ingot
+
+
+
+
+
+
+
+tile.millstoneIdle.name=Grindstone
+tile.stoneCutter.name=Stone Cutter
+tile.obsidianBlock.name=Refined Obsidian
+tile.ricePlant.name=Rice Plant
+tile.lantern.name=Paper Lantern
+tile.copperOre.name=Copper Ore
