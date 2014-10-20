@@ -396,6 +396,13 @@ public class TileEntityMillstone extends TileEntity implements ISidedInventory {
         		return new ItemStack(MillstoneMod.ironDust, 2);
            		} 		
         	}
+          	if(stack.getItem() == Item.getItemFromBlock(MillstoneMod.silverOre)){
+           		if(i == 3){
+            		return new ItemStack(MillstoneMod.silverDust, 1);
+           		} else {
+        		return new ItemStack(MillstoneMod.silverDust, 2);
+           		} 		
+        	}
           	
           	if(stack.getItem() == Item.getItemFromBlock(MillstoneMod.copperOre)){
            		if(i == 3){
@@ -403,7 +410,7 @@ public class TileEntityMillstone extends TileEntity implements ISidedInventory {
            		} else {
         		return new ItemStack(MillstoneMod.copperDust, 2);
            		} 		
-        	}
+          	}
 			
 			return null;
 		}
