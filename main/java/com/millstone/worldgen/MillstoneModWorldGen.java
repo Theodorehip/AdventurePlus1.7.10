@@ -35,8 +35,14 @@ public class MillstoneModWorldGen implements IWorldGenerator {
 	private void generateSurface(World world, Random random, int x, int z) {
 		// this.addOreSpawn
 		this.addOreSpawn(MillstoneMod.copperOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
-		this.addOreSpawn(MillstoneMod.sapphireOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
 		this.addOreSpawn(MillstoneMod.silverOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
+		
+		 String s = world.getBiomeGenForCoords(x + 8, z + 8).biomeName;
+		    if (s.startsWith("Water"))
+		    {
+		    	this.addOreSpawn(MillstoneMod.sapphireOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
+		    }
+		
 	}
 
 	private void generateNether(World world, Random random, int x, int z) {
