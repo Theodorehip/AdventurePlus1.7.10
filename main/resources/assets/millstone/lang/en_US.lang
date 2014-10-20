@@ -21,6 +21,9 @@ item.sushi.name=Sushi Roll
 item.ricePaper.name=Rice Paper
 item.copperDust.name=Copper Dust
 item.copperIngot.name=Copper Ingot
+item.ruby.name=Ruby
+item.sapphire.name=Sapphire
+
 
 
 
@@ -34,3 +37,5 @@ tile.obsidianBlock.name=Refined Obsidian
 tile.ricePlant.name=Rice Plant
 tile.lantern.name=Paper Lantern
 tile.copperOre.name=Copper Ore
+tile.sapphireOre.name=Sapphire Ore
+tile.netherRubyOre.name=Nether Ruby Ore

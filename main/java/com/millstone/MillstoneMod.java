@@ -19,6 +19,8 @@ import com.millstone.blocks.CopperOre;
 import com.millstone.blocks.CottonPlant;
 import com.millstone.blocks.Cutter;
 import com.millstone.blocks.Millstone;
+import com.millstone.blocks.NetherRubyOre;
+import com.millstone.blocks.SapphireOre;
 import com.millstone.blocks.ObsidianBlock;
 import com.millstone.blocks.lantern;
 import com.millstone.blocks.lavaBrick;
@@ -34,6 +36,8 @@ import com.millstone.items.Flour;
 import com.millstone.items.GoldDust;
 import com.millstone.items.IronDust;
 import com.millstone.items.ObsidianDust;
+import com.millstone.items.Ruby;
+import com.millstone.items.Sapphire;
 import com.millstone.items.StoneDust;
 import com.millstone.items.riceBowl;
 import com.millstone.items.ricePaper;
@@ -93,6 +97,8 @@ public class MillstoneMod
 	public static Block stoneCutter = new Cutter().setBlockName("stoneCutter").setCreativeTab(tabMillstone).setHardness(5F);
 	public static Block obsidianBlock = new ObsidianBlock(Material.rock).setBlockName("obsidianBlock");
 	public static Block copperOre = new CopperOre(Material.rock).setBlockName("copperOre");
+	public static Block netherRubyOre = new NetherRubyOre(Material.rock).setBlockName("netherRubyOre");
+	public static Block sapphireOre = new SapphireOre(Material.rock).setBlockName("sapphireOre");
 	
 	public static Block lantern = new lantern(Material.glass).setHardness(0.3F).setLightLevel(1.0F).setBlockName("lantern").setBlockTextureName("lantern");
 	
@@ -118,6 +124,8 @@ public class MillstoneMod
 	public static Item obsidianDust = new ObsidianDust();
 	public static Item copperDust = new CopperDust();
 	public static Item copperIngot = new CopperIngot();
+	public static Item ruby = new Ruby();
+	public static Item sapphire = new Sapphire();
 
 	public static Item flour = new Flour();
 	public static Item ricePaper = new ricePaper();
@@ -147,6 +155,10 @@ public class MillstoneMod
 		GameRegistry.registerBlock(lantern, "lantern");
 		GameRegistry.registerBlock(ricePlant, "ricePlant");
 		GameRegistry.registerBlock(lavaBrick, "lavaBrick");
+		GameRegistry.registerBlock(copperOre, "copperOre");
+		GameRegistry.registerBlock(sapphireOre, "sapphireOre");
+		GameRegistry.registerBlock(netherRubyOre, "netherRubyOre");
+		
 		
 		GameRegistry.registerItem(woodGear, "woodGear");
 		GameRegistry.registerItem(stoneGear, "stoneGear");	
@@ -169,6 +181,8 @@ public class MillstoneMod
 		GameRegistry.registerItem(ricePaper, "ricePaper");
 		GameRegistry.registerItem(copperDust, "copperDust");
 		GameRegistry.registerItem(copperIngot, "copperBar");
+		GameRegistry.registerItem(sapphire, "sapphire");
+		GameRegistry.registerItem(ruby, "ruby");
 		
 		//spawn ores
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
