@@ -39,7 +39,7 @@ public class MillstoneModWorldGen implements IWorldGenerator {
 	}
 
 	private void generateNether(World world, Random random, int x, int z) {
-		// TODO Auto-generated method stub
+		this.addNetherOreSpawn(MillstoneMod.lavaBrick, world, random, x, z, 16, 16, 4 + random.nextInt(15), 50, 0, 120);
 
 	}
 
@@ -48,8 +48,7 @@ public class MillstoneModWorldGen implements IWorldGenerator {
 
 	}
 
-	private void addOreSpawn(Block block, World world, Random random,
-			int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chanceToSpawn, int minY, int maxY) {
+	private void addOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chanceToSpawn, int minY, int maxY) {
 
 		for (int i = 0; i < chanceToSpawn; i++) {
 
@@ -57,6 +56,18 @@ public class MillstoneModWorldGen implements IWorldGenerator {
 			int posY = minY + random.nextInt(maxY - minY);
 			int posZ = blockZPos + random.nextInt(maxZ);
 			(new WorldGenMinable(block, maxVeinSize)).generate(world, random,
+					posX, posY, posZ);
+		}
+
+	}
+	private void addNetherOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chanceToSpawn, int minY, int maxY) {
+
+		for (int i = 0; i < chanceToSpawn; i++) {
+
+			int posX = blockXPos + random.nextInt(maxX);
+			int posY = minY + random.nextInt(maxY - minY);
+			int posZ = blockZPos + random.nextInt(maxZ);
+			(new WorldGenNetherMinable(block, maxVeinSize)).generate(world, random,
 					posX, posY, posZ);
 		}
 
