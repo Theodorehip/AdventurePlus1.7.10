@@ -23,7 +23,7 @@ public class NetherRubyOre extends Block{
 		this.setCreativeTab(MillstoneMod.tabMillstone);
 	}
 	
-	public Item getDropped(int i, Random random, int j){
+	public Item getItemDropped(int i, Random random, int j) {
 		return MillstoneMod.ruby;
 	}
 	
