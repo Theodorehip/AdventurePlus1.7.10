@@ -12,7 +12,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 
-public class SapphireOre extends Block{
+public class SapphireOre extends Block {
 
 	public SapphireOre(Material material) {
 		super(material);
@@ -22,19 +22,37 @@ public class SapphireOre extends Block{
 		this.setStepSound(soundTypeStone);
 		this.setCreativeTab(MillstoneMod.tabMillstone);
 	}
-	
+
 	public Item getItemDropped(int i, Random random, int j) {
 		return MillstoneMod.sapphire;
 	}
-	
+
+	public int quantityDropped(Random random) {
+		return 1;
+	}
+
+	public int quantityDroppedWithBonus(int fortune, Random random) {
+		if (fortune > 0) {
+			int j = random.nextInt(fortune + 2) - 1;
+
+			if (j < 0) {
+				j = 0;
+			}
+
+			return quantityDropped(random) * (j + 1);
+		} else {
+			return quantityDropped(random);
+		}
+	}
+
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int metadata) {
 		return this.blockIcon;
 	}
-	
+
 	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister iconRegister){
+	public void registerBlockIcons(IIconRegister iconRegister) {
 		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "SapphireOre");
-		
+
 	}
 }
