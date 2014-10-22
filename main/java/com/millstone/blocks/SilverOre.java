@@ -34,7 +34,7 @@ public class SilverOre extends Block{
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister){
-		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "firerack");
+		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "SilverOre");
 		
 	}
 }
