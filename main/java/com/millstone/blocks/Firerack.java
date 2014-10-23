@@ -15,9 +15,9 @@ import com.millstone.MillstoneMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class lavaBrick extends Block{
+public class Firerack extends Block{
 	
-	public lavaBrick(Material material) {
+	public Firerack(Material material) {
 		super(material);
 		
 		this.setHardness(3F);
@@ -41,7 +41,7 @@ public class lavaBrick extends Block{
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister){
-		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "Lavabrick");
+		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "Firerack");
 		
 	}
 	
@@ -50,10 +50,10 @@ public class lavaBrick extends Block{
         return 0;
     }
     
-    /**protected boolean canSilkHarvest()
+    protected boolean canSilkHarvest()
     {
         return true;
     }
-	**/
+	
 
 }

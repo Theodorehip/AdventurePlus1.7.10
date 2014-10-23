@@ -55,4 +55,9 @@ public class SapphireOre extends Block {
 		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "SapphireOre");
 
 	}
+	
+    protected boolean canSilkHarvest()
+    {
+        return true;
+    }
 }

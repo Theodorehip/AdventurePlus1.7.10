@@ -56,4 +56,9 @@ public class NetherRubyOre extends Block {
 		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "NetherRuby");
 
 	}
+	
+	protected boolean canSilkHarvest()
+    {
+        return true;
+    }
 }

@@ -38,14 +38,15 @@ public class MillstoneModWorldGen implements IWorldGenerator {
 		this.addOreSpawn(MillstoneMod.silverOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
 		
 		 String s = world.getBiomeGenForCoords(x, z).biomeName;
-		    	this.addOreSpawn(MillstoneMod.sapphireOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
+		    	this.addOreSpawn(MillstoneMod.sapphireOre, world, random, x, z, 16, 16, 2 + random.nextInt(6), 25, 0, 20);
 		
 	}
 
 	private void generateNether(World world, Random random, int x, int z) {
-		this.addNetherOreSpawn(MillstoneMod.lavaBrick, world, random, x, z, 16, 16, 4 + random.nextInt(15), 50, 0, 120);
-		this.addNetherOreSpawn(MillstoneMod.netherRubyOre, world, random, x, z, 16, 16, 4 + random.nextInt(15), 50, 0, 120);
-		
+		this.addNetherOreSpawn(MillstoneMod.lavaBrick, world, random, x, z, 16, 16, 4 + random.nextInt(15), 50, 0, 40);
+		this.addNetherOreSpawn(MillstoneMod.netherRubyOre, world, random, x, z, 16, 16, 2 + random.nextInt(15), 50, 0, 100);
+		this.addNetherOreSpawn(MillstoneMod.Firerack, world, random, x, z, 16, 16, 4 + random.nextInt(15), 50, 0, 120);
+
 	}
 
 	private void generateEnd(World world, Random random, int x, int z) {

@@ -18,14 +18,15 @@ import net.minecraftforge.common.util.EnumHelper;
 import com.millstone.blocks.CopperOre;
 import com.millstone.blocks.CottonPlant;
 import com.millstone.blocks.Cutter;
+import com.millstone.blocks.Firerack;
 import com.millstone.blocks.Millstone;
 import com.millstone.blocks.NetherRubyOre;
-import com.millstone.blocks.SapphireOre;
 import com.millstone.blocks.ObsidianBlock;
+import com.millstone.blocks.RicePlant;
+import com.millstone.blocks.SapphireOre;
 import com.millstone.blocks.SilverOre;
 import com.millstone.blocks.lantern;
 import com.millstone.blocks.lavaBrick;
-import com.millstone.blocks.RicePlant;
 import com.millstone.crafting.CraftingHandler;
 import com.millstone.creativetab.tabMillstone;
 import com.millstone.handler.GuiHandler;
@@ -63,7 +64,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-//Just putting it out there, I am very organised with my main class file. Hopefully it might help you get around also. ~Muggles
+//Just putting it out there, I am very organized with my main class file. Hopefully it might help you get around also. ~Muggles
 
 //ModID Stuffs
 @Mod(modid = MillstoneMod.MODID, version = MillstoneMod.VERSION)
@@ -71,7 +72,7 @@ public class MillstoneMod
 {
 	//ID's and etc
     public static final String MODID = "millstonemod";
-    public static final String VERSION = "0.0.2";
+    public static final String VERSION = "0.0.3";
    
     //Whenever making a new GUI, do this same thing but put a number higher than the previous ID.
     public static final int guiIDMillstone = 1;
@@ -107,7 +108,9 @@ public class MillstoneMod
 	public static Block lantern = new lantern(Material.glass).setHardness(0.3F).setLightLevel(1.0F).setBlockName("lantern").setBlockTextureName("lantern");
 	
 	public static Block lavaBrick  = new lavaBrick(Material.rock).setBlockName("lavaBrick").setBlockTextureName(MODID + ":" + "lavaBrick");
+	public static Block Firerack  = new Firerack(Material.rock).setBlockName("Firerack").setBlockTextureName(MODID + ":" + "Firerack");
 
+	
 	public static Item woodGear = new com.millstone.items.ItemGear().setMaxDamage(500).setTextureName(MODID + ":" + "woodGear").setUnlocalizedName("woodGear");
 	public static Item stoneGear = new com.millstone.items.ItemGear().setMaxDamage(1320).setTextureName(MODID + ":" + "stoneGear").setUnlocalizedName("stoneGear");
 	public static Item ironGear = new com.millstone.items.ItemGear().setMaxDamage(2500).setTextureName(MODID + ":" + "ironGear").setUnlocalizedName("ironGear");
@@ -165,6 +168,7 @@ public class MillstoneMod
 		GameRegistry.registerBlock(sapphireOre, "sapphireOre");
 		GameRegistry.registerBlock(netherRubyOre, "netherRubyOre");
 		GameRegistry.registerBlock(silverOre, "silverOre");
+		GameRegistry.registerBlock(Firerack, "Firerack");
 		
 		GameRegistry.registerItem(woodGear, "woodGear");
 		GameRegistry.registerItem(stoneGear, "stoneGear");	
