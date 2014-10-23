@@ -12,7 +12,7 @@ public class sushi extends ItemFood{
 		
 		setUnlocalizedName("sushi");
 		setCreativeTab(MillstoneMod.tabMillstone);
-		setTextureName(MillstoneMod.MODID + ":" + "");
+		setTextureName(MillstoneMod.MODID + ":" + "Sushi");
 		
 	}
 

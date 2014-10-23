@@ -5,15 +5,41 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 
 import com.millstone.MillstoneMod;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 public class lantern extends Block{
 	
 	private static final String __OBFID = "CL_00000250";
+	
+	
+	@SideOnly(Side.CLIENT)
+	private IIcon top;
+	@SideOnly(Side.CLIENT)
+	private IIcon bottom;
+
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon(int side, int p_149691_2_)
+	{
+	return side == 1 ? this.top : ( side == 0 ? this.bottom :this.blockIcon);
+	}
+	
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister iconRegister)
+	{
+	this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "LanternSide");
+	this.top = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "LanternTop");
+	this.bottom = iconRegister.registerIcon((MillstoneMod.MODID + ":" + "LanternBottom"));
+	}
+	
 
     public lantern(Material p_i45409_1_)
     {
