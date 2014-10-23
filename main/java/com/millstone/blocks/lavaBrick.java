@@ -44,11 +44,6 @@ public class lavaBrick extends Block{
 		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "Lavabrick");
 		
 	}
-	
-    public int quantityDropped(Random p_149745_1_)
-    {
-        return 0;
-    }
     
     /**protected boolean canSilkHarvest()
     {
