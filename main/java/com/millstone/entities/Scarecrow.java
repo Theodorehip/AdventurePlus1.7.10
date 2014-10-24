@@ -119,7 +119,7 @@ public class Scarecrow extends EntityGolem
 
         for (k = 0; k < j; ++k)
         {
-            this.func_145778_a(Item.getItemFromBlock(Blocks.pumpkin), 1, 0.0F);
+            this.func_145778_a(Item.getItemFromBlock(Blocks.hay_block), 1, 0.0F);
         }
 
         k = 3 + this.rand.nextInt(3);

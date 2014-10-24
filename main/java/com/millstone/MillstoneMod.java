@@ -2,9 +2,12 @@
 
 package com.millstone;
 
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityList;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -29,6 +32,7 @@ import com.millstone.blocks.lantern;
 import com.millstone.blocks.lavaBrick;
 import com.millstone.crafting.CraftingHandler;
 import com.millstone.creativetab.tabMillstone;
+import com.millstone.entities.Scarecrow;
 import com.millstone.handler.GuiHandler;
 import com.millstone.handler.RemoveRecipes;
 import com.millstone.items.CopperDust;
@@ -63,6 +67,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 //Just putting it out there, I am very organized with my main class file. Hopefully it might help you get around also. ~Muggles
@@ -158,6 +163,12 @@ public class MillstoneMod
     public static Block ricePlant = new RicePlant().setBlockName("Rice").setBlockTextureName(MODID + ":ricePlant");
     public static Item riceCrop = new ItemSeeds(ricePlant, Blocks.farmland).setUnlocalizedName("riceCrop").setTextureName(MODID + ":riceCrop");
 	
+    @EventHandler
+    public void preinit(FMLInitializationEvent event)
+    {  
+    	registerEntity(Scarecrow.class, "Scarecrow");
+    }
+    
     @EventHandler
     public void init(FMLInitializationEvent event)
     {   	
@@ -332,9 +343,27 @@ public class MillstoneMod
 		
 		MinecraftForge.addGrassSeed(new ItemStack(cottonSeeds), 1);
 		
+		
 		//Register your renderer in your proxy.
 		proxy.registerRenderThings();
+		
     }  
+    
+    
+    
+    public static void registerEntity(Class entityClass, String name)
+    {
+    int entityID = EntityRegistry.findGlobalUniqueEntityId();
+    long seed = name.hashCode();
+    Random rand = new Random(seed);
+    int primaryColor = rand.nextInt() * 16777215;
+    int secondaryColor = rand.nextInt() * 16777215;
+
+    EntityRegistry.registerGlobalEntityID(entityClass, name, entityID);
+    EntityRegistry.registerModEntity(entityClass, name, entityID, instance, 64, 1, true);
+    EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor));
+
+    }
 
     
    
