@@ -43,9 +43,9 @@ public class MillstoneModWorldGen implements IWorldGenerator {
 	}
 
 	private void generateNether(World world, Random random, int x, int z) {
-		this.addNetherOreSpawn(MillstoneMod.lavaBrick, world, random, x, z, 16, 16, 4 + random.nextInt(15), 50, 0, 40);
+		this.addNetherOreSpawn(MillstoneMod.lavaBrick, world, random, x, z, 16, 16, 4 + random.nextInt(6), 50, 0, 40);
 		this.addNetherOreSpawn(MillstoneMod.netherRubyOre, world, random, x, z, 16, 16, 2 + random.nextInt(15), 50, 0, 100);
-		this.addNetherOreSpawn(MillstoneMod.Firerack, world, random, x, z, 16, 16, 4 + random.nextInt(15), 50, 0, 120);
+		this.addNetherOreSpawn(MillstoneMod.Firerack, world, random, x, z, 16, 16, 1 + random.nextInt(15), 50, 0, 120);
 
 	}
 
