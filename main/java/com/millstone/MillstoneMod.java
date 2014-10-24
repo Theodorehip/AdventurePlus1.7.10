@@ -27,7 +27,7 @@ import com.millstone.blocks.ObsidianBlock;
 import com.millstone.blocks.RicePlant;
 import com.millstone.blocks.SapphireOre;
 import com.millstone.blocks.SilverOre;
-import com.millstone.blocks.lantern;
+import com.millstone.blocks.Lantern;
 import com.millstone.blocks.crops.CottonPlant;
 import com.millstone.blocks.crops.FlaxPlant;
 import com.millstone.blocks.crops.TomatoPlant;
@@ -146,7 +146,7 @@ public class MillstoneMod
 	public static Block sapphireOre = new SapphireOre(Material.rock).setBlockName("sapphireOre");
 	public static Block silverOre = new SilverOre(Material.rock).setBlockName("silverOre");
 	
-	public static Block lantern = new lantern(Material.glass).setHardness(0.3F).setLightLevel(1.0F).setBlockName("lantern").setBlockTextureName("lantern");
+	public static Block lantern = new Lantern(Material.glass).setHardness(0.3F).setLightLevel(1.0F).setBlockName("lantern").setBlockTextureName("lantern");
 	
 	public static Block lavaBrick  = new LavaBrick(Material.rock).setBlockName("lavaBrick").setBlockTextureName(MODID + ":" + "lavaBrick");
 	public static Block Firerack  = new Firerack(Material.rock).setBlockName("Firerack").setBlockTextureName(MODID + ":" + "Firerack");

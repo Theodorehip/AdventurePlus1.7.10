@@ -6,7 +6,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
@@ -16,7 +15,7 @@ import com.millstone.MillstoneMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class lantern extends Block{
+public class Lantern extends Block{
 	
 	private static final String __OBFID = "CL_00000250";
 	
@@ -41,7 +40,7 @@ public class lantern extends Block{
 	}
 	
 
-    public lantern(Material p_i45409_1_)
+    public Lantern(Material p_i45409_1_)
     {
         super(p_i45409_1_);
         this.setCreativeTab(MillstoneMod.tabMillstone);
