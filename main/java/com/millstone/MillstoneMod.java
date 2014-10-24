@@ -1,5 +1,3 @@
-//I assume you know how to organize things with packages
-
 package com.millstone;
 
 import java.util.Random;
@@ -20,9 +18,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.millstone.blocks.CopperOre;
-import com.millstone.blocks.CottonPlant;
 import com.millstone.blocks.Cutter;
 import com.millstone.blocks.Firerack;
+import com.millstone.blocks.LavaBrick;
 import com.millstone.blocks.Millstone;
 import com.millstone.blocks.NetherRubyOre;
 import com.millstone.blocks.ObsidianBlock;
@@ -30,7 +28,9 @@ import com.millstone.blocks.RicePlant;
 import com.millstone.blocks.SapphireOre;
 import com.millstone.blocks.SilverOre;
 import com.millstone.blocks.lantern;
-import com.millstone.blocks.lavaBrick;
+import com.millstone.blocks.crops.CottonPlant;
+import com.millstone.blocks.crops.FlaxPlant;
+import com.millstone.blocks.crops.TomatoPlant;
 import com.millstone.crafting.CraftingHandler;
 import com.millstone.creativetab.tabMillstone;
 import com.millstone.creativetab.tabMillstoneArmor;
@@ -40,6 +40,7 @@ import com.millstone.handler.RemoveRecipes;
 import com.millstone.items.CopperDust;
 import com.millstone.items.CopperIngot;
 import com.millstone.items.Cotton;
+import com.millstone.items.Flax;
 import com.millstone.items.Flour;
 import com.millstone.items.GoldDust;
 import com.millstone.items.IronDust;
@@ -50,6 +51,7 @@ import com.millstone.items.Sapphire;
 import com.millstone.items.SilverDust;
 import com.millstone.items.SilverIngot;
 import com.millstone.items.StoneDust;
+import com.millstone.items.Tomato;
 import com.millstone.items.riceBowl;
 import com.millstone.items.ricePaper;
 import com.millstone.items.sushi;
@@ -146,7 +148,7 @@ public class MillstoneMod
 	
 	public static Block lantern = new lantern(Material.glass).setHardness(0.3F).setLightLevel(1.0F).setBlockName("lantern").setBlockTextureName("lantern");
 	
-	public static Block lavaBrick  = new lavaBrick(Material.rock).setBlockName("lavaBrick").setBlockTextureName(MODID + ":" + "lavaBrick");
+	public static Block lavaBrick  = new LavaBrick(Material.rock).setBlockName("lavaBrick").setBlockTextureName(MODID + ":" + "lavaBrick");
 	public static Block Firerack  = new Firerack(Material.rock).setBlockName("Firerack").setBlockTextureName(MODID + ":" + "Firerack");
 
 	
@@ -243,10 +245,17 @@ public class MillstoneMod
 	public static ItemFood riceBowl = new riceBowl(3, 0.4F, false);
 	public static ItemFood sushi = new sushi(6, 0.7F, false);
 	
+    public static Block tomatoPlant = new TomatoPlant().setBlockName("tomatoPlant");
+    public static Item tomatoSeeds = new ItemSeeds(tomatoPlant, Blocks.farmland).setUnlocalizedName("tomatoSeeds").setTextureName(MODID + ":tomatoSeeds").setCreativeTab(MillstoneMod.tabMillstone);
+    public static Item tomato = new Tomato(2, 2, false);
 	
     public static Block cottonPlant = new CottonPlant().setBlockName("cottonPlant");
     public static Item cottonSeeds = new ItemSeeds(cottonPlant, Blocks.farmland).setUnlocalizedName("cottonSeeds").setTextureName(MODID + ":cottonSeeds").setCreativeTab(MillstoneMod.tabMillstone);
     public static Item cotton = new Cotton();
+    
+    public static Block flaxPlant = new FlaxPlant().setBlockName("flaxPlant");
+    public static Item flaxSeeds = new ItemSeeds(flaxPlant, Blocks.farmland).setUnlocalizedName("flaxSeeds").setTextureName(MODID + ":flaxSeeds").setCreativeTab(MillstoneMod.tabMillstone);
+    public static Item flax = new Flax();
     
     public static Block ricePlant = new RicePlant().setBlockName("Rice").setBlockTextureName(MODID + ":ricePlant");
     public static Item riceCrop = new ItemSeeds(ricePlant, Blocks.farmland).setUnlocalizedName("riceCrop").setTextureName(MODID + ":riceCrop");
@@ -283,8 +292,10 @@ public class MillstoneMod
 		
 		//Plants
 		GameRegistry.registerBlock(ricePlant, "ricePlant");
+		GameRegistry.registerBlock(tomatoPlant, "tomatoPlant");
+		GameRegistry.registerBlock(cottonPlant, "cottonPlant");
+		GameRegistry.registerBlock(flaxPlant, "flaxPlant");
 
-		
 		//Gears
 		GameRegistry.registerItem(woodGear, "woodGear");
 		GameRegistry.registerItem(stoneGear, "stoneGear");	
@@ -340,6 +351,14 @@ public class MillstoneMod
 		
 		//Crops
 		GameRegistry.registerItem(riceCrop, "riceCrop");
+		GameRegistry.registerItem(cotton, "cotton");
+		GameRegistry.registerItem(tomato, "tomato");
+		GameRegistry.registerItem(flax, "flax");
+		
+		//Seeds
+		GameRegistry.registerItem(tomatoSeeds, "tomatoSeeds");
+		GameRegistry.registerItem(cottonSeeds, "cottonSeeds");
+		GameRegistry.registerItem(flaxSeeds, "flaxSeeds");
 
 		//OreItems
 		GameRegistry.registerItem(copperIngot, "copperBar");

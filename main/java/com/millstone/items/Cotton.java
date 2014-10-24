@@ -11,6 +11,5 @@ public class Cotton extends Item {
 		this.setUnlocalizedName("cotton");
 		this.setTextureName("millstonemod:cotton");
 		this.setCreativeTab(MillstoneMod.tabMillstone);
-		this.setMaxStackSize(64);
 	}
 }

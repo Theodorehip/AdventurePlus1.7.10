@@ -39,6 +39,19 @@ item.sapphireShovel.name=Sapphire Shovel
 item.riceCrop.name=Rice
 item.riceSeeds.name=Rice Seeds
 item.riceBowl.name=Bowl of Rice
+
+item.tomato.name=Tomato
+item.tomatoPlant.name=Tomato Plant
+item.tomatoSeeds.name=Tomato Seeds
+
+item.cotton.name=Cotton
+item.cottonPlant.name=Cotton Plant
+item.cottonSeeds.name=Cotton Seeds
+
+item.flax.name=Flax
+item.flaxPlant.name=Flax Plant
+item.flaxSeeds.name=Flax Seeds
+
 item.sushi.name=Sushi Roll
 item.ricePaper.name=Rice Paper
 item.copperDust.name=Copper Dust

@@ -15,9 +15,9 @@ import com.millstone.MillstoneMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class lavaBrick extends Block{
+public class LavaBrick extends Block{
 	
-	public lavaBrick(Material material) {
+	public LavaBrick(Material material) {
 		super(material);
 		
 		this.setHardness(3F);
