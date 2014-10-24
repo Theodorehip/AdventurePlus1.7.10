@@ -9,7 +9,7 @@ public class SapphireHoe extends ItemHoe{
 	
 	public SapphireHoe(ToolMaterial material) {
 		super(material);
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
 			this.setTextureName("millstonemod:");
 		
 	}

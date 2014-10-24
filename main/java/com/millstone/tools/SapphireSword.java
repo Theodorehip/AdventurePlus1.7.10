@@ -12,7 +12,7 @@ public class SapphireSword extends ItemSword{
 
 	public SapphireSword(ToolMaterial material) {
 		super(material);
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
 			this.setTextureName("millstonemod:");
 		
 	}

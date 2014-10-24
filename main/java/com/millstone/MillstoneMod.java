@@ -33,6 +33,7 @@ import com.millstone.blocks.lantern;
 import com.millstone.blocks.lavaBrick;
 import com.millstone.crafting.CraftingHandler;
 import com.millstone.creativetab.tabMillstone;
+import com.millstone.creativetab.tabMillstoneArmor;
 import com.millstone.entities.Scarecrow;
 import com.millstone.handler.GuiHandler;
 import com.millstone.handler.RemoveRecipes;
@@ -79,6 +80,7 @@ import com.millstone.armor.CopperArmor;
 import com.millstone.armor.ObsidianArmor;
 import com.millstone.armor.RubyArmor;
 import com.millstone.armor.SapphireArmor;
+import com.millstone.creativetab.tabMillstoneTools;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -107,8 +109,10 @@ public class MillstoneMod
 	@Instance(MODID)
 	public static MillstoneMod instance;
 	
-	//Millstone CreativeTab
+	//Millstone CreativeTabs
 	public static CreativeTabs tabMillstone = new tabMillstone(CreativeTabs.getNextID(), "tabMillstone");
+	public static CreativeTabs tabMillstoneTools = new tabMillstoneTools(CreativeTabs.getNextID(), "tabMillstoneTools");
+	public static CreativeTabs tabMillstoneArmor = new tabMillstoneArmor(CreativeTabs.getNextID(), "tabMillstoneArmor");
 	
 	//Proxy Stuff
 	@SidedProxy(clientSide = "com.millstone.proxy.ClientProxy", serverSide = "com.millstone.proxy.CommonProxy")
@@ -121,7 +125,7 @@ public class MillstoneMod
 	public static ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
 	public static ToolMaterial SapphireMaterial = EnumHelper.addToolMaterial("SapphireMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
 
-	public static ArmorMaterial ObsidianArmorMaterial = EnumHelper.addArmorMaterial("ObsidianArmor", 42, new int[]{3, 7, 7, 3}, 20);
+	public static ArmorMaterial ObsidianArmorMaterial = EnumHelper.addArmorMaterial("ObsidianArmor", 42, new int[]{4, 10, 4, 2}, 20);
 	public static ArmorMaterial CopperArmorMaterial = EnumHelper.addArmorMaterial("CopperArmor", 13, new int[]{2, 5, 4, 1}, 10);
 	public static ArmorMaterial RubyArmorMaterial = EnumHelper.addArmorMaterial("RubyArmor", 33, new int[]{3, 8, 6, 3}, 10);
 	public static ArmorMaterial SapphireArmorMaterial = EnumHelper.addArmorMaterial("SapphireArmor", 33, new int[]{3, 8, 6, 3}, 10);

@@ -9,7 +9,7 @@ public class CopperAxe extends ItemAxe{
 
 	public CopperAxe(ToolMaterial material) {
 		super(material);
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
 			this.setTextureName("millstonemod:");
 		
 	}

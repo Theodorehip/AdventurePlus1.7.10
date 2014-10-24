@@ -10,7 +10,7 @@ public class RubyArmor extends ItemArmor {
 
 	public RubyArmor(ArmorMaterial material, int id, int slot) {
 		super(material, id, slot);
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneArmor);
 
 		if(slot == 0){
 			this.setTextureName("millstonemod:ruby_helmet");

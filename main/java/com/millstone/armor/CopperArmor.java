@@ -10,7 +10,7 @@ public class CopperArmor extends ItemArmor {
 
 	public CopperArmor(ArmorMaterial material, int id, int slot) {
 		super(material, id, slot);
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneArmor);
 
 		if(slot == 0){
 			this.setTextureName("millstonemod:copper_helmet");

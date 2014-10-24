@@ -10,7 +10,7 @@ public class ObsidianArmor extends ItemArmor {
 
 	public ObsidianArmor(ArmorMaterial material, int id, int slot) {
 		super(material, id, slot);
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneArmor);
 
 		if(slot == 0){
 			this.setTextureName("millstonemod:obsidian_helmet");
