@@ -34,6 +34,7 @@ import com.millstone.blocks.lavaBrick;
 import com.millstone.crafting.CraftingHandler;
 import com.millstone.crafting.RecipeRemover;
 import com.millstone.creativetab.tabMillstone;
+import com.millstone.creativetab.tabMillstoneArmor;
 import com.millstone.entities.Scarecrow;
 import com.millstone.handler.GuiHandler;
 import com.millstone.handler.RemoveRecipes;
@@ -62,6 +63,12 @@ import com.millstone.tools.ObsidianShovel;
 import com.millstone.tools.ObsidianSword;
 import com.millstone.worldgen.MillstoneModWorldGen;
 import com.millstone.armor.ObsidianArmor;
+<<<<<<< HEAD
+=======
+import com.millstone.armor.RubyArmor;
+import com.millstone.armor.SapphireArmor;
+import com.millstone.creativetab.tabMillstoneTools;
+>>>>>>> origin/master
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -83,6 +90,86 @@ public class MillstoneMod
 	public static final String MODID = "millstonemod";
 	public static final String VERSION = "0.0.3";
 
+<<<<<<< HEAD
+=======
+	@Instance(MODID)
+	public static MillstoneMod instance;
+	
+	//Millstone CreativeTabs
+	public static CreativeTabs tabMillstone = new tabMillstone(CreativeTabs.getNextID(), "tabMillstone");
+	public static CreativeTabs tabMillstoneTools = new tabMillstoneTools(CreativeTabs.getNextID(), "tabMillstoneTools");
+	public static CreativeTabs tabMillstoneArmor = new tabMillstoneArmor(CreativeTabs.getNextID(), "tabMillstoneArmor");
+	
+	//Proxy Stuff
+	@SidedProxy(clientSide = "com.millstone.proxy.ClientProxy", serverSide = "com.millstone.proxy.CommonProxy")
+	public static CommonProxy proxy;
+	
+	
+	//Tool/Armor Materials
+	public static ToolMaterial ObsidianMaterial = EnumHelper.addToolMaterial("ObsidianMaterial" , 3 , 750, 13.0F, 4.0F, 10);
+	public static ToolMaterial CopperMaterial = EnumHelper.addToolMaterial("CopperMaterial" , 2 , 210, 5.0F, 2.0F, 14);
+	public static ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
+	public static ToolMaterial SapphireMaterial = EnumHelper.addToolMaterial("SapphireMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
+
+	public static ArmorMaterial ObsidianArmorMaterial = EnumHelper.addArmorMaterial("ObsidianArmor", 42, new int[]{4, 10, 4, 2}, 20);
+	public static ArmorMaterial CopperArmorMaterial = EnumHelper.addArmorMaterial("CopperArmor", 13, new int[]{2, 5, 4, 1}, 10);
+	public static ArmorMaterial RubyArmorMaterial = EnumHelper.addArmorMaterial("RubyArmor", 33, new int[]{3, 8, 6, 3}, 10);
+	public static ArmorMaterial SapphireArmorMaterial = EnumHelper.addArmorMaterial("SapphireArmor", 33, new int[]{3, 8, 6, 3}, 10);
+	
+	//WorldGen
+	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
+	
+	
+	//Create the millstone. You need the idle and active.
+	public static Block millstoneIdle = new Millstone(false).setBlockName("millstoneIdle").setCreativeTab(tabMillstone).setHardness(5F);
+	public static Block millstoneActive = new Millstone(true).setBlockName("millstoneActive").setHardness(5F);;
+	public static Block stoneCutter = new Cutter().setBlockName("stoneCutter").setCreativeTab(tabMillstone).setHardness(5F);
+	public static Block obsidianBlock = new ObsidianBlock(Material.rock).setBlockName("obsidianBlock");
+	public static Block copperOre = new CopperOre(Material.rock).setBlockName("copperOre");
+	public static Block netherRubyOre = new NetherRubyOre(Material.rock).setBlockName("netherRubyOre");
+	public static Block sapphireOre = new SapphireOre(Material.rock).setBlockName("sapphireOre");
+	public static Block silverOre = new SilverOre(Material.rock).setBlockName("silverOre");
+	
+	public static Block lantern = new lantern(Material.glass).setHardness(0.3F).setLightLevel(1.0F).setBlockName("lantern").setBlockTextureName("lantern");
+	
+	public static Block lavaBrick  = new lavaBrick(Material.rock).setBlockName("lavaBrick").setBlockTextureName(MODID + ":" + "lavaBrick");
+	public static Block Firerack  = new Firerack(Material.rock).setBlockName("Firerack").setBlockTextureName(MODID + ":" + "Firerack");
+
+	
+	public static Item woodGear = new com.millstone.items.ItemGear().setMaxDamage(500).setTextureName(MODID + ":" + "woodGear").setUnlocalizedName("woodGear");
+	public static Item stoneGear = new com.millstone.items.ItemGear().setMaxDamage(1320).setTextureName(MODID + ":" + "stoneGear").setUnlocalizedName("stoneGear");
+	public static Item ironGear = new com.millstone.items.ItemGear().setMaxDamage(2500).setTextureName(MODID + ":" + "ironGear").setUnlocalizedName("ironGear");
+	public static Item goldGear = new com.millstone.items.ItemGear().setMaxDamage(240).setTextureName(MODID + ":" + "goldGear").setUnlocalizedName("goldGear");
+	public static Item diamondGear = new com.millstone.items.ItemGear().setMaxDamage(15612).setTextureName(MODID + ":" + "diamondGear").setUnlocalizedName("diamondGear");
+	
+
+	//Tools
+	public static Item obsidianPickaxe = new ObsidianPickaxe(ObsidianMaterial).setUnlocalizedName("obsidianPickaxe");
+	public static Item obsidianShovel = new ObsidianShovel(ObsidianMaterial).setUnlocalizedName("obsidianShovel");
+	public static Item obsidianAxe = new ObsidianAxe(ObsidianMaterial).setUnlocalizedName("obsidianAxe");
+	public static Item obsidianHoe = new ObsidianHoe(ObsidianMaterial).setUnlocalizedName("obsidianHoe");
+	public static Item obsidianSword = new ObsidianSword(ObsidianMaterial).setUnlocalizedName("obsidianSword");
+	
+	public static Item copperPickaxe = new CopperPickaxe(CopperMaterial).setUnlocalizedName("copperPickaxe");
+	public static Item copperShovel = new CopperShovel(CopperMaterial).setUnlocalizedName("copperShovel");
+	public static Item copperAxe = new CopperAxe(CopperMaterial).setUnlocalizedName("copperAxe");
+	public static Item copperHoe = new CopperHoe(CopperMaterial).setUnlocalizedName("copperHoe");
+	public static Item copperSword = new CopperSword(CopperMaterial).setUnlocalizedName("copperSword");	
+	
+	public static Item rubyPickaxe = new RubyPickaxe(RubyMaterial).setUnlocalizedName("rubyPickaxe");
+	public static Item rubyShovel = new RubyShovel(RubyMaterial).setUnlocalizedName("rubyShovel");
+	public static Item rubyAxe = new RubyAxe(RubyMaterial).setUnlocalizedName("rubyAxe");
+	public static Item rubyHoe = new RubyHoe(RubyMaterial).setUnlocalizedName("rubyHoe");
+	public static Item rubySword = new RubySword(RubyMaterial).setUnlocalizedName("rubySword");
+	
+	public static Item sapphirePickaxe = new SapphirePickaxe(SapphireMaterial).setUnlocalizedName("sapphirePickaxe");
+	public static Item sapphireShovel = new SapphireShovel(SapphireMaterial).setUnlocalizedName("sapphireShovel");
+	public static Item sapphireAxe = new SapphireAxe(SapphireMaterial).setUnlocalizedName("sapphireAxe");
+	public static Item sapphireHoe = new SapphireHoe(SapphireMaterial).setUnlocalizedName("sapphireHoe");
+	public static Item sapphireSword = new SapphireSword(SapphireMaterial).setUnlocalizedName("sapphireSword");	
+	
+	//Armor
+>>>>>>> origin/master
 	public static int armorObsidianHelmID;
 	public static int armorObsidianChestID;
 	public static int armorObsidianLegsID;

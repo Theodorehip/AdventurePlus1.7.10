@@ -5,12 +5,12 @@ import com.millstone.MillstoneMod;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.Item.ToolMaterial;
 
-public class ObsidianPickaxe extends ItemPickaxe{
+public class SapphirePickaxe extends ItemPickaxe{
 
-	public ObsidianPickaxe(ToolMaterial material) {
+	public SapphirePickaxe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:RefObsPickaxe");
+			this.setTextureName("millstonemod:");
 		
 	}
 

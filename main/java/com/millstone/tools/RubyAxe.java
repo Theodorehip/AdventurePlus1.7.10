@@ -1,16 +1,17 @@
 package com.millstone.tools;
 
-import com.millstone.MillstoneMod;
-
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.Item.ToolMaterial;
 
-public class ObsidianAxe extends ItemAxe{
+import com.millstone.MillstoneMod;
 
-	public ObsidianAxe(ToolMaterial material) {
+
+public class RubyAxe extends ItemAxe{
+
+	public RubyAxe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:RefObsAxe");
+			this.setTextureName("millstonemod:");
 		
 	}
 

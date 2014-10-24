@@ -8,12 +8,12 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.IIcon;
 
-public class ObsidianSword extends ItemSword{
+public class SapphireSword extends ItemSword{
 
-	public ObsidianSword(ToolMaterial material) {
+	public SapphireSword(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:RefObsSword");
+			this.setTextureName("millstonemod:");
 		
 	}
 

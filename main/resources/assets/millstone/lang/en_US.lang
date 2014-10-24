@@ -1,4 +1,7 @@
-itemGroup.tabMillstone=Millstone Mod
+itemGroup.tabMillstone=Millstone Main
+itemGroup.tabMillstoneTools=Millstone Tools
+itemGroup.tabMillstoneArmor=Millstone Armors
+
 item.woodGear.name=Wooden Gear
 item.stoneGear.name=Stone Gear
 item.ironGear.name=Iron Gear
