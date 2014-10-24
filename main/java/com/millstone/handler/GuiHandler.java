@@ -4,6 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
+import com.millstone.MillstoneBlocks;
 import com.millstone.MillstoneMod;
 import com.millstone.container.ContainerCutter;
 import com.millstone.container.ContainerMillstone;
@@ -32,7 +33,7 @@ public class GuiHandler implements IGuiHandler {
 		}
 
 		if(ID == MillstoneMod.guiIDCutter) {
-			return ID == MillstoneMod.guiIDCutter && world.getBlock(x, y, z) == MillstoneMod.stoneCutter ? new ContainerCutter(player.inventory, world, x, y, z) : null;
+			return ID == MillstoneMod.guiIDCutter && world.getBlock(x, y, z) == MillstoneBlocks.stoneCutter ? new ContainerCutter(player.inventory, world, x, y, z) : null;
 		}
 
 		return null;
@@ -54,7 +55,7 @@ public class GuiHandler implements IGuiHandler {
 		}
 		
 		if(ID == MillstoneMod.guiIDCutter) {
-			return ID == MillstoneMod.guiIDCutter && world.getBlock(x, y, z) == MillstoneMod.stoneCutter ? new GuiCutter(player.inventory, world, x, y, z) : null;
+			return ID == MillstoneMod.guiIDCutter && world.getBlock(x, y, z) == MillstoneBlocks.stoneCutter ? new GuiCutter(player.inventory, world, x, y, z) : null;
 		}
 
 		return null;

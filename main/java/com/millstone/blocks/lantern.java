@@ -6,11 +6,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 
+import com.millstone.MillstoneItems;
 import com.millstone.MillstoneMod;
 
 import cpw.mods.fml.relauncher.Side;
@@ -65,7 +65,7 @@ public class lantern extends Block{
 
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
-        return MillstoneMod.ricePaper;
+        return MillstoneItems.ricePaper;
     }
 
     public MapColor getMapColor(int p_149728_1_)

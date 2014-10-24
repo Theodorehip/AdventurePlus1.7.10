@@ -2,15 +2,17 @@ package com.millstone.blocks;
 
 import java.util.Random;
 
-import com.millstone.MillstoneMod;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
+
+import com.millstone.MillstoneItems;
+import com.millstone.MillstoneMod;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class SapphireOre extends Block {
 
@@ -24,7 +26,7 @@ public class SapphireOre extends Block {
 	}
 
 	public Item getItemDropped(int i, Random random, int j) {
-		return MillstoneMod.sapphire;
+		return MillstoneItems.sapphire;
 	}
 
 	public int quantityDropped(Random random) {

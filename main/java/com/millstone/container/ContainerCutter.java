@@ -1,11 +1,7 @@
 package com.millstone.container;
 
-import com.millstone.MillstoneMod;
-import com.millstone.crafting.CutterCraftingManager;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryCraftResult;
@@ -14,6 +10,9 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import com.millstone.MillstoneBlocks;
+import com.millstone.crafting.CutterCraftingManager;
 
 public class ContainerCutter extends Container
 {
@@ -95,7 +94,7 @@ public class ContainerCutter extends Container
 
     public boolean canInteractWith(EntityPlayer par1EntityPlayer)
     {
-    	if(worldObj.getBlock(posX, posY, posZ) != MillstoneMod.stoneCutter) {
+    	if(worldObj.getBlock(posX, posY, posZ) != MillstoneBlocks.stoneCutter) {
 			return false;
 		}else{
 			return par1EntityPlayer.getDistanceSq((double)posX + 0.5D, (double)posY + 0.5D, (double)posZ + 0.5D) <= 64.0D;

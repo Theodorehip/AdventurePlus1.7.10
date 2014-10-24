@@ -7,6 +7,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
+import com.millstone.MillstoneBlocks;
 import com.millstone.MillstoneMod;
 
 import cpw.mods.fml.relauncher.Side;
@@ -24,7 +25,7 @@ public class SilverOre extends Block{
 	}
 	
 	public Block getDropped(int i, Random random, int j){
-		return MillstoneMod.silverOre;
+		return MillstoneBlocks.silverOre;
 	}
 	
 	@SideOnly(Side.CLIENT)

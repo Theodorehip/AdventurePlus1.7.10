@@ -1,26 +1,20 @@
 package com.millstone.tileentity;
 
-import com.millstone.blocks.Millstone;
-import com.millstone.items.ItemGear;
-
 import java.util.Random;
 
-import com.millstone.blocks.Millstone;
-import com.millstone.MillstoneMod;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockFlower;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import cpw.mods.fml.common.registry.GameRegistry;
+
+import com.millstone.MillstoneBlocks;
+import com.millstone.MillstoneItems;
+import com.millstone.items.ItemGear;
 
 public class TileEntityMillstone extends TileEntity implements ISidedInventory {
 
@@ -73,19 +67,19 @@ public class TileEntityMillstone extends TileEntity implements ISidedInventory {
 
 	public int getGear() {
 		if (hasGear()) {
-			if (this.slots[1].getItem() == MillstoneMod.woodGear) {
+			if (this.slots[1].getItem() == MillstoneItems.woodGear) {
 				return this.WoodGear;
 			}
-			if (this.slots[1].getItem() == MillstoneMod.stoneGear) {
+			if (this.slots[1].getItem() == MillstoneItems.stoneGear) {
 				return this.StoneGear;
 			}
-			if (this.slots[1].getItem() == MillstoneMod.ironGear) {
+			if (this.slots[1].getItem() == MillstoneItems.ironGear) {
 				return this.IronGear;
 			}
-			if (this.slots[1].getItem() == MillstoneMod.goldGear) {
+			if (this.slots[1].getItem() == MillstoneItems.goldGear) {
 				return this.GoldGear;
 			}
-			if (this.slots[1].getItem() == MillstoneMod.diamondGear) {
+			if (this.slots[1].getItem() == MillstoneItems.diamondGear) {
 				return this.DiamondGear;
 			}
 		}
@@ -294,7 +288,7 @@ public class TileEntityMillstone extends TileEntity implements ISidedInventory {
         	//}
         	
         	if(stack.getItem() == Item.getItemFromBlock(Blocks.hay_block)){
-        		return new ItemStack(MillstoneMod.flour, 9);
+        		return new ItemStack(MillstoneItems.flour, 9);
         	}
         	
          	if(stack.getItem() == Items.blaze_rod){
@@ -302,7 +296,7 @@ public class TileEntityMillstone extends TileEntity implements ISidedInventory {
         	}
          	
           	if(stack.getItem() == Items.wheat){
-        		return new ItemStack(MillstoneMod.flour);
+        		return new ItemStack(MillstoneItems.flour);
         	}
           	
         	if(stack.getItem() == Item.getItemFromBlock(Blocks.gravel)){
@@ -370,52 +364,49 @@ public class TileEntityMillstone extends TileEntity implements ISidedInventory {
          		//Orange Dye
         		return new ItemStack(Items.dye, 3, 14);
         	}
-         	
          	if(stack.getItem() == Items.iron_ingot){
-           		if(i == 3){
-            		return new ItemStack(MillstoneMod.ironRod, 2);
-           		} else {
-        		return new ItemStack(MillstoneMod.ironRod, 3);
-           		} 	
+         		//Orange Dye
+        		return new ItemStack(MillstoneItems.ironRod, 3);
         	}
+         	
          	
          	//Incase you are reading, this basically returns a "random" amount of dust.
            	if(stack.getItem() == Item.getItemFromBlock(Blocks.gold_ore)){
            		if(i == 3){
-            		return new ItemStack(MillstoneMod.goldDust, 1);
+            		return new ItemStack(MillstoneItems.goldDust, 1);
            		} else {
-        		return new ItemStack(MillstoneMod.goldDust, 2);
+        		return new ItemStack(MillstoneItems.goldDust, 2);
            		} 		
         	}
            	
            	if(stack.getItem() == Item.getItemFromBlock(Blocks.obsidian)){
            		if(i == 3){
-            		return new ItemStack(MillstoneMod.obsidianDust, 1);
+            		return new ItemStack(MillstoneItems.obsidianDust, 1);
            		} else {
-        		return new ItemStack(MillstoneMod.obsidianDust, 2);
+        		return new ItemStack(MillstoneItems.obsidianDust, 2);
            		} 		
         	}
            	
           	if(stack.getItem() == Item.getItemFromBlock(Blocks.iron_ore)){
            		if(i == 3){
-            		return new ItemStack(MillstoneMod.ironDust, 1);
+            		return new ItemStack(MillstoneItems.ironDust, 1);
            		} else {
-        		return new ItemStack(MillstoneMod.ironDust, 2);
+        		return new ItemStack(MillstoneItems.ironDust, 2);
            		} 		
         	}
-          	if(stack.getItem() == Item.getItemFromBlock(MillstoneMod.silverOre)){
+          	if(stack.getItem() == Item.getItemFromBlock(MillstoneBlocks.silverOre)){
            		if(i == 3){
-            		return new ItemStack(MillstoneMod.silverDust, 1);
+            		return new ItemStack(MillstoneItems.silverDust, 1);
            		} else {
-        		return new ItemStack(MillstoneMod.silverDust, 2);
+        		return new ItemStack(MillstoneItems.silverDust, 2);
            		} 		
         	}
           	
-          	if(stack.getItem() == Item.getItemFromBlock(MillstoneMod.copperOre)){
+          	if(stack.getItem() == Item.getItemFromBlock(MillstoneBlocks.copperOre)){
            		if(i == 3){
-            		return new ItemStack(MillstoneMod.copperDust, 1);
+            		return new ItemStack(MillstoneItems.copperDust, 1);
            		} else {
-        		return new ItemStack(MillstoneMod.copperDust, 2);
+        		return new ItemStack(MillstoneItems.copperDust, 2);
            		} 		
           	}
 			
