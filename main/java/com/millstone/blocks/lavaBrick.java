@@ -41,7 +41,7 @@ public class lavaBrick extends Block{
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister){
-		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "Lavabrick");
+		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "FireBrick");
 		
 	}
     

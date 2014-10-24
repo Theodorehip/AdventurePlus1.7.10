@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 
 public class IronRod extends Item {
 	public IronRod() {
-		this.setUnlocalizedName("goldDust");
+		this.setUnlocalizedName("ironRod");
 		this.setTextureName("millstonemod:IronRod");
 		this.setCreativeTab(MillstoneMod.tabMillstone);
 		this.setMaxStackSize(64);
