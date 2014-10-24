@@ -54,13 +54,31 @@ import com.millstone.items.ricePaper;
 import com.millstone.items.sushi;
 import com.millstone.proxy.CommonProxy;
 import com.millstone.tileentity.TileEntityMillstone;
+import com.millstone.tools.CopperAxe;
+import com.millstone.tools.CopperHoe;
+import com.millstone.tools.CopperPickaxe;
+import com.millstone.tools.CopperShovel;
+import com.millstone.tools.CopperSword;
 import com.millstone.tools.ObsidianAxe;
 import com.millstone.tools.ObsidianHoe;
 import com.millstone.tools.ObsidianPickaxe;
 import com.millstone.tools.ObsidianShovel;
 import com.millstone.tools.ObsidianSword;
+import com.millstone.tools.RubyAxe;
+import com.millstone.tools.RubyHoe;
+import com.millstone.tools.RubyPickaxe;
+import com.millstone.tools.RubyShovel;
+import com.millstone.tools.RubySword;
+import com.millstone.tools.SapphireAxe;
+import com.millstone.tools.SapphireHoe;
+import com.millstone.tools.SapphirePickaxe;
+import com.millstone.tools.SapphireShovel;
+import com.millstone.tools.SapphireSword;
 import com.millstone.worldgen.MillstoneModWorldGen;
+import com.millstone.armor.CopperArmor;
 import com.millstone.armor.ObsidianArmor;
+import com.millstone.armor.RubyArmor;
+import com.millstone.armor.SapphireArmor;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -72,7 +90,7 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-//Just putting it out there, I am very organized with my main class file. Hopefully it might help you get around also. ~Muggles
+//This Class is very organized, Please keep it that way.
 
 //ModID Stuffs
 @Mod(modid = MillstoneMod.MODID, version = MillstoneMod.VERSION)
@@ -109,7 +127,6 @@ public class MillstoneMod
 	public static ArmorMaterial SapphireArmorMaterial = EnumHelper.addArmorMaterial("SapphireArmor", 33, new int[]{3, 8, 6, 3}, 10);
 	
 	//WorldGen
-	
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
 	
 	
@@ -135,22 +152,73 @@ public class MillstoneMod
 	public static Item goldGear = new com.millstone.items.ItemGear().setMaxDamage(240).setTextureName(MODID + ":" + "goldGear").setUnlocalizedName("goldGear");
 	public static Item diamondGear = new com.millstone.items.ItemGear().setMaxDamage(15612).setTextureName(MODID + ":" + "diamondGear").setUnlocalizedName("diamondGear");
 	
+
 	//Tools
-	public static Item obsidianSword = new ObsidianSword(ObsidianMaterial).setUnlocalizedName("obsidianSword");
 	public static Item obsidianPickaxe = new ObsidianPickaxe(ObsidianMaterial).setUnlocalizedName("obsidianPickaxe");
 	public static Item obsidianShovel = new ObsidianShovel(ObsidianMaterial).setUnlocalizedName("obsidianShovel");
 	public static Item obsidianAxe = new ObsidianAxe(ObsidianMaterial).setUnlocalizedName("obsidianAxe");
 	public static Item obsidianHoe = new ObsidianHoe(ObsidianMaterial).setUnlocalizedName("obsidianHoe");
+	public static Item obsidianSword = new ObsidianSword(ObsidianMaterial).setUnlocalizedName("obsidianSword");
 	
+	public static Item copperPickaxe = new CopperPickaxe(CopperMaterial).setUnlocalizedName("copperPickaxe");
+	public static Item copperShovel = new CopperShovel(CopperMaterial).setUnlocalizedName("copperShovel");
+	public static Item copperAxe = new CopperAxe(CopperMaterial).setUnlocalizedName("copperAxe");
+	public static Item copperHoe = new CopperHoe(CopperMaterial).setUnlocalizedName("copperHoe");
+	public static Item copperSword = new CopperSword(CopperMaterial).setUnlocalizedName("copperSword");	
+	
+	public static Item rubyPickaxe = new RubyPickaxe(RubyMaterial).setUnlocalizedName("rubyPickaxe");
+	public static Item rubyShovel = new RubyShovel(RubyMaterial).setUnlocalizedName("rubyShovel");
+	public static Item rubyAxe = new RubyAxe(RubyMaterial).setUnlocalizedName("rubyAxe");
+	public static Item rubyHoe = new RubyHoe(RubyMaterial).setUnlocalizedName("rubyHoe");
+	public static Item rubySword = new RubySword(RubyMaterial).setUnlocalizedName("rubySword");
+	
+	public static Item sapphirePickaxe = new SapphirePickaxe(SapphireMaterial).setUnlocalizedName("sapphirePickaxe");
+	public static Item sapphireShovel = new SapphireShovel(SapphireMaterial).setUnlocalizedName("sapphireShovel");
+	public static Item sapphireAxe = new SapphireAxe(SapphireMaterial).setUnlocalizedName("sapphireAxe");
+	public static Item sapphireHoe = new SapphireHoe(SapphireMaterial).setUnlocalizedName("sapphireHoe");
+	public static Item sapphireSword = new SapphireSword(SapphireMaterial).setUnlocalizedName("sapphireSword");	
+	
+	//Armor
 	public static int armorObsidianHelmID;
 	public static int armorObsidianChestID;
 	public static int armorObsidianLegsID;
 	public static int armorObsidianBootsID;
+	
+	public static int armorCopperHelmID;
+	public static int armorCopperChestID;
+	public static int armorCopperLegsID;
+	public static int armorCopperBootsID;
+	
+	public static int armorRubyHelmID;
+	public static int armorRubyChestID;
+	public static int armorRubyLegsID;
+	public static int armorRubyBootsID;
+	
+	public static int armorSapphireHelmID;
+	public static int armorSapphireChestID;
+	public static int armorSapphireLegsID;
+	public static int armorSapphireBootsID;
 
 	public static Item armorObsidianHelm = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianHelmID, 0).setUnlocalizedName("ObsidianHelm");
 	public static Item armorObsidianChest = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianChestID, 1).setUnlocalizedName("ObsidianChest");
 	public static Item armorObsidianLegs = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianLegsID, 2).setUnlocalizedName("ObsidianLegs");
 	public static Item armorObsidianBoots = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianBootsID, 3).setUnlocalizedName("ObsidianBoots");
+	
+	public static Item armorCopperHelm = new CopperArmor(CopperArmorMaterial, armorCopperHelmID, 0).setUnlocalizedName("CopperHelm");
+	public static Item armorCopperChest = new CopperArmor(CopperArmorMaterial, armorCopperChestID, 1).setUnlocalizedName("CopperChest");
+	public static Item armorCopperLegs = new CopperArmor(CopperArmorMaterial, armorCopperLegsID, 2).setUnlocalizedName("CopperLegs");
+	public static Item armorCopperBoots = new CopperArmor(CopperArmorMaterial, armorCopperBootsID, 3).setUnlocalizedName("CopperBoots");
+
+	public static Item armorRubyHelm = new RubyArmor(RubyArmorMaterial, armorRubyHelmID, 0).setUnlocalizedName("RubyHelm");
+	public static Item armorRubyChest = new RubyArmor(RubyArmorMaterial, armorRubyChestID, 1).setUnlocalizedName("RubyChest");
+	public static Item armorRubyLegs = new RubyArmor(RubyArmorMaterial, armorRubyLegsID, 2).setUnlocalizedName("RubyLegs");
+	public static Item armorRubyBoots = new RubyArmor(RubyArmorMaterial, armorRubyBootsID, 3).setUnlocalizedName("RubyBoots");
+
+	public static Item armorSapphireHelm = new SapphireArmor(SapphireArmorMaterial, armorSapphireHelmID, 0).setUnlocalizedName("SapphireHelm");
+	public static Item armorSapphireChest = new SapphireArmor(SapphireArmorMaterial, armorSapphireChestID, 1).setUnlocalizedName("SapphireChest");
+	public static Item armorSapphireLegs = new SapphireArmor(SapphireArmorMaterial, armorSapphireLegsID, 2).setUnlocalizedName("SapphireLegs");
+	public static Item armorSapphireBoots = new SapphireArmor(SapphireArmorMaterial, armorSapphireBootsID, 3).setUnlocalizedName("SapphireBoots");
+
 	
 	public static Item stoneDust = new StoneDust();
 	public static Item goldDust = new GoldDust();
@@ -227,11 +295,44 @@ public class MillstoneMod
 		GameRegistry.registerItem(obsidianPickaxe, "obsidianPickaxe");
 		GameRegistry.registerItem(obsidianShovel, "obsidianShovel");
 		
+		GameRegistry.registerItem(copperSword, "copperSword");
+		GameRegistry.registerItem(copperHoe, "copperHoe");
+		GameRegistry.registerItem(copperAxe, "copperAxe");
+		GameRegistry.registerItem(copperPickaxe, "copperPickaxe");
+		GameRegistry.registerItem(copperShovel, "copperShovel");
+		
+		GameRegistry.registerItem(rubySword, "rubySword");
+		GameRegistry.registerItem(rubyHoe, "rubyHoe");
+		GameRegistry.registerItem(rubyAxe, "rubyAxe");
+		GameRegistry.registerItem(rubyPickaxe, "rubyPickaxe");
+		GameRegistry.registerItem(rubyShovel, "rubyShovel");
+		
+		GameRegistry.registerItem(sapphireSword, "sapphireSword");
+		GameRegistry.registerItem(sapphireHoe, "sapphireHoe");
+		GameRegistry.registerItem(sapphireAxe, "sapphireAxe");
+		GameRegistry.registerItem(sapphirePickaxe, "sapphirePickaxe");
+		GameRegistry.registerItem(sapphireShovel, "sapphireShovel");
+		
 		//Armors
 		GameRegistry.registerItem(armorObsidianHelm, "ObsidianHelm");	
 		GameRegistry.registerItem(armorObsidianChest, "Obsidianchest");
 		GameRegistry.registerItem(armorObsidianLegs, "ObsidianLegs");
 		GameRegistry.registerItem(armorObsidianBoots, "ObsidianBoots");
+		
+		GameRegistry.registerItem(armorCopperHelm, "CopperHelm");	
+		GameRegistry.registerItem(armorCopperChest, "Copperchest");
+		GameRegistry.registerItem(armorCopperLegs, "CopperLegs");
+		GameRegistry.registerItem(armorCopperBoots, "CopperBoots");
+		
+		GameRegistry.registerItem(armorRubyHelm, "RubyHelm");	
+		GameRegistry.registerItem(armorRubyChest, "Rubychest");
+		GameRegistry.registerItem(armorRubyLegs, "RubyLegs");
+		GameRegistry.registerItem(armorRubyBoots, "RubyBoots");
+		
+		GameRegistry.registerItem(armorSapphireHelm, "SapphireHelm");	
+		GameRegistry.registerItem(armorSapphireChest, "Sapphirechest");
+		GameRegistry.registerItem(armorSapphireLegs, "SapphireLegs");
+		GameRegistry.registerItem(armorSapphireBoots, "SapphireBoots");
 		
 		//Crops
 		GameRegistry.registerItem(riceCrop, "riceCrop");
@@ -313,7 +414,7 @@ public class MillstoneMod
         //Experimenting with recipes
 		
 		/**
-	    *Let me explain recipes. So the "stonegear, 1" in the itemstack is basically the item you want to create, and the 1 for
+		* Let me explain recipes. So the "stonegear, 1" in the itemstack is basically the item you want to create, and the 1 for
 		*how many. Simple. Now, where you see the " S ", "S S", " S ", 'S', Blocks.stone" is where it gets trickier. Each "" represents
 		*one row in the crafting grid. The first "" is the top row, second "" middle, third "" bottom. Now, you put any letter you want 
 		*in there, such as S in the order you want to craft your recipe. If you want to leave a space blank, simply put a space there.
@@ -344,6 +445,44 @@ public class MillstoneMod
 		GameRegistry.addShapedRecipe(new ItemStack(obsidianShovel, 1), new Object[]{" O ", " I ", " I ", 'I', ironRod, 'O', obsidianBlock});
 		GameRegistry.addShapedRecipe(new ItemStack(obsidianHoe, 1), new Object[]{" OO", " I ", " I ", 'I', ironRod, 'O', obsidianBlock});
 		
+		GameRegistry.addShapedRecipe(new ItemStack(copperSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', copperIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(copperPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O', copperIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(copperAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', copperIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(copperShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', copperIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(copperHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', copperIngot});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(rubySword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', ruby});
+		GameRegistry.addShapedRecipe(new ItemStack(rubyPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O', ruby});
+		GameRegistry.addShapedRecipe(new ItemStack(rubyAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', ruby});
+		GameRegistry.addShapedRecipe(new ItemStack(rubyShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', ruby});
+		GameRegistry.addShapedRecipe(new ItemStack(rubyHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', ruby});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(sapphireSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', sapphire});
+		GameRegistry.addShapedRecipe(new ItemStack(sapphirePickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O', sapphire});
+		GameRegistry.addShapedRecipe(new ItemStack(sapphireAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', sapphire});
+		GameRegistry.addShapedRecipe(new ItemStack(sapphireShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', sapphire});
+		GameRegistry.addShapedRecipe(new ItemStack(sapphireHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', sapphire});
+				
+		//Armor
+		GameRegistry.addShapedRecipe(new ItemStack(armorObsidianHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', obsidianBlock});
+		GameRegistry.addShapedRecipe(new ItemStack(armorObsidianChest, 1), new Object[]{"O O", "OOO", "OOO", 'O', obsidianBlock});
+		GameRegistry.addShapedRecipe(new ItemStack(armorObsidianLegs, 1), new Object[]{"OOO", "O O", "O O", 'O', obsidianBlock});
+		GameRegistry.addShapedRecipe(new ItemStack(armorObsidianBoots, 1), new Object[]{"   ", "O O", "O O", 'O', obsidianBlock});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(armorCopperHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', copperIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(armorCopperChest, 1), new Object[]{"O O", "OOO", "OOO", 'O', copperIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(armorCopperLegs, 1), new Object[]{"OOO", "O O", "O O", 'O', copperIngot});
+		GameRegistry.addShapedRecipe(new ItemStack(armorCopperBoots, 1), new Object[]{"   ", "O O", "O O", 'O', copperIngot});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(armorRubyHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', ruby});
+		GameRegistry.addShapedRecipe(new ItemStack(armorRubyChest, 1), new Object[]{"O O", "OOO", "OOO", 'O', ruby});
+		GameRegistry.addShapedRecipe(new ItemStack(armorRubyLegs, 1), new Object[]{"OOO", "O O", "O O", 'O', ruby});
+		GameRegistry.addShapedRecipe(new ItemStack(armorRubyBoots, 1), new Object[]{"   ", "O O", "O O", 'O', ruby});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(armorSapphireHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', sapphire});
+		GameRegistry.addShapedRecipe(new ItemStack(armorSapphireChest, 1), new Object[]{"O O", "OOO", "OOO", 'O', sapphire});
+		GameRegistry.addShapedRecipe(new ItemStack(armorSapphireLegs, 1), new Object[]{"OOO", "O O", "O O", 'O', sapphire});
+		GameRegistry.addShapedRecipe(new ItemStack(armorSapphireBoots, 1), new Object[]{"   ", "O O", "O O", 'O', sapphire});
 		
         GameRegistry.addShapedRecipe(new ItemStack(riceBowl,1), new Object[] {"x", "y", 'x', riceCrop, 'y', Items.bowl});
         GameRegistry.addShapedRecipe(new ItemStack(lantern,1), new Object[] {"xxx", "xyx", "xxx", 'x', ricePaper, 'y', Blocks.torch});
