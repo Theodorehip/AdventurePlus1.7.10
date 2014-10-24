@@ -2,16 +2,15 @@ package com.millstone.blocks;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.util.IIcon;
-
-import com.millstone.MillstoneBlocks;
 import com.millstone.MillstoneMod;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
 
 public class CopperOre extends Block{
 
@@ -25,7 +24,7 @@ public class CopperOre extends Block{
 	}
 	
 	public Block getDropped(int i, Random random, int j){
-		return MillstoneBlocks.copperOre;
+		return MillstoneMod.copperOre;
 	}
 	
 	@SideOnly(Side.CLIENT)

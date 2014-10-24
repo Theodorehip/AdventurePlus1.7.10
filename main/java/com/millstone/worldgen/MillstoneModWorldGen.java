@@ -2,13 +2,12 @@ package com.millstone.worldgen;
 
 import java.util.Random;
 
+import com.millstone.MillstoneMod;
+
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
-
-import com.millstone.MillstoneBlocks;
-
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class MillstoneModWorldGen implements IWorldGenerator {
@@ -35,18 +34,18 @@ public class MillstoneModWorldGen implements IWorldGenerator {
 
 	private void generateSurface(World world, Random random, int x, int z) {
 		// this.addOreSpawn
-		this.addOreSpawn(MillstoneBlocks.copperOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
-		this.addOreSpawn(MillstoneBlocks.silverOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
+		this.addOreSpawn(MillstoneMod.copperOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
+		this.addOreSpawn(MillstoneMod.silverOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
 		
 		 String s = world.getBiomeGenForCoords(x, z).biomeName;
-		    	this.addOreSpawn(MillstoneBlocks.sapphireOre, world, random, x, z, 16, 16, 2 + random.nextInt(6), 25, 0, 20);
+		    	this.addOreSpawn(MillstoneMod.sapphireOre, world, random, x, z, 16, 16, 2 + random.nextInt(6), 25, 0, 20);
 		
 	}
 
 	private void generateNether(World world, Random random, int x, int z) {
-		this.addNetherOreSpawn(MillstoneBlocks.lavaBrick, world, random, x, z, 16, 16, 4 + random.nextInt(6), 50, 0, 40);
-		this.addNetherOreSpawn(MillstoneBlocks.netherRubyOre, world, random, x, z, 16, 16, 2 + random.nextInt(15), 50, 0, 100);
-		this.addNetherOreSpawn(MillstoneBlocks.Firerack, world, random, x, z, 16, 16, 1 + random.nextInt(15), 50, 0, 120);
+		this.addNetherOreSpawn(MillstoneMod.lavaBrick, world, random, x, z, 16, 16, 4 + random.nextInt(6), 50, 0, 40);
+		this.addNetherOreSpawn(MillstoneMod.netherRubyOre, world, random, x, z, 16, 16, 2 + random.nextInt(15), 50, 0, 100);
+		this.addNetherOreSpawn(MillstoneMod.Firerack, world, random, x, z, 16, 16, 1 + random.nextInt(15), 50, 0, 120);
 
 	}
 

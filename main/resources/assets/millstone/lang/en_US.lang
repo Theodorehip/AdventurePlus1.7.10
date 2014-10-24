@@ -17,6 +17,25 @@ item.obsidianHoe.name=Obsidian Hoe
 item.obsidianAxe.name=Obsidian Axe
 item.obsidianPickaxe.name=Obsidian Pickaxe
 item.obsidianShovel.name=Obsidian Shovel
+
+item.copperSword.name=Copper Sword
+item.copperHoe.name=Copper Hoe
+item.copperAxe.name=Copper Axe
+item.copperPickaxe.name=Copper Pickaxe
+item.copperShovel.name=Copper Shovel
+
+item.rubySword.name=Ruby Sword
+item.rubyHoe.name=Ruby Hoe
+item.rubyAxe.name=Ruby Axe
+item.rubyPickaxe.name=Ruby Pickaxe
+item.rubyShovel.name=Ruby Shovel
+
+item.sapphireSword.name=Sapphire Sword
+item.sapphireHoe.name=Sapphire Hoe
+item.sapphireAxe.name=Sapphire Axe
+item.sapphirePickaxe.name=Sapphire Pickaxe
+item.sapphireShovel.name=Sapphire Shovel
+
 item.riceCrop.name=Rice
 item.riceSeeds.name=Rice Seeds
 item.riceBowl.name=Bowl of Rice
@@ -29,12 +48,23 @@ item.sapphire.name=Sapphire
 item.silverDust.name=Silver Dust
 item.silverIngot.name=Silver Ingot
 item.ironRod.name=Iron Rod
+
 item.ObsidianHelm.name=Obsidian Helmet
 item.ObsidianChest.name=Obsidian Chestplate
 item.ObsidianLegs.name=Obsidian Leggings
 item.ObsidianBoots.name=Obsidian Boots
-
-
+item.CopperHelm.name=Copper Helmet
+item.CopperChest.name=Copper Chestplate
+item.CopperLegs.name=Copper Leggings
+item.CopperBoots.name=Copper Boots
+item.RubyHelm.name=Ruby Helmet
+item.RubyChest.name=Ruby Chestplate
+item.RubyLegs.name=Ruby Leggings
+item.RubyBoots.name=Ruby Boots
+item.SapphireHelm.name=Sapphire Helmet
+item.SapphireChest.name=Sapphire Chestplate
+item.SapphireLegs.name=Sapphire Leggings
+item.SapphireBoots.name=Sapphire Boots
 
 
 

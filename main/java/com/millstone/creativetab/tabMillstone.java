@@ -2,8 +2,7 @@ package com.millstone.creativetab;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-
-import com.millstone.MillstoneItems;
+import com.millstone.MillstoneMod;
 
 public class tabMillstone extends CreativeTabs{
 	
@@ -14,6 +13,6 @@ public class tabMillstone extends CreativeTabs{
 	
 	@Override
 	public Item getTabIconItem(){
-		return MillstoneItems.obsidianDust;
+		return MillstoneMod.obsidianDust;
 	}
 }

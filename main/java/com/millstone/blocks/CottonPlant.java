@@ -7,7 +7,6 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 
-import com.millstone.MillstoneItems;
 import com.millstone.MillstoneMod;
 
 import cpw.mods.fml.relauncher.Side;
@@ -44,10 +43,10 @@ public class CottonPlant extends BlockCrops {
 	}
 	
 	protected Item func_149866_i() {
-		return MillstoneItems.cottonSeeds;
+		return MillstoneMod.cottonSeeds;
 	}
 	
 	protected Item func_149865_P() {
-		return MillstoneItems.cotton;
+		return MillstoneMod.cotton;
 	}
 }

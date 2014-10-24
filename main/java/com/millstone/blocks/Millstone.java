@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -17,7 +18,6 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.millstone.MillstoneBlocks;
 import com.millstone.MillstoneMod;
 import com.millstone.tileentity.TileEntityMillstone;
 
@@ -68,7 +68,7 @@ public class Millstone extends BlockContainer {
 	
 	//Retruns what item is dropped when broken
 	public Item getItemDropped(int i, Random random, int j) {
-		return Item.getItemFromBlock((MillstoneBlocks.millstoneIdle));
+		return Item.getItemFromBlock((MillstoneMod.millstoneIdle));
 	}
 	
 	public void onBlockAdded(World world, int x, int y, int z) {
@@ -160,9 +160,9 @@ public class Millstone extends BlockContainer {
 		keepInventory = true;
 		
 		if(active) {
-			worldObj.setBlock(xCoord, yCoord, zCoord, MillstoneBlocks.millstoneActive);
+			worldObj.setBlock(xCoord, yCoord, zCoord, MillstoneMod.millstoneActive);
 		}else{
-			worldObj.setBlock(xCoord, yCoord, zCoord, MillstoneBlocks.millstoneIdle);
+			worldObj.setBlock(xCoord, yCoord, zCoord, MillstoneMod.millstoneIdle);
 		}
 		
 		keepInventory = false;
@@ -218,7 +218,7 @@ public class Millstone extends BlockContainer {
 	
 	//Just return your millstone idle.
 	public Item getItem(World world, int x, int y, int z) {
-		return Item.getItemFromBlock(MillstoneBlocks.millstoneIdle);
+		return Item.getItemFromBlock(MillstoneMod.millstoneIdle);
 	}
 
 }
