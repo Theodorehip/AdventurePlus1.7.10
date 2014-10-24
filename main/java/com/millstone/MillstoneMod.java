@@ -37,6 +37,7 @@ import com.millstone.items.Cotton;
 import com.millstone.items.Flour;
 import com.millstone.items.GoldDust;
 import com.millstone.items.IronDust;
+import com.millstone.items.IronRod;
 import com.millstone.items.ObsidianDust;
 import com.millstone.items.Ruby;
 import com.millstone.items.Sapphire;
@@ -88,8 +89,13 @@ public class MillstoneMod
 	@SidedProxy(clientSide = "com.millstone.proxy.ClientProxy", serverSide = "com.millstone.proxy.CommonProxy")
 	public static CommonProxy proxy;
 	
-	public static ToolMaterial ObsidianMaterial = EnumHelper.addToolMaterial("ObsidianMaterial" , 3 , 750, 13.0F, 4.0F, 10);
 	
+	//ToolMaterials
+	public static ToolMaterial ObsidianMaterial = EnumHelper.addToolMaterial("ObsidianMaterial" , 3 , 750, 13.0F, 4.0F, 10);
+	public static ToolMaterial CopperMaterial = EnumHelper.addToolMaterial("CopperMaterial" , 2 , 210, 5.0F, 2.0F, 14);
+	public static ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
+	public static ToolMaterial SapphireMaterial = EnumHelper.addToolMaterial("SapphireMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
+
 	//WorldGen
 	
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
@@ -135,6 +141,7 @@ public class MillstoneMod
 	public static Item sapphire = new Sapphire();
 	public static Item silverDust = new SilverDust();
 	public static Item silverIngot = new SilverIngot();
+	public static Item ironRod = new IronRod();
 
 	public static Item flour = new Flour();
 	public static Item ricePaper = new ricePaper();
@@ -195,6 +202,7 @@ public class MillstoneMod
 		GameRegistry.registerItem(ruby, "ruby");
 		GameRegistry.registerItem(silverDust, "silverDust");
 		GameRegistry.registerItem(silverIngot, "silverBar");
+		GameRegistry.registerItem(ironRod, "ironRod");
 		
 		//spawn ores
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
@@ -276,13 +284,12 @@ public class MillstoneMod
 		GameRegistry.addShapedRecipe(new ItemStack(goldGear, 1), new Object[]{" S ", "SCS", " S ", 'S', Items.gold_ingot, 'C', ironGear});
 		GameRegistry.addShapedRecipe(new ItemStack(diamondGear, 1), new Object[]{" S ", "SCS", " S ", 'C', ironGear, 'S', Items.diamond});
 		
-		
 		//Tools
-		GameRegistry.addShapedRecipe(new ItemStack(obsidianSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.iron_ingot, 'O', obsidianBlock});
-		GameRegistry.addShapedRecipe(new ItemStack(obsidianPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.iron_ingot, 'O', obsidianBlock});
-		GameRegistry.addShapedRecipe(new ItemStack(obsidianAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.iron_ingot, 'O', obsidianBlock});
-		GameRegistry.addShapedRecipe(new ItemStack(obsidianShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.iron_ingot, 'O', obsidianBlock});
-		GameRegistry.addShapedRecipe(new ItemStack(obsidianHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.iron_ingot, 'O', obsidianBlock});
+		GameRegistry.addShapedRecipe(new ItemStack(obsidianSword, 1), new Object[]{" O ", " O ", " I ", 'I', ironRod, 'O', obsidianBlock});
+		GameRegistry.addShapedRecipe(new ItemStack(obsidianPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', ironRod, 'O', obsidianBlock});
+		GameRegistry.addShapedRecipe(new ItemStack(obsidianAxe, 1), new Object[]{" OO", " IO", " I ", 'I', ironRod, 'O', obsidianBlock});
+		GameRegistry.addShapedRecipe(new ItemStack(obsidianShovel, 1), new Object[]{" O ", " I ", " I ", 'I', ironRod, 'O', obsidianBlock});
+		GameRegistry.addShapedRecipe(new ItemStack(obsidianHoe, 1), new Object[]{" OO", " I ", " I ", 'I', ironRod, 'O', obsidianBlock});
 		
 		
         GameRegistry.addShapedRecipe(new ItemStack(riceBowl,1), new Object[] {"x", "y", 'x', riceCrop, 'y', Items.bowl});

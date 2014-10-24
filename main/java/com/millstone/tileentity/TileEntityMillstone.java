@@ -370,6 +370,10 @@ public class TileEntityMillstone extends TileEntity implements ISidedInventory {
          		//Orange Dye
         		return new ItemStack(Items.dye, 3, 14);
         	}
+         	if(stack.getItem() == Items.iron_ingot){
+         		//Orange Dye
+        		return new ItemStack(MillstoneMod.ironRod, 3);
+        	}
          	
          	
          	//Incase you are reading, this basically returns a "random" amount of dust.
