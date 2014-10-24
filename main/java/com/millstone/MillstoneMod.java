@@ -12,6 +12,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
@@ -59,6 +60,7 @@ import com.millstone.tools.ObsidianPickaxe;
 import com.millstone.tools.ObsidianShovel;
 import com.millstone.tools.ObsidianSword;
 import com.millstone.worldgen.MillstoneModWorldGen;
+import com.millstone.armor.ObsidianArmor;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -95,12 +97,17 @@ public class MillstoneMod
 	public static CommonProxy proxy;
 	
 	
-	//ToolMaterials
+	//Tool/Armor Materials
 	public static ToolMaterial ObsidianMaterial = EnumHelper.addToolMaterial("ObsidianMaterial" , 3 , 750, 13.0F, 4.0F, 10);
 	public static ToolMaterial CopperMaterial = EnumHelper.addToolMaterial("CopperMaterial" , 2 , 210, 5.0F, 2.0F, 14);
 	public static ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
 	public static ToolMaterial SapphireMaterial = EnumHelper.addToolMaterial("SapphireMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
 
+	public static ArmorMaterial ObsidianArmorMaterial = EnumHelper.addArmorMaterial("ObsidianArmor", 42, new int[]{3, 7, 7, 3}, 20);
+	public static ArmorMaterial CopperArmorMaterial = EnumHelper.addArmorMaterial("CopperArmor", 13, new int[]{2, 5, 4, 1}, 10);
+	public static ArmorMaterial RubyArmorMaterial = EnumHelper.addArmorMaterial("RubyArmor", 33, new int[]{3, 8, 6, 3}, 10);
+	public static ArmorMaterial SapphireArmorMaterial = EnumHelper.addArmorMaterial("SapphireArmor", 33, new int[]{3, 8, 6, 3}, 10);
+	
 	//WorldGen
 	
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
@@ -134,7 +141,16 @@ public class MillstoneMod
 	public static Item obsidianShovel = new ObsidianShovel(ObsidianMaterial).setUnlocalizedName("obsidianShovel");
 	public static Item obsidianAxe = new ObsidianAxe(ObsidianMaterial).setUnlocalizedName("obsidianAxe");
 	public static Item obsidianHoe = new ObsidianHoe(ObsidianMaterial).setUnlocalizedName("obsidianHoe");
+	
+	public static int armorObsidianHelmID;
+	public static int armorObsidianChestID;
+	public static int armorObsidianLegsID;
+	public static int armorObsidianBootsID;
 
+	public static Item armorObsidianHelm = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianHelmID, 0).setUnlocalizedName("ObsidianHelm");
+	public static Item armorObsidianChest = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianChestID, 1).setUnlocalizedName("ObsidianChest");
+	public static Item armorObsidianLegs = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianLegsID, 2).setUnlocalizedName("ObsidianLegs");
+	public static Item armorObsidianBoots = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianBootsID, 3).setUnlocalizedName("ObsidianBoots");
 	
 	public static Item stoneDust = new StoneDust();
 	public static Item goldDust = new GoldDust();
@@ -172,50 +188,76 @@ public class MillstoneMod
     @EventHandler
     public void init(FMLInitializationEvent event)
     {   	
-    	//Game and Lang reg,
+    	//Game Registry
 	
-		//Register the millstone and millstone active, but only add a name to the active millstone.
+		//InteractiveBlocks
 		GameRegistry.registerBlock(millstoneIdle, "millstoneIdle");
 		GameRegistry.registerBlock(millstoneActive, "millstoneActive");
-		GameRegistry.registerBlock(obsidianBlock, "obsidianBlock");
 		GameRegistry.registerBlock(stoneCutter, "stoneCutter");
-		GameRegistry.registerBlock(lantern, "lantern");
-		GameRegistry.registerBlock(ricePlant, "ricePlant");
-		GameRegistry.registerBlock(lavaBrick, "lavaBrick");
+		
+		//Ores
 		GameRegistry.registerBlock(copperOre, "copperOre");
 		GameRegistry.registerBlock(sapphireOre, "sapphireOre");
 		GameRegistry.registerBlock(netherRubyOre, "netherRubyOre");
 		GameRegistry.registerBlock(silverOre, "silverOre");
+		
+		//NonOreSpawningBlocks
+		GameRegistry.registerBlock(lavaBrick, "lavaBrick");
 		GameRegistry.registerBlock(Firerack, "Firerack");
 		
+		//Craftable
+		GameRegistry.registerBlock(obsidianBlock, "obsidianBlock");
+		GameRegistry.registerBlock(lantern, "lantern");
+		
+		//Plants
+		GameRegistry.registerBlock(ricePlant, "ricePlant");
+
+		
+		//Gears
 		GameRegistry.registerItem(woodGear, "woodGear");
 		GameRegistry.registerItem(stoneGear, "stoneGear");	
 		GameRegistry.registerItem(ironGear, "ironGear");
 		GameRegistry.registerItem(goldGear, "goldGear");
 		GameRegistry.registerItem(diamondGear, "diamondGear");
-		GameRegistry.registerItem(flour, "flour");
-		GameRegistry.registerItem(stoneDust, "stoneDust");
-		GameRegistry.registerItem(obsidianDust, "obsidianDust");
-		GameRegistry.registerItem(goldDust, "goldDust");
-		GameRegistry.registerItem(ironDust, "ironDust");
+		
+		//Tools
 		GameRegistry.registerItem(obsidianSword, "obsidianSword");
 		GameRegistry.registerItem(obsidianHoe, "obsidianHoe");
 		GameRegistry.registerItem(obsidianAxe, "obsidianAxe");
 		GameRegistry.registerItem(obsidianPickaxe, "obsidianPickaxe");
 		GameRegistry.registerItem(obsidianShovel, "obsidianShovel");
+		
+		//Armors
+		GameRegistry.registerItem(armorObsidianHelm, "ObsidianHelm");	
+		GameRegistry.registerItem(armorObsidianChest, "Obsidianchest");
+		GameRegistry.registerItem(armorObsidianLegs, "ObsidianLegs");
+		GameRegistry.registerItem(armorObsidianBoots, "ObsidianBoots");
+		
+		//Crops
 		GameRegistry.registerItem(riceCrop, "riceCrop");
+
+		//OreItems
+		GameRegistry.registerItem(copperIngot, "copperBar");
+		GameRegistry.registerItem(silverIngot, "silverBar");
+		GameRegistry.registerItem(sapphire, "sapphire");
+		GameRegistry.registerItem(ruby, "ruby");
+		
+		//Dusts
+		GameRegistry.registerItem(silverDust, "silverDust");
+		GameRegistry.registerItem(copperDust, "copperDust");
+		GameRegistry.registerItem(stoneDust, "stoneDust");
+		GameRegistry.registerItem(obsidianDust, "obsidianDust");
+		GameRegistry.registerItem(goldDust, "goldDust");
+		GameRegistry.registerItem(ironDust, "ironDust");
+		
+		//Misc
+		GameRegistry.registerItem(ironRod, "ironRod");
 		GameRegistry.registerItem(riceBowl, "riceBowl");
 		GameRegistry.registerItem(sushi, "sushi");
 		GameRegistry.registerItem(ricePaper, "ricePaper");
-		GameRegistry.registerItem(copperDust, "copperDust");
-		GameRegistry.registerItem(copperIngot, "copperBar");
-		GameRegistry.registerItem(sapphire, "sapphire");
-		GameRegistry.registerItem(ruby, "ruby");
-		GameRegistry.registerItem(silverDust, "silverDust");
-		GameRegistry.registerItem(silverIngot, "silverBar");
-		GameRegistry.registerItem(ironRod, "ironRod");
+		GameRegistry.registerItem(flour, "flour");
 		
-		//spawn ores
+		//Spawn ores
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
 		
 		//Remove Recipes

@@ -26,6 +26,10 @@ item.sapphire.name=Sapphire
 item.silverDust.name=Silver Dust
 item.silverIngot.name=Silver Ingot
 item.ironRod.name=Iron Rod
+item.ObsidianHelm.name=Obsidian Helmet
+item.ObsidianChest.name=Obsidian Chestplate
+item.ObsidianLegs.name=Obsidian Leggings
+item.ObsidianBoots.name=Obsidian Boots
 
 
 
