@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "MillstoneMod",
+  "name": "Millstone Mod/Minecraft +",
+  "description": "Adds a lot of stuff",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Paloeflora, Theodorhip, Moocowmaniak, PandawanFr"],
+  "credits": "None?",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
