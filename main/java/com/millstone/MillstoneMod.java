@@ -17,23 +17,28 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 
+import com.millstone.armor.CopperArmor;
+import com.millstone.armor.ObsidianArmor;
+import com.millstone.armor.RubyArmor;
+import com.millstone.armor.SapphireArmor;
 import com.millstone.blocks.CopperOre;
 import com.millstone.blocks.Cutter;
 import com.millstone.blocks.Firerack;
+import com.millstone.blocks.Lantern;
 import com.millstone.blocks.LavaBrick;
 import com.millstone.blocks.Millstone;
 import com.millstone.blocks.NetherRubyOre;
 import com.millstone.blocks.ObsidianBlock;
-import com.millstone.blocks.RicePlant;
 import com.millstone.blocks.SapphireOre;
 import com.millstone.blocks.SilverOre;
-import com.millstone.blocks.Lantern;
 import com.millstone.blocks.crops.CottonPlant;
 import com.millstone.blocks.crops.FlaxPlant;
+import com.millstone.blocks.crops.RicePlant;
 import com.millstone.blocks.crops.TomatoPlant;
 import com.millstone.crafting.CraftingHandler;
 import com.millstone.creativetab.tabMillstone;
 import com.millstone.creativetab.tabMillstoneArmor;
+import com.millstone.creativetab.tabMillstoneTools;
 import com.millstone.entities.Scarecrow;
 import com.millstone.handler.GuiHandler;
 import com.millstone.handler.RemoveRecipes;
@@ -78,11 +83,6 @@ import com.millstone.tools.SapphirePickaxe;
 import com.millstone.tools.SapphireShovel;
 import com.millstone.tools.SapphireSword;
 import com.millstone.worldgen.MillstoneModWorldGen;
-import com.millstone.armor.CopperArmor;
-import com.millstone.armor.ObsidianArmor;
-import com.millstone.armor.RubyArmor;
-import com.millstone.armor.SapphireArmor;
-import com.millstone.creativetab.tabMillstoneTools;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -257,8 +257,8 @@ public class MillstoneMod
     public static Item flaxSeeds = new ItemSeeds(flaxPlant, Blocks.farmland).setUnlocalizedName("flaxSeeds").setTextureName(MODID + ":flaxSeeds").setCreativeTab(MillstoneMod.tabMillstone);
     public static Item flax = new Flax();
     
-    public static Block ricePlant = new RicePlant().setBlockName("Rice").setBlockTextureName(MODID + ":ricePlant");
-    public static Item riceCrop = new ItemSeeds(ricePlant, Blocks.farmland).setUnlocalizedName("riceCrop").setTextureName(MODID + ":riceCrop");
+    public static Block ricePlant = new RicePlant().setBlockName("Rice");
+    public static Item riceCrop = new ItemSeeds(ricePlant, Blocks.farmland).setUnlocalizedName("riceCrop").setTextureName(MODID + ":riceCrop").setCreativeTab(MillstoneMod.tabMillstone);
 	
     @EventHandler
     public void preinit(FMLInitializationEvent event)
