@@ -10,7 +10,7 @@ public class RubyPickaxe extends ItemPickaxe{
 	public RubyPickaxe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:");
+			this.setTextureName("millstonemod:ruby_pickaxe");
 		
 	}
 

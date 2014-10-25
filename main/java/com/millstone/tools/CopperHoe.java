@@ -10,7 +10,7 @@ public class CopperHoe extends ItemHoe{
 	public CopperHoe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:");
+			this.setTextureName("millstonemod:copper_hoe");
 		
 	}
 

@@ -13,7 +13,7 @@ public class CopperSword extends ItemSword{
 	public CopperSword(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:");
+			this.setTextureName("millstonemod:copper_sword");
 		
 	}
 

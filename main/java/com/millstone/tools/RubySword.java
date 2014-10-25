@@ -10,7 +10,7 @@ public class RubySword extends ItemSword{
 	public RubySword(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:");
+			this.setTextureName("millstonemod:ruby_sword");
 		
 	}
 

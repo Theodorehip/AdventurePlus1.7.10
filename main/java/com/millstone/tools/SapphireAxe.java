@@ -10,7 +10,7 @@ public class SapphireAxe extends ItemAxe{
 	public SapphireAxe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:");
+			this.setTextureName("millstonemod:sapphire_axe");
 		
 	}
 

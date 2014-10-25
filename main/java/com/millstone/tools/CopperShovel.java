@@ -10,7 +10,7 @@ public class CopperShovel extends ItemSpade{
 	public CopperShovel(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:");
+			this.setTextureName("millstonemod:copper_shovel");
 		
 	}
 

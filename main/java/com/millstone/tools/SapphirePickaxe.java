@@ -10,7 +10,7 @@ public class SapphirePickaxe extends ItemPickaxe{
 	public SapphirePickaxe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:");
+			this.setTextureName("millstonemod:sapphire_pickaxe");
 		
 	}
 

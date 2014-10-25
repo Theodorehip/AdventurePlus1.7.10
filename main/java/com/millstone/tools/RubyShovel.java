@@ -10,7 +10,7 @@ public class RubyShovel extends ItemSpade{
 	public RubyShovel(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:");
+			this.setTextureName("millstonemod:ruby_shovel");
 		
 	}
 

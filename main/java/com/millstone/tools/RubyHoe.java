@@ -10,7 +10,7 @@ public class RubyHoe extends ItemHoe{
 	public RubyHoe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:");
+			this.setTextureName("millstonemod:ruby_hoe");
 		
 	}
 

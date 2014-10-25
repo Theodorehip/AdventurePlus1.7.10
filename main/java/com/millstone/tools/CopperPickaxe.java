@@ -11,7 +11,7 @@ public class CopperPickaxe extends ItemPickaxe{
 	public CopperPickaxe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:");
+			this.setTextureName("millstonemod:copper_pickaxe");
 		
 	}
 
