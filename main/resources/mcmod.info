@@ -1,6 +1,6 @@
 [
 {
-  "modid": "MillstoneMod",
+  "modid": "mod_MillstoneMod",
   "name": "Millstone Mod/Minecraft +",
   "description": "Adds a lot of stuff",
   "version": "${version}",

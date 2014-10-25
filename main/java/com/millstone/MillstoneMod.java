@@ -245,6 +245,8 @@ public class MillstoneMod
 	public static ItemFood riceBowl = new riceBowl(3, 0.4F, false);
 	public static ItemFood sushi = new sushi(6, 0.7F, false);
 	
+	
+	//Crops
     public static Block tomatoPlant = new TomatoPlant().setBlockName("tomatoPlant");
     public static Item tomatoSeeds = new ItemSeeds(tomatoPlant, Blocks.farmland).setUnlocalizedName("tomatoSeeds").setTextureName(MODID + ":tomatoSeeds").setCreativeTab(MillstoneMod.tabMillstone);
     public static Item tomato = new Tomato(2, 2, false);
@@ -257,7 +259,7 @@ public class MillstoneMod
     public static Item flaxSeeds = new ItemSeeds(flaxPlant, Blocks.farmland).setUnlocalizedName("flaxSeeds").setTextureName(MODID + ":flaxSeeds").setCreativeTab(MillstoneMod.tabMillstone);
     public static Item flax = new Flax();
     
-    public static Block ricePlant = new RicePlant().setBlockName("Rice");
+    public static Block ricePlant = new RicePlant().setBlockName("ricePlant");
     public static Item riceCrop = new ItemSeeds(ricePlant, Blocks.farmland).setUnlocalizedName("riceCrop").setTextureName(MODID + ":riceCrop").setCreativeTab(MillstoneMod.tabMillstone);
 	
     @EventHandler
