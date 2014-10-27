@@ -30,6 +30,12 @@ item.rubyAxe.name=Ruby Axe
 item.rubyPickaxe.name=Ruby Pickaxe
 item.rubyShovel.name=Ruby Shovel
 
+item.emeraldSword.name=Emerald Sword
+item.emeraldHoe.name=Emerald Hoe
+item.emeraldAxe.name=Emerald Axe
+item.emeraldPickaxe.name=Emerald Pickaxe
+item.emeraldShovel.name=Emerald Shovel
+
 item.sapphireSword.name=Sapphire Sword
 item.sapphireHoe.name=Sapphire Hoe
 item.sapphireAxe.name=Sapphire Axe
@@ -41,6 +47,7 @@ item.riceSeeds.name=Rice Seeds
 item.riceBowl.name=Bowl of Rice
 
 item.bonePickaxe.name=Bone Pickaxe
+item.boneShard.name=Bone Shard
 item.flintKnife.name=Flint Knife
 item.flintHatchet.name=Flint Hatchet
 

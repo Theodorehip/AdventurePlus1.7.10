@@ -14,10 +14,13 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.millstone.armor.CopperArmor;
+import com.millstone.armor.EmeraldArmor;
 import com.millstone.armor.ObsidianArmor;
 import com.millstone.armor.RubyArmor;
 import com.millstone.armor.SapphireArmor;
@@ -42,6 +45,7 @@ import com.millstone.creativetab.tabMillstoneTools;
 import com.millstone.entities.Scarecrow;
 import com.millstone.handler.GuiHandler;
 import com.millstone.handler.RemoveRecipes;
+import com.millstone.items.BoneShard;
 import com.millstone.items.CopperDust;
 import com.millstone.items.CopperIngot;
 import com.millstone.items.Cotton;
@@ -68,6 +72,11 @@ import com.millstone.tools.CopperHoe;
 import com.millstone.tools.CopperPickaxe;
 import com.millstone.tools.CopperShovel;
 import com.millstone.tools.CopperSword;
+import com.millstone.tools.EmeraldAxe;
+import com.millstone.tools.EmeraldHoe;
+import com.millstone.tools.EmeraldPickaxe;
+import com.millstone.tools.EmeraldShovel;
+import com.millstone.tools.EmeraldSword;
 import com.millstone.tools.FlintHatchet;
 import com.millstone.tools.FlintKnife;
 import com.millstone.tools.ObsidianAxe;
@@ -123,18 +132,19 @@ public class MillstoneMod
 	@SidedProxy(clientSide = "com.millstone.proxy.ClientProxy", serverSide = "com.millstone.proxy.CommonProxy")
 	public static CommonProxy proxy;
 	
-	
 	//Tool/Armor Materials
 	public static ToolMaterial ObsidianMaterial = EnumHelper.addToolMaterial("ObsidianMaterial" , 3 , 750, 13.0F, 4.0F, 10);
 	public static ToolMaterial CopperMaterial = EnumHelper.addToolMaterial("CopperMaterial" , 2 , 210, 5.0F, 2.0F, 14);
 	public static ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
 	public static ToolMaterial SapphireMaterial = EnumHelper.addToolMaterial("SapphireMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
-	public static ToolMaterial Tier0 = EnumHelper.addToolMaterial("Tier0" , 0, 59, 2.0F, 0.0F, 15);
+	public static ToolMaterial EmeraldMaterial = EnumHelper.addToolMaterial("EmeraldMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
+	public static ToolMaterial Tier0 = EnumHelper.addToolMaterial("Tier0" , 0, 80, 2.0F, 0.0F, 15);
 
 	public static ArmorMaterial ObsidianArmorMaterial = EnumHelper.addArmorMaterial("ObsidianArmor", 42, new int[]{4, 10, 4, 2}, 20);
 	public static ArmorMaterial CopperArmorMaterial = EnumHelper.addArmorMaterial("CopperArmor", 13, new int[]{2, 5, 4, 1}, 10);
 	public static ArmorMaterial RubyArmorMaterial = EnumHelper.addArmorMaterial("RubyArmor", 33, new int[]{3, 8, 6, 3}, 10);
 	public static ArmorMaterial SapphireArmorMaterial = EnumHelper.addArmorMaterial("SapphireArmor", 33, new int[]{3, 8, 6, 3}, 10);
+	public static ArmorMaterial EmeraldArmorMaterial = EnumHelper.addArmorMaterial("EmeraldArmor", 33, new int[]{3, 8, 6, 3}, 10);
 	
 	//WorldGen
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
@@ -188,6 +198,12 @@ public class MillstoneMod
 	public static Item sapphireHoe = new SapphireHoe(SapphireMaterial).setUnlocalizedName("sapphireHoe");
 	public static Item sapphireSword = new SapphireSword(SapphireMaterial).setUnlocalizedName("sapphireSword");	
 	
+	public static Item emeraldPickaxe = new EmeraldPickaxe(EmeraldMaterial).setUnlocalizedName("emeraldPickaxe");
+	public static Item emeraldShovel = new EmeraldShovel(EmeraldMaterial).setUnlocalizedName("emeraldShovel");
+	public static Item emeraldAxe = new EmeraldAxe(EmeraldMaterial).setUnlocalizedName("emeraldAxe");
+	public static Item emeraldHoe = new EmeraldHoe(EmeraldMaterial).setUnlocalizedName("emeraldHoe");
+	public static Item emeraldSword = new EmeraldSword(EmeraldMaterial).setUnlocalizedName("emeraldSword");	
+	
 	public static Item bonePickaxe = new BonePickaxe(Tier0).setUnlocalizedName("bonePickaxe");
 	public static Item flintKnife = new FlintKnife(Tier0).setUnlocalizedName("flintKnife");
 	public static Item flintHatchet = new FlintHatchet(Tier0).setUnlocalizedName("flintHatchet");
@@ -212,11 +228,21 @@ public class MillstoneMod
 	public static int armorSapphireChestID;
 	public static int armorSapphireLegsID;
 	public static int armorSapphireBootsID;
+	
+	public static int armorEmeraldHelmID;
+	public static int armorEmeraldChestID;
+	public static int armorEmeraldLegsID;
+	public static int armorEmeraldBootsID;
 
 	public static Item armorObsidianHelm = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianHelmID, 0).setUnlocalizedName("ObsidianHelm");
 	public static Item armorObsidianChest = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianChestID, 1).setUnlocalizedName("ObsidianChest");
 	public static Item armorObsidianLegs = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianLegsID, 2).setUnlocalizedName("ObsidianLegs");
 	public static Item armorObsidianBoots = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianBootsID, 3).setUnlocalizedName("ObsidianBoots");
+	
+	public static Item armorEmeraldHelm = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldHelmID, 0).setUnlocalizedName("EmeraldHelm");
+	public static Item armorEmeraldChest = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldChestID, 1).setUnlocalizedName("EmeraldChest");
+	public static Item armorEmeraldLegs = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldLegsID, 2).setUnlocalizedName("EmeraldLegs");
+	public static Item armorEmeraldBoots = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldBootsID, 3).setUnlocalizedName("EmeraldBoots");
 	
 	public static Item armorCopperHelm = new CopperArmor(CopperArmorMaterial, armorCopperHelmID, 0).setUnlocalizedName("CopperHelm");
 	public static Item armorCopperChest = new CopperArmor(CopperArmorMaterial, armorCopperChestID, 1).setUnlocalizedName("CopperChest");
@@ -248,6 +274,7 @@ public class MillstoneMod
 
 	public static Item flour = new Flour();
 	public static Item ricePaper = new ricePaper();
+	public static Item boneShard = new BoneShard();
 	
 	//Food
 	public static ItemFood riceBowl = new riceBowl(3, 0.4F, false);
@@ -319,6 +346,12 @@ public class MillstoneMod
 		GameRegistry.registerItem(obsidianAxe, "obsidianAxe");
 		GameRegistry.registerItem(obsidianPickaxe, "obsidianPickaxe");
 		GameRegistry.registerItem(obsidianShovel, "obsidianShovel");
+		
+		GameRegistry.registerItem(emeraldSword, "emeraldSword");
+		GameRegistry.registerItem(emeraldHoe, "emeraldHoe");
+		GameRegistry.registerItem(emeraldAxe, "emeraldAxe");
+		GameRegistry.registerItem(emeraldPickaxe, "emeraldPickaxe");
+		GameRegistry.registerItem(emeraldShovel, "emeraldShovel");
 		
 		GameRegistry.registerItem(copperSword, "copperSword");
 		GameRegistry.registerItem(copperHoe, "copperHoe");
@@ -394,10 +427,22 @@ public class MillstoneMod
 		GameRegistry.registerItem(sushi, "sushi");
 		GameRegistry.registerItem(ricePaper, "ricePaper");
 		GameRegistry.registerItem(flour, "flour");
+		GameRegistry.registerItem(boneShard, "boneShard");
 		
 		//Spawn ores
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
 		
+		//testing generating random chest
+		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(obsidianPickaxe, 0 , 1, 4, 50));
+		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(obsidianAxe, 0, 1, 4, 50));
+		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(obsidianHoe, 0, 1, 4, 50));
+		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(obsidianSword, 0, 1, 4, 50));
+		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(obsidianShovel, 0, 1, 4, 50));
+		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(armorObsidianHelm, 0, 1, 4, 50));
+		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(armorObsidianChest, 0, 1, 4, 50));
+		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(armorObsidianLegs, 0, 1, 4, 50));
+		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(armorObsidianBoots, 0, 1, 4, 50));
+
 		//Remove Recipes
 		RemoveRecipes.removeRecipes(Items.sugar);
 		RemoveRecipes.removeRecipes(Items.cookie);
@@ -483,7 +528,6 @@ public class MillstoneMod
 		GameRegistry.addShapedRecipe(new ItemStack(diamondGear, 1), new Object[]{" S ", "SCS", " S ", 'C', ironGear, 'S', Items.diamond});
 		
 		//Tools
-
 		GameRegistry.addShapedRecipe(new ItemStack(copperSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', copperIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(copperPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O', copperIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(copperAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', copperIngot});
@@ -501,7 +545,17 @@ public class MillstoneMod
 		GameRegistry.addShapedRecipe(new ItemStack(sapphireAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', sapphire});
 		GameRegistry.addShapedRecipe(new ItemStack(sapphireShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', sapphire});
 		GameRegistry.addShapedRecipe(new ItemStack(sapphireHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', sapphire});
-				
+		
+		GameRegistry.addShapedRecipe(new ItemStack(emeraldSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', Items.emerald});
+		GameRegistry.addShapedRecipe(new ItemStack(emeraldPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O',Items.emerald});
+		GameRegistry.addShapedRecipe(new ItemStack(emeraldAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', Items.emerald});
+		GameRegistry.addShapedRecipe(new ItemStack(emeraldShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', Items.emerald});
+		GameRegistry.addShapedRecipe(new ItemStack(emeraldHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', Items.emerald});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(flintHatchet, 1), new Object[]{" O ", "OI ", 'I', Items.stick, 'O', Items.flint});
+		GameRegistry.addShapedRecipe(new ItemStack(bonePickaxe, 1), new Object[]{"OQO", " I ", " I ", 'I', Items.stick, 'Q', Items.bone, 'O', boneShard});
+		GameRegistry.addShapedRecipe(new ItemStack(flintKnife, 1), new Object[]{"  I", " I ", 'I', Items.flint});
+		
 		//Armor
 		GameRegistry.addShapedRecipe(new ItemStack(armorCopperHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', copperIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(armorCopperChest, 1), new Object[]{"O O", "OOO", "OOO", 'O', copperIngot});
@@ -517,6 +571,11 @@ public class MillstoneMod
 		GameRegistry.addShapedRecipe(new ItemStack(armorSapphireChest, 1), new Object[]{"O O", "OOO", "OOO", 'O', sapphire});
 		GameRegistry.addShapedRecipe(new ItemStack(armorSapphireLegs, 1), new Object[]{"OOO", "O O", "O O", 'O', sapphire});
 		GameRegistry.addShapedRecipe(new ItemStack(armorSapphireBoots, 1), new Object[]{"   ", "O O", "O O", 'O', sapphire});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(armorEmeraldHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', Items.emerald});
+		GameRegistry.addShapedRecipe(new ItemStack(armorEmeraldChest, 1), new Object[]{"O O", "OOO", "OOO", 'O', Items.emerald});
+		GameRegistry.addShapedRecipe(new ItemStack(armorEmeraldLegs, 1), new Object[]{"OOO", "O O", "O O", 'O', Items.emerald});
+		GameRegistry.addShapedRecipe(new ItemStack(armorEmeraldBoots, 1), new Object[]{"   ", "O O", "O O", 'O', Items.emerald});
 		
         GameRegistry.addShapedRecipe(new ItemStack(riceBowl,1), new Object[] {"x", "y", 'x', riceCrop, 'y', Items.bowl});
         GameRegistry.addShapedRecipe(new ItemStack(lantern,1), new Object[] {"xxx", "xyx", "xxx", 'x', ricePaper, 'y', Blocks.torch});
