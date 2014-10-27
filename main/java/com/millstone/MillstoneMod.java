@@ -62,11 +62,14 @@ import com.millstone.items.ricePaper;
 import com.millstone.items.sushi;
 import com.millstone.proxy.CommonProxy;
 import com.millstone.tileentity.TileEntityMillstone;
+import com.millstone.tools.BonePickaxe;
 import com.millstone.tools.CopperAxe;
 import com.millstone.tools.CopperHoe;
 import com.millstone.tools.CopperPickaxe;
 import com.millstone.tools.CopperShovel;
 import com.millstone.tools.CopperSword;
+import com.millstone.tools.FlintHatchet;
+import com.millstone.tools.FlintKnife;
 import com.millstone.tools.ObsidianAxe;
 import com.millstone.tools.ObsidianHoe;
 import com.millstone.tools.ObsidianPickaxe;
@@ -126,6 +129,7 @@ public class MillstoneMod
 	public static ToolMaterial CopperMaterial = EnumHelper.addToolMaterial("CopperMaterial" , 2 , 210, 5.0F, 2.0F, 14);
 	public static ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
 	public static ToolMaterial SapphireMaterial = EnumHelper.addToolMaterial("SapphireMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
+	public static ToolMaterial Tier0 = EnumHelper.addToolMaterial("Tier0" , 0, 59, 2.0F, 0.0F, 15);
 
 	public static ArmorMaterial ObsidianArmorMaterial = EnumHelper.addArmorMaterial("ObsidianArmor", 42, new int[]{4, 10, 4, 2}, 20);
 	public static ArmorMaterial CopperArmorMaterial = EnumHelper.addArmorMaterial("CopperArmor", 13, new int[]{2, 5, 4, 1}, 10);
@@ -183,6 +187,10 @@ public class MillstoneMod
 	public static Item sapphireAxe = new SapphireAxe(SapphireMaterial).setUnlocalizedName("sapphireAxe");
 	public static Item sapphireHoe = new SapphireHoe(SapphireMaterial).setUnlocalizedName("sapphireHoe");
 	public static Item sapphireSword = new SapphireSword(SapphireMaterial).setUnlocalizedName("sapphireSword");	
+	
+	public static Item bonePickaxe = new BonePickaxe(Tier0).setUnlocalizedName("bonePickaxe");
+	public static Item flintKnife = new FlintKnife(Tier0).setUnlocalizedName("flintKnife");
+	public static Item flintHatchet = new FlintHatchet(Tier0).setUnlocalizedName("flintHatchet");
 	
 	//Armor
 	public static int armorObsidianHelmID;
@@ -318,6 +326,10 @@ public class MillstoneMod
 		GameRegistry.registerItem(copperPickaxe, "copperPickaxe");
 		GameRegistry.registerItem(copperShovel, "copperShovel");
 		
+		GameRegistry.registerItem(bonePickaxe, "bonePickaxe");
+		GameRegistry.registerItem(flintKnife, "flintKnife");
+		GameRegistry.registerItem(flintHatchet, "flintAxe");
+		
 		GameRegistry.registerItem(rubySword, "rubySword");
 		GameRegistry.registerItem(rubyHoe, "rubyHoe");
 		GameRegistry.registerItem(rubyAxe, "rubyAxe");
@@ -415,6 +427,13 @@ public class MillstoneMod
 		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.quartz_stairs));
 		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.nether_brick_stairs));
 		
+		//getting rid of wooden tools
+		RemoveRecipes.removeRecipes(Items.wooden_axe);
+		RemoveRecipes.removeRecipes(Items.wooden_pickaxe);
+		RemoveRecipes.removeRecipes(Items.wooden_shovel);
+		RemoveRecipes.removeRecipes(Items.wooden_sword);
+		RemoveRecipes.removeRecipes(Items.wooden_hoe);
+		
 		//Logs to Planks reduction
         GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 0), new Object[] {new ItemStack(Blocks.log, 1, 0)});
         GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 1), new Object[] {new ItemStack(Blocks.log, 1, 1)});
@@ -464,12 +483,7 @@ public class MillstoneMod
 		GameRegistry.addShapedRecipe(new ItemStack(diamondGear, 1), new Object[]{" S ", "SCS", " S ", 'C', ironGear, 'S', Items.diamond});
 		
 		//Tools
-		GameRegistry.addShapedRecipe(new ItemStack(obsidianSword, 1), new Object[]{" O ", " O ", " I ", 'I', ironRod, 'O', obsidianBlock});
-		GameRegistry.addShapedRecipe(new ItemStack(obsidianPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', ironRod, 'O', obsidianBlock});
-		GameRegistry.addShapedRecipe(new ItemStack(obsidianAxe, 1), new Object[]{" OO", " IO", " I ", 'I', ironRod, 'O', obsidianBlock});
-		GameRegistry.addShapedRecipe(new ItemStack(obsidianShovel, 1), new Object[]{" O ", " I ", " I ", 'I', ironRod, 'O', obsidianBlock});
-		GameRegistry.addShapedRecipe(new ItemStack(obsidianHoe, 1), new Object[]{" OO", " I ", " I ", 'I', ironRod, 'O', obsidianBlock});
-		
+
 		GameRegistry.addShapedRecipe(new ItemStack(copperSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', copperIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(copperPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O', copperIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(copperAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', copperIngot});
@@ -489,11 +503,6 @@ public class MillstoneMod
 		GameRegistry.addShapedRecipe(new ItemStack(sapphireHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', sapphire});
 				
 		//Armor
-		GameRegistry.addShapedRecipe(new ItemStack(armorObsidianHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', obsidianBlock});
-		GameRegistry.addShapedRecipe(new ItemStack(armorObsidianChest, 1), new Object[]{"O O", "OOO", "OOO", 'O', obsidianBlock});
-		GameRegistry.addShapedRecipe(new ItemStack(armorObsidianLegs, 1), new Object[]{"OOO", "O O", "O O", 'O', obsidianBlock});
-		GameRegistry.addShapedRecipe(new ItemStack(armorObsidianBoots, 1), new Object[]{"   ", "O O", "O O", 'O', obsidianBlock});
-		
 		GameRegistry.addShapedRecipe(new ItemStack(armorCopperHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', copperIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(armorCopperChest, 1), new Object[]{"O O", "OOO", "OOO", 'O', copperIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(armorCopperLegs, 1), new Object[]{"OOO", "O O", "O O", 'O', copperIngot});
