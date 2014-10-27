@@ -305,6 +305,7 @@ public class MillstoneMod
     	registerEntity(Scarecrow.class, "Scarecrow");
     }
     
+    
     @EventHandler
     public void init(FMLInitializationEvent event)
     {   	
@@ -382,6 +383,11 @@ public class MillstoneMod
 		GameRegistry.registerItem(armorObsidianChest, "Obsidianchest");
 		GameRegistry.registerItem(armorObsidianLegs, "ObsidianLegs");
 		GameRegistry.registerItem(armorObsidianBoots, "ObsidianBoots");
+		
+		GameRegistry.registerItem(armorEmeraldHelm, "EmeraldHelm");	
+		GameRegistry.registerItem(armorEmeraldChest, "Emeraldchest");
+		GameRegistry.registerItem(armorEmeraldLegs, "EmeraldLegs");
+		GameRegistry.registerItem(armorEmeraldBoots, "EmeraldBoots");
 		
 		GameRegistry.registerItem(armorCopperHelm, "CopperHelm");	
 		GameRegistry.registerItem(armorCopperChest, "Copperchest");
@@ -626,20 +632,6 @@ public class MillstoneMod
 		
     }  
     
-	@EventHandler
-	public void takenFromCrafting(EntityPlayer player, ItemStack item,
-			IInventory matrix) {
-		for (int i = 0; i < matrix.getSizeInventory(); i++) {
-			if (matrix.getStackInSlot(i) != null) {
-				ItemStack itemnew = matrix.getStackInSlot(i);
-				if (itemnew != null && itemnew.getItem() == flintKnife) {
-					ItemStack k = new ItemStack(flintKnife, 2);
-					k.damageItem(itemnew.getItemDamage() + 1, player);
-					matrix.setInventorySlotContents(i, k);
-				}
-			}
-		}
-	}
     
     public static void registerEntity(Class entityClass, String name)
     {

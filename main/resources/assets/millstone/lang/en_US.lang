@@ -77,14 +77,22 @@ item.ObsidianHelm.name=Obsidian Helmet
 item.ObsidianChest.name=Obsidian Chestplate
 item.ObsidianLegs.name=Obsidian Leggings
 item.ObsidianBoots.name=Obsidian Boots
+
+item.EmeraldHelm.name=Emerald Helmet
+item.EmeraldChest.name=Emerald Chestplate
+item.EmeraldLegs.name=Emerald Leggings
+item.EmeraldBoots.name=Emerald Boots
+
 item.CopperHelm.name=Copper Helmet
 item.CopperChest.name=Copper Chestplate
 item.CopperLegs.name=Copper Leggings
 item.CopperBoots.name=Copper Boots
+
 item.RubyHelm.name=Ruby Helmet
 item.RubyChest.name=Ruby Chestplate
 item.RubyLegs.name=Ruby Leggings
 item.RubyBoots.name=Ruby Boots
+
 item.SapphireHelm.name=Sapphire Helmet
 item.SapphireChest.name=Sapphire Chestplate
 item.SapphireLegs.name=Sapphire Leggings
