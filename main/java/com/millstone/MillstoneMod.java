@@ -6,8 +6,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityList;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
@@ -555,6 +557,7 @@ public class MillstoneMod
 		GameRegistry.addShapedRecipe(new ItemStack(flintHatchet, 1), new Object[]{" O ", "OI ", 'I', Items.stick, 'O', Items.flint});
 		GameRegistry.addShapedRecipe(new ItemStack(bonePickaxe, 1), new Object[]{"OQO", " I ", " I ", 'I', Items.stick, 'Q', Items.bone, 'O', boneShard});
 		GameRegistry.addShapedRecipe(new ItemStack(flintKnife, 1), new Object[]{"  I", " I ", 'I', Items.flint});
+		GameRegistry.addShapelessRecipe(new ItemStack(boneShard, 1), new Object[]{flintKnife, Items.bone});
 		
 		//Armor
 		GameRegistry.addShapedRecipe(new ItemStack(armorCopperHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', copperIngot});
@@ -623,7 +626,20 @@ public class MillstoneMod
 		
     }  
     
-    
+	@EventHandler
+	public void takenFromCrafting(EntityPlayer player, ItemStack item,
+			IInventory matrix) {
+		for (int i = 0; i < matrix.getSizeInventory(); i++) {
+			if (matrix.getStackInSlot(i) != null) {
+				ItemStack itemnew = matrix.getStackInSlot(i);
+				if (itemnew != null && itemnew.getItem() == flintKnife) {
+					ItemStack k = new ItemStack(flintKnife, 2);
+					k.damageItem(itemnew.getItemDamage() + 1, player);
+					matrix.setInventorySlotContents(i, k);
+				}
+			}
+		}
+	}
     
     public static void registerEntity(Class entityClass, String name)
     {
