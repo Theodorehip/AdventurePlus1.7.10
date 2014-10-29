@@ -63,8 +63,8 @@ import com.millstone.items.SilverDust;
 import com.millstone.items.SilverIngot;
 import com.millstone.items.StoneDust;
 import com.millstone.items.Tomato;
-import com.millstone.items.riceBowl;
-import com.millstone.items.ricePaper;
+import com.millstone.items.RiceBowl;
+import com.millstone.items.RicePaper;
 import com.millstone.items.sushi;
 import com.millstone.proxy.CommonProxy;
 import com.millstone.tileentity.TileEntityMillstone;
@@ -275,11 +275,11 @@ public class MillstoneMod
 	public static Item ironRod = new IronRod();
 
 	public static Item flour = new Flour();
-	public static Item ricePaper = new ricePaper();
+	public static Item ricePaper = new RicePaper();
 	public static Item boneShard = new BoneShard();
 	
 	//Food
-	public static ItemFood riceBowl = new riceBowl(3, 0.4F, false);
+	public static ItemFood riceBowl = new RiceBowl(3, 0.4F, false);
 	public static ItemFood sushi = new sushi(6, 0.7F, false);
 	
 	

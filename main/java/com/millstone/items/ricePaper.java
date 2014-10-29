@@ -5,9 +5,9 @@ import com.millstone.MillstoneMod;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class ricePaper extends Item {
+public class RicePaper extends Item {
 	
-	public ricePaper() {
+	public RicePaper() {
 		this.setUnlocalizedName("ricePaper");
 		this.setTextureName(MillstoneMod.MODID + ":ricePaper");
 		this.setCreativeTab(MillstoneMod.tabMillstone);

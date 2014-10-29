@@ -8,10 +8,10 @@ import net.minecraft.world.World;
 
 import com.millstone.MillstoneMod;
 
-public class riceBowl extends ItemFood{
+public class RiceBowl extends ItemFood{
 	
 	
-	public riceBowl(int hunger, float saturation, boolean isWolfFood) {
+	public RiceBowl(int hunger, float saturation, boolean isWolfFood) {
 		super(hunger, saturation, isWolfFood);
 		
 		setUnlocalizedName("riceBowl");
