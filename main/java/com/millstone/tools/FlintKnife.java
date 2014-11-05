@@ -12,13 +12,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.IIcon;
 
-public class FlintKnife extends ItemSword{
+public class FlintKnife extends ItemSword {
 
 	public FlintKnife(ToolMaterial material) {
 		super(material);
+
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:flint_knife");
-		
+
+		this.setTextureName("millstonemod:flint_knife");
+
 	}
-	
+
 }
