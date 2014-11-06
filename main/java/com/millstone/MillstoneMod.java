@@ -5,11 +5,10 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityList;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
@@ -44,6 +43,7 @@ import com.millstone.crafting.CraftingHandler;
 import com.millstone.creativetab.tabMillstone;
 import com.millstone.creativetab.tabMillstoneArmor;
 import com.millstone.creativetab.tabMillstoneTools;
+import com.millstone.enchantments.Piercing;
 import com.millstone.entities.Scarecrow;
 import com.millstone.handler.GuiHandler;
 import com.millstone.handler.RemoveRecipes;
@@ -57,14 +57,14 @@ import com.millstone.items.GoldDust;
 import com.millstone.items.IronDust;
 import com.millstone.items.IronRod;
 import com.millstone.items.ObsidianDust;
+import com.millstone.items.RiceBowl;
+import com.millstone.items.RicePaper;
 import com.millstone.items.Ruby;
 import com.millstone.items.Sapphire;
 import com.millstone.items.SilverDust;
 import com.millstone.items.SilverIngot;
 import com.millstone.items.StoneDust;
 import com.millstone.items.Tomato;
-import com.millstone.items.RiceBowl;
-import com.millstone.items.RicePaper;
 import com.millstone.items.sushi;
 import com.millstone.proxy.CommonProxy;
 import com.millstone.tileentity.TileEntityMillstone;
@@ -167,7 +167,7 @@ public class MillstoneMod
 	public static Block lavaBrick  = new LavaBrick(Material.rock).setBlockName("lavaBrick").setBlockTextureName(MODID + ":" + "lavaBrick");
 	public static Block Firerack  = new Firerack(Material.rock).setBlockName("Firerack").setBlockTextureName(MODID + ":" + "Firerack");
 
-	
+	//Gears
 	public static Item woodGear = new com.millstone.items.ItemGear().setMaxDamage(500).setTextureName(MODID + ":" + "woodGear").setUnlocalizedName("woodGear");
 	public static Item stoneGear = new com.millstone.items.ItemGear().setMaxDamage(1320).setTextureName(MODID + ":" + "stoneGear").setUnlocalizedName("stoneGear");
 	public static Item ironGear = new com.millstone.items.ItemGear().setMaxDamage(2500).setTextureName(MODID + ":" + "ironGear").setUnlocalizedName("ironGear");
@@ -261,7 +261,7 @@ public class MillstoneMod
 	public static Item armorSapphireLegs = new SapphireArmor(SapphireArmorMaterial, armorSapphireLegsID, 2).setUnlocalizedName("SapphireLegs");
 	public static Item armorSapphireBoots = new SapphireArmor(SapphireArmorMaterial, armorSapphireBootsID, 3).setUnlocalizedName("SapphireBoots");
 
-	
+	//Items 
 	public static Item stoneDust = new StoneDust();
 	public static Item goldDust = new GoldDust();
 	public static Item ironDust = new IronDust();
@@ -277,6 +277,7 @@ public class MillstoneMod
 	public static Item flour = new Flour();
 	public static Item ricePaper = new RicePaper();
 	public static Item boneShard = new BoneShard();
+	
 	
 	//Food
 	public static ItemFood riceBowl = new RiceBowl(3, 0.4F, false);
@@ -299,6 +300,11 @@ public class MillstoneMod
     public static Block ricePlant = new RicePlant().setBlockName("ricePlant");
     public static Item riceCrop = new ItemSeeds(ricePlant, Blocks.farmland).setUnlocalizedName("riceCrop").setTextureName(MODID + ":riceCrop").setCreativeTab(MillstoneMod.tabMillstone);
 	
+    
+    //Enchantment
+    public static final Enchantment Piercing = new Piercing(199, 5);
+    
+    
     @EventHandler
     public void preinit(FMLInitializationEvent event)
     {  
