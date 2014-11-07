@@ -66,6 +66,7 @@ import com.millstone.items.SilverDust;
 import com.millstone.items.SilverIngot;
 import com.millstone.items.StoneDust;
 import com.millstone.items.Tomato;
+import com.millstone.items.rottenArrow;
 import com.millstone.items.sushi;
 import com.millstone.proxy.CommonProxy;
 import com.millstone.tileentity.TileEntityMillstone;
@@ -279,6 +280,8 @@ public class MillstoneMod
 	public static Item ricePaper = new RicePaper();
 	public static Item boneShard = new BoneShard();
 	
+	public static Item rottenArrow = new rottenArrow();
+
 	
 	//Food
 	public static ItemFood riceBowl = new RiceBowl(3, 0.4F, false);
@@ -308,8 +311,10 @@ public class MillstoneMod
     @EventHandler
     public void preinit(FMLInitializationEvent event)
     {  
+    	//Entities
     	registerEntity(Scarecrow.class, "Scarecrow");
     	
+    	//Events
     	MinecraftForge.EVENT_BUS.register(new CustomDropsEvent());
     }
     
@@ -444,6 +449,7 @@ public class MillstoneMod
 		GameRegistry.registerItem(ricePaper, "ricePaper");
 		GameRegistry.registerItem(flour, "flour");
 		GameRegistry.registerItem(boneShard, "boneShard");
+		GameRegistry.registerItem(rottenArrow, "rottenArrow");
 		
 		//Spawn ores
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
