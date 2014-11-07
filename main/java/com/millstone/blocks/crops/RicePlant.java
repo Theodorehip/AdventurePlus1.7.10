@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.ItemRegistry;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -48,7 +49,7 @@ public class RicePlant extends BlockCrops{
 	@Override
 	protected Item func_149866_i()
     {
-        return MillstoneMod.riceCrop;
+        return ItemRegistry.riceCrop;
     }
 	
 	
@@ -58,7 +59,7 @@ public class RicePlant extends BlockCrops{
 	@Override
     protected Item func_149865_P()
     {
-        return MillstoneMod.riceCrop;
+        return ItemRegistry.riceCrop;
     }
 	
 	

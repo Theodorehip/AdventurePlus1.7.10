@@ -3,6 +3,7 @@ package com.millstone.worldgen;
 import java.util.Random;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.BlockRegistry;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
@@ -34,18 +35,18 @@ public class MillstoneModWorldGen implements IWorldGenerator {
 
 	private void generateSurface(World world, Random random, int x, int z) {
 		// this.addOreSpawn
-		this.addOreSpawn(MillstoneMod.copperOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
-		this.addOreSpawn(MillstoneMod.silverOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
+		this.addOreSpawn(BlockRegistry.copperOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
+		this.addOreSpawn(BlockRegistry.silverOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
 		
 		 String s = world.getBiomeGenForCoords(x, z).biomeName;
-		    	this.addOreSpawn(MillstoneMod.sapphireOre, world, random, x, z, 16, 16, 2 + random.nextInt(6), 25, 0, 20);
+		    	this.addOreSpawn(BlockRegistry.sapphireOre, world, random, x, z, 16, 16, 2 + random.nextInt(6), 25, 0, 20);
 		
 	}
 
 	private void generateNether(World world, Random random, int x, int z) {
-		this.addNetherOreSpawn(MillstoneMod.lavaBrick, world, random, x, z, 16, 16, 4 + random.nextInt(6), 50, 0, 40);
-		this.addNetherOreSpawn(MillstoneMod.netherRubyOre, world, random, x, z, 16, 16, 2 + random.nextInt(15), 50, 0, 100);
-		this.addNetherOreSpawn(MillstoneMod.Firerack, world, random, x, z, 16, 16, 1 + random.nextInt(15), 50, 0, 120);
+		this.addNetherOreSpawn(BlockRegistry.lavaBrick, world, random, x, z, 16, 16, 4 + random.nextInt(6), 50, 0, 40);
+		this.addNetherOreSpawn(BlockRegistry.netherRubyOre, world, random, x, z, 16, 16, 2 + random.nextInt(15), 50, 0, 100);
+		this.addNetherOreSpawn(BlockRegistry.Firerack, world, random, x, z, 16, 16, 1 + random.nextInt(15), 50, 0, 120);
 
 	}
 

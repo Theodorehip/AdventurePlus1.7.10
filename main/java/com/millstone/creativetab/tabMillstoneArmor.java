@@ -2,10 +2,11 @@ package com.millstone.creativetab;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+
 import com.millstone.MillstoneMod;
+import com.millstone.registry.ItemRegistry;
 
 public class tabMillstoneArmor extends CreativeTabs{
 	
@@ -16,6 +17,6 @@ public class tabMillstoneArmor extends CreativeTabs{
 	
 	@Override
 	public Item getTabIconItem(){
-		return MillstoneMod.armorObsidianChest;
+		return ItemRegistry.armorObsidianChest;
 	}
 }

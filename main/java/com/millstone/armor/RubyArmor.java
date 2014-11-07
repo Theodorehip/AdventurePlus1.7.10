@@ -1,6 +1,7 @@
 package com.millstone.armor;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.ItemRegistry;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
@@ -30,13 +31,13 @@ public class RubyArmor extends ItemArmor {
 	public String getArmorTexture(ItemStack itemstack, Entity entity, int slot,
 			String type) {
 
-		if (itemstack.getItem() == MillstoneMod.armorRubyHelm
-				|| itemstack.getItem() == MillstoneMod.armorRubyChest
-				|| itemstack.getItem() == MillstoneMod.armorRubyBoots) {
+		if (itemstack.getItem() == ItemRegistry.armorRubyHelm
+				|| itemstack.getItem() == ItemRegistry.armorRubyChest
+				|| itemstack.getItem() == ItemRegistry.armorRubyBoots) {
 
 			return MillstoneMod.MODID + ":textures/model/ruby_layer_1.png";
 
-		} else if (itemstack.getItem() == MillstoneMod.armorRubyLegs) {
+		} else if (itemstack.getItem() == ItemRegistry.armorRubyLegs) {
 
 			return MillstoneMod.MODID + ":textures/model/ruby_layer_2.png";
 

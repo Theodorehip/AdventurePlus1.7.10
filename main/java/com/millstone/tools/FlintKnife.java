@@ -18,9 +18,9 @@ public class FlintKnife extends ItemSword {
 		super(material);
 
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-
 		this.setTextureName("millstonemod:flint_knife");
-
+		
+		
 	}
 
 }

@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.ItemRegistry;
 
 public class EmeraldArmor extends ItemArmor {
 
@@ -31,13 +32,13 @@ public class EmeraldArmor extends ItemArmor {
 	public String getArmorTexture(ItemStack itemstack, Entity entity, int slot,
 			String type) {
 
-		if (itemstack.getItem() == MillstoneMod.armorEmeraldHelm
-				|| itemstack.getItem() == MillstoneMod.armorEmeraldChest
-				|| itemstack.getItem() == MillstoneMod.armorEmeraldBoots) {
+		if (itemstack.getItem() == ItemRegistry.armorEmeraldHelm
+				|| itemstack.getItem() == ItemRegistry.armorEmeraldChest
+				|| itemstack.getItem() == ItemRegistry.armorEmeraldBoots) {
 
 			return MillstoneMod.MODID + ":textures/model/emerald_layer_1.png";
 
-		} else if (itemstack.getItem() == MillstoneMod.armorEmeraldLegs) {
+		} else if (itemstack.getItem() == ItemRegistry.armorEmeraldLegs) {
 
 			return MillstoneMod.MODID + ":textures/model/emerald_layer_2.png";
 

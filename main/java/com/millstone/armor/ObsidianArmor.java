@@ -1,6 +1,7 @@
 package com.millstone.armor;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.ItemRegistry;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
@@ -30,13 +31,13 @@ public class ObsidianArmor extends ItemArmor {
 	public String getArmorTexture(ItemStack itemstack, Entity entity, int slot,
 			String type) {
 
-		if (itemstack.getItem() == MillstoneMod.armorObsidianHelm
-				|| itemstack.getItem() == MillstoneMod.armorObsidianChest
-				|| itemstack.getItem() == MillstoneMod.armorObsidianBoots) {
+		if (itemstack.getItem() == ItemRegistry.armorObsidianHelm
+				|| itemstack.getItem() == ItemRegistry.armorObsidianChest
+				|| itemstack.getItem() == ItemRegistry.armorObsidianBoots) {
 
 			return MillstoneMod.MODID + ":textures/model/obsidian_layer_1.png";
 
-		} else if (itemstack.getItem() == MillstoneMod.armorObsidianLegs) {
+		} else if (itemstack.getItem() == ItemRegistry.armorObsidianLegs) {
 
 			return MillstoneMod.MODID + ":textures/model/obsidian_layer_2.png";
 

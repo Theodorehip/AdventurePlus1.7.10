@@ -10,7 +10,7 @@ public class EmeraldAxe extends ItemAxe{
 	public EmeraldAxe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:EmeraldAxe");
+			this.setTextureName("millstonemod:Emerald_Axe");
 		
 	}
 

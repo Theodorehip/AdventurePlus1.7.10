@@ -10,7 +10,7 @@ public class EmeraldPickaxe extends ItemPickaxe{
 	public EmeraldPickaxe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:EmeraldPickaxe");
+			this.setTextureName("millstonemod:Emerald_Pickaxe");
 		
 	}
 

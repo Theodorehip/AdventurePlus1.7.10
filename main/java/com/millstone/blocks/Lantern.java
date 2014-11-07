@@ -11,6 +11,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.ItemRegistry;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -64,7 +65,7 @@ public class Lantern extends Block{
 
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
-        return MillstoneMod.ricePaper;
+        return ItemRegistry.ricePaper;
     }
 
     public MapColor getMapColor(int p_149728_1_)

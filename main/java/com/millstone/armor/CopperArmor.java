@@ -1,6 +1,7 @@
 package com.millstone.armor;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.ItemRegistry;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
@@ -30,13 +31,13 @@ public class CopperArmor extends ItemArmor {
 	public String getArmorTexture(ItemStack itemstack, Entity entity, int slot,
 			String type) {
 
-		if (itemstack.getItem() == MillstoneMod.armorCopperHelm
-				|| itemstack.getItem() == MillstoneMod.armorCopperChest
-				|| itemstack.getItem() == MillstoneMod.armorCopperBoots) {
+		if (itemstack.getItem() == ItemRegistry.armorCopperHelm
+				|| itemstack.getItem() == ItemRegistry.armorCopperChest
+				|| itemstack.getItem() == ItemRegistry.armorCopperBoots) {
 
 			return MillstoneMod.MODID + ":textures/model/copper_layer_1.png";
 
-		} else if (itemstack.getItem() == MillstoneMod.armorCopperLegs) {
+		} else if (itemstack.getItem() == ItemRegistry.armorCopperLegs) {
 
 			return MillstoneMod.MODID + ":textures/model/copper_layer_2.png";
 

@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.ItemRegistry;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -43,10 +44,10 @@ public class CottonPlant extends BlockCrops {
 	}
 	
 	protected Item func_149866_i() {
-		return MillstoneMod.cottonSeeds;
+		return ItemRegistry.cottonSeeds;
 	}
 	
 	protected Item func_149865_P() {
-		return MillstoneMod.cotton;
+		return ItemRegistry.cotton;
 	}
 }

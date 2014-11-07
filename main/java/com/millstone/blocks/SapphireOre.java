@@ -3,6 +3,7 @@ package com.millstone.blocks;
 import java.util.Random;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.ItemRegistry;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -24,7 +25,7 @@ public class SapphireOre extends Block {
 	}
 
 	public Item getItemDropped(int i, Random random, int j) {
-		return MillstoneMod.sapphire;
+		return ItemRegistry.sapphire;
 	}
 
 	public int quantityDropped(Random random) {

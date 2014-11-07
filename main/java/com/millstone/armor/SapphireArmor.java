@@ -1,6 +1,7 @@
 package com.millstone.armor;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.ItemRegistry;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
@@ -30,13 +31,13 @@ public class SapphireArmor extends ItemArmor {
 	public String getArmorTexture(ItemStack itemstack, Entity entity, int slot,
 			String type) {
 
-		if (itemstack.getItem() == MillstoneMod.armorSapphireHelm
-				|| itemstack.getItem() == MillstoneMod.armorSapphireChest
-				|| itemstack.getItem() == MillstoneMod.armorSapphireBoots) {
+		if (itemstack.getItem() == ItemRegistry.armorSapphireHelm
+				|| itemstack.getItem() == ItemRegistry.armorSapphireChest
+				|| itemstack.getItem() == ItemRegistry.armorSapphireBoots) {
 
 			return MillstoneMod.MODID + ":textures/model/sapphire_layer_1.png";
 
-		} else if (itemstack.getItem() == MillstoneMod.armorSapphireLegs) {
+		} else if (itemstack.getItem() == ItemRegistry.armorSapphireLegs) {
 
 			return MillstoneMod.MODID + ":textures/model/sapphire_layer_2.png";
 

@@ -3,6 +3,7 @@ package com.millstone.blocks;
 import java.util.Random;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.BlockRegistry;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -24,7 +25,7 @@ public class CopperOre extends Block{
 	}
 	
 	public Block getDropped(int i, Random random, int j){
-		return MillstoneMod.copperOre;
+		return BlockRegistry.copperOre;
 	}
 	
 	@SideOnly(Side.CLIENT)

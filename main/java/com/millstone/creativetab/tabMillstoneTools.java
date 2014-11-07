@@ -2,7 +2,9 @@ package com.millstone.creativetab;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+
 import com.millstone.MillstoneMod;
+import com.millstone.registry.ItemRegistry;
 
 public class tabMillstoneTools extends CreativeTabs{
 	
@@ -13,6 +15,6 @@ public class tabMillstoneTools extends CreativeTabs{
 	
 	@Override
 	public Item getTabIconItem(){
-		return MillstoneMod.obsidianPickaxe;
+		return ItemRegistry.obsidianPickaxe;
 	}
 }

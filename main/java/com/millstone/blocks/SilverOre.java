@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.BlockRegistry;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -24,7 +25,7 @@ public class SilverOre extends Block{
 	}
 	
 	public Block getDropped(int i, Random random, int j){
-		return MillstoneMod.silverOre;
+		return BlockRegistry.silverOre;
 	}
 	
 	@SideOnly(Side.CLIENT)

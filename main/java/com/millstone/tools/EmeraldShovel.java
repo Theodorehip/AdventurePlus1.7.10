@@ -10,7 +10,7 @@ public class EmeraldShovel extends ItemSpade{
 	public EmeraldShovel(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
-			this.setTextureName("millstonemod:EmeraldShovel");
+			this.setTextureName("millstonemod:Emerald_Shovel");
 		
 	}
 
