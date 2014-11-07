@@ -70,6 +70,7 @@ import com.millstone.items.rottenArrow;
 import com.millstone.items.sushi;
 import com.millstone.proxy.CommonProxy;
 import com.millstone.registry.BlockRegistry;
+import com.millstone.registry.ChestGenRegistry;
 import com.millstone.registry.ItemRegistry;
 import com.millstone.registry.RecipeRegistry;
 import com.millstone.tileentity.TileEntityMillstone;
@@ -169,16 +170,7 @@ public class MillstoneMod
 		
 		//testing generating random chest
 		//needs spawnrate tweak
-		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(ItemRegistry.obsidianPickaxe, 0 , 1, 4, 50));
-		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(ItemRegistry.obsidianAxe, 0, 1, 4, 50));
-		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(ItemRegistry.obsidianHoe, 0, 1, 4, 50));
-		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(ItemRegistry.obsidianSword, 0, 1, 4, 50));
-		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(ItemRegistry.obsidianShovel, 0, 1, 4, 50));
-		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(ItemRegistry.armorObsidianHelm, 0, 1, 4, 50));
-		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(ItemRegistry.armorObsidianChest, 0, 1, 4, 50));
-		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(ItemRegistry.armorObsidianLegs, 0, 1, 4, 50));
-		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(ItemRegistry.armorObsidianBoots, 0, 1, 4, 50));
-
+		ChestGenRegistry.RegisterGeneration();
 		RecipeRegistry.RegisterCrafting();
 		RecipeRegistry.RemoveRecipes();
 	    RecipeRegistry.RegisterSmelting();
