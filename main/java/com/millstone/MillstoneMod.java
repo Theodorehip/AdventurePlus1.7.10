@@ -45,6 +45,7 @@ import com.millstone.creativetab.tabMillstoneArmor;
 import com.millstone.creativetab.tabMillstoneTools;
 import com.millstone.enchantments.Piercing;
 import com.millstone.entities.Scarecrow;
+import com.millstone.handler.CustomDropsEvent;
 import com.millstone.handler.GuiHandler;
 import com.millstone.handler.RemoveRecipes;
 import com.millstone.items.BoneShard;
@@ -304,11 +305,12 @@ public class MillstoneMod
     //Enchantment
     public static final Enchantment Piercing = new Piercing(199, 5);
     
-    
     @EventHandler
     public void preinit(FMLInitializationEvent event)
     {  
     	registerEntity(Scarecrow.class, "Scarecrow");
+    	
+    	MinecraftForge.EVENT_BUS.register(new CustomDropsEvent());
     }
     
     
@@ -635,6 +637,8 @@ public class MillstoneMod
 		
 		//Register your renderer in your proxy.
 		proxy.registerRenderThings();
+		
+		
 		
     }  
     

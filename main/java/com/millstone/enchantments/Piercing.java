@@ -2,6 +2,7 @@ package com.millstone.enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
+import net.minecraft.util.DamageSource;
 
 public class Piercing extends Enchantment{
 	
