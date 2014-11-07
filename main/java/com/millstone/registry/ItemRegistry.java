@@ -37,6 +37,7 @@ import com.millstone.items.SilverDust;
 import com.millstone.items.SilverIngot;
 import com.millstone.items.StoneDust;
 import com.millstone.items.Tomato;
+import com.millstone.items.rottenArrow;
 import com.millstone.items.sushi;
 import com.millstone.tools.BonePickaxe;
 import com.millstone.tools.CopperAxe;
@@ -186,7 +187,15 @@ public class ItemRegistry{
 	public static Item silverIngot = new SilverIngot();
 	public static Item ironRod = new IronRod();
 	public static Item boneShard = new BoneShard();
+	public static Item rottenArrow = new rottenArrow();
 	
+	//Gears
+	public static Item woodGear = new com.millstone.items.ItemGear().setMaxDamage(500).setTextureName(MillstoneMod.MODID + ":" + "woodGear").setUnlocalizedName("woodGear");
+	public static Item stoneGear = new com.millstone.items.ItemGear().setMaxDamage(1320).setTextureName(MillstoneMod.MODID + ":" + "stoneGear").setUnlocalizedName("stoneGear");
+	public static Item ironGear = new com.millstone.items.ItemGear().setMaxDamage(2500).setTextureName(MillstoneMod.MODID + ":" + "ironGear").setUnlocalizedName("ironGear");
+	public static Item goldGear = new com.millstone.items.ItemGear().setMaxDamage(240).setTextureName(MillstoneMod.MODID + ":" + "goldGear").setUnlocalizedName("goldGear");
+	public static Item diamondGear = new com.millstone.items.ItemGear().setMaxDamage(15612).setTextureName(MillstoneMod.MODID + ":" + "diamondGear").setUnlocalizedName("diamondGear");
+
 	//Food
 	public static ItemFood riceBowl = new RiceBowl(3, 0.4F, false);
 	public static ItemFood sushi = new sushi(6, 0.7F, false);
@@ -293,7 +302,8 @@ public class ItemRegistry{
 	GameRegistry.registerItem(boneShard, "boneShard");
 	GameRegistry.registerItem(ricePaper, "ricePaper");
 	GameRegistry.registerItem(flour, "flour");
-	
+	GameRegistry.registerItem(rottenArrow, "rottenArrow");
+		
 	//Plants
 	GameRegistry.registerBlock(ricePlant, "ricePlant");
 	GameRegistry.registerBlock(tomatoPlant, "tomatoPlant");
@@ -315,6 +325,14 @@ public class ItemRegistry{
 	//food
 	GameRegistry.registerItem(riceBowl, "riceBowl");
 	GameRegistry.registerItem(sushi, "sushi");
+
+	
+	//Gears
+	GameRegistry.registerItem(woodGear, "woodGear");
+	GameRegistry.registerItem(stoneGear, "stoneGear");	
+	GameRegistry.registerItem(ironGear, "ironGear");
+	GameRegistry.registerItem(goldGear, "goldGear");
+	GameRegistry.registerItem(diamondGear, "diamondGear");
 
 
 		

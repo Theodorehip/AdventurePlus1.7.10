@@ -19,6 +19,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import com.millstone.MillstoneMod;
+import com.millstone.registry.BlockRegistry;
 import com.millstone.tileentity.TileEntityMillstone;
 
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
@@ -68,7 +69,7 @@ public class Millstone extends BlockContainer {
 	
 	//Retruns what item is dropped when broken
 	public Item getItemDropped(int i, Random random, int j) {
-		return Item.getItemFromBlock((MillstoneMod.millstoneIdle));
+		return Item.getItemFromBlock((BlockRegistry.millstoneIdle));
 	}
 	
 	public void onBlockAdded(World world, int x, int y, int z) {
@@ -160,9 +161,9 @@ public class Millstone extends BlockContainer {
 		keepInventory = true;
 		
 		if(active) {
-			worldObj.setBlock(xCoord, yCoord, zCoord, MillstoneMod.millstoneActive);
+			worldObj.setBlock(xCoord, yCoord, zCoord, BlockRegistry.millstoneActive);
 		}else{
-			worldObj.setBlock(xCoord, yCoord, zCoord, MillstoneMod.millstoneIdle);
+			worldObj.setBlock(xCoord, yCoord, zCoord, BlockRegistry.millstoneIdle);
 		}
 		
 		keepInventory = false;
@@ -218,7 +219,7 @@ public class Millstone extends BlockContainer {
 	
 	//Just return your millstone idle.
 	public Item getItem(World world, int x, int y, int z) {
-		return Item.getItemFromBlock(MillstoneMod.millstoneIdle);
+		return Item.getItemFromBlock(BlockRegistry.millstoneIdle);
 	}
 
 }

@@ -75,19 +75,19 @@ public class TileEntityMillstone extends TileEntity implements ISidedInventory {
 
 	public int getGear() {
 		if (hasGear()) {
-			if (this.slots[1].getItem() == MillstoneMod.woodGear) {
+			if (this.slots[1].getItem() == ItemRegistry.woodGear) {
 				return this.WoodGear;
 			}
-			if (this.slots[1].getItem() == MillstoneMod.stoneGear) {
+			if (this.slots[1].getItem() == ItemRegistry.stoneGear) {
 				return this.StoneGear;
 			}
-			if (this.slots[1].getItem() == MillstoneMod.ironGear) {
+			if (this.slots[1].getItem() == ItemRegistry.ironGear) {
 				return this.IronGear;
 			}
-			if (this.slots[1].getItem() == MillstoneMod.goldGear) {
+			if (this.slots[1].getItem() == ItemRegistry.goldGear) {
 				return this.GoldGear;
 			}
-			if (this.slots[1].getItem() == MillstoneMod.diamondGear) {
+			if (this.slots[1].getItem() == ItemRegistry.diamondGear) {
 				return this.DiamondGear;
 			}
 		}

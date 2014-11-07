@@ -2,6 +2,7 @@ package com.millstone.container;
 
 import com.millstone.MillstoneMod;
 import com.millstone.crafting.CutterCraftingManager;
+import com.millstone.registry.BlockRegistry;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -95,7 +96,7 @@ public class ContainerCutter extends Container
 
     public boolean canInteractWith(EntityPlayer par1EntityPlayer)
     {
-    	if(worldObj.getBlock(posX, posY, posZ) != MillstoneMod.stoneCutter) {
+    	if(worldObj.getBlock(posX, posY, posZ) != BlockRegistry.stoneCutter) {
 			return false;
 		}else{
 			return par1EntityPlayer.getDistanceSq((double)posX + 0.5D, (double)posY + 0.5D, (double)posZ + 0.5D) <= 64.0D;

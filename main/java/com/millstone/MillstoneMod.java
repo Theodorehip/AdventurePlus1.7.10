@@ -142,25 +142,6 @@ public class MillstoneMod
 
 	//WorldGen
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
-	
-	
-	//Create the millstone. You need the idle and active.
-	public static Block millstoneIdle = new Millstone(false).setBlockName("millstoneIdle").setCreativeTab(tabMillstone).setHardness(5F);
-	public static Block millstoneActive = new Millstone(true).setBlockName("millstoneActive").setHardness(5F);;
-	public static Block stoneCutter = new Cutter().setBlockName("stoneCutter").setCreativeTab(tabMillstone).setHardness(5F);
-
-	
-	//Gears
-	public static Item woodGear = new com.millstone.items.ItemGear().setMaxDamage(500).setTextureName(MODID + ":" + "woodGear").setUnlocalizedName("woodGear");
-	public static Item stoneGear = new com.millstone.items.ItemGear().setMaxDamage(1320).setTextureName(MODID + ":" + "stoneGear").setUnlocalizedName("stoneGear");
-	public static Item ironGear = new com.millstone.items.ItemGear().setMaxDamage(2500).setTextureName(MODID + ":" + "ironGear").setUnlocalizedName("ironGear");
-	public static Item goldGear = new com.millstone.items.ItemGear().setMaxDamage(240).setTextureName(MODID + ":" + "goldGear").setUnlocalizedName("goldGear");
-	public static Item diamondGear = new com.millstone.items.ItemGear().setMaxDamage(15612).setTextureName(MODID + ":" + "diamondGear").setUnlocalizedName("diamondGear");
-
-	
-	
-	public static Item rottenArrow = new rottenArrow();
-	
     
     //Enchantment
     public static final Enchantment Piercing = new Piercing(199, 5);
@@ -182,20 +163,6 @@ public class MillstoneMod
     	//Game Registry
     	ItemRegistry.Register();
     	BlockRegistry.Register();
-		//InteractiveBlocks
-		GameRegistry.registerBlock(millstoneIdle, "millstoneIdle");
-		GameRegistry.registerBlock(millstoneActive, "millstoneActive");
-		GameRegistry.registerBlock(stoneCutter, "stoneCutter");
-
-		
-		//Gears
-		GameRegistry.registerItem(woodGear, "woodGear");
-		GameRegistry.registerItem(stoneGear, "stoneGear");	
-		GameRegistry.registerItem(ironGear, "ironGear");
-		GameRegistry.registerItem(goldGear, "goldGear");
-		GameRegistry.registerItem(diamondGear, "diamondGear");
-
-		GameRegistry.registerItem(rottenArrow, "rottenArrow");
 		
 		//Spawn ores
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
@@ -213,93 +180,7 @@ public class MillstoneMod
 		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(ItemRegistry.armorObsidianBoots, 0, 1, 4, 50));
 
 		RecipeRegistry.RegisterCrafting();
-		//Remove Recipes
-		RemoveRecipes.removeRecipes(Items.sugar);
-		RemoveRecipes.removeRecipes(Items.cookie);
-		RemoveRecipes.removeRecipes(Items.cake);
-		RemoveRecipes.removeRecipes(Items.dye);
-		RemoveRecipes.removeRecipes(Items.blaze_powder);
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.brick_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.stone_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.stone_slab));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.stone_brick_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.stone_pressure_plate));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.stone_button));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.cobblestone_wall));
-
-		//Experimenting with recipes
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.planks));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.acacia_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.sandstone_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.stone_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.stone_brick_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.oak_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.birch_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.jungle_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.dark_oak_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.brick_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.spruce_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.quartz_stairs));
-		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.nether_brick_stairs));
-		
-		//getting rid of wooden tools
-		RemoveRecipes.removeRecipes(Items.wooden_axe);
-		RemoveRecipes.removeRecipes(Items.wooden_pickaxe);
-		RemoveRecipes.removeRecipes(Items.wooden_shovel);
-		RemoveRecipes.removeRecipes(Items.wooden_sword);
-		RemoveRecipes.removeRecipes(Items.wooden_hoe);
-		
-		//Logs to Planks reduction
-        GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 0), new Object[] {new ItemStack(Blocks.log, 1, 0)});
-        GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 1), new Object[] {new ItemStack(Blocks.log, 1, 1)});
-        GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 2), new Object[] {new ItemStack(Blocks.log, 1, 2)});
-        GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 3), new Object[] {new ItemStack(Blocks.log, 1, 3)});
-        GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 4), new Object[] {new ItemStack(Blocks.log2, 1, 0)});
-        GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 5), new Object[] {new ItemStack(Blocks.log2, 1, 1)});
-        
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.oak_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 0)});
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.birch_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 2)});
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.spruce_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 1)});
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.jungle_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 3)});
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.acacia_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 4)});
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.dark_oak_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 5)});  
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.cobblestone});
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.brick_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.brick_block});
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_brick_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.stonebrick});
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.nether_brick_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.nether_brick});
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.sandstone_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.sandstone});
-        GameRegistry.addShapedRecipe(new ItemStack(Blocks.quartz_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.quartz_block});
-		
-        //Experimenting with recipes
-			
-		GameRegistry.addShapedRecipe(new ItemStack(millstoneIdle, 1), new Object[]{"SGS", "IXI", "BBB", 'S', Blocks.stone_slab, 'I', Items.iron_ingot, 'X', stoneCutter, 'G', Items.gold_ingot, 'B', Blocks.stonebrick});
-		GameRegistry.addShapedRecipe(new ItemStack(stoneCutter, 1), new Object[]{"CCC", "CSC", "CCC", 'C', Blocks.cobblestone, 'S', stoneGear});;
-
-		
-		GameRegistry.addShapedRecipe(new ItemStack(woodGear, 1), new Object[]{" S ", "SCS", " S ", 'S', Items.stick, 'C', Blocks.planks});
-		GameRegistry.addShapedRecipe(new ItemStack(stoneGear, 1), new Object[]{" S ", "SCS", " S ", 'C', Blocks.cobblestone, 'S', Items.stick});
-		GameRegistry.addShapedRecipe(new ItemStack(ironGear, 1), new Object[]{" S ", "SCS", " S ", 'S', Items.iron_ingot, 'C', stoneGear});
-		GameRegistry.addShapedRecipe(new ItemStack(goldGear, 1), new Object[]{" S ", "SCS", " S ", 'S', Items.gold_ingot, 'C', ironGear});
-		GameRegistry.addShapedRecipe(new ItemStack(diamondGear, 1), new Object[]{" S ", "SCS", " S ", 'C', ironGear, 'S', Items.diamond});
-		
-
-		
-		
-		//making dyes craftable from other dyes, need this because i got rid of all dye recipes  //WIP
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 2, 9), new Object[] {new ItemStack(Items.dye, 1, 1), new ItemStack(Items.dye, 1, 15)});
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 2, 14), new Object[] {new ItemStack(Items.dye, 1, 1), new ItemStack(Items.dye, 1, 11)});
-	    GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 2, 10), new Object[] {new ItemStack(Items.dye, 1, 2), new ItemStack(Items.dye, 1, 15)});
-	    GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 2, 8), new Object[] {new ItemStack(Items.dye, 1, 0), new ItemStack(Items.dye, 1, 15)});
-	    GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 2, 7), new Object[] {new ItemStack(Items.dye, 1, 8), new ItemStack(Items.dye, 1, 15)});
-	    GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 3, 7), new Object[] {new ItemStack(Items.dye, 1, 0), new ItemStack(Items.dye, 1, 15), new ItemStack(Items.dye, 1, 15)});
-	    GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 2, 12), new Object[] {new ItemStack(Items.dye, 1, 4), new ItemStack(Items.dye, 1, 15)});
-	    GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 2, 6), new Object[] {new ItemStack(Items.dye, 1, 4), new ItemStack(Items.dye, 1, 2)});
-	    GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 2, 5), new Object[] {new ItemStack(Items.dye, 1, 4), new ItemStack(Items.dye, 1, 1)});
-	    GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 2, 13), new Object[] {new ItemStack(Items.dye, 1, 5), new ItemStack(Items.dye, 1, 9)});
-	    GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 3, 13), new Object[] {new ItemStack(Items.dye, 1, 4), new ItemStack(Items.dye, 1, 1), new ItemStack(Items.dye, 1, 9)});
-	    GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 4, 13), new Object[] {new ItemStack(Items.dye, 1, 4), new ItemStack(Items.dye, 1, 1), new ItemStack(Items.dye, 1, 1), new ItemStack(Items.dye, 1, 15)});
-	    GameRegistry.addSmelting(new ItemStack(Items.dye, 1, 2), new ItemStack(Blocks.cactus, 1), 0.35F);
-			
+		RecipeRegistry.RemoveRecipes();
 	    RecipeRegistry.RegisterSmelting();
 		
 		//Tile Entity Registry

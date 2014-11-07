@@ -2,9 +2,11 @@ package com.millstone.registry;
 
 import com.millstone.MillstoneMod;
 import com.millstone.blocks.CopperOre;
+import com.millstone.blocks.Cutter;
 import com.millstone.blocks.Firerack;
 import com.millstone.blocks.Lantern;
 import com.millstone.blocks.LavaBrick;
+import com.millstone.blocks.Millstone;
 import com.millstone.blocks.NetherRubyOre;
 import com.millstone.blocks.ObsidianBlock;
 import com.millstone.blocks.SapphireOre;
@@ -21,8 +23,12 @@ public class BlockRegistry {
 	public static Block obsidianBlock = new ObsidianBlock(Material.rock).setBlockName("obsidianBlock");
 	public static Block lantern = new Lantern(Material.glass).setHardness(0.3F).setLightLevel(1.0F).setBlockName("lantern").setBlockTextureName("lantern");
 
-
 	
+	//Interactive Blocks
+	public static Block millstoneIdle = new Millstone(false).setBlockName("millstoneIdle").setCreativeTab(MillstoneMod.tabMillstone).setHardness(5F);
+	public static Block millstoneActive = new Millstone(true).setBlockName("millstoneActive").setHardness(5F);;
+	public static Block stoneCutter = new Cutter().setBlockName("stoneCutter").setCreativeTab(MillstoneMod.tabMillstone).setHardness(5F);
+
 	//ores
 	public static Block copperOre = new CopperOre(Material.rock).setBlockName("copperOre");
 	public static Block netherRubyOre = new NetherRubyOre(Material.rock).setBlockName("netherRubyOre");
@@ -34,7 +40,11 @@ public class BlockRegistry {
 	public static Block Firerack  = new Firerack(Material.rock).setBlockName("Firerack").setBlockTextureName(MillstoneMod.MODID + ":" + "Firerack");
 
 	public static void Register() {
-		
+		//InteractiveBlocks
+		GameRegistry.registerBlock(millstoneIdle, "millstoneIdle");
+		GameRegistry.registerBlock(millstoneActive, "millstoneActive");
+		GameRegistry.registerBlock(stoneCutter, "stoneCutter");
+
 		//Ores
 		GameRegistry.registerBlock(copperOre, "copperOre");
 		GameRegistry.registerBlock(sapphireOre, "sapphireOre");
