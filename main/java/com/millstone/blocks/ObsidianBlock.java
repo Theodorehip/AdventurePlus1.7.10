@@ -1,13 +1,15 @@
 package com.millstone.blocks;
 
-import com.millstone.MillstoneMod;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
+
+import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ObsidianBlock extends Block{
 
@@ -27,7 +29,7 @@ public class ObsidianBlock extends Block{
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister){
-		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "RefObsBlock");
+		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "RefObsBlock");
 		
 	}
 

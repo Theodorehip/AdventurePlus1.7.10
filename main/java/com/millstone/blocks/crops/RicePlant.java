@@ -5,7 +5,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 
-import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 import com.millstone.registry.ItemRegistry;
 
 import cpw.mods.fml.relauncher.Side;
@@ -25,7 +25,7 @@ public class RicePlant extends BlockCrops{
 
         for (int i = 0; i < this.iconArray.length; ++i)
         {
-            this.iconArray[i] = p_149651_1_.registerIcon(MillstoneMod.MODID + ":" + this.getUnlocalizedName().substring(5) + "_stage_" + i);
+            this.iconArray[i] = p_149651_1_.registerIcon(References.MODID + ":" + this.getUnlocalizedName().substring(5) + "_stage_" + i);
         }
     }
     

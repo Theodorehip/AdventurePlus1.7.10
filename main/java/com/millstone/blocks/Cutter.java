@@ -8,6 +8,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -34,10 +35,10 @@ public class Cutter extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister)
 	{
-	this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "StonecutterSide");
-	this.top = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "StonecutterTop");
-	this.front = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "StonecutterFront");
-	this.bottom = iconRegister.registerIcon((MillstoneMod.MODID + ":" + "StonecutterBottom"));
+	this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "StonecutterSide");
+	this.top = iconRegister.registerIcon(References.MODID + ":" + "StonecutterTop");
+	this.front = iconRegister.registerIcon(References.MODID + ":" + "StonecutterFront");
+	this.bottom = iconRegister.registerIcon((References.MODID + ":" + "StonecutterBottom"));
 	}
 	
 	public boolean onBlockActivated (World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {

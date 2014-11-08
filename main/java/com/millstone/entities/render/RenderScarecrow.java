@@ -5,11 +5,11 @@ import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
-import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 
 public class RenderScarecrow extends RenderLiving
 {
-    private static final ResourceLocation Your_Texture = new ResourceLocation(MillstoneMod.MODID + ":" + "textures/models/scarecrowtesting.png");  //refers to:assets/yourmod/textures/entity/yourtexture.png
+    private static final ResourceLocation Your_Texture = new ResourceLocation(References.MODID + ":" + "textures/models/scarecrowtesting.png");  //refers to:assets/yourmod/textures/entity/yourtexture.png
 
     public RenderScarecrow(ModelBase par1ModelBase, float par2)
     {

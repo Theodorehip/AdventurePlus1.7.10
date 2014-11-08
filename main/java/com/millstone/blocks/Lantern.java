@@ -11,6 +11,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 
 import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 import com.millstone.registry.ItemRegistry;
 
 import cpw.mods.fml.relauncher.Side;
@@ -35,9 +36,9 @@ public class Lantern extends Block{
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister)
 	{
-	this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "LanternSide");
-	this.top = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "LanternTop");
-	this.bottom = iconRegister.registerIcon((MillstoneMod.MODID + ":" + "LanternBottom"));
+	this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "LanternSide");
+	this.top = iconRegister.registerIcon(References.MODID + ":" + "LanternTop");
+	this.bottom = iconRegister.registerIcon((References.MODID + ":" + "LanternBottom"));
 	}
 	
 

@@ -11,6 +11,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -41,7 +42,7 @@ public class Firerack extends Block{
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister){
-		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "Firerack");
+		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "Firerack");
 		
 	}
 	

@@ -1,11 +1,12 @@
 package com.millstone.armor;
 
-import com.millstone.MillstoneMod;
-import com.millstone.registry.ItemRegistry;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+
+import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
+import com.millstone.registry.ItemRegistry;
 
 public class SapphireArmor extends ItemArmor {
 
@@ -35,11 +36,11 @@ public class SapphireArmor extends ItemArmor {
 				|| itemstack.getItem() == ItemRegistry.armorSapphireChest
 				|| itemstack.getItem() == ItemRegistry.armorSapphireBoots) {
 
-			return MillstoneMod.MODID + ":textures/model/sapphire_layer_1.png";
+			return References.MODID + ":textures/model/sapphire_layer_1.png";
 
 		} else if (itemstack.getItem() == ItemRegistry.armorSapphireLegs) {
 
-			return MillstoneMod.MODID + ":textures/model/sapphire_layer_2.png";
+			return References.MODID + ":textures/model/sapphire_layer_2.png";
 
 		} else
 			return null;

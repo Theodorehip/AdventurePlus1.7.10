@@ -3,6 +3,7 @@ package com.millstone.items;
 import net.minecraft.item.ItemFood;
 
 import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 
 public class sushi extends ItemFood{
 	
@@ -12,7 +13,7 @@ public class sushi extends ItemFood{
 		
 		setUnlocalizedName("sushi");
 		setCreativeTab(MillstoneMod.tabMillstone);
-		setTextureName(MillstoneMod.MODID + ":" + "Sushi");
+		setTextureName(References.MODID + ":" + "Sushi");
 		
 	}
 

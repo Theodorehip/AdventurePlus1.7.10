@@ -1,11 +1,12 @@
 package com.millstone.armor;
 
-import com.millstone.MillstoneMod;
-import com.millstone.registry.ItemRegistry;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+
+import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
+import com.millstone.registry.ItemRegistry;
 
 public class CopperArmor extends ItemArmor {
 
@@ -35,11 +36,11 @@ public class CopperArmor extends ItemArmor {
 				|| itemstack.getItem() == ItemRegistry.armorCopperChest
 				|| itemstack.getItem() == ItemRegistry.armorCopperBoots) {
 
-			return MillstoneMod.MODID + ":textures/model/copper_layer_1.png";
+			return References.MODID + ":textures/model/copper_layer_1.png";
 
 		} else if (itemstack.getItem() == ItemRegistry.armorCopperLegs) {
 
-			return MillstoneMod.MODID + ":textures/model/copper_layer_2.png";
+			return References.MODID + ":textures/model/copper_layer_2.png";
 
 		} else
 			return null;

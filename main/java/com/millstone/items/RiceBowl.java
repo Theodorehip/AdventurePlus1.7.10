@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 
 public class RiceBowl extends ItemFood{
 	
@@ -16,7 +17,7 @@ public class RiceBowl extends ItemFood{
 		
 		setUnlocalizedName("riceBowl");
 		setCreativeTab(MillstoneMod.tabMillstone);
-		setTextureName(MillstoneMod.MODID + ":" + "bowlofrice");
+		setTextureName(References.MODID + ":" + "bowlofrice");
 		
 	}
 	

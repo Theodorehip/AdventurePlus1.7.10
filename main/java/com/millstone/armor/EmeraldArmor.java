@@ -3,9 +3,9 @@ package com.millstone.armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
 
 import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 import com.millstone.registry.ItemRegistry;
 
 public class EmeraldArmor extends ItemArmor {
@@ -36,11 +36,11 @@ public class EmeraldArmor extends ItemArmor {
 				|| itemstack.getItem() == ItemRegistry.armorEmeraldChest
 				|| itemstack.getItem() == ItemRegistry.armorEmeraldBoots) {
 
-			return MillstoneMod.MODID + ":textures/model/emerald_layer_1.png";
+			return References.MODID + ":textures/model/emerald_layer_1.png";
 
 		} else if (itemstack.getItem() == ItemRegistry.armorEmeraldLegs) {
 
-			return MillstoneMod.MODID + ":textures/model/emerald_layer_2.png";
+			return References.MODID + ":textures/model/emerald_layer_2.png";
 
 		} else
 			return null;

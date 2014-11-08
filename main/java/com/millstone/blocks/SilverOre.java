@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
 import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 import com.millstone.registry.BlockRegistry;
 
 import cpw.mods.fml.relauncher.Side;
@@ -35,7 +36,7 @@ public class SilverOre extends Block{
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister){
-		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "SilverOre");
+		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "SilverOre");
 		
 	}
 }

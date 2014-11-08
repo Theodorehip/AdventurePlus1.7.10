@@ -11,6 +11,7 @@ import com.millstone.blocks.NetherRubyOre;
 import com.millstone.blocks.ObsidianBlock;
 import com.millstone.blocks.SapphireOre;
 import com.millstone.blocks.SilverOre;
+import com.millstone.lib.References;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -36,8 +37,8 @@ public class BlockRegistry {
 	public static Block silverOre = new SilverOre(Material.rock).setBlockName("silverOre");
 	
 	//NonOreSpawningBlocks
-	public static Block lavaBrick  = new LavaBrick(Material.rock).setBlockName("lavaBrick").setBlockTextureName(MillstoneMod.MODID + ":" + "lavaBrick");
-	public static Block Firerack  = new Firerack(Material.rock).setBlockName("Firerack").setBlockTextureName(MillstoneMod.MODID + ":" + "Firerack");
+	public static Block lavaBrick  = new LavaBrick(Material.rock).setBlockName("lavaBrick").setBlockTextureName(References.MODID + ":" + "lavaBrick");
+	public static Block Firerack  = new Firerack(Material.rock).setBlockName("Firerack").setBlockTextureName(References.MODID + ":" + "Firerack");
 
 	public static void Register() {
 		//InteractiveBlocks

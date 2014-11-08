@@ -1,10 +1,5 @@
 package com.millstone.gui;
 
-import org.lwjgl.opengl.GL11;
-
-import com.millstone.MillstoneMod;
-import com.millstone.container.ContainerCutter;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -12,9 +7,14 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
+import org.lwjgl.opengl.GL11;
+
+import com.millstone.container.ContainerCutter;
+import com.millstone.lib.References;
+
 public class GuiCutter extends GuiContainer {
 
-	private ResourceLocation texture = new ResourceLocation("millstonemod:textures/gui/stoneCutter.png");
+	private ResourceLocation texture = new ResourceLocation(References.MODID + ":" + "textures/gui/stoneCutter.png");
 	
 	public GuiCutter(InventoryPlayer invPlayer, World world, int x, int y, int z) {
 		super(new ContainerCutter(invPlayer, world, x, y, z));

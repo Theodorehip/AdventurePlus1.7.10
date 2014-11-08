@@ -3,10 +3,10 @@ package com.millstone.registry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
-import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemSeeds;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.millstone.MillstoneMod;
@@ -39,6 +39,7 @@ import com.millstone.items.StoneDust;
 import com.millstone.items.Tomato;
 import com.millstone.items.rottenArrow;
 import com.millstone.items.sushi;
+import com.millstone.lib.References;
 import com.millstone.tools.BonePickaxe;
 import com.millstone.tools.CopperAxe;
 import com.millstone.tools.CopperHoe;
@@ -68,8 +69,6 @@ import com.millstone.tools.SapphirePickaxe;
 import com.millstone.tools.SapphireShovel;
 import com.millstone.tools.SapphireSword;
 
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 
@@ -190,11 +189,11 @@ public class ItemRegistry{
 	public static Item rottenArrow = new rottenArrow();
 	
 	//Gears
-	public static Item woodGear = new com.millstone.items.ItemGear().setMaxDamage(500).setTextureName(MillstoneMod.MODID + ":" + "woodGear").setUnlocalizedName("woodGear");
-	public static Item stoneGear = new com.millstone.items.ItemGear().setMaxDamage(1320).setTextureName(MillstoneMod.MODID + ":" + "stoneGear").setUnlocalizedName("stoneGear");
-	public static Item ironGear = new com.millstone.items.ItemGear().setMaxDamage(2500).setTextureName(MillstoneMod.MODID + ":" + "ironGear").setUnlocalizedName("ironGear");
-	public static Item goldGear = new com.millstone.items.ItemGear().setMaxDamage(240).setTextureName(MillstoneMod.MODID + ":" + "goldGear").setUnlocalizedName("goldGear");
-	public static Item diamondGear = new com.millstone.items.ItemGear().setMaxDamage(15612).setTextureName(MillstoneMod.MODID + ":" + "diamondGear").setUnlocalizedName("diamondGear");
+	public static Item woodGear = new com.millstone.items.ItemGear().setMaxDamage(500).setTextureName(References.MODID + ":" + "woodGear").setUnlocalizedName("woodGear");
+	public static Item stoneGear = new com.millstone.items.ItemGear().setMaxDamage(1320).setTextureName(References.MODID + ":" + "stoneGear").setUnlocalizedName("stoneGear");
+	public static Item ironGear = new com.millstone.items.ItemGear().setMaxDamage(2500).setTextureName(References.MODID + ":" + "ironGear").setUnlocalizedName("ironGear");
+	public static Item goldGear = new com.millstone.items.ItemGear().setMaxDamage(240).setTextureName(References.MODID + ":" + "goldGear").setUnlocalizedName("goldGear");
+	public static Item diamondGear = new com.millstone.items.ItemGear().setMaxDamage(15612).setTextureName(References.MODID + ":" + "diamondGear").setUnlocalizedName("diamondGear");
 
 	//Food
 	public static ItemFood riceBowl = new RiceBowl(3, 0.4F, false);
@@ -202,19 +201,19 @@ public class ItemRegistry{
 	
 	//Crops
     public static Block tomatoPlant = new TomatoPlant().setBlockName("tomatoPlant");
-    public static Item tomatoSeeds = new ItemSeeds(tomatoPlant, Blocks.farmland).setUnlocalizedName("tomatoSeeds").setTextureName(MillstoneMod.MODID + ":tomatoSeeds").setCreativeTab(MillstoneMod.tabMillstone);
+    public static Item tomatoSeeds = new ItemSeeds(tomatoPlant, Blocks.farmland).setUnlocalizedName("tomatoSeeds").setTextureName(References.MODID + ":tomatoSeeds").setCreativeTab(MillstoneMod.tabMillstone);
     public static Item tomato = new Tomato(2, 2, false);
 	
     public static Block cottonPlant = new CottonPlant().setBlockName("cottonPlant");
-    public static Item cottonSeeds = new ItemSeeds(cottonPlant, Blocks.farmland).setUnlocalizedName("cottonSeeds").setTextureName(MillstoneMod.MODID + ":cottonSeeds").setCreativeTab(MillstoneMod.tabMillstone);
+    public static Item cottonSeeds = new ItemSeeds(cottonPlant, Blocks.farmland).setUnlocalizedName("cottonSeeds").setTextureName(References.MODID + ":cottonSeeds").setCreativeTab(MillstoneMod.tabMillstone);
     public static Item cotton = new Cotton();
     
     public static Block flaxPlant = new FlaxPlant().setBlockName("flaxPlant");
-    public static Item flaxSeeds = new ItemSeeds(flaxPlant, Blocks.farmland).setUnlocalizedName("flaxSeeds").setTextureName(MillstoneMod.MODID + ":flaxSeeds").setCreativeTab(MillstoneMod.tabMillstone);
+    public static Item flaxSeeds = new ItemSeeds(flaxPlant, Blocks.farmland).setUnlocalizedName("flaxSeeds").setTextureName(References.MODID + ":flaxSeeds").setCreativeTab(MillstoneMod.tabMillstone);
     public static Item flax = new Flax();
     
     public static Block ricePlant = new RicePlant().setBlockName("ricePlant");
-    public static Item riceCrop = new ItemSeeds(ricePlant, Blocks.farmland).setUnlocalizedName("riceCrop").setTextureName(MillstoneMod.MODID + ":riceCrop").setCreativeTab(MillstoneMod.tabMillstone);
+    public static Item riceCrop = new ItemSeeds(ricePlant, Blocks.farmland).setUnlocalizedName("riceCrop").setTextureName(References.MODID + ":riceCrop").setCreativeTab(MillstoneMod.tabMillstone);
 
 	public static Item flour = new Flour();
 	public static Item ricePaper = new RicePaper();

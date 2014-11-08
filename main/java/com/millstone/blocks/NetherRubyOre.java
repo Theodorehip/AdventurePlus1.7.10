@@ -2,16 +2,18 @@ package com.millstone.blocks;
 
 import java.util.Random;
 
-import com.millstone.MillstoneMod;
-import com.millstone.registry.ItemRegistry;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
+
+import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
+import com.millstone.registry.ItemRegistry;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class NetherRubyOre extends Block {
 
@@ -54,7 +56,7 @@ public class NetherRubyOre extends Block {
 
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
-		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "NetherRuby");
+		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "NetherRuby");
 
 	}
 	

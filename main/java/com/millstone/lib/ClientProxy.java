@@ -1,4 +1,4 @@
-package com.millstone.proxy;
+package com.millstone.lib;
 
 import net.minecraft.client.model.ModelBiped;
 

@@ -6,7 +6,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,6 +18,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 import com.millstone.registry.BlockRegistry;
 import com.millstone.tileentity.TileEntityMillstone;
 
@@ -53,10 +53,10 @@ public class Millstone extends BlockContainer {
 	//This registers the sides of the block and binds them with their textures.
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
-		this.blockIcon = iconRegister.registerIcon(MillstoneMod.MODID + ":" + "MillstoneSide");
-		this.iconFront = iconRegister.registerIcon(MillstoneMod.MODID + ":" + (this.isActive ? "MillstoneSide" : "MillstoneSide"));
-		this.iconTop = iconRegister.registerIcon((MillstoneMod.MODID + ":" + "MillstoneTop"));
-		this.iconBottom = iconRegister.registerIcon((MillstoneMod.MODID + ":" + "MillstoneBottom"));
+		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "MillstoneSide");
+		this.iconFront = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? "MillstoneSide" : "MillstoneSide"));
+		this.iconTop = iconRegister.registerIcon((References.MODID + ":" + "MillstoneTop"));
+		this.iconBottom = iconRegister.registerIcon((References.MODID + ":" + "MillstoneBottom"));
 
 		
 	

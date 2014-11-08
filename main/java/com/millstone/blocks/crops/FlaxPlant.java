@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 
-import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 import com.millstone.registry.ItemRegistry;
 
 import cpw.mods.fml.relauncher.Side;
@@ -23,7 +23,7 @@ public class FlaxPlant extends BlockCrops {
 			this.iconArray = new IIcon[4];
 			
 			for(int i = 0; i < this.iconArray.length; i++) {
-				this.iconArray[i] = iconRegister.registerIcon(MillstoneMod.MODID + ":" + this.getUnlocalizedName().substring(5) + (i + 1));
+				this.iconArray[i] = iconRegister.registerIcon(References.MODID + ":" + this.getUnlocalizedName().substring(5) + (i + 1));
 			}
 	}
 	

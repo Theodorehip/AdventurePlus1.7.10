@@ -1,11 +1,12 @@
 package com.millstone.armor;
 
-import com.millstone.MillstoneMod;
-import com.millstone.registry.ItemRegistry;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+
+import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
+import com.millstone.registry.ItemRegistry;
 
 public class RubyArmor extends ItemArmor {
 
@@ -35,11 +36,11 @@ public class RubyArmor extends ItemArmor {
 				|| itemstack.getItem() == ItemRegistry.armorRubyChest
 				|| itemstack.getItem() == ItemRegistry.armorRubyBoots) {
 
-			return MillstoneMod.MODID + ":textures/model/ruby_layer_1.png";
+			return References.MODID + ":textures/model/ruby_layer_1.png";
 
 		} else if (itemstack.getItem() == ItemRegistry.armorRubyLegs) {
 
-			return MillstoneMod.MODID + ":textures/model/ruby_layer_2.png";
+			return References.MODID + ":textures/model/ruby_layer_2.png";
 
 		} else
 			return null;

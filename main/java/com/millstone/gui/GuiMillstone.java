@@ -8,14 +8,14 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.millstone.MillstoneMod;
 import com.millstone.container.ContainerMillstone;
+import com.millstone.lib.References;
 import com.millstone.tileentity.TileEntityMillstone;
 
 
 public class GuiMillstone extends GuiContainer {
 	
-	public static final ResourceLocation bground = new ResourceLocation(MillstoneMod.MODID + ":" + "textures/gui/MillstoneGuiExample.png");
+	public static final ResourceLocation bground = new ResourceLocation(References.MODID + ":" + "textures/gui/MillstoneGuiExample.png");
 	
 	public TileEntityMillstone millstone;
 
