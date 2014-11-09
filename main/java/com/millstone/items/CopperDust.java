@@ -9,7 +9,7 @@ public class CopperDust extends Item {
 	public CopperDust() {
 		this.setUnlocalizedName("copperDust");
 		this.setTextureName(References.MODID + ":" + "copperDust");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 		this.setMaxStackSize(64);
 	}
 }

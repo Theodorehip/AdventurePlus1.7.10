@@ -9,7 +9,7 @@ public class SilverDust extends Item {
 	public SilverDust() {
 		this.setUnlocalizedName("silverDust");
 		this.setTextureName(References.MODID + ":" + "SilverDust");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 		this.setMaxStackSize(64);
 	}
 }

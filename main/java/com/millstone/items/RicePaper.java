@@ -10,7 +10,7 @@ public class RicePaper extends Item {
 	public RicePaper() {
 		this.setUnlocalizedName("ricePaper");
 		this.setTextureName(References.MODID + ":ricePaper");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMisc);
 		this.setMaxStackSize(64);
 	}
 }

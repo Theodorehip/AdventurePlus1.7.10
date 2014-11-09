@@ -9,7 +9,7 @@ public class BoneShard extends Item {
 	public BoneShard() {
 		this.setUnlocalizedName("boneShard");
 		this.setTextureName(References.MODID + ":" + "bone_shard");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 		this.setMaxStackSize(64);
 	}
 }

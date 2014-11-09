@@ -10,7 +10,7 @@ public class StoneDust extends Item {
 	public StoneDust() {
 		this.setUnlocalizedName("stoneDust");
 		this.setTextureName(References.MODID + ":" + "stonedust");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 		this.setMaxStackSize(64);
 	}
 }

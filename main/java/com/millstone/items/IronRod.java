@@ -10,7 +10,7 @@ public class IronRod extends Item {
 	public IronRod() {
 		this.setUnlocalizedName("ironRod");
 		this.setTextureName(References.MODID + ":" + "IronRod");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneTools);
 		this.setMaxStackSize(64);
 	}
 }

@@ -9,6 +9,6 @@ public class Flax extends Item {
 	public Flax() {
 		this.setUnlocalizedName("flax");
 		this.setTextureName(References.MODID + ":" + "flax");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 	}
 }

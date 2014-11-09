@@ -1,6 +1,10 @@
 itemGroup.tabMillstone=Millstone Main
 itemGroup.tabMillstoneTools=Millstone Tools
 itemGroup.tabMillstoneArmor=Millstone Armors
+itemGroup.tabMillstoneMaterials=Millstone Materials
+itemGroup.tabMillstoneFood=Millstone Food
+itemGroup.tabMillstoneMisc=Millstone Miscellaneous
+
 
 item.woodGear.name=Wooden Gear
 item.stoneGear.name=Stone Gear
@@ -72,6 +76,7 @@ item.sapphire.name=Sapphire
 item.silverDust.name=Silver Dust
 item.silverIngot.name=Silver Ingot
 item.ironRod.name=Iron Rod
+item.rottenArrow.name=Rotten Arrow
 
 item.ObsidianHelm.name=Obsidian Helmet
 item.ObsidianChest.name=Obsidian Chestplate

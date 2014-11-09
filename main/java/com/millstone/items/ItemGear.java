@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack;
 public class ItemGear extends Item{
 
 	public ItemGear(){
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMisc);
 		this.setMaxStackSize(1);
 		
 	}

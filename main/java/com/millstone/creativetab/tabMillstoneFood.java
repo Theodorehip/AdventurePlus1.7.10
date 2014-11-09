@@ -2,19 +2,21 @@ package com.millstone.creativetab;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 import com.millstone.registry.BlockRegistry;
+import com.millstone.registry.ItemRegistry;
 
-public class tabMillstone extends CreativeTabs{
+public class tabMillstoneFood extends CreativeTabs{
 	
-	public tabMillstone(int par1, String par2Str) {
+	public tabMillstoneFood(int par1, String par2Str) {
 		super(par1, par2Str);
 		
 	}
 	
 	@Override
 	public Item getTabIconItem(){
-		return Item.getItemFromBlock(BlockRegistry.stoneCutter);
+		return ItemRegistry.tomato;
 	}
 }

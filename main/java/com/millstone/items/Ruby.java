@@ -9,7 +9,7 @@ public class Ruby extends Item {
 	public Ruby() {
 		this.setUnlocalizedName("ruby");
 		this.setTextureName(References.MODID + ":" + "ruby");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 		this.setMaxStackSize(64);
 	}
 }

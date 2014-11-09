@@ -10,7 +10,7 @@ public class ObsidianDust extends Item {
 	public ObsidianDust() {
 		this.setUnlocalizedName("ObsidianDust");
 		this.setTextureName(References.MODID + ":" + "ObsidianDust");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 		this.setMaxStackSize(64);
 	}
 }

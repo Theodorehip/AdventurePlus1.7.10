@@ -11,6 +11,9 @@ import net.minecraftforge.common.MinecraftForge;
 import com.millstone.crafting.CraftingHandler;
 import com.millstone.creativetab.tabMillstone;
 import com.millstone.creativetab.tabMillstoneArmor;
+import com.millstone.creativetab.tabMillstoneFood;
+import com.millstone.creativetab.tabMillstoneMaterials;
+import com.millstone.creativetab.tabMillstoneMisc;
 import com.millstone.creativetab.tabMillstoneTools;
 import com.millstone.enchantments.Piercing;
 import com.millstone.entities.Scarecrow;
@@ -53,6 +56,10 @@ public class MillstoneMod
 	public static CreativeTabs tabMillstone = new tabMillstone(CreativeTabs.getNextID(), "tabMillstone");
 	public static CreativeTabs tabMillstoneTools = new tabMillstoneTools(CreativeTabs.getNextID(), "tabMillstoneTools");
 	public static CreativeTabs tabMillstoneArmor = new tabMillstoneArmor(CreativeTabs.getNextID(), "tabMillstoneArmor");
+	public static CreativeTabs tabMillstoneMaterials = new tabMillstoneMaterials(CreativeTabs.getNextID(), "tabMillstoneMaterials");
+	public static CreativeTabs tabMillstoneFood = new tabMillstoneFood(CreativeTabs.getNextID(), "tabMillstoneFood");
+	public static CreativeTabs tabMillstoneMisc = new tabMillstoneMisc(CreativeTabs.getNextID(), "tabMillstoneMisc");
+
 	
 	//Proxy Stuff
 	@SidedProxy(clientSide = References.Client, serverSide = References.Common)

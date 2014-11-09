@@ -10,7 +10,7 @@ public class GoldDust extends Item {
 	public GoldDust() {
 		this.setUnlocalizedName("goldDust");
 		this.setTextureName(References.MODID + ":" + "gold_grinds");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 		this.setMaxStackSize(64);
 	}
 }

@@ -9,7 +9,7 @@ public class CopperIngot extends Item {
 	public CopperIngot() {
 		this.setUnlocalizedName("copperIngot");
 		this.setTextureName(References.MODID + ":" + "copperIngot");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 		this.setMaxStackSize(64);
 	}
 }

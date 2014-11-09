@@ -10,6 +10,6 @@ public class Tomato extends ItemFood {
 		super(j, b);
 		this.setUnlocalizedName("tomato");
 		this.setTextureName(References.MODID + ":" + "tomato");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneFood);
 	}
 }

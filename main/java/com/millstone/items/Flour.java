@@ -10,7 +10,7 @@ public class Flour extends Item {
 	public Flour() {
 		this.setUnlocalizedName("flour");
 		this.setTextureName(References.MODID + ":" + "Flour");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 		this.setMaxStackSize(64);
 	}
 }

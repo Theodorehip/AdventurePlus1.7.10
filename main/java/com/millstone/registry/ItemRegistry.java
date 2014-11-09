@@ -201,19 +201,19 @@ public class ItemRegistry{
 	
 	//Crops
     public static Block tomatoPlant = new TomatoPlant().setBlockName("tomatoPlant");
-    public static Item tomatoSeeds = new ItemSeeds(tomatoPlant, Blocks.farmland).setUnlocalizedName("tomatoSeeds").setTextureName(References.MODID + ":tomatoSeeds").setCreativeTab(MillstoneMod.tabMillstone);
+    public static Item tomatoSeeds = new ItemSeeds(tomatoPlant, Blocks.farmland).setUnlocalizedName("tomatoSeeds").setTextureName(References.MODID + ":tomatoSeeds").setCreativeTab(MillstoneMod.tabMillstoneMaterials);
     public static Item tomato = new Tomato(2, 2, false);
 	
     public static Block cottonPlant = new CottonPlant().setBlockName("cottonPlant");
-    public static Item cottonSeeds = new ItemSeeds(cottonPlant, Blocks.farmland).setUnlocalizedName("cottonSeeds").setTextureName(References.MODID + ":cottonSeeds").setCreativeTab(MillstoneMod.tabMillstone);
+    public static Item cottonSeeds = new ItemSeeds(cottonPlant, Blocks.farmland).setUnlocalizedName("cottonSeeds").setTextureName(References.MODID + ":cottonSeeds").setCreativeTab(MillstoneMod.tabMillstoneMaterials);
     public static Item cotton = new Cotton();
     
     public static Block flaxPlant = new FlaxPlant().setBlockName("flaxPlant");
-    public static Item flaxSeeds = new ItemSeeds(flaxPlant, Blocks.farmland).setUnlocalizedName("flaxSeeds").setTextureName(References.MODID + ":flaxSeeds").setCreativeTab(MillstoneMod.tabMillstone);
+    public static Item flaxSeeds = new ItemSeeds(flaxPlant, Blocks.farmland).setUnlocalizedName("flaxSeeds").setTextureName(References.MODID + ":flaxSeeds").setCreativeTab(MillstoneMod.tabMillstoneMaterials);
     public static Item flax = new Flax();
     
     public static Block ricePlant = new RicePlant().setBlockName("ricePlant");
-    public static Item riceCrop = new ItemSeeds(ricePlant, Blocks.farmland).setUnlocalizedName("riceCrop").setTextureName(References.MODID + ":riceCrop").setCreativeTab(MillstoneMod.tabMillstone);
+    public static Item riceCrop = new ItemSeeds(ricePlant, Blocks.farmland).setUnlocalizedName("riceCrop").setTextureName(References.MODID + ":riceCrop").setCreativeTab(MillstoneMod.tabMillstoneFood);
 
 	public static Item flour = new Flour();
 	public static Item ricePaper = new RicePaper();

@@ -9,7 +9,7 @@ public class SilverIngot extends Item {
 	public SilverIngot() {
 		this.setUnlocalizedName("silverIngot");
 		this.setTextureName(References.MODID + ":" + "SilverIngot");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 		this.setMaxStackSize(64);
 	}
 }

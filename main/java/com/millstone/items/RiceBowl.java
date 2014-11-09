@@ -16,7 +16,7 @@ public class RiceBowl extends ItemFood{
 		super(hunger, saturation, isWolfFood);
 		
 		setUnlocalizedName("riceBowl");
-		setCreativeTab(MillstoneMod.tabMillstone);
+		setCreativeTab(MillstoneMod.tabMillstoneFood);
 		setTextureName(References.MODID + ":" + "bowlofrice");
 		
 	}

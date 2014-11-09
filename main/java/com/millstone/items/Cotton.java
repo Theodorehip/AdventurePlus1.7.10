@@ -11,6 +11,6 @@ public class Cotton extends Item {
 	public Cotton() {
 		this.setUnlocalizedName("cotton");
 		this.setTextureName(References.MODID + ":" + "cotton");
-		this.setCreativeTab(MillstoneMod.tabMillstone);
+		this.setCreativeTab(MillstoneMod.tabMillstoneMaterials);
 	}
 }
