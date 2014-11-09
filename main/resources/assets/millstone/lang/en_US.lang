@@ -114,6 +114,15 @@ tile.Firerack.name=Firerack
 tile.sandstoneWall.name=Sandstone Wall
 tile.brickWall.name=Brick Wall
 tile.stoneBrickWall.name=Stonebrick Wall
+tile.planks.name=Wooden Planks
+tile.planks.willow.name=Willow Wood Planks
+tile.planks.palm.name=Palm Wood Planks
+tile.planks.dreadwood.name=Dreadwood Planks
+tile.planks.redwood.name=Redwood Planks
+tile.planks.applewood.name=Applewood Planks
+tile.planks.cherry.name=Cherry Wood Planks
+tile.planks.baobob.name=Baobob Wood Planks
+
 
 
 

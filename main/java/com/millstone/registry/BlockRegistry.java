@@ -17,8 +17,8 @@ import com.millstone.blocks.ores.NetherRubyOre;
 import com.millstone.blocks.ores.SapphireOre;
 import com.millstone.blocks.ores.SilverOre;
 import com.millstone.lib.References;
-import com.millstone.trees.TreeBlock;
-import com.millstone.trees.TreeBlockItem;
+import com.millstone.trees.PlanksBlock;
+import com.millstone.trees.PlanksBlockItem;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -34,7 +34,7 @@ public class BlockRegistry {
 	public static Block stoneBrickWall = new WallBlock(Blocks.stonebrick, 2).setBlockName("stoneBrickWall");
 	
 	//Woods 
-	public static Block treeBlock = new TreeBlock();
+	public static Block planks = new PlanksBlock();
 
 	
 	
@@ -61,7 +61,7 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(stoneBrickWall, "stoneBrickWall");
 		
 		//Planks
-		GameRegistry.registerBlock(treeBlock, TreeBlockItem.class, (treeBlock.getUnlocalizedName().substring(6)));
+		GameRegistry.registerBlock(planks, PlanksBlockItem.class, (planks.getUnlocalizedName().substring(5)));
 		
 		//InteractiveBlocks
 		GameRegistry.registerBlock(millstoneIdle, "millstoneIdle");
