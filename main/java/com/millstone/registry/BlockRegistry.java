@@ -1,5 +1,9 @@
 package com.millstone.registry;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.init.Blocks;
+
 import com.millstone.MillstoneMod;
 import com.millstone.blocks.CopperOre;
 import com.millstone.blocks.Cutter;
@@ -11,18 +15,21 @@ import com.millstone.blocks.NetherRubyOre;
 import com.millstone.blocks.ObsidianBlock;
 import com.millstone.blocks.SapphireOre;
 import com.millstone.blocks.SilverOre;
+import com.millstone.blocks.WallBlock;
 import com.millstone.lib.References;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 
 public class BlockRegistry {
 	
 	//misc
 	public static Block obsidianBlock = new ObsidianBlock(Material.rock).setBlockName("obsidianBlock");
 	public static Block lantern = new Lantern(Material.glass).setHardness(0.3F).setLightLevel(1.0F).setBlockName("lantern").setBlockTextureName("lantern");
+	
+	//Walls
+	public static Block sandstoneWall = new WallBlock(Blocks.sandstone, 0).setBlockName("sandstoneWall");
+	public static Block brickWall = new WallBlock(Blocks.brick_block, 1).setBlockName("brickWall");
+	public static Block stoneBrickWall = new WallBlock(Blocks.stonebrick, 2).setBlockName("stoneBrickWall");
 
 	
 	//Interactive Blocks
@@ -41,6 +48,12 @@ public class BlockRegistry {
 	public static Block Firerack  = new Firerack(Material.rock).setBlockName("Firerack").setBlockTextureName(References.MODID + ":" + "Firerack");
 
 	public static void Register() {
+		
+		//Walls
+		GameRegistry.registerBlock(sandstoneWall, "sandstoneWall");
+		GameRegistry.registerBlock(brickWall, "brickWall");
+		GameRegistry.registerBlock(stoneBrickWall, "stoneBrickWall");
+		
 		//InteractiveBlocks
 		GameRegistry.registerBlock(millstoneIdle, "millstoneIdle");
 		GameRegistry.registerBlock(millstoneActive, "millstoneActive");

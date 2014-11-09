@@ -1,4 +1,4 @@
-itemGroup.tabMillstone=Millstone Mai
+itemGroup.tabMillstone=Millstone Main
 itemGroup.tabMillstoneTools=Millstone Tools
 itemGroup.tabMillstoneArmor=Millstone Armors
 
@@ -111,6 +111,9 @@ tile.netherRubyOre.name=Nether Ruby Ore
 tile.silverOre.name=Silver Ore
 tile.lavaBrick.name=Lava Brick
 tile.Firerack.name=Firerack
+tile.sandstoneWall.name=Sandstone Wall
+tile.brickWall.name=Brick Wall
+tile.stoneBrickWall.name=Stonebrick Wall
 
 
 
