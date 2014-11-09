@@ -5,18 +5,20 @@ import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 
 import com.millstone.MillstoneMod;
-import com.millstone.blocks.CopperOre;
 import com.millstone.blocks.Cutter;
 import com.millstone.blocks.Firerack;
 import com.millstone.blocks.Lantern;
 import com.millstone.blocks.LavaBrick;
 import com.millstone.blocks.Millstone;
-import com.millstone.blocks.NetherRubyOre;
 import com.millstone.blocks.ObsidianBlock;
-import com.millstone.blocks.SapphireOre;
-import com.millstone.blocks.SilverOre;
 import com.millstone.blocks.WallBlock;
+import com.millstone.blocks.ores.CopperOre;
+import com.millstone.blocks.ores.NetherRubyOre;
+import com.millstone.blocks.ores.SapphireOre;
+import com.millstone.blocks.ores.SilverOre;
 import com.millstone.lib.References;
+import com.millstone.trees.TreeBlock;
+import com.millstone.trees.TreeBlockItem;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -30,7 +32,11 @@ public class BlockRegistry {
 	public static Block sandstoneWall = new WallBlock(Blocks.sandstone, 0).setBlockName("sandstoneWall");
 	public static Block brickWall = new WallBlock(Blocks.brick_block, 1).setBlockName("brickWall");
 	public static Block stoneBrickWall = new WallBlock(Blocks.stonebrick, 2).setBlockName("stoneBrickWall");
+	
+	//Woods 
+	public static Block treeBlock = new TreeBlock();
 
+	
 	
 	//Interactive Blocks
 	public static Block millstoneIdle = new Millstone(false).setBlockName("millstoneIdle").setCreativeTab(MillstoneMod.tabMillstone).setHardness(5F);
@@ -53,6 +59,9 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(sandstoneWall, "sandstoneWall");
 		GameRegistry.registerBlock(brickWall, "brickWall");
 		GameRegistry.registerBlock(stoneBrickWall, "stoneBrickWall");
+		
+		//Planks
+		GameRegistry.registerBlock(treeBlock, TreeBlockItem.class, (treeBlock.getUnlocalizedName().substring(6)));
 		
 		//InteractiveBlocks
 		GameRegistry.registerBlock(millstoneIdle, "millstoneIdle");

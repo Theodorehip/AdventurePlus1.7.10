@@ -1,4 +1,4 @@
-package com.millstone.blocks;
+package com.millstone.blocks.ores;
 
 import java.util.Random;
 
@@ -14,9 +14,9 @@ import com.millstone.registry.BlockRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class CopperOre extends Block{
+public class SilverOre extends Block{
 
-	public CopperOre(Material material) {
+	public SilverOre(Material material) {
 		super(material);
 		
 		this.setHardness(3F);
@@ -26,7 +26,7 @@ public class CopperOre extends Block{
 	}
 	
 	public Block getDropped(int i, Random random, int j){
-		return BlockRegistry.copperOre;
+		return BlockRegistry.silverOre;
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -36,7 +36,7 @@ public class CopperOre extends Block{
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister){
-		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "copperore");
+		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "SilverOre");
 		
 	}
 }

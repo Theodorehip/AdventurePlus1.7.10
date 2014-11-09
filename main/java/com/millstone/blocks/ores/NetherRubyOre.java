@@ -1,4 +1,4 @@
-package com.millstone.blocks;
+package com.millstone.blocks.ores;
 
 import java.util.Random;
 
@@ -15,9 +15,9 @@ import com.millstone.registry.ItemRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SapphireOre extends Block {
+public class NetherRubyOre extends Block {
 
-	public SapphireOre(Material material) {
+	public NetherRubyOre(Material material) {
 		super(material);
 
 		this.setHardness(3F);
@@ -27,7 +27,8 @@ public class SapphireOre extends Block {
 	}
 
 	public Item getItemDropped(int i, Random random, int j) {
-		return ItemRegistry.sapphire;
+
+		return ItemRegistry.ruby;
 	}
 
 	public int quantityDropped(Random random) {
@@ -55,11 +56,11 @@ public class SapphireOre extends Block {
 
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
-		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "SapphireOre");
+		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "NetherRuby");
 
 	}
 	
-    protected boolean canSilkHarvest()
+	protected boolean canSilkHarvest()
     {
         return true;
     }
