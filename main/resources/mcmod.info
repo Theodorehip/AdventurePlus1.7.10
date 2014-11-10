@@ -1,16 +1,21 @@
 [
-{
-  "modid": "mod_MillstoneMod",
-  "name": "Millstone Mod/Minecraft +",
-  "description": "Adds a lot of stuff",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["Paloeflora, Theodorhip, Moocowmaniak, PandawanFr"],
-  "credits": "None?",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+  {
+    "modid": "MillstoneMod",
+    "name": "The Millstone Mod",
+    "description": "Add tons of stuffs!",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authors": [
+      "Paloeflora", "Theodorhip", "Moocowmaniak", "PandawanFr", "and more!"
+    ],
+    "credits": "Everyone that helped make this mod possible",
+    "logoFile": "",
+    "screenshots": [
+    ],
+    "parent":"",
+    "dependencies": [
+    ]
+  }
 ]
