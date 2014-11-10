@@ -96,8 +96,9 @@ public class MillstoneMod
 		//testing generating random chest
 		//needs spawnrate tweak
 		ChestGenRegistry.RegisterGeneration();
-		RecipeRegistry.RegisterCrafting();
 		RecipeRegistry.RemoveRecipes();
+		RecipeRegistry.RegisterCrafting();
+
 	    RecipeRegistry.RegisterSmelting();
 		
 		//Tile Entity Registry
