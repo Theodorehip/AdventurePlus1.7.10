@@ -1,6 +1,5 @@
 package com.millstone.creativetab;
 
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -15,6 +14,6 @@ public class tabMillstone extends CreativeTabs{
 	
 	@Override
 	public Item getTabIconItem(){
-		return Item.getItemFromBlock(BlockRegistry.stoneCutter);
+		return Item.getItemFromBlock(BlockRegistry.millstoneIdle);
 	}
 }
