@@ -1,7 +1,7 @@
 [
   {
     "modid": "MillstoneMod",
-    "name": "The Millstone Mod",
+    "name": "Millstone Mod",
     "description": "Add tons of stuffs!",
     "version": "${version}",
     "mcversion": "${mcversion}",

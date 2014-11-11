@@ -41,7 +41,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 //This Class is very organized, Please keep it that way.
 
 //ModID Stuffs
-@Mod(modid = References.MODID, version = References.VERSION)
+@Mod(modid = References.MODID, version = References.VERSION, name = References.Name)
 public class MillstoneMod
 {
    

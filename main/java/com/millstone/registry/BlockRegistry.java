@@ -17,12 +17,15 @@ import com.millstone.blocks.ores.NetherRubyOre;
 import com.millstone.blocks.ores.SapphireOre;
 import com.millstone.blocks.ores.SilverOre;
 import com.millstone.lib.References;
+import com.millstone.trees.LogBlock;
+import com.millstone.trees.LogBlockItem;
 import com.millstone.trees.PlanksBlock;
 import com.millstone.trees.PlanksBlockItem;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockRegistry {
+
 	
 	//misc
 	public static Block obsidianBlock = new ObsidianBlock(Material.rock).setBlockName("obsidianBlock");
@@ -35,7 +38,7 @@ public class BlockRegistry {
 	
 	//Woods 
 	public static Block planks = new PlanksBlock();
-
+	public static Block log = new LogBlock();
 	
 	
 	//Interactive Blocks
@@ -62,7 +65,9 @@ public class BlockRegistry {
 		
 		//Planks
 		GameRegistry.registerBlock(planks, PlanksBlockItem.class, (planks.getUnlocalizedName().substring(5)));
+		GameRegistry.registerBlock(log, LogBlockItem.class, (log.getUnlocalizedName().substring(5)));
 		
+
 		//InteractiveBlocks
 		GameRegistry.registerBlock(millstoneIdle, "millstoneIdle");
 		GameRegistry.registerBlock(millstoneActive, "millstoneActive");

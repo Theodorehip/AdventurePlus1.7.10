@@ -10,18 +10,18 @@ import com.millstone.MillstoneMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class PlanksBlockItem extends ItemBlock{
+public class LogBlockItem extends ItemBlock{
 	
 	
 	
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
 	
-	public PlanksBlockItem(Block block)
+	public LogBlockItem(Block block)
     {
         super(block);
         this.setCreativeTab(MillstoneMod.tabMillstone);
-        this.setUnlocalizedName("planks");
+        this.setUnlocalizedName("log");
         setHasSubtypes(true);
         
     }
