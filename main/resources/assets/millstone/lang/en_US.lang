@@ -127,6 +127,14 @@ tile.planks.redwood.name=Redwood Planks
 tile.planks.applewood.name=Applewood Planks
 tile.planks.cherry.name=Cherry Wood Planks
 tile.planks.baobob.name=Baobob Wood Planks
+tile.log.name=Log
+tile.log.willow.name=Willow Wood 
+tile.log.palm.name=Palm Wood 
+tile.log.dreadwood.name=Dreadwood 
+tile.log.redwood.name=Redwood 
+tile.log.applewood.name=Applewood 
+tile.log.cherry.name=Cherry Wood 
+tile.log.baobob.name=Baobob Wood 
 
 
 

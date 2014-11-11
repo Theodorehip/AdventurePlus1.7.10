@@ -17,6 +17,9 @@ public class LogBlockItem extends ItemBlock{
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
 	
+	public static final String[] logs = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobob"};
+
+	
 	public LogBlockItem(Block block)
     {
         super(block);
@@ -29,49 +32,13 @@ public class LogBlockItem extends ItemBlock{
 	@Override
 	public String getUnlocalizedName(ItemStack itemstack)
 	{
-	String name = "";
-	switch (itemstack.getItemDamage())
-	{
-	case 0:
-	{
-	name = "willow";
-	break;
-	}
-	case 1:
-	{
-	name = "palm";
-	break;
-	}
-	case 2:
-	{
-	name = "dreadwood";
-	break;
-	}
-	case 3:
-	{
-	name = "redwood";
-	break;
-	}
-	case 4:
-	{
-	name = "applewood";
-	break;
-	}
-	case 5:
-	{
-	name = "cherry";
-	break;
-	}
-	case 6:
-	{
-	name = "baobob";
-	break;
-	}
-	default:
-	name = "noMeta";
-	}
-	return getUnlocalizedName() + "." + name;
-	}
+		int i = itemstack.getItemDamage();
+		
+		if (i < 0 || i >= logs.length){
+			i = 0;
+		}
+		return super.getUnlocalizedName() + "." + logs[i]; 
+		}
 	
 	    @Override
 	    public int getMetadata(int meta) {

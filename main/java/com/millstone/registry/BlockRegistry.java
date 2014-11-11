@@ -38,7 +38,7 @@ public class BlockRegistry {
 	
 	//Woods 
 	public static Block planks = new PlanksBlock();
-	public static Block log = new LogBlock();
+	public static Block log = new LogBlock().setBlockName("log").setCreativeTab(MillstoneMod.tabMillstone).setBlockTextureName("log");
 	
 	
 	//Interactive Blocks
@@ -66,7 +66,6 @@ public class BlockRegistry {
 		//Planks
 		GameRegistry.registerBlock(planks, PlanksBlockItem.class, (planks.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(log, LogBlockItem.class, (log.getUnlocalizedName().substring(5)));
-		
 
 		//InteractiveBlocks
 		GameRegistry.registerBlock(millstoneIdle, "millstoneIdle");
