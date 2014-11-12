@@ -17,6 +17,8 @@ import com.millstone.blocks.ores.NetherRubyOre;
 import com.millstone.blocks.ores.SapphireOre;
 import com.millstone.blocks.ores.SilverOre;
 import com.millstone.lib.References;
+import com.millstone.trees.LeafBlock;
+import com.millstone.trees.LeafBlockItem;
 import com.millstone.trees.LogBlock;
 import com.millstone.trees.LogBlockItem;
 import com.millstone.trees.PlanksBlock;
@@ -30,16 +32,6 @@ public class BlockRegistry {
 	//misc
 	public static Block obsidianBlock = new ObsidianBlock(Material.rock).setBlockName("obsidianBlock");
 	public static Block lantern = new Lantern(Material.glass).setHardness(0.3F).setLightLevel(1.0F).setBlockName("lantern").setBlockTextureName("lantern");
-	
-	//Walls
-	public static Block sandstoneWall = new WallBlock(Blocks.sandstone, 0).setBlockName("sandstoneWall");
-	public static Block brickWall = new WallBlock(Blocks.brick_block, 1).setBlockName("brickWall");
-	public static Block stoneBrickWall = new WallBlock(Blocks.stonebrick, 2).setBlockName("stoneBrickWall");
-	
-	//Woods 
-	public static Block planks = new PlanksBlock();
-	public static Block log = new LogBlock().setBlockName("log").setCreativeTab(MillstoneMod.tabMillstone).setBlockTextureName("log");
-	
 	
 	//Interactive Blocks
 	public static Block millstoneIdle = new Millstone(false).setBlockName("millstoneIdle").setCreativeTab(MillstoneMod.tabMillstone).setHardness(5F);
@@ -56,6 +48,17 @@ public class BlockRegistry {
 	public static Block lavaBrick  = new LavaBrick(Material.rock).setBlockName("lavaBrick").setBlockTextureName(References.MODID + ":" + "lavaBrick");
 	public static Block Firerack  = new Firerack(Material.rock).setBlockName("Firerack").setBlockTextureName(References.MODID + ":" + "Firerack");
 
+	//Walls
+	public static Block sandstoneWall = new WallBlock(Blocks.sandstone, 0).setBlockName("sandstoneWall");
+	public static Block brickWall = new WallBlock(Blocks.brick_block, 1).setBlockName("brickWall");
+	public static Block stoneBrickWall = new WallBlock(Blocks.stonebrick, 2).setBlockName("stoneBrickWall");
+		
+	//Woods 
+	public static Block planks = new PlanksBlock();
+	public static Block log = new LogBlock().setBlockName("log").setCreativeTab(MillstoneMod.tabMillstone).setBlockTextureName("log");
+	public static Block leaf = new LeafBlock().setBlockName("leaf").setCreativeTab(MillstoneMod.tabMillstone).setBlockTextureName("leaf");
+
+	
 	public static void Register() {
 		
 		//Walls
@@ -66,7 +69,9 @@ public class BlockRegistry {
 		//Planks
 		GameRegistry.registerBlock(planks, PlanksBlockItem.class, (planks.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(log, LogBlockItem.class, (log.getUnlocalizedName().substring(5)));
+		GameRegistry.registerBlock(leaf, LeafBlockItem.class, (leaf.getUnlocalizedName().substring(5)));
 
+		
 		//InteractiveBlocks
 		GameRegistry.registerBlock(millstoneIdle, "millstoneIdle");
 		GameRegistry.registerBlock(millstoneActive, "millstoneActive");

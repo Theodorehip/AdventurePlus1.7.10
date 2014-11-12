@@ -3,23 +3,19 @@ package com.millstone.trees;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
 
 import com.millstone.MillstoneMod;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
-public class LogBlockItem extends ItemBlock{
+public class LeafBlockItem extends ItemBlock{
 	
-	public static final String[] logs = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobob"};
+	public static final String[] leaf = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobob"};
 
 	
-	public LogBlockItem(Block block)
+	public LeafBlockItem(Block block)
     {
         super(block);
         this.setCreativeTab(MillstoneMod.tabMillstone);
-        this.setUnlocalizedName("log");
+        this.setUnlocalizedName("leaf");
         setHasSubtypes(true);
         
     }
@@ -29,10 +25,10 @@ public class LogBlockItem extends ItemBlock{
 	{
 		int i = itemstack.getItemDamage();
 		
-		if (i < 0 || i >= logs.length){
+		if (i < 0 || i >= leaf.length){
 			i = 0;
 		}
-		return super.getUnlocalizedName() + "." + logs[i]; 
+		return super.getUnlocalizedName() + "." + leaf[i]; 
 		}
 	
 	    @Override
@@ -41,6 +37,4 @@ public class LogBlockItem extends ItemBlock{
 	        return meta;
 	    }
 
-	}
-
-
+}

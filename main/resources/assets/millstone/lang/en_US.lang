@@ -135,6 +135,14 @@ tile.log.redwood.name=Redwood
 tile.log.applewood.name=Applewood 
 tile.log.cherry.name=Cherry Wood 
 tile.log.baobob.name=Baobob Wood 
+tile.leaf.name=Leaves
+tile.leaf.willow.name=Willow Leaves
+tile.leaf.palm.name=Palm Leaves
+tile.leaf.dreadwood.name=Dreadwood Leaves 
+tile.leaf.redwood.name=Redwood Leaves
+tile.leaf.applewood.name=Applewood Leaves
+tile.leaf.cherry.name=Cherry Leaves
+tile.leaf.baobob.name=Baobob Leaves
 
 
 
