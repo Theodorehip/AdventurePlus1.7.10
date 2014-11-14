@@ -60,7 +60,7 @@ public class EntityGrenade extends EntityThrowable {
 			 * it should set neighboring blocks on fire
 			 */
 			this.worldObj.newExplosion(this, mop.blockX, mop.blockY,
-					mop.blockZ, 2.0F, true, true);
+					mop.blockZ, 5.0F, false, true);
 		} // If the Server is online and works, kill this entity
 		if (!this.worldObj.isRemote) {
 			this.setDead();
