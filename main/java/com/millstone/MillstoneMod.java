@@ -16,6 +16,7 @@ import com.millstone.creativetab.tabMillstoneMaterials;
 import com.millstone.creativetab.tabMillstoneMisc;
 import com.millstone.creativetab.tabMillstoneTools;
 import com.millstone.enchantments.Piercing;
+import com.millstone.entities.EntityGrenade;
 import com.millstone.entities.Scarecrow;
 import com.millstone.handler.CustomDropsEvent;
 import com.millstone.handler.GuiHandler;
@@ -104,6 +105,7 @@ public class MillstoneMod
 		
 		//Tile Entity Registry
 		GameRegistry.registerTileEntity(TileEntityMillstone.class, "tileEntityMillstone");
+		EntityRegistry.registerModEntity(EntityGrenade.class, "Grenade", 4, this, 80, 3, true);
 
 
     	//Register your GUI handler

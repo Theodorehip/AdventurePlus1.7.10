@@ -28,6 +28,12 @@ item.copperAxe.name=Copper Axe
 item.copperPickaxe.name=Copper Pickaxe
 item.copperShovel.name=Copper Shovel
 
+item.ironSword.name=Iron Sword
+item.ironHoe.name=Iron Hoe
+item.ironAxe.name=Iron Axe
+item.ironPickaxe.name=Iron Pickaxe
+item.ironShovel.name=Iron Shovel
+
 item.rubySword.name=Ruby Sword
 item.rubyHoe.name=Ruby Hoe
 item.rubyAxe.name=Ruby Axe
@@ -77,6 +83,7 @@ item.silverDust.name=Silver Dust
 item.silverIngot.name=Silver Ingot
 item.ironRod.name=Iron Rod
 item.rottenArrow.name=Rotten Arrow
+item.grenade.name=Holy Hand Grenade
 
 item.boneShard.name=Bone Shard
 item.leatherStrip.name=Leather Strip

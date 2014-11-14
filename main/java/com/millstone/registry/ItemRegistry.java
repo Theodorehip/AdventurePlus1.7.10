@@ -29,6 +29,7 @@ import com.millstone.items.GoldDust;
 import com.millstone.items.IronDust;
 import com.millstone.items.IronNugget;
 import com.millstone.items.IronRod;
+import com.millstone.items.ItemGrenade;
 import com.millstone.items.LeatherStrip;
 import com.millstone.items.ObsidianDust;
 import com.millstone.items.RiceBowl;
@@ -108,11 +109,11 @@ public class ItemRegistry{
 	public static Item copperHoe = new CopperHoe(CopperMaterial).setUnlocalizedName("copperHoe");
 	//public static Item copperSword = new CopperSword(CopperMaterial).setUnlocalizedName("copperSword");	
 	
-	public static Item ironPickaxe = new IronPickaxe(CustomIron).setUnlocalizedName("copperPickaxe");
-	public static Item ironShovel = new IronShovel(CustomIron).setUnlocalizedName("copperShovel");
-	public static Item ironAxe = new IronAxe(CustomIron).setUnlocalizedName("copperAxe");
-	public static Item ironHoe = new IronHoe(CustomIron).setUnlocalizedName("copperHoe");
-	public static Item ironSword = new IronSword(CustomIron).setUnlocalizedName("copperSword");
+	public static Item ironPickaxe = new IronPickaxe(CustomIron).setUnlocalizedName("ironPickaxe");
+	public static Item ironShovel = new IronShovel(CustomIron).setUnlocalizedName("ironShovel");
+	public static Item ironAxe = new IronAxe(CustomIron).setUnlocalizedName("ironAxe");
+	public static Item ironHoe = new IronHoe(CustomIron).setUnlocalizedName("ironHoe");
+	public static Item ironSword = new IronSword(CustomIron).setUnlocalizedName("ironSword");
 	
 	public static Item rubyPickaxe = new RubyPickaxe(RubyMaterial).setUnlocalizedName("rubyPickaxe");
 	public static Item rubyShovel = new RubyShovel(RubyMaterial).setUnlocalizedName("rubyShovel");
@@ -203,6 +204,7 @@ public class ItemRegistry{
 	public static Item rottenArrow = new rottenArrow();
 	public static Item ironNugget = new IronNugget();
 	public static Item leatherStrip = new LeatherStrip();
+	public static Item grenade = new ItemGrenade();
 	
 	//Gears
 	public static Item woodGear = new com.millstone.items.ItemGear().setMaxDamage(500).setTextureName(References.MODID + ":" + "woodGear").setUnlocalizedName("woodGear");
@@ -256,6 +258,12 @@ public class ItemRegistry{
 	GameRegistry.registerItem(copperPickaxe, "copperPickaxe");
 	GameRegistry.registerItem(copperShovel, "copperShovel");
 	
+	GameRegistry.registerItem(ironSword, "ironSword");
+	GameRegistry.registerItem(ironHoe, "ironHoe");
+	GameRegistry.registerItem(ironAxe, "ironAxe");
+	GameRegistry.registerItem(ironPickaxe, "ironPickaxe");
+	GameRegistry.registerItem(ironShovel, "ironShovel");
+	
 	GameRegistry.registerItem(bonePickaxe, "bonePickaxe");
 	GameRegistry.registerItem(flintKnife, "flintKnife");
 	GameRegistry.registerItem(flintHatchet, "flintAxe");
@@ -303,6 +311,7 @@ public class ItemRegistry{
 	GameRegistry.registerItem(silverIngot, "silverBar");
 	GameRegistry.registerItem(sapphire, "sapphire");
 	GameRegistry.registerItem(ruby, "ruby");
+	GameRegistry.registerItem(grenade, "grenade");
 	
 	//Dusts
 	GameRegistry.registerItem(silverDust, "silverDust");
