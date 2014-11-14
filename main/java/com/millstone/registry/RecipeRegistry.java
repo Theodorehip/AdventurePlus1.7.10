@@ -29,34 +29,59 @@ public class RecipeRegistry{
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.diamondGear, 1), new Object[]{" S ", "SCS", " S ", 'C', ItemRegistry.ironGear, 'S', Items.diamond});
 	
 	//Tools
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.copperSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', copperIngot});
+	//GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.copperSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', copperIngot});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.copperPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O', copperIngot});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.copperAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', copperIngot});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.copperShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', copperIngot});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.copperHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', copperIngot});
 	
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.rubySword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', ruby});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.rubyPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O', ruby});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.rubyAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', ruby});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.rubyShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', ruby});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.rubyHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', ruby});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.rubySword, 1), new Object[]{" O ", " O ", " I ", 'I', ItemRegistry.ironRod, 'O', ruby});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.rubyPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', ruby});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.rubyAxe, 1), new Object[]{" OO", " IO", " I ", 'I', ItemRegistry.ironRod, 'O', ruby});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.rubyShovel, 1), new Object[]{" O ", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', ruby});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.rubyHoe, 1), new Object[]{" OO", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', ruby});
 	
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.sapphireSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O',sapphire});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.sapphirePickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O', sapphire});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.sapphireAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', sapphire});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.sapphireShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', sapphire});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.sapphireHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', sapphire});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.sapphireSword, 1), new Object[]{" O ", " O ", " I ", 'I', ItemRegistry.ironRod, 'O',sapphire});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.sapphirePickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', sapphire});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.sapphireAxe, 1), new Object[]{" OO", " IO", " I ", 'I', ItemRegistry.ironRod, 'O', sapphire});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.sapphireShovel, 1), new Object[]{" O ", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', sapphire});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.sapphireHoe, 1), new Object[]{" OO", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', sapphire});
 	
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.emeraldSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', Items.emerald});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.emeraldPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O',Items.emerald});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.emeraldAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', Items.emerald});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.emeraldShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', Items.emerald});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.emeraldHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', Items.emerald});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.emeraldSword, 1), new Object[]{" O ", " O ", " I ", 'I', ItemRegistry.ironRod, 'O', Items.emerald});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.emeraldPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', ItemRegistry.ironRod, 'O',Items.emerald});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.emeraldAxe, 1), new Object[]{" OO", " IO", " I ", 'I', ItemRegistry.ironRod, 'O', Items.emerald});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.emeraldShovel, 1), new Object[]{" O ", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', Items.emerald});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.emeraldHoe, 1), new Object[]{" OO", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', Items.emerald});
 	
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintHatchet, 1), new Object[]{" O ", "OI ", 'I', Items.stick, 'O', Items.flint});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.golden_sword, 1), new Object[]{" O ", " O ", " I ", 'I', ItemRegistry.ironRod, 'O', Items.gold_ingot});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.golden_pickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', ItemRegistry.ironRod, 'O',Items.gold_ingot});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.golden_axe, 1), new Object[]{" OO", " IO", " I ", 'I', ItemRegistry.ironRod, 'O', Items.gold_ingot});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.golden_shovel, 1), new Object[]{" O ", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', Items.gold_ingot});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.golden_hoe, 1), new Object[]{" OO", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', Items.gold_ingot});
+	
+	GameRegistry.addShapedRecipe(new ItemStack(Items.diamond_sword, 1), new Object[]{" O ", " O ", " I ", 'I', ItemRegistry.ironRod, 'O', Items.diamond});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.diamond_pickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', ItemRegistry.ironRod, 'O',Items.diamond});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.diamond_axe, 1), new Object[]{" OO", " IO", " I ", 'I', ItemRegistry.ironRod, 'O', Items.diamond});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.diamond_shovel, 1), new Object[]{" O ", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', Items.diamond});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.diamond_hoe, 1), new Object[]{" OO", " I ", " I ", 'I', ItemRegistry.ironRod, 'O', Items.diamond});
+	
+	GameRegistry.addShapedRecipe(new ItemStack(Items.stone_sword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', Blocks.stone});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.stone_pickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O',Blocks.stone});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.stone_axe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', Blocks.stone});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.stone_shovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', Blocks.stone});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.stone_hoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', Blocks.stone});
+	
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', Items.iron_ingot});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironPickaxe, 1), new Object[]{"OOO", " I ", " I ", 'I', Items.stick, 'O',Items.iron_ingot});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironAxe, 1), new Object[]{" OO", " IO", " I ", 'I', Items.stick, 'O', Items.iron_ingot});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', Items.iron_ingot});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', Items.iron_ingot});
+	
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintHatchet, 1), new Object[]{" OL", "  I", 'I', Items.stick, 'O', Items.flint, 'L', ItemRegistry.leatherStrip});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.bonePickaxe, 1), new Object[]{"OQO", " I ", " I ", 'I', Items.stick, 'Q', Items.bone, 'O',ItemRegistry.boneShard});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintKnife, 1), new Object[]{"  I", " I ", 'I', Items.flint});
 	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.boneShard, 1), new Object[]{ItemRegistry.flintKnife, Items.bone});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironRod, 6), new Object[]{" I ", " I ", " I ", 'I', Items.iron_ingot});
 	
 	//Armor
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.armorCopperHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', copperIngot});
@@ -91,6 +116,7 @@ public class RecipeRegistry{
 	GameRegistry.addShapedRecipe(new ItemStack(Blocks.wool, 1), new Object[]{"   ", "CC ", "CC ", 'C', ItemRegistry.cotton});
     GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.riceBowl,1), new Object[] {"x", "y", 'x', ItemRegistry.riceCrop, 'y', Items.bowl});
     GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.sushi,1), new Object[] {new ItemStack(ItemRegistry.riceCrop, 1), Items.fish});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.iron_bars, 4), new Object[] {"   ", "###", "###", '#', ItemRegistry.ironRod});
     
 	//Logs to Planks reduction
     GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 0), new Object[] {new ItemStack(Blocks.log, 1, 0)});
@@ -169,12 +195,33 @@ public class RecipeRegistry{
 		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.quartz_stairs));
 		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.nether_brick_stairs));
 		
-		//getting rid of wooden tools
+		//redoing Recipes
+		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.iron_bars));
+		
+		//getting rid of wooden tools/changing diamond and gold tools and stone tools
 		RemoveRecipes.removeRecipes(Items.wooden_axe);
 		RemoveRecipes.removeRecipes(Items.wooden_pickaxe);
 		RemoveRecipes.removeRecipes(Items.wooden_shovel);
 		RemoveRecipes.removeRecipes(Items.wooden_sword);
 		RemoveRecipes.removeRecipes(Items.wooden_hoe);
+		
+		RemoveRecipes.removeRecipes(Items.golden_axe);
+		RemoveRecipes.removeRecipes(Items.golden_pickaxe);
+		RemoveRecipes.removeRecipes(Items.golden_shovel);
+		RemoveRecipes.removeRecipes(Items.golden_sword);
+		RemoveRecipes.removeRecipes(Items.golden_hoe);
+		
+		RemoveRecipes.removeRecipes(Items.diamond_axe);
+		RemoveRecipes.removeRecipes(Items.diamond_pickaxe);
+		RemoveRecipes.removeRecipes(Items.diamond_shovel);
+		RemoveRecipes.removeRecipes(Items.diamond_sword);
+		RemoveRecipes.removeRecipes(Items.diamond_hoe);
+		
+		RemoveRecipes.removeRecipes(Items.stone_axe);
+		RemoveRecipes.removeRecipes(Items.stone_pickaxe);
+		RemoveRecipes.removeRecipes(Items.stone_shovel);
+		RemoveRecipes.removeRecipes(Items.stone_sword);
+		RemoveRecipes.removeRecipes(Items.stone_hoe);
 		
 		
 	}

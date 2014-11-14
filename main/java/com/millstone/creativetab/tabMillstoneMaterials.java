@@ -14,6 +14,6 @@ public class tabMillstoneMaterials extends CreativeTabs{
 	
 	@Override
 	public Item getTabIconItem(){
-		return ItemRegistry.ironDust;
+		return ItemRegistry.obsidianDust;
 	}
 }

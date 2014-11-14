@@ -15,6 +15,6 @@ public class tabMillstoneMisc extends CreativeTabs{
 	
 	@Override
 	public Item getTabIconItem(){
-		return ItemRegistry.obsidianDust;
+		return ItemRegistry.ironGear;
 	}
 }

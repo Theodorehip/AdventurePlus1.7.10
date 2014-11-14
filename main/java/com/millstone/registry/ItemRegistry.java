@@ -27,7 +27,9 @@ import com.millstone.items.Flax;
 import com.millstone.items.Flour;
 import com.millstone.items.GoldDust;
 import com.millstone.items.IronDust;
+import com.millstone.items.IronNugget;
 import com.millstone.items.IronRod;
+import com.millstone.items.LeatherStrip;
 import com.millstone.items.ObsidianDust;
 import com.millstone.items.RiceBowl;
 import com.millstone.items.RicePaper;
@@ -53,6 +55,11 @@ import com.millstone.tools.EmeraldShovel;
 import com.millstone.tools.EmeraldSword;
 import com.millstone.tools.FlintHatchet;
 import com.millstone.tools.FlintKnife;
+import com.millstone.tools.IronAxe;
+import com.millstone.tools.IronHoe;
+import com.millstone.tools.IronPickaxe;
+import com.millstone.tools.IronShovel;
+import com.millstone.tools.IronSword;
 import com.millstone.tools.ObsidianAxe;
 import com.millstone.tools.ObsidianHoe;
 import com.millstone.tools.ObsidianPickaxe;
@@ -74,15 +81,16 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemRegistry{
 	//Tool/Armor Materials
-	public static ToolMaterial ObsidianMaterial = EnumHelper.addToolMaterial("ObsidianMaterial" , 3 , 750, 13.0F, 4.0F, 10);
-	public static ToolMaterial CopperMaterial = EnumHelper.addToolMaterial("CopperMaterial" , 2 , 210, 5.0F, 2.0F, 14);
+	public static ToolMaterial ObsidianMaterial = EnumHelper.addToolMaterial("ObsidianMaterial" , 3 , 2000, 13.0F, 4.0F, 10);
+	public static ToolMaterial CopperMaterial = EnumHelper.addToolMaterial("CopperMaterial" , 1, 251, 4.0F, 1.0F, 5);
 	public static ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
 	public static ToolMaterial SapphireMaterial = EnumHelper.addToolMaterial("SapphireMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
 	public static ToolMaterial EmeraldMaterial = EnumHelper.addToolMaterial("EmeraldMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
-	public static ToolMaterial Tier0 = EnumHelper.addToolMaterial("Tier0" , 0, 80, 2.0F, 0.0F, 15);
+	public static ToolMaterial Tier0 = EnumHelper.addToolMaterial("Tier0" , 0, 60, 2.0F, 0.0F, 15);
+	public static ToolMaterial CustomIron = EnumHelper.addToolMaterial("CustomIron" , 2, 480, 6.0F, 2.0F, 14);
 
 	public static ArmorMaterial ObsidianArmorMaterial = EnumHelper.addArmorMaterial("ObsidianArmor", 42, new int[]{4, 10, 4, 2}, 20);
-	public static ArmorMaterial CopperArmorMaterial = EnumHelper.addArmorMaterial("CopperArmor", 13, new int[]{2, 5, 4, 1}, 10);
+	public static ArmorMaterial CopperArmorMaterial = EnumHelper.addArmorMaterial("CopperArmor", 13, new int[]{2, 5, 4, 1}, 12);
 	public static ArmorMaterial RubyArmorMaterial = EnumHelper.addArmorMaterial("RubyArmor", 33, new int[]{3, 8, 6, 3}, 10);
 	public static ArmorMaterial SapphireArmorMaterial = EnumHelper.addArmorMaterial("SapphireArmor", 33, new int[]{3, 8, 6, 3}, 10);
 	public static ArmorMaterial EmeraldArmorMaterial = EnumHelper.addArmorMaterial("EmeraldArmor", 33, new int[]{3, 8, 6, 3}, 10);
@@ -98,7 +106,13 @@ public class ItemRegistry{
 	public static Item copperShovel = new CopperShovel(CopperMaterial).setUnlocalizedName("copperShovel");
 	public static Item copperAxe = new CopperAxe(CopperMaterial).setUnlocalizedName("copperAxe");
 	public static Item copperHoe = new CopperHoe(CopperMaterial).setUnlocalizedName("copperHoe");
-	public static Item copperSword = new CopperSword(CopperMaterial).setUnlocalizedName("copperSword");	
+	//public static Item copperSword = new CopperSword(CopperMaterial).setUnlocalizedName("copperSword");	
+	
+	public static Item ironPickaxe = new IronPickaxe(CustomIron).setUnlocalizedName("copperPickaxe");
+	public static Item ironShovel = new IronShovel(CustomIron).setUnlocalizedName("copperShovel");
+	public static Item ironAxe = new IronAxe(CustomIron).setUnlocalizedName("copperAxe");
+	public static Item ironHoe = new IronHoe(CustomIron).setUnlocalizedName("copperHoe");
+	public static Item ironSword = new IronSword(CustomIron).setUnlocalizedName("copperSword");
 	
 	public static Item rubyPickaxe = new RubyPickaxe(RubyMaterial).setUnlocalizedName("rubyPickaxe");
 	public static Item rubyShovel = new RubyShovel(RubyMaterial).setUnlocalizedName("rubyShovel");
@@ -187,6 +201,8 @@ public class ItemRegistry{
 	public static Item ironRod = new IronRod();
 	public static Item boneShard = new BoneShard();
 	public static Item rottenArrow = new rottenArrow();
+	public static Item ironNugget = new IronNugget();
+	public static Item leatherStrip = new LeatherStrip();
 	
 	//Gears
 	public static Item woodGear = new com.millstone.items.ItemGear().setMaxDamage(500).setTextureName(References.MODID + ":" + "woodGear").setUnlocalizedName("woodGear");
@@ -234,7 +250,7 @@ public class ItemRegistry{
 	GameRegistry.registerItem(emeraldPickaxe, "emeraldPickaxe");
 	GameRegistry.registerItem(emeraldShovel, "emeraldShovel");
 	
-	GameRegistry.registerItem(copperSword, "copperSword");
+	//GameRegistry.registerItem(copperSword, "copperSword");
 	GameRegistry.registerItem(copperHoe, "copperHoe");
 	GameRegistry.registerItem(copperAxe, "copperAxe");
 	GameRegistry.registerItem(copperPickaxe, "copperPickaxe");
@@ -302,6 +318,8 @@ public class ItemRegistry{
 	GameRegistry.registerItem(ricePaper, "ricePaper");
 	GameRegistry.registerItem(flour, "flour");
 	GameRegistry.registerItem(rottenArrow, "rottenArrow");
+	GameRegistry.registerItem(ironNugget, "ironNugget");
+	GameRegistry.registerItem(leatherStrip, "leatherStrip");
 		
 	//Plants
 	GameRegistry.registerBlock(ricePlant, "ricePlant");
