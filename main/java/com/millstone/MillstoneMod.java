@@ -99,6 +99,7 @@ public class MillstoneMod
 		ChestGenRegistry.RegisterGeneration();
 		
 		
+		
 		RecipeRegistry.RemoveRecipes();
 		RecipeRegistry.RegisterCrafting();
 	    RecipeRegistry.RegisterSmelting();

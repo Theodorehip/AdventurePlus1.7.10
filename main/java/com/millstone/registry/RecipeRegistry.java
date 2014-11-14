@@ -82,6 +82,8 @@ public class RecipeRegistry{
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintKnife, 1), new Object[]{"  I", " I ", 'I', Items.flint});
 	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.boneShard, 1), new Object[]{ItemRegistry.flintKnife, Items.bone});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironRod, 6), new Object[]{" I ", " I ", " I ", 'I', Items.iron_ingot});
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 2), new Object[]{ItemRegistry.flintKnife, Blocks.sapling});
+	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.leatherStrip, 3), new Object[]{ItemRegistry.flintKnife, Items.leather});
 	
 	//Armor
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.armorCopperHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', copperIngot});
@@ -117,6 +119,12 @@ public class RecipeRegistry{
     GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.riceBowl,1), new Object[] {"x", "y", 'x', ItemRegistry.riceCrop, 'y', Items.bowl});
     GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.sushi,1), new Object[] {new ItemStack(ItemRegistry.riceCrop, 1), Items.fish});
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.iron_bars, 4), new Object[] {"   ", "###", "###", '#', ItemRegistry.ironRod});
+    
+    //Re-done Rails
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.rail, 16), new Object[]{"X X", "XIX", "X X", 'X', ItemRegistry.ironRod, 'I', Items.stick});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.activator_rail, 6), new Object[]{"XIX", "XRX", "XIX", 'X', ItemRegistry.ironRod, 'I', Items.stick, 'R', Blocks.redstone_torch});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.detector_rail, 6), new Object[]{"X X", "XRX", "XIX", 'X', ItemRegistry.ironRod, 'I', Items.redstone, 'R', Blocks.stone_pressure_plate});
+   // GameRegistry.addShapedRecipe(new ItemStack(Blocks.golden_rail, 6), new Object[]{"X X", "XIX", "XRX", 'X', Items.gold_ingot, 'I', Items.stick, 'R', Items.redstone});
     
 	//Logs to Planks reduction
     GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 0), new Object[] {new ItemStack(Blocks.log, 1, 0)});
@@ -197,6 +205,11 @@ public class RecipeRegistry{
 		
 		//redoing Recipes
 		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.iron_bars));
+		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.rail));
+		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.activator_rail));
+		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.detector_rail));
+		//RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.golden_rail));
+		
 		
 		//getting rid of wooden tools/changing diamond and gold tools and stone tools
 		RemoveRecipes.removeRecipes(Items.wooden_axe);

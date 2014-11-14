@@ -22,11 +22,11 @@ public class MillstoneModWorldGen implements IWorldGenerator {
 			generateSurface(world, random, chunkX * 16, chunkZ * 16);
 
 		case -1:
-			// generater our surface world
+			// generater our Nether World
 			generateNether(world, random, chunkX * 16, chunkZ * 16);
 
 		case 1:
-			// generater our surface world
+			// generater our EnderWorld
 			generateEnd(world, random, chunkX * 16, chunkZ * 16);
 
 		}
@@ -35,8 +35,8 @@ public class MillstoneModWorldGen implements IWorldGenerator {
 
 	private void generateSurface(World world, Random random, int x, int z) {
 		// this.addOreSpawn
-		this.addOreSpawn(BlockRegistry.copperOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
-		this.addOreSpawn(BlockRegistry.silverOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 25, 38, 100);
+		this.addOreSpawn(BlockRegistry.copperOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 10, 42, 63);
+		this.addOreSpawn(BlockRegistry.silverOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 10, 42, 63);
 
 		 String s = world.getBiomeGenForCoords(x, z).biomeName;
 		    	this.addOreSpawn(BlockRegistry.sapphireOre, world, random, x, z, 16, 16, 2 + random.nextInt(6), 25, 0, 20);
