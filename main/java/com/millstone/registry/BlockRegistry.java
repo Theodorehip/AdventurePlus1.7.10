@@ -61,6 +61,25 @@ public class BlockRegistry {
 	
 	public static void Register() {
 		
+		//InteractiveBlocks
+		GameRegistry.registerBlock(millstoneIdle, "millstoneIdle");
+		GameRegistry.registerBlock(millstoneActive, "millstoneActive");
+		GameRegistry.registerBlock(stoneCutter, "stoneCutter");
+		
+		//Ores
+		GameRegistry.registerBlock(copperOre, "copperOre");
+		GameRegistry.registerBlock(sapphireOre, "sapphireOre");
+		GameRegistry.registerBlock(netherRubyOre, "netherRubyOre");
+		GameRegistry.registerBlock(silverOre, "silverOre");
+		
+		//NonOreSpawningBlocks
+		GameRegistry.registerBlock(lavaBrick, "lavaBrick");
+		GameRegistry.registerBlock(Firerack, "Firerack");
+		
+		//Craftable
+		GameRegistry.registerBlock(obsidianBlock, "obsidianBlock");		
+		GameRegistry.registerBlock(lantern, "lantern");
+		
 		//Walls
 		GameRegistry.registerBlock(sandstoneWall, "sandstoneWall");
 		GameRegistry.registerBlock(brickWall, "brickWall");
@@ -70,29 +89,6 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(planks, PlanksBlockItem.class, (planks.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(log, LogBlockItem.class, (log.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(leaf, LeafBlockItem.class, (leaf.getUnlocalizedName().substring(5)));
-
-		
-		//InteractiveBlocks
-		GameRegistry.registerBlock(millstoneIdle, "millstoneIdle");
-		GameRegistry.registerBlock(millstoneActive, "millstoneActive");
-		GameRegistry.registerBlock(stoneCutter, "stoneCutter");
-
-		//Ores
-		GameRegistry.registerBlock(copperOre, "copperOre");
-		GameRegistry.registerBlock(sapphireOre, "sapphireOre");
-		GameRegistry.registerBlock(netherRubyOre, "netherRubyOre");
-		GameRegistry.registerBlock(silverOre, "silverOre");
-		
-		//Craftable
-		GameRegistry.registerBlock(obsidianBlock, "obsidianBlock");		
-		GameRegistry.registerBlock(lantern, "lantern");
-
-		//NonOreSpawningBlocks
-		GameRegistry.registerBlock(lavaBrick, "lavaBrick");
-		GameRegistry.registerBlock(Firerack, "Firerack");
-		
-
-
 
 	}
 }

@@ -81,38 +81,36 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemRegistry{
 	//Tool/Armor Materials
-	public static ToolMaterial ObsidianMaterial = EnumHelper.addToolMaterial("ObsidianMaterial" , 3 , 2000, 13.0F, 4.0F, 10);
+	public static ToolMaterial Tier0 = EnumHelper.addToolMaterial("Tier0" , 0, 60, 2.0F, 0.0F, 15);
+	public static ToolMaterial CustomIron = EnumHelper.addToolMaterial("CustomIron" , 2, 480, 6.0F, 2.0F, 14);
 	public static ToolMaterial CopperMaterial = EnumHelper.addToolMaterial("CopperMaterial" , 1, 251, 4.0F, 1.0F, 5);
 	public static ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
 	public static ToolMaterial SapphireMaterial = EnumHelper.addToolMaterial("SapphireMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
 	public static ToolMaterial EmeraldMaterial = EnumHelper.addToolMaterial("EmeraldMaterial" , 3 , 1561, 8.0F, 3.0F, 10);
-	public static ToolMaterial Tier0 = EnumHelper.addToolMaterial("Tier0" , 0, 60, 2.0F, 0.0F, 15);
-	public static ToolMaterial CustomIron = EnumHelper.addToolMaterial("CustomIron" , 2, 480, 6.0F, 2.0F, 14);
-
-	public static ArmorMaterial ObsidianArmorMaterial = EnumHelper.addArmorMaterial("ObsidianArmor", 42, new int[]{4, 10, 4, 2}, 20);
+	public static ToolMaterial ObsidianMaterial = EnumHelper.addToolMaterial("ObsidianMaterial" , 3 , 2000, 13.0F, 4.0F, 10);
+	
 	public static ArmorMaterial CopperArmorMaterial = EnumHelper.addArmorMaterial("CopperArmor", 13, new int[]{2, 5, 4, 1}, 12);
 	public static ArmorMaterial RubyArmorMaterial = EnumHelper.addArmorMaterial("RubyArmor", 33, new int[]{3, 8, 6, 3}, 10);
 	public static ArmorMaterial SapphireArmorMaterial = EnumHelper.addArmorMaterial("SapphireArmor", 33, new int[]{3, 8, 6, 3}, 10);
 	public static ArmorMaterial EmeraldArmorMaterial = EnumHelper.addArmorMaterial("EmeraldArmor", 33, new int[]{3, 8, 6, 3}, 10);
-	
+	public static ArmorMaterial ObsidianArmorMaterial = EnumHelper.addArmorMaterial("ObsidianArmor", 42, new int[]{4, 10, 4, 2}, 20);
+
 	//Tools
-	public static Item obsidianPickaxe = new ObsidianPickaxe(ObsidianMaterial).setUnlocalizedName("obsidianPickaxe");
-	public static Item obsidianShovel = new ObsidianShovel(ObsidianMaterial).setUnlocalizedName("obsidianShovel");
-	public static Item obsidianAxe = new ObsidianAxe(ObsidianMaterial).setUnlocalizedName("obsidianAxe");
-	public static Item obsidianHoe = new ObsidianHoe(ObsidianMaterial).setUnlocalizedName("obsidianHoe");
-	public static Item obsidianSword = new ObsidianSword(ObsidianMaterial).setUnlocalizedName("obsidianSword");
-	
-	public static Item copperPickaxe = new CopperPickaxe(CopperMaterial).setUnlocalizedName("copperPickaxe");
-	public static Item copperShovel = new CopperShovel(CopperMaterial).setUnlocalizedName("copperShovel");
-	public static Item copperAxe = new CopperAxe(CopperMaterial).setUnlocalizedName("copperAxe");
-	public static Item copperHoe = new CopperHoe(CopperMaterial).setUnlocalizedName("copperHoe");
-	//public static Item copperSword = new CopperSword(CopperMaterial).setUnlocalizedName("copperSword");	
+	public static Item bonePickaxe = new BonePickaxe(Tier0).setUnlocalizedName("bonePickaxe");
+	public static Item flintKnife = new FlintKnife(Tier0).setUnlocalizedName("flintKnife");
+	public static Item flintHatchet = new FlintHatchet(Tier0).setUnlocalizedName("flintHatchet");
 	
 	public static Item ironPickaxe = new IronPickaxe(CustomIron).setUnlocalizedName("ironPickaxe");
 	public static Item ironShovel = new IronShovel(CustomIron).setUnlocalizedName("ironShovel");
 	public static Item ironAxe = new IronAxe(CustomIron).setUnlocalizedName("ironAxe");
 	public static Item ironHoe = new IronHoe(CustomIron).setUnlocalizedName("ironHoe");
 	public static Item ironSword = new IronSword(CustomIron).setUnlocalizedName("ironSword");
+	
+	public static Item copperPickaxe = new CopperPickaxe(CopperMaterial).setUnlocalizedName("copperPickaxe");
+	public static Item copperShovel = new CopperShovel(CopperMaterial).setUnlocalizedName("copperShovel");
+	public static Item copperAxe = new CopperAxe(CopperMaterial).setUnlocalizedName("copperAxe");
+	public static Item copperHoe = new CopperHoe(CopperMaterial).setUnlocalizedName("copperHoe");
+	//public static Item copperSword = new CopperSword(CopperMaterial).setUnlocalizedName("copperSword");	
 	
 	public static Item rubyPickaxe = new RubyPickaxe(RubyMaterial).setUnlocalizedName("rubyPickaxe");
 	public static Item rubyShovel = new RubyShovel(RubyMaterial).setUnlocalizedName("rubyShovel");
@@ -132,16 +130,13 @@ public class ItemRegistry{
 	public static Item emeraldHoe = new EmeraldHoe(EmeraldMaterial).setUnlocalizedName("emeraldHoe");
 	public static Item emeraldSword = new EmeraldSword(EmeraldMaterial).setUnlocalizedName("emeraldSword");	
 	
-	public static Item bonePickaxe = new BonePickaxe(Tier0).setUnlocalizedName("bonePickaxe");
-	public static Item flintKnife = new FlintKnife(Tier0).setUnlocalizedName("flintKnife");
-	public static Item flintHatchet = new FlintHatchet(Tier0).setUnlocalizedName("flintHatchet");
+	public static Item obsidianPickaxe = new ObsidianPickaxe(ObsidianMaterial).setUnlocalizedName("obsidianPickaxe");
+	public static Item obsidianShovel = new ObsidianShovel(ObsidianMaterial).setUnlocalizedName("obsidianShovel");
+	public static Item obsidianAxe = new ObsidianAxe(ObsidianMaterial).setUnlocalizedName("obsidianAxe");
+	public static Item obsidianHoe = new ObsidianHoe(ObsidianMaterial).setUnlocalizedName("obsidianHoe");
+	public static Item obsidianSword = new ObsidianSword(ObsidianMaterial).setUnlocalizedName("obsidianSword");
 	
 	//Armor
-	public static int armorObsidianHelmID;
-	public static int armorObsidianChestID;
-	public static int armorObsidianLegsID;
-	public static int armorObsidianBootsID;
-		
 	public static int armorCopperHelmID;
 	public static int armorCopperChestID;
 	public static int armorCopperLegsID;
@@ -161,16 +156,11 @@ public class ItemRegistry{
 	public static int armorEmeraldChestID;
 	public static int armorEmeraldLegsID;
 	public static int armorEmeraldBootsID;
-
-	public static Item armorObsidianHelm = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianHelmID, 0).setUnlocalizedName("ObsidianHelm");
-	public static Item armorObsidianChest = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianChestID, 1).setUnlocalizedName("ObsidianChest");
-	public static Item armorObsidianLegs = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianLegsID, 2).setUnlocalizedName("ObsidianLegs");
-	public static Item armorObsidianBoots = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianBootsID, 3).setUnlocalizedName("ObsidianBoots");
 	
-	public static Item armorEmeraldHelm = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldHelmID, 0).setUnlocalizedName("EmeraldHelm");
-	public static Item armorEmeraldChest = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldChestID, 1).setUnlocalizedName("EmeraldChest");
-	public static Item armorEmeraldLegs = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldLegsID, 2).setUnlocalizedName("EmeraldLegs");
-	public static Item armorEmeraldBoots = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldBootsID, 3).setUnlocalizedName("EmeraldBoots");
+	public static int armorObsidianHelmID;
+	public static int armorObsidianChestID;
+	public static int armorObsidianLegsID;
+	public static int armorObsidianBootsID;
 	
 	public static Item armorCopperHelm = new CopperArmor(CopperArmorMaterial, armorCopperHelmID, 0).setUnlocalizedName("CopperHelm");
 	public static Item armorCopperChest = new CopperArmor(CopperArmorMaterial, armorCopperChestID, 1).setUnlocalizedName("CopperChest");
@@ -187,23 +177,35 @@ public class ItemRegistry{
 	public static Item armorSapphireLegs = new SapphireArmor(SapphireArmorMaterial, armorSapphireLegsID, 2).setUnlocalizedName("SapphireLegs");
 	public static Item armorSapphireBoots = new SapphireArmor(SapphireArmorMaterial, armorSapphireBootsID, 3).setUnlocalizedName("SapphireBoots");
 
+	public static Item armorEmeraldHelm = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldHelmID, 0).setUnlocalizedName("EmeraldHelm");
+	public static Item armorEmeraldChest = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldChestID, 1).setUnlocalizedName("EmeraldChest");
+	public static Item armorEmeraldLegs = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldLegsID, 2).setUnlocalizedName("EmeraldLegs");
+	public static Item armorEmeraldBoots = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldBootsID, 3).setUnlocalizedName("EmeraldBoots");
+	
+	public static Item armorObsidianHelm = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianHelmID, 0).setUnlocalizedName("ObsidianHelm");
+	public static Item armorObsidianChest = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianChestID, 1).setUnlocalizedName("ObsidianChest");
+	public static Item armorObsidianLegs = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianLegsID, 2).setUnlocalizedName("ObsidianLegs");
+	public static Item armorObsidianBoots = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianBootsID, 3).setUnlocalizedName("ObsidianBoots");
+	
 	//Items 
 	public static Item stoneDust = new StoneDust();
-	public static Item goldDust = new GoldDust();
 	public static Item ironDust = new IronDust();
-	public static Item obsidianDust = new ObsidianDust();
 	public static Item copperDust = new CopperDust();
+	public static Item silverDust = new SilverDust();
+	public static Item goldDust = new GoldDust();
+	public static Item obsidianDust = new ObsidianDust();
+	
 	public static Item copperIngot = new CopperIngot();
 	public static Item ruby = new Ruby();
 	public static Item sapphire = new Sapphire();
-	public static Item silverDust = new SilverDust();
 	public static Item silverIngot = new SilverIngot();
 	public static Item ironRod = new IronRod();
 	public static Item boneShard = new BoneShard();
-	public static Item rottenArrow = new rottenArrow();
 	public static Item ironNugget = new IronNugget();
+	
 	public static Item leatherStrip = new LeatherStrip();
 	public static Item grenade = new ItemGrenade();
+	public static Item rottenArrow = new rottenArrow();
 	
 	//Gears
 	public static Item woodGear = new com.millstone.items.ItemGear().setMaxDamage(500).setTextureName(References.MODID + ":" + "woodGear").setUnlocalizedName("woodGear");
@@ -238,57 +240,51 @@ public class ItemRegistry{
 	//GameRegistry
     public static void Register()
     {  
-		//Tools
-	GameRegistry.registerItem(obsidianSword, "obsidianSword");
-	GameRegistry.registerItem(obsidianHoe, "obsidianHoe");
-	GameRegistry.registerItem(obsidianAxe, "obsidianAxe");
-	GameRegistry.registerItem(obsidianPickaxe, "obsidianPickaxe");
-	GameRegistry.registerItem(obsidianShovel, "obsidianShovel");
+	//Tools
+    
+    GameRegistry.registerItem(bonePickaxe, "bonePickaxe");
+    GameRegistry.registerItem(flintKnife, "flintKnife");
+    GameRegistry.registerItem(flintHatchet, "flintAxe");
+    
+    GameRegistry.registerItem(ironSword, "ironSword");
+    GameRegistry.registerItem(ironHoe, "ironHoe");
+    GameRegistry.registerItem(ironAxe, "ironAxe");
+    GameRegistry.registerItem(ironPickaxe, "ironPickaxe");
+    GameRegistry.registerItem(ironShovel, "ironShovel");
+    
+  //GameRegistry.registerItem(copperSword, "copperSword");
+  	GameRegistry.registerItem(copperHoe, "copperHoe");
+  	GameRegistry.registerItem(copperAxe, "copperAxe");
+  	GameRegistry.registerItem(copperPickaxe, "copperPickaxe");
+  	GameRegistry.registerItem(copperShovel, "copperShovel");
+  	
+  	GameRegistry.registerItem(rubySword, "rubySword");
+  	GameRegistry.registerItem(rubyHoe, "rubyHoe");
+  	GameRegistry.registerItem(rubyAxe, "rubyAxe");
+  	GameRegistry.registerItem(rubyPickaxe, "rubyPickaxe");
+  	GameRegistry.registerItem(rubyShovel, "rubyShovel");
+  	
+  	GameRegistry.registerItem(sapphireSword, "sapphireSword");
+  	GameRegistry.registerItem(sapphireHoe, "sapphireHoe");
+  	GameRegistry.registerItem(sapphireAxe, "sapphireAxe");
+  	GameRegistry.registerItem(sapphirePickaxe, "sapphirePickaxe");
+  	GameRegistry.registerItem(sapphireShovel, "sapphireShovel");
 	
 	GameRegistry.registerItem(emeraldSword, "emeraldSword");
 	GameRegistry.registerItem(emeraldHoe, "emeraldHoe");
 	GameRegistry.registerItem(emeraldAxe, "emeraldAxe");
 	GameRegistry.registerItem(emeraldPickaxe, "emeraldPickaxe");
 	GameRegistry.registerItem(emeraldShovel, "emeraldShovel");
-	
-	//GameRegistry.registerItem(copperSword, "copperSword");
-	GameRegistry.registerItem(copperHoe, "copperHoe");
-	GameRegistry.registerItem(copperAxe, "copperAxe");
-	GameRegistry.registerItem(copperPickaxe, "copperPickaxe");
-	GameRegistry.registerItem(copperShovel, "copperShovel");
-	
-	GameRegistry.registerItem(ironSword, "ironSword");
-	GameRegistry.registerItem(ironHoe, "ironHoe");
-	GameRegistry.registerItem(ironAxe, "ironAxe");
-	GameRegistry.registerItem(ironPickaxe, "ironPickaxe");
-	GameRegistry.registerItem(ironShovel, "ironShovel");
-	
-	GameRegistry.registerItem(bonePickaxe, "bonePickaxe");
-	GameRegistry.registerItem(flintKnife, "flintKnife");
-	GameRegistry.registerItem(flintHatchet, "flintAxe");
-	
-	GameRegistry.registerItem(rubySword, "rubySword");
-	GameRegistry.registerItem(rubyHoe, "rubyHoe");
-	GameRegistry.registerItem(rubyAxe, "rubyAxe");
-	GameRegistry.registerItem(rubyPickaxe, "rubyPickaxe");
-	GameRegistry.registerItem(rubyShovel, "rubyShovel");
-	
-	GameRegistry.registerItem(sapphireSword, "sapphireSword");
-	GameRegistry.registerItem(sapphireHoe, "sapphireHoe");
-	GameRegistry.registerItem(sapphireAxe, "sapphireAxe");
-	GameRegistry.registerItem(sapphirePickaxe, "sapphirePickaxe");
-	GameRegistry.registerItem(sapphireShovel, "sapphireShovel");
+    	
+	GameRegistry.registerItem(obsidianSword, "obsidianSword");
+	GameRegistry.registerItem(obsidianHoe, "obsidianHoe");
+	GameRegistry.registerItem(obsidianAxe, "obsidianAxe");
+	GameRegistry.registerItem(obsidianPickaxe, "obsidianPickaxe");
+	GameRegistry.registerItem(obsidianShovel, "obsidianShovel");
+
+
 	
 	//Armors
-	GameRegistry.registerItem(armorObsidianHelm, "ObsidianHelm");	
-	GameRegistry.registerItem(armorObsidianChest, "Obsidianchest");
-	GameRegistry.registerItem(armorObsidianLegs, "ObsidianLegs");
-	GameRegistry.registerItem(armorObsidianBoots, "ObsidianBoots");
-	
-	GameRegistry.registerItem(armorEmeraldHelm, "EmeraldHelm");	
-	GameRegistry.registerItem(armorEmeraldChest, "Emeraldchest");
-	GameRegistry.registerItem(armorEmeraldLegs, "EmeraldLegs");
-	GameRegistry.registerItem(armorEmeraldBoots, "EmeraldBoots");
 	
 	GameRegistry.registerItem(armorCopperHelm, "CopperHelm");	
 	GameRegistry.registerItem(armorCopperChest, "Copperchest");
@@ -305,20 +301,32 @@ public class ItemRegistry{
 	GameRegistry.registerItem(armorSapphireLegs, "SapphireLegs");
 	GameRegistry.registerItem(armorSapphireBoots, "SapphireBoots");
 	
+	GameRegistry.registerItem(armorEmeraldHelm, "EmeraldHelm");	
+	GameRegistry.registerItem(armorEmeraldChest, "Emeraldchest");
+	GameRegistry.registerItem(armorEmeraldLegs, "EmeraldLegs");
+	GameRegistry.registerItem(armorEmeraldBoots, "EmeraldBoots");
+	
+	GameRegistry.registerItem(armorObsidianHelm, "ObsidianHelm");	
+	GameRegistry.registerItem(armorObsidianChest, "Obsidianchest");
+	GameRegistry.registerItem(armorObsidianLegs, "ObsidianLegs");
+	GameRegistry.registerItem(armorObsidianBoots, "ObsidianBoots");
+	
+
+	
 	//OreItems
 	GameRegistry.registerItem(copperIngot, "copperBar");
 	GameRegistry.registerItem(silverIngot, "silverBar");
-	GameRegistry.registerItem(sapphire, "sapphire");
 	GameRegistry.registerItem(ruby, "ruby");
-	GameRegistry.registerItem(grenade, "grenade");
+	GameRegistry.registerItem(sapphire, "sapphire");
 	
 	//Dusts
+	GameRegistry.registerItem(stoneDust, "stoneDust");
 	GameRegistry.registerItem(silverDust, "silverDust");
 	GameRegistry.registerItem(copperDust, "copperDust");
-	GameRegistry.registerItem(stoneDust, "stoneDust");
-	GameRegistry.registerItem(obsidianDust, "obsidianDust");
-	GameRegistry.registerItem(goldDust, "goldDust");
 	GameRegistry.registerItem(ironDust, "ironDust");
+	GameRegistry.registerItem(goldDust, "goldDust");
+	GameRegistry.registerItem(obsidianDust, "obsidianDust");
+
 	
 	//Misc
 	GameRegistry.registerItem(ironRod, "ironRod");
@@ -328,6 +336,7 @@ public class ItemRegistry{
 	GameRegistry.registerItem(rottenArrow, "rottenArrow");
 	GameRegistry.registerItem(ironNugget, "ironNugget");
 	GameRegistry.registerItem(leatherStrip, "leatherStrip");
+	GameRegistry.registerItem(grenade, "grenade");
 		
 	//Plants
 	GameRegistry.registerBlock(ricePlant, "ricePlant");
@@ -351,15 +360,12 @@ public class ItemRegistry{
 	GameRegistry.registerItem(riceBowl, "riceBowl");
 	GameRegistry.registerItem(sushi, "sushi");
 
-	
 	//Gears
 	GameRegistry.registerItem(woodGear, "woodGear");
 	GameRegistry.registerItem(stoneGear, "stoneGear");	
 	GameRegistry.registerItem(ironGear, "ironGear");
 	GameRegistry.registerItem(goldGear, "goldGear");
 	GameRegistry.registerItem(diamondGear, "diamondGear");
-
-
 		
 	
 	}
