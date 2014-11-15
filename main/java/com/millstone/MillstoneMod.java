@@ -76,6 +76,7 @@ public class MillstoneMod
     @EventHandler
     public void preinit(FMLInitializationEvent event)
     {  
+        
     	//Entities
     	registerEntity(Scarecrow.class, "Scarecrow");
     	
@@ -137,7 +138,6 @@ public class MillstoneMod
     EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor));
 
     }
-
     
    
 }

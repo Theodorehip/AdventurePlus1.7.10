@@ -48,7 +48,6 @@ import com.millstone.tools.CopperAxe;
 import com.millstone.tools.CopperHoe;
 import com.millstone.tools.CopperPickaxe;
 import com.millstone.tools.CopperShovel;
-import com.millstone.tools.CopperSword;
 import com.millstone.tools.EmeraldAxe;
 import com.millstone.tools.EmeraldHoe;
 import com.millstone.tools.EmeraldPickaxe;

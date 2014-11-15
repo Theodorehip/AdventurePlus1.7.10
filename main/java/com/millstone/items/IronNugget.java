@@ -8,7 +8,7 @@ import com.millstone.lib.References;
 public class IronNugget extends Item{
 	
 	public IronNugget() {
-		this.setUnlocalizedName("rottenArrow");
+		this.setUnlocalizedName("ironNugget");
 		this.setTextureName(References.MODID + ":" + "IronNugget");
 		this.setCreativeTab(MillstoneMod.tabMillstoneMisc);
 		this.setMaxStackSize(64);
