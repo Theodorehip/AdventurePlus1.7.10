@@ -13,7 +13,7 @@ import com.millstone.handler.RemoveTabs;
 
 public class TabsRegistry {
 	
-	public static void RemoveRecipes(){
+	public static void RemoveCreativeTab(){
 		RemoveTabs.removeTabs(Items.iron_sword);
 		RemoveTabs.removeTabs(Items.iron_pickaxe);
 		RemoveTabs.removeTabs(Items.iron_shovel);

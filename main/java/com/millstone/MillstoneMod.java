@@ -100,7 +100,7 @@ public class MillstoneMod
 		//needs spawnrate tweak
 		ChestGenRegistry.RegisterGeneration();
 
-		TabsRegistry.RemoveRecipes();
+		TabsRegistry.RemoveCreativeTab();
 		
 		
 		RecipeRegistry.RemoveRecipes();
