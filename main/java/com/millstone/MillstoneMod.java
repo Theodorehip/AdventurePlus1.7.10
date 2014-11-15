@@ -26,6 +26,7 @@ import com.millstone.registry.BlockRegistry;
 import com.millstone.registry.ChestGenRegistry;
 import com.millstone.registry.ItemRegistry;
 import com.millstone.registry.RecipeRegistry;
+import com.millstone.registry.TabsRegistry;
 import com.millstone.tileentity.TileEntityMillstone;
 import com.millstone.worldgen.MillstoneModWorldGen;
 
@@ -53,6 +54,11 @@ public class MillstoneMod
 	@Instance(References.MODID)
 	public static MillstoneMod instance;
 	
+	
+	//Proxy Stuff
+	@SidedProxy(clientSide = References.Client, serverSide = References.Common)
+	public static CommonProxy proxy;
+	
 	//Millstone CreativeTabs
 	public static CreativeTabs tabMillstone = new tabMillstone(CreativeTabs.getNextID(), "tabMillstone");
 	public static CreativeTabs tabMillstoneTools = new tabMillstoneTools(CreativeTabs.getNextID(), "tabMillstoneTools");
@@ -60,11 +66,6 @@ public class MillstoneMod
 	public static CreativeTabs tabMillstoneMaterials = new tabMillstoneMaterials(CreativeTabs.getNextID(), "tabMillstoneMaterials");
 	public static CreativeTabs tabMillstoneFood = new tabMillstoneFood(CreativeTabs.getNextID(), "tabMillstoneFood");
 	public static CreativeTabs tabMillstoneMisc = new tabMillstoneMisc(CreativeTabs.getNextID(), "tabMillstoneMisc");
-
-	
-	//Proxy Stuff
-	@SidedProxy(clientSide = References.Client, serverSide = References.Common)
-	public static CommonProxy proxy;
 	
 
 	//WorldGen
@@ -98,7 +99,8 @@ public class MillstoneMod
 		//testing generating random chest
 		//needs spawnrate tweak
 		ChestGenRegistry.RegisterGeneration();
-		
+
+		TabsRegistry.RemoveRecipes();
 		
 		
 		RecipeRegistry.RemoveRecipes();
