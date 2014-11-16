@@ -9,7 +9,7 @@ public class IronNugget extends Item{
 	
 	public IronNugget() {
 		this.setUnlocalizedName("ironNugget");
-		this.setTextureName(References.MODID + ":" + "IronNugget");
+		this.setTextureName(References.MODID + ":" + "Iron_Nugget");
 		this.setCreativeTab(MillstoneMod.tabMillstoneMisc);
 		this.setMaxStackSize(64);
 	}
