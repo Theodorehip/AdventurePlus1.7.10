@@ -126,7 +126,7 @@ public class RecipeRegistry{
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.detector_rail, 6), new Object[]{"X X", "XRX", "XIX", 'X', ItemRegistry.ironRod, 'I', Items.redstone, 'R', Blocks.stone_pressure_plate});
    // GameRegistry.addShapedRecipe(new ItemStack(Blocks.golden_rail, 6), new Object[]{"X X", "XIX", "XRX", 'X', Items.gold_ingot, 'I', Items.stick, 'R', Items.redstone});
     
-	//Logs to Planks reduction
+	//Vanilla Logs to Planks reduction
     GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 0), new Object[] {new ItemStack(Blocks.log, 1, 0)});
     GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 1), new Object[] {new ItemStack(Blocks.log, 1, 1)});
     GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 2), new Object[] {new ItemStack(Blocks.log, 1, 2)});
@@ -134,6 +134,17 @@ public class RecipeRegistry{
     GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 4), new Object[] {new ItemStack(Blocks.log2, 1, 0)});
     GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 5), new Object[] {new ItemStack(Blocks.log2, 1, 1)});
     
+    //Mod Logs to Planks Reduction
+    GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.planks, 2, 0), new Object[] {new ItemStack(BlockRegistry.log, 1, 0)});
+    GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.planks, 2, 1), new Object[] {new ItemStack(BlockRegistry.log, 1, 1)});
+    GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.planks, 2, 2), new Object[] {new ItemStack(BlockRegistry.log, 1, 2)});
+    GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.planks, 2, 3), new Object[] {new ItemStack(BlockRegistry.log, 1, 3)});
+    GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.planks, 2, 4), new Object[] {new ItemStack(BlockRegistry.log, 1, 4)});
+    GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.planks, 2, 5), new Object[] {new ItemStack(BlockRegistry.log, 1, 5)});
+    GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.planks, 2, 6), new Object[] {new ItemStack(BlockRegistry.log, 1, 5)});
+    
+    
+    //Vanilla Stairs
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.oak_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 0)});
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.birch_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 2)});
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.spruce_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 1)});
@@ -147,6 +158,24 @@ public class RecipeRegistry{
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.sandstone_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.sandstone});
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.quartz_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.quartz_block});
 	
+    //Mod Stairs
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.willowStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 0)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.palmStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 2)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.dreadwoodStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 1)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.redwoodStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 3)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.applewoodStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 4)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.cherryStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 5)});  
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.baobobStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 6)});
+
+    //Mod Slabs
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.singleSlab, 6, 0), new Object[] {"###", '#', new ItemStack(BlockRegistry.planks, 1, 0)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.singleSlab, 6, 1), new Object[] {"###", '#', new ItemStack(BlockRegistry.planks, 1, 2)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.singleSlab, 6, 2), new Object[] {"###", '#', new ItemStack(BlockRegistry.planks, 1, 1)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.singleSlab, 6, 3), new Object[] {"###", '#', new ItemStack(BlockRegistry.planks, 1, 3)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.singleSlab, 6, 4), new Object[] {"###", '#', new ItemStack(BlockRegistry.planks, 1, 4)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.singleSlab, 6, 5), new Object[] {"###", '#', new ItemStack(BlockRegistry.planks, 1, 5)});  
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.singleSlab, 6, 6), new Object[] {"###", '#', new ItemStack(BlockRegistry.planks, 1, 6)});
+    
     
 	//making dyes craftable from other dyes, need this because i got rid of all dye recipes  //WIP
 	GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 2, 9), new Object[] {new ItemStack(Items.dye, 1, 1), new ItemStack(Items.dye, 1, 15)});
