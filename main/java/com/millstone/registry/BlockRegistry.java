@@ -23,6 +23,8 @@ import com.millstone.trees.LogBlock;
 import com.millstone.trees.LogBlockItem;
 import com.millstone.trees.PlanksBlock;
 import com.millstone.trees.PlanksBlockItem;
+import com.millstone.trees.SlabBlock;
+import com.millstone.trees.SlabBlockItem;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -53,6 +55,12 @@ public class BlockRegistry {
 	public static Block brickWall = new WallBlock(Blocks.brick_block, 1).setBlockName("brickWall");
 	public static Block stoneBrickWall = new WallBlock(Blocks.stonebrick, 2).setBlockName("stoneBrickWall");
 		
+	//Slabs
+	public static Block doubleSlab = new SlabBlock(true, Material.wood);
+	public static Block singleSlab = new SlabBlock(false, Material.wood);
+
+	
+	
 	//Woods 
 	public static Block planks = new PlanksBlock();
 	public static Block log = new LogBlock().setBlockName("log").setCreativeTab(MillstoneMod.tabMillstone).setBlockTextureName("log");
@@ -85,10 +93,13 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(brickWall, "brickWall");
 		GameRegistry.registerBlock(stoneBrickWall, "stoneBrickWall");
 		
+		//Slabs
+		GameRegistry.registerBlock(doubleSlab, SlabBlockItem.class, "doubleSlab");
+		GameRegistry.registerBlock(singleSlab, SlabBlockItem.class, "singleSlab");
+		
 		//Planks
 		GameRegistry.registerBlock(planks, PlanksBlockItem.class, (planks.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(log, LogBlockItem.class, (log.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(leaf, LeafBlockItem.class, (leaf.getUnlocalizedName().substring(5)));
-
 	}
 }

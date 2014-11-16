@@ -154,5 +154,13 @@ tile.leaf.redwood.name=Redwood Leaves
 tile.leaf.applewood.name=Applewood Leaves
 tile.leaf.cherry.name=Cherry Leaves
 tile.leaf.baobob.name=Baobob Leaves
+tile.slab.name=Wooden Slab
+tile.slab.willow.name=Willow Slab
+tile.slab.palm.name=Palm Slab
+tile.slab.dreadwood.name=Dreadwood Slab 
+tile.slab.redwood.name=Redwood Slab
+tile.slab.applewood.name=Applewood Slab
+tile.slab.cherry.name=Cherry Slab
+tile.slab.baobob.name=Baobob Slab
 
 

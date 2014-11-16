@@ -72,6 +72,7 @@ public class MillstoneMod
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
     
     //Enchantment
+	//Doesn't work yet
     public static final Enchantment Piercing = new Piercing(199, 5);
     
     @EventHandler
@@ -79,6 +80,7 @@ public class MillstoneMod
     {  
         
     	//Entities
+    	//Doesn't work yet
     	registerEntity(Scarecrow.class, "Scarecrow");
     	
     	//Events
