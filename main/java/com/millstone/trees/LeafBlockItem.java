@@ -14,8 +14,8 @@ public class LeafBlockItem extends ItemBlock{
 	public LeafBlockItem(Block block)
     {
         super(block);
-        this.setCreativeTab(MillstoneMod.tabMillstone);
-        this.setUnlocalizedName("leaf");
+        setCreativeTab(MillstoneMod.tabMillstoneDeco);
+        setUnlocalizedName("leaf");
         setHasSubtypes(true);
         
     }

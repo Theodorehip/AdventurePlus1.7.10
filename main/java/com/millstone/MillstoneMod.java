@@ -11,6 +11,7 @@ import net.minecraftforge.common.MinecraftForge;
 import com.millstone.crafting.CraftingHandler;
 import com.millstone.creativetab.tabMillstone;
 import com.millstone.creativetab.tabMillstoneArmor;
+import com.millstone.creativetab.tabMillstoneDeco;
 import com.millstone.creativetab.tabMillstoneFood;
 import com.millstone.creativetab.tabMillstoneMaterials;
 import com.millstone.creativetab.tabMillstoneMisc;
@@ -66,7 +67,8 @@ public class MillstoneMod
 	public static CreativeTabs tabMillstoneMaterials = new tabMillstoneMaterials(CreativeTabs.getNextID(), "tabMillstoneMaterials");
 	public static CreativeTabs tabMillstoneFood = new tabMillstoneFood(CreativeTabs.getNextID(), "tabMillstoneFood");
 	public static CreativeTabs tabMillstoneMisc = new tabMillstoneMisc(CreativeTabs.getNextID(), "tabMillstoneMisc");
-	
+	public static CreativeTabs tabMillstoneDeco = new tabMillstoneDeco(CreativeTabs.getNextID(), "tabMillstoneDeco");
+
 
 	//WorldGen
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();

@@ -45,7 +45,7 @@ public class Lantern extends Block{
     public Lantern(Material p_i45409_1_)
     {
         super(p_i45409_1_);
-        this.setCreativeTab(MillstoneMod.tabMillstone);
+        this.setCreativeTab(MillstoneMod.tabMillstoneDeco);
     }
 
     /**

@@ -11,6 +11,7 @@ import com.millstone.blocks.Lantern;
 import com.millstone.blocks.LavaBrick;
 import com.millstone.blocks.Millstone;
 import com.millstone.blocks.ObsidianBlock;
+import com.millstone.blocks.StairsBlock;
 import com.millstone.blocks.WallBlock;
 import com.millstone.blocks.ores.CopperOre;
 import com.millstone.blocks.ores.NetherRubyOre;
@@ -54,17 +55,24 @@ public class BlockRegistry {
 	public static Block sandstoneWall = new WallBlock(Blocks.sandstone, 0).setBlockName("sandstoneWall");
 	public static Block brickWall = new WallBlock(Blocks.brick_block, 1).setBlockName("brickWall");
 	public static Block stoneBrickWall = new WallBlock(Blocks.stonebrick, 2).setBlockName("stoneBrickWall");
-		
-	//Slabs
-	public static Block doubleSlab = new SlabBlock(true, Material.wood);
-	public static Block singleSlab = new SlabBlock(false, Material.wood);
-
-	
 	
 	//Woods 
 	public static Block planks = new PlanksBlock();
 	public static Block log = new LogBlock().setBlockName("log").setCreativeTab(MillstoneMod.tabMillstone).setBlockTextureName("log");
-	public static Block leaf = new LeafBlock().setBlockName("leaf").setCreativeTab(MillstoneMod.tabMillstone).setBlockTextureName("leaf");
+	public static Block leaf = new LeafBlock().setBlockName("leaf").setCreativeTab(MillstoneMod.tabMillstoneDeco).setBlockTextureName("leaf");
+	
+	//Slabs
+	public static Block doubleSlab = new SlabBlock(true, Material.wood);
+	public static Block singleSlab = new SlabBlock(false, Material.wood);
+
+	//Stairs
+	public static Block willowStairs = new StairsBlock(planks, 0).setBlockName("willowStairs");
+	public static Block palmStairs = new StairsBlock(planks, 1).setBlockName("palmStairs");
+	public static Block dreadwoodStairs = new StairsBlock(planks, 2).setBlockName("dreadwoodStairs");
+	public static Block redwoodStairs = new StairsBlock(planks, 3).setBlockName("redwoodStairs");
+	public static Block applewoodStairs = new StairsBlock(planks, 4).setBlockName("applewoodStairs");
+	public static Block cherryStairs = new StairsBlock(planks, 5).setBlockName("cherryStairs");
+	public static Block baobobStairs = new StairsBlock(planks, 6).setBlockName("baobobStairs");
 
 	
 	public static void Register() {
@@ -93,13 +101,24 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(brickWall, "brickWall");
 		GameRegistry.registerBlock(stoneBrickWall, "stoneBrickWall");
 		
-		//Slabs
-		GameRegistry.registerBlock(doubleSlab, SlabBlockItem.class, "doubleSlab");
-		GameRegistry.registerBlock(singleSlab, SlabBlockItem.class, "singleSlab");
-		
 		//Planks
 		GameRegistry.registerBlock(planks, PlanksBlockItem.class, (planks.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(log, LogBlockItem.class, (log.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(leaf, LeafBlockItem.class, (leaf.getUnlocalizedName().substring(5)));
+		
+		//Slabs
+		GameRegistry.registerBlock(doubleSlab, SlabBlockItem.class, "doubleSlab");
+		GameRegistry.registerBlock(singleSlab, SlabBlockItem.class, "singleSlab");
+		
+		//Walls
+		GameRegistry.registerBlock(willowStairs, "willowStairs");
+		GameRegistry.registerBlock(palmStairs, "palmStairs");
+		GameRegistry.registerBlock(dreadwoodStairs, "dreadwoodStairs");
+		GameRegistry.registerBlock(redwoodStairs, "redwoodStairs");
+		GameRegistry.registerBlock(applewoodStairs, "applewoodStairs");
+		GameRegistry.registerBlock(cherryStairs, "cherryStairs");
+		GameRegistry.registerBlock(baobobStairs, "baobobStairs");
+				
+		
 	}
 }

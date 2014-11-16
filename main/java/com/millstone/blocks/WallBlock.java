@@ -22,7 +22,7 @@ public class WallBlock extends BlockWall
         this.setHardness(3.0F);
         this.setResistance(3.0F);
         this.setStepSound(block.stepSound);
-        this.setCreativeTab(MillstoneMod.tabMillstone);
+        this.setCreativeTab(MillstoneMod.tabMillstoneDeco);
         this.icon = block;
     }
     

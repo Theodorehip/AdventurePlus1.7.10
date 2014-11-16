@@ -28,7 +28,6 @@ public class SlabBlock extends BlockSlab
 		setBlockName("slab");
 		setCreativeTab(MillstoneMod.tabMillstone);
 		setStepSound(soundTypeWood);
-		this.setCreativeTab(MillstoneMod.tabMillstone);
 		
 		if(!this.field_150004_a)
 		{

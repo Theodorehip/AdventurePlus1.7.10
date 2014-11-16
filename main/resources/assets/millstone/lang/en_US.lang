@@ -4,6 +4,7 @@ itemGroup.tabMillstoneArmor=Millstone Armors
 itemGroup.tabMillstoneMaterials=Millstone Materials
 itemGroup.tabMillstoneFood=Millstone Food
 itemGroup.tabMillstoneMisc=Millstone Miscellaneous
+itemGroup.tabMillstoneDeco=Millstone Decorations
 
 
 item.woodGear.name=Wooden Gear
@@ -127,9 +128,19 @@ tile.netherRubyOre.name=Nether Ruby Ore
 tile.silverOre.name=Silver Ore
 tile.lavaBrick.name=Lava Brick
 tile.Firerack.name=Firerack
+
 tile.sandstoneWall.name=Sandstone Wall
 tile.brickWall.name=Brick Wall
 tile.stoneBrickWall.name=Stonebrick Wall
+
+tile.willowStairs.name=Willow Stairs
+tile.palmStairs.name=Palm Stairs
+tile.dreadwood.name=Dreadwood Stairs
+tile.redwoodStairs.name=Redwood Stairs
+tile.applewoodStairs.name=Applewood Stairs
+tile.cherryStairs.name=Cherry Stairs
+tile.baobobStairs.name=Baobob Stairs
+
 tile.planks.name=Wooden Planks
 tile.planks.willow.name=Willow Wood Planks
 tile.planks.palm.name=Palm Wood Planks
@@ -138,6 +149,7 @@ tile.planks.redwood.name=Redwood Planks
 tile.planks.applewood.name=Applewood Planks
 tile.planks.cherry.name=Cherry Wood Planks
 tile.planks.baobob.name=Baobob Wood Planks
+
 tile.log.name=Log
 tile.log.willow.name=Willow Wood 
 tile.log.palm.name=Palm Wood 
@@ -146,6 +158,7 @@ tile.log.redwood.name=Redwood
 tile.log.applewood.name=Applewood 
 tile.log.cherry.name=Cherry Wood 
 tile.log.baobob.name=Baobob Wood 
+
 tile.leaf.name=Leaves
 tile.leaf.willow.name=Willow Leaves
 tile.leaf.palm.name=Palm Leaves
@@ -154,6 +167,7 @@ tile.leaf.redwood.name=Redwood Leaves
 tile.leaf.applewood.name=Applewood Leaves
 tile.leaf.cherry.name=Cherry Leaves
 tile.leaf.baobob.name=Baobob Leaves
+
 tile.slab.name=Wooden Slab
 tile.slab.willow.name=Willow Slab
 tile.slab.palm.name=Palm Slab
