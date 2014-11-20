@@ -5,8 +5,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 
 import com.millstone.MillstoneMod;
+import com.millstone.blocks.BlockColoredBed;
 import com.millstone.blocks.Cutter;
 import com.millstone.blocks.Firerack;
+import com.millstone.blocks.ItemColoredBed;
 import com.millstone.blocks.Lantern;
 import com.millstone.blocks.LavaBrick;
 import com.millstone.blocks.Millstone;
@@ -34,7 +36,7 @@ public class BlockRegistry {
 	
 	//misc
 	public static Block obsidianBlock = new ObsidianBlock(Material.rock).setBlockName("obsidianBlock");
-	public static Block lantern = new Lantern(Material.glass).setHardness(0.3F).setLightLevel(1.0F).setBlockName("lantern").setBlockTextureName("lantern");
+	public static Block lantern = new Lantern(Material.glass).setHardness(0.3F).setLightLevel(1.0F).setBlockName("lantern").setBlockTextureName("lantern");	
 	
 	//Interactive Blocks
 	public static Block millstoneIdle = new Millstone(false).setBlockName("millstoneIdle").setCreativeTab(MillstoneMod.tabMillstone).setHardness(5F);
@@ -74,6 +76,9 @@ public class BlockRegistry {
 	public static Block cherryStairs = new StairsBlock(planks, 5).setBlockName("cherryStairs");
 	public static Block baobobStairs = new StairsBlock(planks, 6).setBlockName("baobobStairs");
 
+	public static Block coloredBed = new BlockColoredBed().setBlockName("coloredBed");
+
+	
 	
 	public static void Register() {
 		
@@ -118,6 +123,9 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(applewoodStairs, "applewoodStairs");
 		GameRegistry.registerBlock(cherryStairs, "cherryStairs");
 		GameRegistry.registerBlock(baobobStairs, "baobobStairs");
+		
+		GameRegistry.registerBlock(coloredBed, "coloredBed");
+
 				
 		
 	}

@@ -15,6 +15,8 @@ import com.millstone.armor.EmeraldArmor;
 import com.millstone.armor.ObsidianArmor;
 import com.millstone.armor.RubyArmor;
 import com.millstone.armor.SapphireArmor;
+import com.millstone.blocks.BlockColoredBed;
+import com.millstone.blocks.ItemColoredBed;
 import com.millstone.blocks.crops.CottonPlant;
 import com.millstone.blocks.crops.FlaxPlant;
 import com.millstone.blocks.crops.RicePlant;
@@ -237,6 +239,8 @@ public class ItemRegistry{
 	public static Item flour = new Flour();
 	public static Item ricePaper = new RicePaper();
 	
+	public static Item itemColoredBed = new ItemColoredBed();
+	
 	//GameRegistry
     public static void Register()
     {  
@@ -337,6 +341,7 @@ public class ItemRegistry{
 	GameRegistry.registerItem(ironNugget, "ironNugget");
 	GameRegistry.registerItem(leatherStrip, "leatherStrip");
 	GameRegistry.registerItem(grenade, "grenade");
+	GameRegistry.registerItem(itemColoredBed, "itemColoredBed");
 		
 	//Plants
 	GameRegistry.registerBlock(ricePlant, "ricePlant");
