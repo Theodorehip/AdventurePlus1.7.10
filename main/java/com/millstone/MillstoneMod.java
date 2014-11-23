@@ -2,6 +2,8 @@ package com.millstone;
 
 import java.util.Random;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockSapling;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityList;
@@ -68,14 +70,24 @@ public class MillstoneMod
 	public static CreativeTabs tabMillstoneFood = new tabMillstoneFood(CreativeTabs.getNextID(), "tabMillstoneFood");
 	public static CreativeTabs tabMillstoneMisc = new tabMillstoneMisc(CreativeTabs.getNextID(), "tabMillstoneMisc");
 	public static CreativeTabs tabMillstoneDeco = new tabMillstoneDeco(CreativeTabs.getNextID(), "tabMillstoneDeco");
+	public static BlockSapling blockSapling;
+	
+	
+	
 
 
 	//WorldGen
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
-    
+	
+	//TreeStuff(You can move if necessary, don't delete)
+	public static Block blockLeaves;
+	public static Block blockLog;
+	public static Block blockLeaf;
+	
     //Enchantment
 	//Doesn't work yet
     public static final Enchantment Piercing = new Piercing(199, 5);
+	
     
     @EventHandler
     public void preinit(FMLInitializationEvent event)

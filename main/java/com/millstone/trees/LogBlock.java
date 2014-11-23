@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
+import com.millstone.MillstoneMod;
 import com.millstone.lib.References;
 
 import cpw.mods.fml.relauncher.Side;
@@ -32,8 +33,8 @@ public class LogBlock extends BlockLog{
 		this.field_150166_b = new IIcon[logs.length];
 		
 		for (int i = 0; i < this.field_150167_a.length; i++){
-			this.field_150167_a[i] = iconRegister.registerIcon(References.MODID + ":" + this.getTextureName() + "_" + logs[i]);
-			this.field_150166_b[i] = iconRegister.registerIcon(References.MODID + ":" + this.getTextureName() + "_" + logs[i] + "_top");
+			this.field_150167_a[i] = iconRegister.registerIcon(References.MODID + ":" + this.getUnlocalizedName() + "_" + logs[i]);
+			this.field_150166_b[i] = iconRegister.registerIcon((References.MODID + ":" + this.getUnlocalizedName() + "_" + logs[i] + "_top"));
 
 		}
 	}
