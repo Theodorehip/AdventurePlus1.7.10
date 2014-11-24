@@ -21,14 +21,12 @@ import com.millstone.blocks.ores.NetherRubyOre;
 import com.millstone.blocks.ores.SapphireOre;
 import com.millstone.blocks.ores.SilverOre;
 import com.millstone.lib.References;
-import com.millstone.trees.ItemSaplingBlocks;
 import com.millstone.trees.LeafBlock;
 import com.millstone.trees.LeafBlockItem;
 import com.millstone.trees.LogBlock;
 import com.millstone.trees.LogBlockItem;
 import com.millstone.trees.PlanksBlock;
 import com.millstone.trees.PlanksBlockItem;
-import com.millstone.trees.MMSaplings;
 import com.millstone.trees.SlabBlock;
 import com.millstone.trees.SlabBlockItem;
 
@@ -62,7 +60,7 @@ public class BlockRegistry {
 	public static Block stoneBrickWall = new WallBlock(Blocks.stonebrick, 2).setBlockName("stoneBrickWall");
 	
 	//Trees
-	public static Block Sapling = new MMSaplings().setBlockName("Sapling").setCreativeTab(CreativeTabs.tabMisc);
+	
 	public static Block log = new LogBlock().setBlockName("log").setCreativeTab(MillstoneMod.tabMillstone).setBlockTextureName("log");
 	public static Block leaf = new LeafBlock().setBlockName("leaf").setCreativeTab(MillstoneMod.tabMillstoneDeco).setBlockTextureName("leaf");
 	
@@ -117,7 +115,6 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(planks, PlanksBlockItem.class, (planks.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(log, LogBlockItem.class, (log.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(leaf, LeafBlockItem.class, (leaf.getUnlocalizedName().substring(5)));
-		GameRegistry.registerBlock(Sapling, ItemSaplingBlocks.class, (Sapling.getUnlocalizedName().substring(5)));
 		//Slabs
 		GameRegistry.registerBlock(doubleSlab, SlabBlockItem.class, "doubleSlab");
 		GameRegistry.registerBlock(singleSlab, SlabBlockItem.class, "singleSlab");
