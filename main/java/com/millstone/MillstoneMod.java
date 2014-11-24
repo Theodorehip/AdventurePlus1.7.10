@@ -79,10 +79,7 @@ public class MillstoneMod
 	//WorldGen
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
 	
-	//TreeStuff(You can move if necessary, don't delete)
-	public static Block blockLeaves;
-	public static Block blockLog;
-	public static Block blockLeaf;
+	
 	
     //Enchantment
 	//Doesn't work yet
@@ -155,7 +152,6 @@ public class MillstoneMod
     EntityRegistry.registerModEntity(entityClass, name, entityID, instance, 64, 1, true);
     EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor));
 
-    }
-    
-   
+	}
+
 }
