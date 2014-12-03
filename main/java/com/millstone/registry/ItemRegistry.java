@@ -239,7 +239,10 @@ public class ItemRegistry{
 	public static Item flour = new Flour();
 	public static Item ricePaper = new RicePaper();
 	
-	public static Item itemColoredBed = new ItemColoredBed();
+	
+	public static Item coloredBed = new ItemColoredBed();
+	 
+		
 	
 	//GameRegistry
     public static void Register()
@@ -341,7 +344,8 @@ public class ItemRegistry{
 	GameRegistry.registerItem(ironNugget, "ironNugget");
 	GameRegistry.registerItem(leatherStrip, "leatherStrip");
 	GameRegistry.registerItem(grenade, "grenade");
-	GameRegistry.registerItem(itemColoredBed, "itemColoredBed");
+	GameRegistry.registerItem(coloredBed, "coloredBed");
+
 		
 	//Plants
 	GameRegistry.registerBlock(ricePlant, "ricePlant");
@@ -371,6 +375,8 @@ public class ItemRegistry{
 	GameRegistry.registerItem(ironGear, "ironGear");
 	GameRegistry.registerItem(goldGear, "goldGear");
 	GameRegistry.registerItem(diamondGear, "diamondGear");
+	
+	
 		
 	
 	}

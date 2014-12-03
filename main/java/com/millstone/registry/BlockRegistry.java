@@ -2,14 +2,12 @@ package com.millstone.registry;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 
 import com.millstone.MillstoneMod;
 import com.millstone.blocks.BlockColoredBed;
 import com.millstone.blocks.Cutter;
 import com.millstone.blocks.Firerack;
-import com.millstone.blocks.ItemColoredBed;
 import com.millstone.blocks.Lantern;
 import com.millstone.blocks.LavaBrick;
 import com.millstone.blocks.Millstone;
@@ -80,8 +78,8 @@ public class BlockRegistry {
 	public static Block cherryStairs = new StairsBlock(planks, 5).setBlockName("cherryStairs");
 	public static Block baobobStairs = new StairsBlock(planks, 6).setBlockName("baobobStairs");
 
-	public static Block coloredBed = new BlockColoredBed().setBlockName("coloredBed");
-
+	
+	public static Block[] coloredBeds;
 	
 	
 	public static void Register() {
@@ -103,8 +101,7 @@ public class BlockRegistry {
 		
 		//Craftable
 		GameRegistry.registerBlock(obsidianBlock, "obsidianBlock");		
-		GameRegistry.registerBlock(lantern, "lantern");
-		
+		GameRegistry.registerBlock(lantern, "lantern");		
 		//Walls
 		GameRegistry.registerBlock(sandstoneWall, "sandstoneWall");
 		GameRegistry.registerBlock(brickWall, "brickWall");
@@ -128,8 +125,16 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(cherryStairs, "cherryStairs");
 		GameRegistry.registerBlock(baobobStairs, "baobobStairs");
 		
-		GameRegistry.registerBlock(coloredBed, "coloredBed");
+		
 
+		//Weird thingy for beds...
+		coloredBeds = new Block[16];
+		for (int colorIndex = 0; colorIndex < coloredBeds.length; colorIndex++){
+			String name = "coloredBed." + References.COLORS[colorIndex];
+			coloredBeds[colorIndex] = new BlockColoredBed(colorIndex).setBlockName(name);
+			GameRegistry.registerBlock(coloredBeds[colorIndex], name);
+			
+		}
 				
 		
 	}

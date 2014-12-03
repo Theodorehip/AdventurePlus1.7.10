@@ -265,6 +265,8 @@ public class RecipeRegistry{
 		RemoveRecipes.removeRecipes(Items.stone_sword);
 		RemoveRecipes.removeRecipes(Items.stone_hoe);
 		
+		RemoveRecipes.removeRecipes(Items.bed);
+		
 		
 	}
 	
