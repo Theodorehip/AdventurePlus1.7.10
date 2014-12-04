@@ -15,7 +15,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.millstone.lib.References;
-import com.millstone.registry.BlockRegistry;
 import com.millstone.registry.ItemRegistry;
 
 import cpw.mods.fml.relauncher.Side;
@@ -94,8 +93,7 @@ public class BlockColoredBed extends BlockBed
 	    */
 	   @Override
 	   public boolean isBed(IBlockAccess world, int x, int y, int z, EntityLivingBase player) {
-	       //return this == BlockRegistry.coloredBeds;
-		   return true;
+	       return true;
 	   }
 	   
 	   /**

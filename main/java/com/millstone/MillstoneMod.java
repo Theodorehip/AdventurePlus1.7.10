@@ -2,7 +2,6 @@ package com.millstone;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
@@ -70,7 +69,7 @@ public class MillstoneMod
 	public static CreativeTabs tabMillstoneFood = new tabMillstoneFood(CreativeTabs.getNextID(), "tabMillstoneFood");
 	public static CreativeTabs tabMillstoneMisc = new tabMillstoneMisc(CreativeTabs.getNextID(), "tabMillstoneMisc");
 	public static CreativeTabs tabMillstoneDeco = new tabMillstoneDeco(CreativeTabs.getNextID(), "tabMillstoneDeco");
-	public static BlockSapling blockSapling;
+//	public static BlockSapling blockSapling;
 	
 	
 	
@@ -80,9 +79,9 @@ public class MillstoneMod
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
 	
 	//TreeStuff(You can move if necessary, don't delete)
-	public static Block blockLeaves;
-	public static Block blockLog;
-	public static Block blockLeaf;
+//	public static Block blockLeaves;
+//	public static Block blockLog;
+//	public static Block blockLeaf;
 	
     //Enchantment
 	//Doesn't work yet
