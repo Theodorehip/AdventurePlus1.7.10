@@ -94,7 +94,8 @@ public class BlockColoredBed extends BlockBed
 	    */
 	   @Override
 	   public boolean isBed(IBlockAccess world, int x, int y, int z, EntityLivingBase player) {
-	       return this == BlockRegistry.coloredBeds;
+	       //return this == BlockRegistry.coloredBeds;
+		   return true;
 	   }
 	   
 	   /**
