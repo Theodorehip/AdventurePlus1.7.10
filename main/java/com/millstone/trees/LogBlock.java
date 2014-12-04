@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class LogBlock extends BlockLog{
 	
-	public static final String[] logs = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobob"};
+	public static final String[] logs = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobab"};
 	
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item item, CreativeTabs tabs, List list){

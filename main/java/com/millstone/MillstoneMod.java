@@ -77,6 +77,7 @@ public class MillstoneMod
 	//Used to send some Log INFO/ERROR/STDOUT...
 	public static Logger logger = LogManager.getLogger("MillstoneMod");
 	
+	
 	//WorldGen
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
 	
@@ -142,9 +143,7 @@ public class MillstoneMod
 		proxy.registerRenderThings();
 		
 		logger.info("Mod loaded");
-		
-		
-		
+
     }  
     
     

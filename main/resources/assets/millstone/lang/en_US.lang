@@ -139,7 +139,7 @@ tile.dreadwood.name=Dreadwood Stairs
 tile.redwoodStairs.name=Redwood Stairs
 tile.applewoodStairs.name=Applewood Stairs
 tile.cherryStairs.name=Cherry Stairs
-tile.baobobStairs.name=Baobob Stairs
+tile.baobabStairs.name=baobab Stairs
 
 tile.planks.name=Wooden Planks
 tile.planks.willow.name=Willow Wood Planks
@@ -148,7 +148,7 @@ tile.planks.dreadwood.name=Dreadwood Planks
 tile.planks.redwood.name=Redwood Planks
 tile.planks.applewood.name=Applewood Planks
 tile.planks.cherry.name=Cherry Wood Planks
-tile.planks.baobob.name=Baobob Wood Planks
+tile.planks.baobab.name=baobab Wood Planks
 
 tile.log.name=Log
 tile.log.willow.name=Willow Wood 
@@ -157,7 +157,7 @@ tile.log.dreadwood.name=Dreadwood
 tile.log.redwood.name=Redwood 
 tile.log.applewood.name=Applewood 
 tile.log.cherry.name=Cherry Wood 
-tile.log.baobob.name=Baobob Wood 
+tile.log.baobab.name=baobab Wood 
 
 tile.leaf.name=Leaves
 tile.leaf.willow.name=Willow Leaves
@@ -166,7 +166,7 @@ tile.leaf.dreadwood.name=Dreadwood Leaves
 tile.leaf.redwood.name=Redwood Leaves
 tile.leaf.applewood.name=Applewood Leaves
 tile.leaf.cherry.name=Cherry Leaves
-tile.leaf.baobob.name=Baobob Leaves
+tile.leaf.baobab.name=baobab Leaves
 
 tile.slab.name=Wooden Slab
 tile.slab.willow.name=Willow Slab
@@ -175,6 +175,6 @@ tile.slab.dreadwood.name=Dreadwood Slab
 tile.slab.redwood.name=Redwood Slab
 tile.slab.applewood.name=Applewood Slab
 tile.slab.cherry.name=Cherry Slab
-tile.slab.baobob.name=Baobob Slab
+tile.slab.baobab.name=baobab Slab
 
 

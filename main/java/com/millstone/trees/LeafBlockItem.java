@@ -8,7 +8,7 @@ import com.millstone.MillstoneMod;
 
 public class LeafBlockItem extends ItemBlock{
 	
-	public static final String[] leaf = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobob"};
+	public static final String[] leaf = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobab"};
 
 	
 	public LeafBlockItem(Block block)

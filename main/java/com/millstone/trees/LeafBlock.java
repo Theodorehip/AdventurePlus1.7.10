@@ -17,8 +17,8 @@ import net.minecraft.world.World;
 
 public class LeafBlock extends BlockLeaves{
 	
-	public static final String[][] leaftypes = new String[][] {{"leaf_willow", "leaf_palm", "leaf_dreadwood", "leaf_redwood", "leaf_applewood", "leaf_cherry", "leaf_baobob"}, {"leaf_willow_opaque", "leaf_palm_opaque", "leaf_dreadwood_opaque", "leaf_redwood_opaque", "leaf_applewood_opaque", "leaf_cherry_opaque", "leaf_baobob_opaque"}};
-	public static final String[] leaf = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobob"};
+	public static final String[][] leaftypes = new String[][] {{"leaf_willow", "leaf_palm", "leaf_dreadwood", "leaf_redwood", "leaf_applewood", "leaf_cherry", "leaf_baobab"}, {"leaf_willow_opaque", "leaf_palm_opaque", "leaf_dreadwood_opaque", "leaf_redwood_opaque", "leaf_applewood_opaque", "leaf_cherry_opaque", "leaf_baobab_opaque"}};
+	public static final String[] leaf = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobab"};
 	
 	protected void func_150124_c(World world, int x, int y, int z, int side, int meta)
     {

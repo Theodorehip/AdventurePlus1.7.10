@@ -12,7 +12,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class LogBlockItem extends ItemBlock{
 	
-	public static final String[] logs = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobob"};
+	public static final String[] logs = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobab"};
 
 	
 	public LogBlockItem(Block block)
