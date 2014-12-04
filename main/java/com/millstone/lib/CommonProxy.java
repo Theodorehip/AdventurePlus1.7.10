@@ -1,6 +1,8 @@
 package com.millstone.lib;
 
+
 public class CommonProxy {
+
 
 	public void registerRenderThings() {
 		
@@ -9,4 +11,5 @@ public class CommonProxy {
 	public void registerTileEntitySpecialRenderer() {
 		
 	}
+	
 }

@@ -2,12 +2,14 @@ package com.millstone;
 
 import java.util.Random;
 
-import net.minecraft.block.BlockSapling;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityList;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.millstone.crafting.CraftingHandler;
 import com.millstone.creativetab.tabMillstone;
@@ -70,11 +72,11 @@ public class MillstoneMod
 	public static CreativeTabs tabMillstoneMisc = new tabMillstoneMisc(CreativeTabs.getNextID(), "tabMillstoneMisc");
 	public static CreativeTabs tabMillstoneDeco = new tabMillstoneDeco(CreativeTabs.getNextID(), "tabMillstoneDeco");
 //	public static BlockSapling blockSapling;
-	
-	
-	
 
-
+	
+	//Used to send some Log INFO/ERROR/STDOUT...
+	public static Logger logger = LogManager.getLogger("MillstoneMod");
+	
 	//WorldGen
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
 	
@@ -91,7 +93,8 @@ public class MillstoneMod
     @EventHandler
     public void preinit(FMLInitializationEvent event)
     {  
-        
+    	logger.info("Initializing The MillstoneMod V" + References.VERSION);
+    	
     	//Entities
     	//Doesn't work yet
     	registerEntity(Scarecrow.class, "Scarecrow");
@@ -104,6 +107,7 @@ public class MillstoneMod
     @EventHandler
     public void init(FMLInitializationEvent event)
     {   	
+    	
     	//Game Registry
     	ItemRegistry.Register();
     	BlockRegistry.Register();
@@ -136,6 +140,8 @@ public class MillstoneMod
 		
 		//Register your renderer in your proxy.
 		proxy.registerRenderThings();
+		
+		logger.info("Mod loaded");
 		
 		
 		
