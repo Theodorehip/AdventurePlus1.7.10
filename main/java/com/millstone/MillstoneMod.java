@@ -20,6 +20,7 @@ import com.millstone.creativetab.tabMillstoneMaterials;
 import com.millstone.creativetab.tabMillstoneMisc;
 import com.millstone.creativetab.tabMillstoneTools;
 import com.millstone.enchantments.Piercing;
+import com.millstone.entities.EntityBoar;
 import com.millstone.entities.EntityGrenade;
 import com.millstone.entities.Scarecrow;
 import com.millstone.handler.CustomDropsEvent;
@@ -28,6 +29,7 @@ import com.millstone.lib.CommonProxy;
 import com.millstone.lib.References;
 import com.millstone.registry.BlockRegistry;
 import com.millstone.registry.ChestGenRegistry;
+import com.millstone.registry.EntityRegistryMod;
 import com.millstone.registry.ItemRegistry;
 import com.millstone.registry.RecipeRegistry;
 import com.millstone.registry.TabsRegistry;
@@ -75,8 +77,9 @@ public class MillstoneMod
 
 	
 	//Used to send some Log INFO/ERROR/STDOUT...
-	public static Logger logger = LogManager.getLogger("MillstoneMod");
-	
+	//public static Logger logger = LogManager.getLogger("MillstoneMod");
+    private static final Logger logger = LogManager.getLogger();
+
 	
 	//WorldGen
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
@@ -96,10 +99,6 @@ public class MillstoneMod
     {  
     	logger.info("Initializing The MillstoneMod V" + References.VERSION);
     	
-    	//Entities
-    	//Doesn't work yet
-    	registerEntity(Scarecrow.class, "Scarecrow");
-    	
     	//Events
     	MinecraftForge.EVENT_BUS.register(new CustomDropsEvent());
     }
@@ -112,6 +111,7 @@ public class MillstoneMod
     	//Game Registry
     	ItemRegistry.Register();
     	BlockRegistry.Register();
+    	EntityRegistryMod.Register();
 		
 		//Spawn ores
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
@@ -146,20 +146,6 @@ public class MillstoneMod
 
     }  
     
-    
-    public static void registerEntity(Class entityClass, String name)
-    {
-    int entityID = EntityRegistry.findGlobalUniqueEntityId();
-    long seed = name.hashCode();
-    Random rand = new Random(seed);
-    int primaryColor = rand.nextInt() * 16777215;
-    int secondaryColor = rand.nextInt() * 16777215;
-
-    EntityRegistry.registerGlobalEntityID(entityClass, name, entityID);
-    EntityRegistry.registerModEntity(entityClass, name, entityID, instance, 64, 1, true);
-    EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor));
-
-    }
     
    
 }
