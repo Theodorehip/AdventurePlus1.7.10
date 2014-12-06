@@ -37,7 +37,7 @@ public class BlockColoredBed extends BlockBed
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
-		String prefix = References.MODID + ":" + this.getUnlocalizedName().substring(5) + "_" + References.COLORS[colorIndex];
+		String prefix = References.MODID + ":" + this.getUnlocalizedName().substring(5);// + "_" + References.COLORS[colorIndex];
  
 		this.topIcons = new IIcon[] {iconRegister.registerIcon(prefix + "_feet_top"), iconRegister.registerIcon(prefix + "_head_top")};
 		this.endIcons = new IIcon[] {iconRegister.registerIcon(prefix + "_feet_end"), iconRegister.registerIcon(prefix + "_head_end")};

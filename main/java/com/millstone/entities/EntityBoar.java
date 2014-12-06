@@ -18,12 +18,8 @@ import net.minecraft.world.World;
 import com.millstone.lib.References;
 
 public class EntityBoar extends EntityMob{
-
-	public boolean agressive;
 	
 	public EntityBoar(World par1World) {
-		
-		
 		
 		super(par1World);
         
@@ -36,6 +32,9 @@ public class EntityBoar extends EntityMob{
         this.tasks.addTask(6, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
         this.tasks.addTask(8, new EntityAILookIdle(this));
+        
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
+
 	}
 	@Override
     protected void applyEntityAttributes()
@@ -70,11 +69,6 @@ public class EntityBoar extends EntityMob{
             }
         }
     }
-
-//	@Override
-//	public EntityAgeable createChild(EntityAgeable var1) {
-//		return new EntityBoar(this.worldObj);
-//	}
 	
     /**
      * Applies Fall Damages to the entity
@@ -83,11 +77,7 @@ public class EntityBoar extends EntityMob{
     {
         super.fall(par1);
     }
-    
-    public boolean isBreedingItem(ItemStack par1ItemStack)
-    {
-        return par1ItemStack != null && par1ItemStack.getItem() == Items.carrot;
-    }
+
     
     protected void updateAITasks()
     {
@@ -109,18 +99,7 @@ public class EntityBoar extends EntityMob{
     return References.MODID + ":" + "boar.say";
     }
     
-    
-    public void isAgressive(){
-    	
-    	if(agressive == true){		
-    		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
-    	}
-    	else if(agressive == false){
-    		
-    		this.tasks.addTask(9, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.2D, false));
+    //Add the Breeding/Feeding part here (Search for Interact method in other animals)
 
-    	}
-    	
-    }
     
 }
