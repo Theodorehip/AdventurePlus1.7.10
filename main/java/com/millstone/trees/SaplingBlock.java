@@ -20,6 +20,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import com.millstone.MillstoneMod;
 import com.millstone.lib.References;
 import com.millstone.registry.BlockRegistry;
+import com.millstone.worldgen.trees.WorldGenPalmTree;
 import com.millstone.worldgen.trees.WorldGenWillowTree;
 
 import cpw.mods.fml.relauncher.Side;
@@ -92,11 +93,11 @@ public class SaplingBlock extends BlockSapling{
         {
             case 0:
             	//Block Log, Block Leaf, Log Metadata, Leaf Metdata, doBlockNotify, minTreeHeight, randomTreeHeight, vinesGrow
-            	object = new WorldGenWillowTree(BlockRegistry.log, BlockRegistry.leaf, 0, 0, false, 6, 10, false);
+            	object = new WorldGenWillowTree(BlockRegistry.log, BlockRegistry.leaf, 0, 0, false, 5, 3, false);
 
             	break;
             case 1:
-            	//object = new WorldGenWillowTree(BlockRegistry.log, BlockRegistry.leaf, 1, 1, false, 6, 10, false);
+            	object = new WorldGenPalmTree();//BlockRegistry.log, BlockRegistry.leaf, 1, 1, false, 6, 5, false);
                 break;
             case 2:
             	break;
@@ -105,6 +106,8 @@ public class SaplingBlock extends BlockSapling{
             case 4:
                 break;
             case 5:
+            	break;
+            case 6:
             	break;
             default:
                 break;

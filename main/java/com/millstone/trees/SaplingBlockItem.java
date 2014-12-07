@@ -1,19 +1,19 @@
-package com.millstone.trees;
+ package com.millstone.trees;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemBlockWithMetadata;
 import net.minecraft.item.ItemStack;
 
 import com.millstone.MillstoneMod;
 
-public class SaplingBlockItem extends ItemBlock{
+public class SaplingBlockItem extends ItemBlockWithMetadata{
 	
 	public static final String[] sapling = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobab"};
 
 	
 	public SaplingBlockItem(Block block)
     {
-        super(block);
+        super(block, block);
         setCreativeTab(MillstoneMod.tabMillstoneDeco);
         setUnlocalizedName("leaf");
         setHasSubtypes(true);
@@ -28,8 +28,9 @@ public class SaplingBlockItem extends ItemBlock{
 		if (i < 0 || i >= sapling.length){
 			i = 0;
 		}
+		
 		return super.getUnlocalizedName() + "." + sapling[i]; 
-		}
+	}
 	
 	    @Override
 	    public int getMetadata(int meta) {
