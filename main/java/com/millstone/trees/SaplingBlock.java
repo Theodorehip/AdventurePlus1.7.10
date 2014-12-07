@@ -94,12 +94,13 @@ public class SaplingBlock extends BlockSapling{
         switch (l)
         {
             case 0:
+            	//This is only for Normal Trees (normal form (OAK FORM))
             	//Block Log, Block Leaf, Log Metadata, Leaf Metdata, doBlockNotify, minTreeHeight, randomTreeHeight, vinesGrow
             	object = new WorldGenWillowTree(BlockRegistry.log, BlockRegistry.leaf, 0, 0, false, 5, 3, false);
 
             	break;
             case 1:
-            	object = new WorldGenPalmTree();//BlockRegistry.log, BlockRegistry.leaf, 1, 1, false, 6, 5, false);
+            	object = new WorldGenPalmTree();
                 break;
             case 2:
             	break;

@@ -19,10 +19,11 @@ public class WorldGenPalmTree extends WorldGenAbstractTree{
 	public boolean generate(World world, Random rand, int x, int y, int z) {
 		
 		while(world.isAirBlock(x, y, z) && y > 2){
-			y--;
+			--y;
 		}
 		
 		Block block = world.getBlock(x, y, z);
+		
 		if(block != Blocks.grass && block != Blocks.dirt){
 			return false;
 		}
@@ -39,8 +40,8 @@ public class WorldGenPalmTree extends WorldGenAbstractTree{
 				}
 			}
 			
-			int baseLength = 2 + rand.nextInt(4);
-			int branches = 2 + rand.nextInt(4);
+			int baseLength = 4 + rand.nextInt(4);
+			//int branches = 2 + rand.nextInt(4);
 			
 			int h = 1;
 			
@@ -93,6 +94,7 @@ public class WorldGenPalmTree extends WorldGenAbstractTree{
         buildBlock(world, x - 1, y, z, BlockRegistry.leaf, 1);
         buildBlock(world, x, y, z + 1, BlockRegistry.leaf, 1);
         buildBlock(world, x, y, z - 1, BlockRegistry.leaf, 1);
+        
         buildBlock(world, x + 2, y, z + 2, BlockRegistry.leaf, 1);
         buildBlock(world, x - 2, y, z - 2, BlockRegistry.leaf, 1);
         buildBlock(world, x + 2, y, z - 2, BlockRegistry.leaf, 1);
@@ -104,10 +106,10 @@ public class WorldGenPalmTree extends WorldGenAbstractTree{
         buildBlock(world, x - 1, y + 1, z - 1, BlockRegistry.leaf, 1);
         buildBlock(world, x, y + 1, z, BlockRegistry.leaf, 1);
 
-        buildBlock(world, x + 2, y + 2, z, BlockRegistry.leaf, 1);
-        buildBlock(world, x - 2, y + 2, z, BlockRegistry.leaf, 1);
-        buildBlock(world, x, y + 2, z + 2, BlockRegistry.leaf, 1);
-        buildBlock(world, x, y + 2, z - 2, BlockRegistry.leaf, 1);
+//        buildBlock(world, x + 2, y + 2, z, BlockRegistry.leaf, 1);
+//        buildBlock(world, x - 2, y + 2, z, BlockRegistry.leaf, 1);
+//        buildBlock(world, x, y + 2, z + 2, BlockRegistry.leaf, 1);
+//        buildBlock(world, x, y + 2, z - 2, BlockRegistry.leaf, 1);
 
 		
 	}
