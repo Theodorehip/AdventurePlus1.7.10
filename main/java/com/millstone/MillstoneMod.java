@@ -73,7 +73,6 @@ public class MillstoneMod
 	public static CreativeTabs tabMillstoneFood = new tabMillstoneFood(CreativeTabs.getNextID(), "tabMillstoneFood");
 	public static CreativeTabs tabMillstoneMisc = new tabMillstoneMisc(CreativeTabs.getNextID(), "tabMillstoneMisc");
 	public static CreativeTabs tabMillstoneDeco = new tabMillstoneDeco(CreativeTabs.getNextID(), "tabMillstoneDeco");
-//	public static BlockSapling blockSapling;
 
 	
 	//Used to send some Log INFO/ERROR/STDOUT...
@@ -84,10 +83,6 @@ public class MillstoneMod
 	//WorldGen
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
 	
-	//TreeStuff(You can move if necessary, don't delete)
-//	public static Block blockLeaves;
-//	public static Block blockLog;
-//	public static Block blockLeaf;
 	
     //Enchantment
 	//Doesn't work yet
