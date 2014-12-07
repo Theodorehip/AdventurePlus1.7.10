@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class SlabBlock extends BlockSlab
 {
-	public static final String[] StepTypes = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobob"};
+	public static final String[] StepTypes = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobab"};
 
 	public SlabBlock(boolean isdouble, Material material)
 	{

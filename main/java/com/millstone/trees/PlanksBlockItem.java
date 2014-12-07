@@ -64,7 +64,7 @@ public class PlanksBlockItem extends ItemBlock{
 	}
 	case 6:
 	{
-	name = "baobob";
+	name = "baobab";
 	break;
 	}
 	default:

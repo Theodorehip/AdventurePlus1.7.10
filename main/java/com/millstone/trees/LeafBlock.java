@@ -2,10 +2,6 @@ package com.millstone.trees;
 
 import java.util.List;
 
-import com.millstone.lib.References;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,7 +9,13 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
+import com.millstone.lib.References;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class LeafBlock extends BlockLeaves{
 	
@@ -80,6 +82,21 @@ public class LeafBlock extends BlockLeaves{
 	@Override
 	public String[] func_150125_e() {
 		return leaf;
+	}
+	
+	@Override
+	public boolean renderAsNormalBlock(){
+		return false;
+	}
+	
+	@Override
+	public boolean isOpaqueCube(){
+		return false;
+	}
+	
+	@Override
+	public boolean shouldSideBeRendered(IBlockAccess blockAccess, int x, int y, int z, int side){
+		return true;
 	}
 
 }

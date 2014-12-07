@@ -25,6 +25,8 @@ import com.millstone.trees.LogBlock;
 import com.millstone.trees.LogBlockItem;
 import com.millstone.trees.PlanksBlock;
 import com.millstone.trees.PlanksBlockItem;
+import com.millstone.trees.SaplingBlock;
+import com.millstone.trees.SaplingBlockItem;
 import com.millstone.trees.SlabBlock;
 import com.millstone.trees.SlabBlockItem;
 
@@ -61,9 +63,11 @@ public class BlockRegistry {
 	
 	public static Block log = new LogBlock().setBlockName("log").setCreativeTab(MillstoneMod.tabMillstone).setBlockTextureName("log");
 	public static Block leaf = new LeafBlock().setBlockName("leaf").setCreativeTab(MillstoneMod.tabMillstoneDeco).setBlockTextureName("leaf");
+	public static Block sapling = new SaplingBlock().setBlockName("sapling").setCreativeTab(MillstoneMod.tabMillstoneDeco).setBlockTextureName("sapling");
+
 	
 	//Woods 
-		public static Block planks = new PlanksBlock();
+	public static Block planks = new PlanksBlock();
 	
 	//Slabs
 	public static Block doubleSlab = new SlabBlock(true, Material.wood);
@@ -76,7 +80,7 @@ public class BlockRegistry {
 	public static Block redwoodStairs = new StairsBlock(planks, 3).setBlockName("redwoodStairs");
 	public static Block applewoodStairs = new StairsBlock(planks, 4).setBlockName("applewoodStairs");
 	public static Block cherryStairs = new StairsBlock(planks, 5).setBlockName("cherryStairs");
-	public static Block baobobStairs = new StairsBlock(planks, 6).setBlockName("baobobStairs");
+	public static Block baobabStairs = new StairsBlock(planks, 6).setBlockName("baobabStairs");
 
 	
 	public static Block[] coloredBeds;
@@ -112,6 +116,9 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(planks, PlanksBlockItem.class, (planks.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(log, LogBlockItem.class, (log.getUnlocalizedName().substring(5)));
 		GameRegistry.registerBlock(leaf, LeafBlockItem.class, (leaf.getUnlocalizedName().substring(5)));
+		GameRegistry.registerBlock(sapling, SaplingBlockItem.class, (sapling.getUnlocalizedName().substring(5)));
+
+		
 		//Slabs
 		GameRegistry.registerBlock(doubleSlab, SlabBlockItem.class, "doubleSlab");
 		GameRegistry.registerBlock(singleSlab, SlabBlockItem.class, "singleSlab");
@@ -123,7 +130,7 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(redwoodStairs, "redwoodStairs");
 		GameRegistry.registerBlock(applewoodStairs, "applewoodStairs");
 		GameRegistry.registerBlock(cherryStairs, "cherryStairs");
-		GameRegistry.registerBlock(baobobStairs, "baobobStairs");
+		GameRegistry.registerBlock(baobabStairs, "baobabStairs");
 		
 		
 
