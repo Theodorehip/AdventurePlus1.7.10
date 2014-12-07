@@ -82,6 +82,8 @@ public class RecipeRegistry{
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintKnife, 1), new Object[]{"  I", " I ", 'I', Items.flint});
 	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.boneShard, 1), new Object[]{ItemRegistry.flintKnife, Items.bone});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironRod, 6), new Object[]{" I ", " I ", " I ", 'I', Items.iron_ingot});
+	
+	//I think this is a bad idea... Why not making it give 4-6 sticks, and then the normal recipe gives two ? Because that's nearly impossible when starting a new game!
 	GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 2), new Object[]{ItemRegistry.flintKnife, Blocks.sapling});
 	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.leatherStrip, 3), new Object[]{ItemRegistry.flintKnife, Items.leather});
 	
@@ -143,6 +145,37 @@ public class RecipeRegistry{
     GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.planks, 2, 5), new Object[] {new ItemStack(BlockRegistry.log, 1, 5)});
     GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.planks, 2, 6), new Object[] {new ItemStack(BlockRegistry.log, 1, 5)});
     
+    //Mod Planks to Crafting Table
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.crafting_table, 1), new Object[]{"XX","XX", 'X', new ItemStack(BlockRegistry.planks, 1, 0)});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.crafting_table, 1), new Object[]{"XX","XX", 'X', new ItemStack(BlockRegistry.planks, 1, 1)});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.crafting_table, 1), new Object[]{"XX","XX", 'X', new ItemStack(BlockRegistry.planks, 1, 2)});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.crafting_table, 1), new Object[]{"XX","XX", 'X', new ItemStack(BlockRegistry.planks, 1, 3)});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.crafting_table, 1), new Object[]{"XX","XX", 'X', new ItemStack(BlockRegistry.planks, 1, 4)});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.crafting_table, 1), new Object[]{"XX","XX", 'X', new ItemStack(BlockRegistry.planks, 1, 5)});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.crafting_table, 1), new Object[]{"XX","XX", 'X', new ItemStack(BlockRegistry.planks, 1, 6)});
+
+    //Mod Planks to Stick
+    GameRegistry.addShapedRecipe(new ItemStack(Items.stick, 2), new Object[]{"X","X", 'X', new ItemStack(BlockRegistry.planks, 1, 0)});
+    GameRegistry.addShapedRecipe(new ItemStack(Items.stick, 2), new Object[]{"X","X", 'X', new ItemStack(BlockRegistry.planks, 1, 1)});
+    GameRegistry.addShapedRecipe(new ItemStack(Items.stick, 2), new Object[]{"X","X", 'X', new ItemStack(BlockRegistry.planks, 1, 2)});
+    GameRegistry.addShapedRecipe(new ItemStack(Items.stick, 2), new Object[]{"X","X", 'X', new ItemStack(BlockRegistry.planks, 1, 3)});
+    GameRegistry.addShapedRecipe(new ItemStack(Items.stick, 2), new Object[]{"X","X", 'X', new ItemStack(BlockRegistry.planks, 1, 4)});
+    GameRegistry.addShapedRecipe(new ItemStack(Items.stick, 2), new Object[]{"X","X", 'X', new ItemStack(BlockRegistry.planks, 1, 5)});
+    GameRegistry.addShapedRecipe(new ItemStack(Items.stick, 2), new Object[]{"X","X", 'X', new ItemStack(BlockRegistry.planks, 1, 6)});
+
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4), new Object[]{ItemRegistry.flintKnife, new ItemStack(BlockRegistry.sapling, 1, 0)});
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4), new Object[]{ItemRegistry.flintKnife, new ItemStack(BlockRegistry.sapling, 1, 1)});
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4), new Object[]{ItemRegistry.flintKnife, new ItemStack(BlockRegistry.sapling, 1, 2)});
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4), new Object[]{ItemRegistry.flintKnife, new ItemStack(BlockRegistry.sapling, 1, 3)});
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4), new Object[]{ItemRegistry.flintKnife, new ItemStack(BlockRegistry.sapling, 1, 4)});
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4), new Object[]{ItemRegistry.flintKnife, new ItemStack(BlockRegistry.sapling, 1, 5)});
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4), new Object[]{ItemRegistry.flintKnife, new ItemStack(BlockRegistry.sapling, 1, 6)});
+
+
+	//Walls /////I'm not sure if that's the right amount and right crafting recipe\\\\\
+	GameRegistry.addRecipe(new ItemStack(BlockRegistry.sandstoneWall, 6, 0), new Object[] {"###", "###", '#', Blocks.sandstone});
+	GameRegistry.addRecipe(new ItemStack(BlockRegistry.brickWall, 6, 0), new Object[] {"###", "###", '#', Blocks.brick_block});
+	GameRegistry.addRecipe(new ItemStack(BlockRegistry.stoneBrickWall, 6, 0), new Object[] {"###", "###", '#', Blocks.stonebrick});
     
     //Vanilla Stairs
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.oak_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 0)});
@@ -203,6 +236,7 @@ public class RecipeRegistry{
 		GameRegistry.addSmelting(new ItemStack(BlockRegistry.silverOre), new ItemStack(silverIngot, 1), 0.35F);
 		GameRegistry.addSmelting(new ItemStack(ItemRegistry.silverDust), new ItemStack(silverIngot, 1), 0.35F);
 	}
+	
 	public static void RemoveRecipes(){
 		RemoveRecipes.removeRecipes(Items.sugar);
 		RemoveRecipes.removeRecipes(Items.cookie);

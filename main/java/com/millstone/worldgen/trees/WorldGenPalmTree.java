@@ -51,14 +51,14 @@ public class WorldGenPalmTree extends WorldGenAbstractTree{
 				h ++;
 			}
 			
-			int c = 1;
-			
-			for(int i = 0; i < branches; i++){
-				generateBranch(world, rand, x, y + h, z, c);
-				c++;
-				h+=2;
-				
-			}
+//			int c = 1;
+//			
+//			for(int i = 0; i < branches; i++){
+//				generateBranch(world, rand, x, y + h, z, c);
+//				c++;
+//				h+=2;
+//				
+//			}
 			
 			generateTop(world, x, y + h, z);
 			return true;
@@ -67,50 +67,75 @@ public class WorldGenPalmTree extends WorldGenAbstractTree{
 	}
 	
 	public void generateTop(World world, int x, int y, int z){
-		for(int i = -1; i < 2; i++){
-			
-			for(int j = -1; i < 2; j++){
-				buildBlock(world, x + i, y, z + j, BlockRegistry.leaf, 1);
-			}	
-		}
 		
-		buildBlock(world, x, y, z, BlockRegistry.log, 1);
-		buildBlock(world, x, y + 1, z, BlockRegistry.log, 1);
+//		for(int i = -1; i < 2; i++){
+//			
+//			for(int j = -1; i < 2; j++){
+//				buildBlock(world, x + i, y, z + j, BlockRegistry.leaf, 1);
+//			}	
+//		}
+		
+//		buildBlock(world, x, y, z, BlockRegistry.log, 1);
+//		buildBlock(world, x, y + 1, z, BlockRegistry.log, 1);
+//
+//		buildBlock(world, x + 1, y + 1, z, BlockRegistry.leaf, 1);
+//		buildBlock(world, x - 1 , y + 1, z, BlockRegistry.leaf, 1);
+//		buildBlock(world, x, y + 1, z + 1, BlockRegistry.leaf, 1);
+//		buildBlock(world, x, y + 1, z - 1, BlockRegistry.leaf, 1);
+//		buildBlock(world, x, y + 2, z, BlockRegistry.leaf, 1);
+		
+		buildBlock(world, x + 2, y - 1, z, BlockRegistry.leaf, 1);
+        buildBlock(world, x - 2, y - 1, z, BlockRegistry.leaf, 1);
+        buildBlock(world, x, y - 1, z + 2, BlockRegistry.leaf, 1);
+        buildBlock(world, x, y - 1, z - 2, BlockRegistry.leaf, 1);
 
-		buildBlock(world, x + 1, y + 1, z, BlockRegistry.leaf, 1);
-		buildBlock(world, x - 1 , y + 1, z, BlockRegistry.leaf, 1);
-		buildBlock(world, x, y + 1, z + 1, BlockRegistry.leaf, 1);
-		buildBlock(world, x, y + 1, z - 1, BlockRegistry.leaf, 1);
-		buildBlock(world, x, y + 2, z, BlockRegistry.leaf, 1);
+        buildBlock(world, x + 1, y, z, BlockRegistry.leaf, 1);
+        buildBlock(world, x - 1, y, z, BlockRegistry.leaf, 1);
+        buildBlock(world, x, y, z + 1, BlockRegistry.leaf, 1);
+        buildBlock(world, x, y, z - 1, BlockRegistry.leaf, 1);
+        buildBlock(world, x + 2, y, z + 2, BlockRegistry.leaf, 1);
+        buildBlock(world, x - 2, y, z - 2, BlockRegistry.leaf, 1);
+        buildBlock(world, x + 2, y, z - 2, BlockRegistry.leaf, 1);
+        buildBlock(world, x - 2, y, z + 2, BlockRegistry.leaf, 1);
+
+        buildBlock(world, x + 1, y + 1, z - 1, BlockRegistry.leaf, 1);
+        buildBlock(world, x - 1, y + 1, z + 1, BlockRegistry.leaf, 1);
+        buildBlock(world, x + 1, y + 1, z + 1, BlockRegistry.leaf, 1);
+        buildBlock(world, x - 1, y + 1, z - 1, BlockRegistry.leaf, 1);
+        buildBlock(world, x, y + 1, z, BlockRegistry.leaf, 1);
+
+        buildBlock(world, x + 2, y + 2, z, BlockRegistry.leaf, 1);
+        buildBlock(world, x - 2, y + 2, z, BlockRegistry.leaf, 1);
+        buildBlock(world, x, y + 2, z + 2, BlockRegistry.leaf, 1);
+        buildBlock(world, x, y + 2, z - 2, BlockRegistry.leaf, 1);
 
 		
 	}
 	
-	public void generateBranch(World world, Random rand, int x, int y, int z, int p){
-		
-		for(int i = -1; i < 2; i++){
-			
-			for(int j = -1; i < 2; j++){
-				buildBlock(world, x + i, y, z + j, BlockRegistry.leaf, 1);
-			}	
-		}
-		
-		buildBlock(world, x + 1, y + 1, z, BlockRegistry.leaf, 1);
-		buildBlock(world, x - 1 , y + 1, z, BlockRegistry.leaf, 1);
-		buildBlock(world, x, y + 1, z + 1, BlockRegistry.leaf, 1);
-		buildBlock(world, x, y + 1, z - 1, BlockRegistry.leaf, 1);
-		buildBlock(world, x, y + 1, z, BlockRegistry.log, 1);
-		buildBlock(world, x, y, z, BlockRegistry.log, 1);
-
-	}
+//	public void generateBranch(World world, Random rand, int x, int y, int z, int p){
+//		
+//		for(int i = -1; i < 2; i++){
+//			
+//			for(int j = -1; i < 2; j++){
+//				buildBlock(world, x + i, y, z + j, BlockRegistry.leaf, 1);
+//			}	
+//		}
+//		
+//		buildBlock(world, x + 1, y + 1, z, BlockRegistry.leaf, 1);
+//		buildBlock(world, x - 1 , y + 1, z, BlockRegistry.leaf, 1);
+//		buildBlock(world, x, y + 1, z + 1, BlockRegistry.leaf, 1);
+//		buildBlock(world, x, y + 1, z - 1, BlockRegistry.leaf, 1);
+//		buildBlock(world, x, y + 1, z, BlockRegistry.log, 1);
+//		buildBlock(world, x, y, z, BlockRegistry.log, 1);
+//
+//	}
 	
-	public void buildBlock(World world, int x, int y, int z, Block block, int meta){
-		
-		if(world.isAirBlock(x, y, z) || world.getBlock(x, y, z).isLeaves(world, x, y, z)){
-			world.setBlock(x, y, z, block, meta, 2);
-			
+	public void buildBlock(World world, int x, int y, int z, Block block, int meta)
+    {
+    	if (world.isAirBlock(x, y, z) || world.getBlock(x, y, z).isLeaves(world, x, y, z))
+		{
+    		world.setBlock(x, y, z, block, meta, 2);
 		}
-		
-	}
+    }
 	
 }

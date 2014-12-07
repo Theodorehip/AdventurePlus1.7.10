@@ -1,6 +1,7 @@
 package com.millstone.trees;
 
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -13,6 +14,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.millstone.lib.References;
+import com.millstone.registry.BlockRegistry;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -29,13 +31,20 @@ public class LeafBlock extends BlockLeaves{
             this.dropBlockAsItem(world, x, y, z, new ItemStack(Items.apple, 1, 0));
         }
     }
+	
+	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+    {
+        return Item.getItemFromBlock(BlockRegistry.sapling);
+    }
 
     /**
      * Determines the damage on the item the block drops. Used in cloth and wood.
      */
     public int damageDropped(int i)
     {
-        return super.damageDropped(i) + 4;
+        //return super.damageDropped(i) + 4;
+        return super.damageDropped(i) + 0;
+
     }
 
     /**

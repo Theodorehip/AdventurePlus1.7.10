@@ -27,6 +27,7 @@ public class PlanksBlock extends Block{
 	setBlockName("planks");
 	setCreativeTab(MillstoneMod.tabMillstone);
 	setStepSound(soundTypeWood);
+
 	icons = new IIcon[maxMeta];
 	
 	}
