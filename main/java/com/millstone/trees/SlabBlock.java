@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
@@ -38,8 +39,10 @@ public class SlabBlock extends BlockSlab
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int metadata)
 	{
-		int k = metadata & 7;
-		return k == 0 ? BlockRegistry.planks.getIcon(side, 0) : k == 1 ? BlockRegistry.planks.getIcon(side, 1) : k == 2 ? BlockRegistry.planks.getIcon(side, 2) : k == 3 ? BlockRegistry.planks.getIcon(side, 3) : k == 4 ? BlockRegistry.planks.getIcon(side, 4) : k == 5 ? BlockRegistry.planks.getIcon(side, 5) : k == 6 ? BlockRegistry.planks.getIcon(side, 6) : BlockRegistry.planks.getIcon(side, 7);
+        return Blocks.planks.getIcon(side, metadata & 7);
+
+		//int k = metadata & 7;
+		//return k == 0 ? BlockRegistry.planks.getIcon(side, 0) : k == 1 ? BlockRegistry.planks.getIcon(side, 1) : k == 2 ? BlockRegistry.planks.getIcon(side, 2) : k == 3 ? BlockRegistry.planks.getIcon(side, 3) : k == 4 ? BlockRegistry.planks.getIcon(side, 4) : k == 5 ? BlockRegistry.planks.getIcon(side, 5) : k == 6 ? BlockRegistry.planks.getIcon(side, 6) : BlockRegistry.planks.getIcon(side, 7);
 	}
 
 	@SideOnly(Side.CLIENT)
