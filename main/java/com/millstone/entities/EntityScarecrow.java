@@ -1,25 +1,31 @@
 package com.millstone.entities;
 
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIArrowAttack;
 import net.minecraft.entity.ai.EntityAILookIdle;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityGolem;
+import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class Scarecrow extends EntityGolem
+public class EntityScarecrow extends EntityGolem 
 {
-    /** deincrements, and a distance-to-home check is done at 0 */
-    private static final String __OBFID = "CL_00001652";
 
-    public Scarecrow(World p_i1694_1_)
+    public EntityScarecrow(World p_i1694_1_)
     {
         super(p_i1694_1_);
         this.setSize(1.4F, 2.9F);
@@ -27,6 +33,7 @@ public class Scarecrow extends EntityGolem
         this.tasks.addTask(6, new EntityAIWander(this, 0.6D));
         this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
         this.tasks.addTask(8, new EntityAILookIdle(this));
+
     }
 
     protected void entityInit()
@@ -58,34 +65,6 @@ public class Scarecrow extends EntityGolem
     {
         return p_70682_1_;
     }
-
-
-    /**
-     * (abstract) Protected helper method to write subclass entity data to NBT.
-     */
-    public void writeEntityToNBT(NBTTagCompound p_70014_1_)
-    {
-        super.writeEntityToNBT(p_70014_1_);
-        p_70014_1_.setBoolean("PlayerCreated", this.isPlayerCreated());
-    }
-
-    /**
-     * (abstract) Protected helper method to read subclass entity data from NBT.
-     */
-    public void readEntityFromNBT(NBTTagCompound p_70037_1_)
-    {
-        super.readEntityFromNBT(p_70037_1_);
-        this.setPlayerCreated(p_70037_1_.getBoolean("PlayerCreated"));
-    }
-
-
-    @SideOnly(Side.CLIENT)
-    public void handleHealthUpdate(byte p_70103_1_)
-    {
-
-            super.handleHealthUpdate(p_70103_1_);
-    }
-
 
     /**
      * Returns the sound this mob makes when it is hurt.
@@ -119,7 +98,7 @@ public class Scarecrow extends EntityGolem
 
         for (k = 0; k < j; ++k)
         {
-            this.func_145778_a(Item.getItemFromBlock(Blocks.hay_block), 1, 0.0F);
+            this.func_145778_a(Items.wheat, 1, 0.0F);
         }
 
         k = 3 + this.rand.nextInt(3);
@@ -130,23 +109,5 @@ public class Scarecrow extends EntityGolem
         }
     }
 
-    public boolean isPlayerCreated()
-    {
-        return (this.dataWatcher.getWatchableObjectByte(16) & 1) != 0;
-    }
-
-    public void setPlayerCreated(boolean p_70849_1_)
-    {
-        byte b0 = this.dataWatcher.getWatchableObjectByte(16);
-
-        if (p_70849_1_)
-        {
-            this.dataWatcher.updateObject(16, Byte.valueOf((byte)(b0 | 1)));
-        }
-        else
-        {
-            this.dataWatcher.updateObject(16, Byte.valueOf((byte)(b0 & -2)));
-        }
-    }
 
 }

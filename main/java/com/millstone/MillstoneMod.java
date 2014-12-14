@@ -22,7 +22,7 @@ import com.millstone.creativetab.tabMillstoneTools;
 import com.millstone.enchantments.Piercing;
 import com.millstone.entities.EntityBoar;
 import com.millstone.entities.EntityGrenade;
-import com.millstone.entities.Scarecrow;
+import com.millstone.entities.EntityScarecrow;
 import com.millstone.handler.CustomDropsEvent;
 import com.millstone.handler.GuiHandler;
 import com.millstone.lib.CommonProxy;

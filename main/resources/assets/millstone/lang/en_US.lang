@@ -6,6 +6,8 @@ itemGroup.tabMillstoneFood=Millstone Food
 itemGroup.tabMillstoneMisc=Millstone Miscellaneous
 itemGroup.tabMillstoneDeco=Millstone Decorations
 
+entity.Scarecrow.name=Scarecrow
+entity.Boar.name=Boar
 
 item.woodGear.name=Wooden Gear
 item.stoneGear.name=Stone Gear
