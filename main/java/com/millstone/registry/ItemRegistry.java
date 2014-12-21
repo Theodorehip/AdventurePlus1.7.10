@@ -15,7 +15,6 @@ import com.millstone.armor.EmeraldArmor;
 import com.millstone.armor.ObsidianArmor;
 import com.millstone.armor.RubyArmor;
 import com.millstone.armor.SapphireArmor;
-import com.millstone.blocks.BlockColoredBed;
 import com.millstone.blocks.ItemColoredBed;
 import com.millstone.blocks.crops.CottonPlant;
 import com.millstone.blocks.crops.FlaxPlant;
@@ -34,6 +33,7 @@ import com.millstone.items.IronRod;
 import com.millstone.items.ItemGrenade;
 import com.millstone.items.LeatherStrip;
 import com.millstone.items.ObsidianDust;
+import com.millstone.items.RawHide;
 import com.millstone.items.RiceBowl;
 import com.millstone.items.RicePaper;
 import com.millstone.items.Ruby;
@@ -241,6 +241,10 @@ public class ItemRegistry{
 	
 	
 	public static Item coloredBed = new ItemColoredBed();
+	
+	
+	public static Item rawHide = new RawHide();
+
 	 
 		
 	
@@ -345,6 +349,7 @@ public class ItemRegistry{
 	GameRegistry.registerItem(leatherStrip, "leatherStrip");
 	GameRegistry.registerItem(grenade, "grenade");
 	GameRegistry.registerItem(coloredBed, "coloredBed");
+	GameRegistry.registerItem(rawHide, "rawHide");
 
 		
 	//Plants

@@ -104,11 +104,14 @@ public class MillstoneMod
     {   	
     	
     	//Game Registry
+		logger.info("Registering Items, Blocks, and Entities");
+		
     	ItemRegistry.Register();
     	BlockRegistry.Register();
     	EntityRegistryMod.Register();
 		
 		//Spawn ores
+		logger.info("World Generation");
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
 		
 		//testing generating random chest
@@ -117,11 +120,13 @@ public class MillstoneMod
 
 		TabsRegistry.RemoveCreativeTab();
 		
-		
+		logger.info("Registering Recipes Stuffs");
 		RecipeRegistry.RemoveRecipes();
 		RecipeRegistry.RegisterCrafting();
 	    RecipeRegistry.RegisterSmelting();
 		
+	    
+		logger.info("Stuffs");
 		//Tile Entity Registry
 		GameRegistry.registerTileEntity(TileEntityMillstone.class, "tileEntityMillstone");
 		EntityRegistry.registerModEntity(EntityGrenade.class, "Grenade", 4, this, 80, 3, true);

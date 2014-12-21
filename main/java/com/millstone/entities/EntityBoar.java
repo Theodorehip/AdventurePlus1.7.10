@@ -14,10 +14,12 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.millstone.lib.References;
+import com.millstone.registry.ItemRegistry;
 
 public class EntityBoar extends EntityMob{
 	
@@ -56,6 +58,12 @@ public class EntityBoar extends EntityMob{
 		 return true;
 	}
 	
+	protected Item getDropItem()
+    {
+        return ItemRegistry.rawHide;
+
+    }
+	
 	/**
      * Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param
      * par2 - Level of Looting used to kill this mob.
@@ -74,6 +82,10 @@ public class EntityBoar extends EntityMob{
             {
                 this.dropItem(Items.porkchop, 1);
             }
+            
+            this.dropItem(Items.bone, 1);
+            this.dropItem(Items.bone, 1);
+
         }
     }
 	
