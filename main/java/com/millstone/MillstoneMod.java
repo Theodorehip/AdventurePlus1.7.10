@@ -92,7 +92,7 @@ public class MillstoneMod
     @EventHandler
     public void preinit(FMLInitializationEvent event)
     {  
-    	logger.info("Initializing MillstoneMod V" + References.VERSION);
+    	logger.info("Initializing MillstoneMod" + References.VERSION);
     	
     	//Events
     	MinecraftForge.EVENT_BUS.register(new CustomDropsEvent());
