@@ -15,6 +15,8 @@ import com.millstone.blocks.ObsidianBlock;
 import com.millstone.blocks.StairsBlock;
 import com.millstone.blocks.WallBlock;
 import com.millstone.blocks.ores.CopperOre;
+import com.millstone.blocks.ores.Halite;
+import com.millstone.blocks.ores.Jade;
 import com.millstone.blocks.ores.NetherRubyOre;
 import com.millstone.blocks.ores.SapphireOre;
 import com.millstone.blocks.ores.SilverOre;
@@ -53,7 +55,9 @@ public class BlockRegistry {
 	//NonOreSpawningBlocks
 	public static Block lavaBrick  = new LavaBrick(Material.rock).setBlockName("lavaBrick").setBlockTextureName(References.MODID + ":" + "lavaBrick");
 	public static Block Firerack  = new Firerack(Material.rock).setBlockName("Firerack").setBlockTextureName(References.MODID + ":" + "Firerack");
-
+	public static Block jadeOre = new Jade(Material.rock).setBlockName("Jade");
+	public static Block haliteOre = new Halite(Material.rock).setBlockName("Halite");
+	
 	//Walls
 	public static Block sandstoneWall = new WallBlock(Blocks.sandstone, 0).setBlockName("sandstoneWall");
 	public static Block brickWall = new WallBlock(Blocks.brick_block, 1).setBlockName("brickWall");
@@ -102,10 +106,13 @@ public class BlockRegistry {
 		//NonOreSpawningBlocks
 		GameRegistry.registerBlock(lavaBrick, "lavaBrick");
 		GameRegistry.registerBlock(Firerack, "Firerack");
+		GameRegistry.registerBlock(jadeOre, "JadeOre");
+		GameRegistry.registerBlock(haliteOre, "HaliteOre");
 		
 		//Craftable
 		GameRegistry.registerBlock(obsidianBlock, "obsidianBlock");		
 		GameRegistry.registerBlock(lantern, "lantern");		
+		
 		//Walls
 		GameRegistry.registerBlock(sandstoneWall, "sandstoneWall");
 		GameRegistry.registerBlock(brickWall, "brickWall");

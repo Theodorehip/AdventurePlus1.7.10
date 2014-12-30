@@ -37,7 +37,9 @@ public class MillstoneModWorldGen implements IWorldGenerator {
 		// this.addOreSpawn
 		this.addOreSpawn(BlockRegistry.copperOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 10, 42, 63);
 		this.addOreSpawn(BlockRegistry.silverOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 10, 42, 63);
-
+		this.addOreSpawn(BlockRegistry.jadeOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 10, 42, 63);
+		this.addOreSpawn(BlockRegistry.haliteOre, world, random, x, z, 16, 16, 4 + random.nextInt(6), 10, 42, 63);
+		
 		 String s = world.getBiomeGenForCoords(x, z).biomeName;
 		    	this.addOreSpawn(BlockRegistry.sapphireOre, world, random, x, z, 16, 16, 2 + random.nextInt(6), 25, 0, 20);
 		
