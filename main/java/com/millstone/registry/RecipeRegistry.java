@@ -22,11 +22,11 @@ public class RecipeRegistry{
 	GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.stoneCutter, 1), new Object[]{"CCC", "CSC", "CCC", 'C', Blocks.cobblestone, 'S', ItemRegistry.stoneGear});;
 
 	//Gears
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.woodGear, 1), new Object[]{" S ", "SCS", " S ", 'S', Items.stick, 'C', Blocks.planks});
+	//GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.woodGear, 1), new Object[]{" S ", "SCS", " S ", 'S', Items.stick, 'C', Blocks.planks});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.stoneGear, 1), new Object[]{" S ", "SCS", " S ", 'C', Blocks.cobblestone, 'S', Items.stick});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironGear, 1), new Object[]{" S ", "SCS", " S ", 'S', Items.iron_ingot, 'C', ItemRegistry.stoneGear});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.goldGear, 1), new Object[]{" S ", "SCS", " S ", 'S', Items.gold_ingot, 'C', ItemRegistry.ironGear});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.diamondGear, 1), new Object[]{" S ", "SCS", " S ", 'C', ItemRegistry.ironGear, 'S', Items.diamond});
+	//GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironGear, 1), new Object[]{" S ", "SCS", " S ", 'S', Items.iron_ingot, 'C', ItemRegistry.stoneGear});
+	//GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.goldGear, 1), new Object[]{" S ", "SCS", " S ", 'S', Items.gold_ingot, 'C', ItemRegistry.ironGear});
+	//GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.diamondGear, 1), new Object[]{" S ", "SCS", " S ", 'C', ItemRegistry.ironGear, 'S', Items.diamond});
 	
 	//Tools
 	//GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.copperSword, 1), new Object[]{" O ", " O ", " I ", 'I', Items.stick, 'O', copperIngot});

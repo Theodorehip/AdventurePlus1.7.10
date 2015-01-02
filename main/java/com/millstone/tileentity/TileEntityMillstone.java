@@ -283,7 +283,8 @@ public class TileEntityMillstone extends TileEntity implements ISidedInventory {
 
 	// MILLSTONE RECIPES HERE!!!
 	private ItemStack getMillingResults (ItemStack stack) {
-        	
+	
+		if(this.worldObj.isBlockIndirectlyGettingPowered(this.xCoord, this.yCoord,this.zCoord)){
   			Random generator = new Random(); 
     		int i = generator.nextInt(4) + 1;
         	
@@ -420,6 +421,7 @@ public class TileEntityMillstone extends TileEntity implements ISidedInventory {
         		return new ItemStack(ItemRegistry.copperDust, 2);
            		} 		
           	}
+		}
 			
 			return null;
 		}
