@@ -5,8 +5,12 @@ import java.util.Random;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityList;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -42,6 +46,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -145,7 +150,13 @@ public class MillstoneMod
 		logger.info("Mod loaded");
 
     }  
-    
-    
-   
+    /*
+    @SubscribeEvent
+    public void on(BlockEvent.HarvestDropsEvent event){
+    	
+    		if (event.block.isEqualTo(Blocks.bookshelf, null)){
+    			
+    		}
+    	}
+    */
 }
