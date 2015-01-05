@@ -1,0 +1,210 @@
+itemGroup.tabMillstone=Millstone
+itemGroup.tabMillstoneTools=Millstone Outils
+itemGroup.tabMillstoneArmor=Millstone Armures
+itemGroup.tabMillstoneMaterials=Millstone Materiels
+itemGroup.tabMillstoneFood=Millstone Nouriture
+itemGroup.tabMillstoneMisc=Millstone Autres
+itemGroup.tabMillstoneDeco=Millstone Decorations
+
+entity.Scarecrow.name=Epouvantail
+entity.Boar.name=Sanglier
+
+item.woodGear.name=Wooden Gear
+item.stoneGear.name=Stone Gear
+item.ironGear.name=Iron Gear
+item.goldGear.name=Golden Gear
+item.diamondGear.name=Diamond Gear
+item.flour.name=Farine
+item.stoneDust.name=Poudre de pierre
+item.goldDust.name=Poudre d’or
+item.ironDust.name=Poudre de fer
+item.ObsidianDust.name=Poudre d’obsidienne
+item.obsidianSword.name=Epe en obsidienne
+item.obsidianHoe.name=Houe en obsidienne
+item.obsidianAxe.name=Hache en obsidienne
+item.obsidianPickaxe.name=Pioche en obsidienne
+item.obsidianShovel.name=Pelle en obsidienne
+
+item.copperSword.name=Epe en cuivre
+item.copperHoe.name=Houe en cuivre
+item.copperAxe.name=Hache en cuivre
+item.copperPickaxe.name=Pioche en cuivre
+item.copperShovel.name=Pelle en cuivre
+
+item.ironSword.name=Epe en fer
+item.ironHoe.name=Houe en fer
+item.ironAxe.name=Hache en fer
+item.ironPickaxe.name=Pioche en fer
+item.ironShovel.name=Pelle en fer
+
+item.rubySword.name=Epe de rubis
+item.rubyHoe.name=Houe de rubis
+item.rubyAxe.name=Hache de rubis
+item.rubyPickaxe.name=Pioche de rubis
+item.rubyShovel.name=Pelle de rubis
+
+item.emeraldSword.name=Epe d’emeraude
+item.emeraldHoe.name=Houe d’emeraude
+item.emeraldAxe.name=Hache d’emeraude
+item.emeraldPickaxe.name=Pioche d’emeraude
+item.emeraldShovel.name=Pelle d’emeraude
+
+item.sapphireSword.name=Epe de sapphire
+item.sapphireHoe.name=Houe de sapphire
+item.sapphireAxe.name=Hache de sapphire
+item.sapphirePickaxe.name=Pioche de sapphire
+item.sapphireShovel.name=Pelle de sapphire
+
+item.riceCrop.name=Riz
+item.riceSeeds.name=Graine de riz
+item.riceBowl.name=Bol de riz
+
+item.bonePickaxe.name=Pioche en os
+item.boneShard.name=Fragment d'os
+item.flintKnife.name=Couteau en silex
+item.flintHatchet.name=Hachette en silex
+
+item.tomato.name=Tomate
+item.tomatoPlant.name=Plante de tomate
+item.tomatoSeeds.name=Graines de tomate
+
+item.cotton.name=Cotton
+item.cottonPlant.name=Plante de cotton
+item.cottonSeeds.name=Graines de cotton
+
+item.flax.name=Lin
+item.flaxPlant.name=Plante de lin
+item.flaxSeeds.name=Graines de lin
+
+item.sushi.name=Sushi
+item.ricePaper.name=Paper de riz
+item.copperDust.name=Poudre de cuivre
+item.copperIngot.name=Lingot de cuivre
+item.ruby.name=Rubis
+item.sapphire.name=Saphir
+item.silverDust.name=Poudre d’argent
+item.silverIngot.name=Lingot d’argent
+item.ironRod.name=Barre de fer
+item.rottenArrow.name=Fleche pourrie
+item.grenade.name=Sainte grenade
+
+item.boneShard.name=Fragment d’os
+item.leatherStrip.name=Dande de cuir
+item.ironNugget.name=Pepite de fer
+
+item.ObsidianHelm.name=Casque en obisidenne
+item.ObsidianChest.name=Plastron en obisidenne
+item.ObsidianLegs.name=Jambierres en obisidenne
+item.ObsidianBoots.name=Bottes en obisidenne
+
+item.EmeraldHelm.name=Casque en emeraude
+item.EmeraldChest.name=Plastron en emeraude
+item.EmeraldLegs.name=Jambierres en emeraude
+item.EmeraldBoots.name=Bottes en emeraude
+
+item.CopperHelm.name=Casque en cuivre
+item.CopperChest.name=Plastron en cuivre
+item.CopperLegs.name=Jambierres en cuivre
+item.CopperBoots.name=Bottes en cuivre
+
+item.RubyHelm.name=Casque en rubis
+item.RubyChest.name=Plastron en rubis
+item.RubyLegs.name=Jambierres en rubis
+item.RubyBoots.name=Bottes en rubis
+
+item.SapphireHelm.name=Casque en saphir
+item.SapphireChest.name=Plastron en saphir
+item.SapphireLegs.name=Jambierres en saphir
+item.SapphireBoots.name=Bottes en saphir
+
+
+
+tile.millstoneIdle.name=Meule
+tile.stoneCutter.name=Tailleur de pierre
+tile.obsidianBlock.name=Obsidienne raffinee
+tile.ricePlant.name=Plante de riz
+tile.lantern.name=Lanterne en papier
+tile.copperOre.name=Minerai de cuivre
+tile.sapphireOre.name=Minerai de saphir
+tile.netherRubyOre.name=Minerai de rubis du Nether
+tile.silverOre.name=Minerai d’argent
+tile.lavaBrick.name=Briques de lave
+tile.Firerack.name=Roches de feu
+tile.Halite.name=Halite
+tile.Jade.name=Jade
+
+tile.sandstoneWall.name=Mur de gres
+tile.brickWall.name=Mur en briques
+tile.stoneBrickWall.name=Mur de briques de pierre
+
+tile.willowStairs.name=Willow Stairs
+tile.palmStairs.name=Palm Stairs
+tile.dreadwood.name=Dreadwood Stairs
+tile.redwoodStairs.name=Redwood Stairs
+tile.applewoodStairs.name=Applewood Stairs
+tile.cherryStairs.name=Cherry Stairs
+tile.baobabStairs.name=Baobab Stairs
+
+tile.planks.name=Wooden Planks
+tile.planks.willow.name=Willow Wood Planks
+tile.planks.palm.name=Palm Wood Planks
+tile.planks.dreadwood.name=Dreadwood Planks
+tile.planks.redwood.name=Redwood Planks
+tile.planks.applewood.name=Applewood Planks
+tile.planks.cherry.name=Cherry Wood Planks
+tile.planks.baobab.name=Baobab Wood Planks
+
+tile.log.name=Log
+tile.log.willow.name=Willow Wood 
+tile.log.palm.name=Palm Wood 
+tile.log.dreadwood.name=Dreadwood 
+tile.log.redwood.name=Redwood 
+tile.log.applewood.name=Applewood 
+tile.log.cherry.name=Cherry Wood 
+tile.log.baobab.name=Baobab Wood 
+
+tile.leaf.name=Leaves
+tile.leaf.willow.name=Willow Leaves
+tile.leaf.palm.name=Palm Leaves
+tile.leaf.dreadwood.name=Dreadwood Leaves 
+tile.leaf.redwood.name=Redwood Leaves
+tile.leaf.applewood.name=Applewood Leaves
+tile.leaf.cherry.name=Cherry Leaves
+tile.leaf.baobab.name=Baobab Leaves
+
+tile.slab.name=Wooden Slab
+tile.slab.willow.name=Willow Slab
+tile.slab.palm.name=Palm Slab
+tile.slab.dreadwood.name=Dreadwood Slab 
+tile.slab.redwood.name=Redwood Slab
+tile.slab.applewood.name=Applewood Slab
+tile.slab.cherry.name=Cherry Slab
+tile.slab.baobab.name=Baobab Slab
+
+tile.sapling.name=Leaves
+tile.sapling.willow.name=Willow Sapling
+tile.sapling.palm.name=Palm Sapling
+tile.sapling.dreadwood.name=Dreadwood Sapling 
+tile.sapling.redwood.name=Redwood Sapling
+tile.sapling.applewood.name=Applewood Sapling
+tile.sapling.cherry.name=Cherry Sapling
+tile.sapling.baobab.name=Baobab Sapling
+
+item.coloredBed.black.name=Lit noire
+item.coloredBed.red.name=Lit rouge
+item.coloredBed.green.name=Lit vert
+item.coloredBed.brown.name=Lit marron 
+item.coloredBed.blue.name=Lit bleu
+item.coloredBed.purple.name=Lit violet
+item.coloredBed.cyan.name=Lit cyan
+item.coloredBed.silver.name=Lit argenté
+item.coloredBed.gray.name=Lit gris
+item.coloredBed.pink.name=Lit rose
+item.coloredBed.lime.name=Lit vert-citron
+item.coloredBed.yellow.name=Lit jaune
+item.coloredBed.light_blue.name=Lit bleu claire
+item.coloredBed.magenta.name=Lit magenta
+item.coloredBed.orange.name=Lit orange
+item.coloredBed.white.name=Lit blanc
+
+
