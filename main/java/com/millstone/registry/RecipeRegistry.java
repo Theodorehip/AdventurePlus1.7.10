@@ -18,7 +18,8 @@ public class RecipeRegistry{
 	public static void RegisterCrafting(){
 		
 	//Interactives
-	GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.millstoneIdle, 1), new Object[]{"SGS", "IXI", "BBB", 'S', Blocks.stone_slab, 'I', Items.iron_ingot, 'X', BlockRegistry.stoneCutter, 'G', Items.gold_ingot, 'B', Blocks.stonebrick});
+	//GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.millstoneIdle, 1), new Object[]{"SGS", "IXI", "BBB", 'S', Blocks.stone_slab, 'I', Items.iron_ingot, 'X', BlockRegistry.stoneCutter, 'G', Items.gold_ingot, 'B', Blocks.stonebrick});
+	GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.millstoneIdle, 1), new Object[]{"SPS", "IDI", "BPB", 'S', Blocks.stone_slab, 'I', Blocks.iron_block, 'P', Blocks.piston, 'D', Blocks.diamond_ore, 'B', Blocks.stonebrick});
 	GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.stoneCutter, 1), new Object[]{"CCC", "CSC", "CCC", 'C', Blocks.cobblestone, 'S', ItemRegistry.stoneGear});;
 
 	//Gears
@@ -190,13 +191,13 @@ public class RecipeRegistry{
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.quartz_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.quartz_block});
 	
     //Mod Stairs
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.willowStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 0)});
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.palmStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 2)});
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.dreadwoodStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 1)});
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.redwoodStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 3)});
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.applewoodStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 4)});
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.cherryStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 5)});  
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.baobabStairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 6)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.willowStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 0)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.palmStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 2)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.dreadwoodStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 1)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.redwoodStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 3)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.applewoodStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 4)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.cherryStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 5)});  
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.baobabStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 6)});
 
     //Mod Slabs
     GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.singleSlab, 6, 0), new Object[] {"###", '#', new ItemStack(BlockRegistry.planks, 1, 0)});

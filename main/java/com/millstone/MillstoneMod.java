@@ -5,8 +5,10 @@ import java.util.Random;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityList;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BlockEvent;
@@ -150,6 +152,8 @@ public class MillstoneMod
 		logger.info("Mod loaded");
 
     }  
+
+    
     /*
     @SubscribeEvent
     public void on(BlockEvent.HarvestDropsEvent event){
