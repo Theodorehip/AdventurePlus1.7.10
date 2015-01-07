@@ -139,20 +139,20 @@ tile.stoneBrickWall.name=Mur de briques de pierre
 
 tile.willowStairs.name=Willow Stairs
 tile.palmStairs.name=Palm Stairs
-tile.dreadwood.name=Dreadwood Stairs
+tile.dreadwoodStairs.name=Dreadwood Stairs
 tile.redwoodStairs.name=Redwood Stairs
 tile.applewoodStairs.name=Applewood Stairs
 tile.cherryStairs.name=Cherry Stairs
 tile.baobabStairs.name=Baobab Stairs
 
 tile.planks.name=Wooden Planks
-tile.planks.willow.name=Willow Wood Planks
-tile.planks.palm.name=Palm Wood Planks
-tile.planks.dreadwood.name=Dreadwood Planks
-tile.planks.redwood.name=Redwood Planks
-tile.planks.applewood.name=Applewood Planks
-tile.planks.cherry.name=Cherry Wood Planks
-tile.planks.baobab.name=Baobab Wood Planks
+tile.planks_willow.name=Willow Wood Planks
+tile.planks_palm.name=Palm Wood Planks
+tile.planks_dreadwood.name=Dreadwood Planks
+tile.planks_redwood.name=Redwood Planks
+tile.planks_applewood.name=Applewood Planks
+tile.planks_cherry.name=Cherry Wood Planks
+tile.planks_baobab.name=Baobab Wood Planks
 
 tile.log.name=Log
 tile.log.willow.name=Willow Wood 

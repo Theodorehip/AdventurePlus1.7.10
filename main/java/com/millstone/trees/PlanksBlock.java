@@ -2,7 +2,7 @@ package com.millstone.trees;
 
 import java.util.List;
 
-import net.minecraft.block.Block;
+import net.minecraft.block.BlockWood;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -16,85 +16,59 @@ import com.millstone.lib.References;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class PlanksBlock extends Block{
+public class PlanksBlock extends BlockWood{
 
-	private int maxMeta = 7;
-	public IIcon[] icons;
+	public static final String[] icons = new String[] {"willow", "palm", "dreadwood", "redwood", "applewood", "cherry", "baobab"};
+	@SideOnly(Side.CLIENT)
+    private IIcon[] field_150095_b;
+	
 	
 	public PlanksBlock()
 	{
-	super(Material.wood);
 	setBlockName("planks");
 	setCreativeTab(MillstoneMod.tabMillstone);
 	setStepSound(soundTypeWood);
 
-	icons = new IIcon[maxMeta];
-	
 	}
 	
 	@Override
     public void registerBlockIcons(IIconRegister iconRegister) {
- 
-        for(int i = 0; i < icons.length; i++) {
- 
-            icons[i] = iconRegister.registerIcon(References.MODID + ":" + "planks" + i);
-        }
-    }
-	 
-	@Override
-	public int damageDropped(int par1)
-	{
-	return par1;
-	}
-	
-	@SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int meta) {
- 
-        switch(meta) {
- 
-            case 0:
-                return icons[0];
-           case 1: 
-//                {
-// 
-//                switch(side) {
-// 
-//                    case 0:
-//                        return icons[1];
-//                    case 1:
-//                        return icons[2];
-//                    case 2:
-//                        return icons[3];
-//                    default:
-//                        return icons[5];
-//                }
-//            }
-        	    return icons[1];
-            case 2:
-                return icons[2];
-            case 3:
-                return icons[3];
-            case 4:
-                return icons[4];
-            case 5:
-                return icons[5];
-            case 6:
-               return icons[6];
-            default: {
-            	return icons[0];
-        }
-        }
-    }
+		this.field_150095_b = new IIcon[icons.length];
+		
+		for (int i = 0; i < this.field_150095_b.length; i++){
+			this.field_150095_b[i] = iconRegister.registerIcon(References.MODID + ":" + this.getUnlocalizedName().substring(5) + "_" + icons[i]);
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	@Override
-	    public void getSubBlocks(Item item, CreativeTabs creativeTabs, List list) {
+		}
+    }
 	 
-	        for(int i = 0; i < maxMeta; i++){
-	 
-	            list.add(new ItemStack(item, 1, i));
-	        }
-	    }
+//	@Override
+//	public int damageDropped(int par1)
+//	{
+//	return par1;
+//	}
+	
+	/**
+     * Gets the block's texture. Args: side, meta
+     */
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon(int side, int meta)
+    {
+        if (meta < 0 || meta >= this.field_150095_b.length)
+        {
+            meta = 0;
+        }
+
+        return this.field_150095_b[meta];
+    }
+	
+
+	@SideOnly(Side.CLIENT)
+	public void getSubBlocks(Item item, CreativeTabs tabs, List list){
+		
+		for (int i = 0; i < icons.length; i++){
+			list.add(new ItemStack(item, 1, i));
+		}
+	}
 	
 	 
 }

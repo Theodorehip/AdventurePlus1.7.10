@@ -70,7 +70,7 @@ public class PlanksBlockItem extends ItemBlock{
 	default:
 	name = "noMeta";
 	}
-	return getUnlocalizedName() + "." + name;
+	return getUnlocalizedName() + "_" + name;
 	}
 	
 	    @Override
