@@ -2,6 +2,7 @@ package com.millstone;
 
 import java.util.Random;
 
+import net.minecraft.block.BlockStone;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityList;
@@ -59,14 +60,18 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @Mod(modid = References.MODID, version = References.VERSION, name = References.Name)
 public class MillstoneMod
 {
-   
+	
+	
     //Whenever making a new GUI, do this same thing but put a number higher than the previous ID.
+	
+	
+	
     public static final int guiIDMillstone = 1;
     public static final int guiIDCutter = 2;
 
 	@Instance(References.MODID)
 	public static MillstoneMod instance;
-	
+
 	
 	//Proxy Stuff
 	@SidedProxy(clientSide = References.Client, serverSide = References.Common)
@@ -86,7 +91,9 @@ public class MillstoneMod
 	//public static Logger logger = LogManager.getLogger("MillstoneMod");
     private static final Logger logger = LogManager.getLogger();
 
-	
+	//Misc
+  
+    
 	//WorldGen
 	MillstoneModWorldGen eventWorldGen = new MillstoneModWorldGen();
 	
@@ -109,6 +116,7 @@ public class MillstoneMod
     @EventHandler
     public void init(FMLInitializationEvent event)
     {   	
+    	
     	
     	//Game Registry
 		logger.info("Registering Items, Blocks, and Entities");

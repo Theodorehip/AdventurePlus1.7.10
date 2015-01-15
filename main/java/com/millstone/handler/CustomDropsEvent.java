@@ -3,8 +3,13 @@ package com.millstone.handler;
 import java.util.Random;
 
 import net.minecraft.entity.monster.EntitySkeleton;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.event.world.BlockEvent;
+
+import com.millstone.MillstoneMod;
 
 import com.millstone.registry.ItemRegistry;
 
@@ -15,7 +20,16 @@ public class CustomDropsEvent {
 public static double rand;
 public Random r = new Random();
 
+
+
 @SubscribeEvent
+
+public void onDrops(BlockEvent.HarvestDropsEvent event) {
+
+if (event.block == Blocks.stone && event.harvester.getHeldItem() != null && event.harvester.getHeldItem().getItem() == Items.wooden_pickaxe)
+event.drops.add(new ItemStack(com.millstone.registry.ItemRegistry.Rock));
+}
+
 public void onEntityDrop(LivingDropsEvent event)
 {
 	

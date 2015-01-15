@@ -36,6 +36,7 @@ import com.millstone.items.ObsidianDust;
 import com.millstone.items.RawHide;
 import com.millstone.items.RiceBowl;
 import com.millstone.items.RicePaper;
+import com.millstone.items.Rock;
 import com.millstone.items.Ruby;
 import com.millstone.items.Sapphire;
 import com.millstone.items.SilverDust;
@@ -190,6 +191,7 @@ public class ItemRegistry{
 	public static Item armorObsidianBoots = new ObsidianArmor(ObsidianArmorMaterial, armorObsidianBootsID, 3).setUnlocalizedName("ObsidianBoots");
 	
 	//Items 
+	public static Item Rock = new Rock();
 	public static Item stoneDust = new StoneDust();
 	public static Item ironDust = new IronDust();
 	public static Item copperDust = new CopperDust();
@@ -340,6 +342,7 @@ public class ItemRegistry{
 
 	
 	//Misc
+	GameRegistry.registerItem(Rock, "rock");
 	GameRegistry.registerItem(ironRod, "ironRod");
 	GameRegistry.registerItem(boneShard, "boneShard");
 	GameRegistry.registerItem(ricePaper, "ricePaper");
