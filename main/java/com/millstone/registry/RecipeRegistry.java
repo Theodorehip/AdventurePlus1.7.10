@@ -176,27 +176,27 @@ public class RecipeRegistry{
 	GameRegistry.addRecipe(new ItemStack(BlockRegistry.stoneBrickWall, 6, 0), new Object[] {"###", "###", '#', Blocks.stonebrick});
     
     //Vanilla Stairs
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.oak_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 0)});
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.birch_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 2)});
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.spruce_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 1)});
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.jungle_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 3)});
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.acacia_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 4)});
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.dark_oak_stairs, 8), new Object[] {"#  ", "## ", "###", '#', new ItemStack(Blocks.planks, 1, 5)});  
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.cobblestone});
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.brick_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.brick_block});
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_brick_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.stonebrick});
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.nether_brick_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.nether_brick});
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.sandstone_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.sandstone});
-    GameRegistry.addShapedRecipe(new ItemStack(Blocks.quartz_stairs, 8), new Object[] {"#  ", "## ", "###", '#', Blocks.quartz_block});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.oak_stairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(Blocks.planks, 1, 0)});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.birch_stairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(Blocks.planks, 1, 2)});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.spruce_stairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(Blocks.planks, 1, 1)});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.jungle_stairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(Blocks.planks, 1, 3)});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.acacia_stairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(Blocks.planks, 1, 4)});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.dark_oak_stairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(Blocks.planks, 1, 5)});  
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_stairs, 4), new Object[] {"#  ", "## ", '#', Blocks.cobblestone});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.brick_stairs, 4), new Object[] {"#  ", "## ", '#', Blocks.brick_block});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.stone_brick_stairs, 4), new Object[] {"#  ", "## ", '#', Blocks.stonebrick});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.nether_brick_stairs, 4), new Object[] {"#  ", "## ", '#', Blocks.nether_brick});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.sandstone_stairs, 4), new Object[] {"#  ", "## ", '#', Blocks.sandstone});
+    GameRegistry.addShapedRecipe(new ItemStack(Blocks.quartz_stairs, 4), new Object[] {"#  ", "## ", '#', Blocks.quartz_block});
 	
     //Mod Stairs
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.willowStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 0)});
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.palmStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 2)});
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.dreadwoodStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 1)});
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.redwoodStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 3)});
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.applewoodStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 4)});
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.cherryStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 5)});  
-    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.baobabStairs, 4), new Object[] {"#  ", "## ", "###", '#', new ItemStack(BlockRegistry.planks, 1, 6)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.willowStairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(BlockRegistry.planks, 1, 0)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.palmStairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(BlockRegistry.planks, 1, 2)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.dreadwoodStairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(BlockRegistry.planks, 1, 1)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.redwoodStairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(BlockRegistry.planks, 1, 3)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.applewoodStairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(BlockRegistry.planks, 1, 4)});
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.cherryStairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(BlockRegistry.planks, 1, 5)});  
+    GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.baobabStairs, 4), new Object[] {"#  ", "## ", '#', new ItemStack(BlockRegistry.planks, 1, 6)});
 
     //Mod Slabs
     GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.singleSlab, 6, 0), new Object[] {"###", '#', new ItemStack(BlockRegistry.planks, 1, 0)});
