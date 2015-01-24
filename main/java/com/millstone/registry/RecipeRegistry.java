@@ -115,8 +115,8 @@ public class RecipeRegistry{
 	GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.obsidianBlock, 1), new Object[]{"XXX", "XXX", "XXX", 'X', ItemRegistry.obsidianDust});
 	GameRegistry.addShapedRecipe(new ItemStack(Items.string, 1), new Object[]{"   ", "CCC", "   ", 'C', ItemRegistry.cotton});
 	GameRegistry.addShapedRecipe(new ItemStack(Blocks.wool, 1), new Object[]{"   ", "CC ", "CC ", 'C', ItemRegistry.cotton});
-    GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.riceBowl,1), new Object[] {"x", "y", 'x', ItemRegistry.riceCrop, 'y', Items.bowl});
-    GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.sushi,1), new Object[] {new ItemStack(ItemRegistry.riceCrop, 1), Items.fish});
+  //  GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.riceBowl,1), new Object[] {"x", "y", 'x', ItemRegistry.riceCrop, 'y', Items.bowl});
+   // GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.sushi,1), new Object[] {new ItemStack(ItemRegistry.riceCrop, 1), Items.fish});
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.iron_bars, 4), new Object[] {"   ", "###", "###", '#', ItemRegistry.ironRod});
     
     //Re-done Rails
