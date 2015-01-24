@@ -18,8 +18,7 @@ public class RecipeRegistry{
 	public static void RegisterCrafting(){
 		
 	//Interactives
-	//GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.millstoneIdle, 1), new Object[]{"SGS", "IXI", "BBB", 'S', Blocks.stone_slab, 'I', Items.iron_ingot, 'X', BlockRegistry.stoneCutter, 'G', Items.gold_ingot, 'B', Blocks.stonebrick});
-	GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.millstoneIdle, 1), new Object[]{"SPS", "IDI", "BPB", 'S', Blocks.stone_slab, 'I', Blocks.iron_block, 'P', Blocks.piston, 'D', Blocks.diamond_ore, 'B', Blocks.stonebrick});
+	//GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.millstoneIdle, 1), new Object[]{"SPS", "IDI", "BPB", 'S', Blocks.stone_slab, 'I', Blocks.iron_block, 'P', Blocks.piston, 'D', Blocks.diamond_ore, 'B', Blocks.stonebrick});
 	GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.stoneCutter, 1), new Object[]{"CCC", "CSC", "CCC", 'C', Blocks.cobblestone, 'S', ItemRegistry.stoneGear});;
 
 	//Gears
@@ -81,7 +80,7 @@ public class RecipeRegistry{
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintHatchet, 1), new Object[]{" OL", "  I", 'I', Items.stick, 'O', Items.flint, 'L', ItemRegistry.leatherStrip});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.bonePickaxe, 1), new Object[]{"OQO", " I ", " I ", 'I', Items.stick, 'Q', Items.bone, 'O',ItemRegistry.boneShard});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintKnife, 1), new Object[]{"  I", " I ", 'I', Items.flint});	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.boneShard, 1), new Object[]{ItemRegistry.flintKnife, Items.bone});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironRod, 6), new Object[]{" I ", " I ", " I ", 'I', Items.iron_ingot});
+	//GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironRod, 6), new Object[]{" I ", " I ", " I ", 'I', Items.iron_ingot});
 	
 	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.leatherStrip, 3), new Object[]{ItemRegistry.flintKnife, Items.leather});
 	
