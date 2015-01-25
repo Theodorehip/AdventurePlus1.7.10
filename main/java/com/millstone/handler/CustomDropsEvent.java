@@ -35,10 +35,9 @@ public class CustomDropsEvent {
 					com.millstone.registry.ItemRegistry.Rock));
 		}
 
-		if (event.block.equals(Blocks.glass)
-				&& event.harvester.getHeldItem() == null) {
+		if (event.block == Blocks.glass && event.harvester.getHeldItem() == null) {
 
-			event.harvester.attackEntityFrom(DamageSource.generic, 4);
+			event.harvester.attackEntityFrom(DamageSource.generic, 2);
 
 		}
 
