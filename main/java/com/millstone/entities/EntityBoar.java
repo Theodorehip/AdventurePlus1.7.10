@@ -1,5 +1,6 @@
 package com.millstone.entities;
 
+import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
@@ -165,6 +166,11 @@ public class EntityBoar extends EntityMob{
     public boolean isBreedingItem(ItemStack p_70877_1_)
     {
         return p_70877_1_ != null && p_70877_1_.getItem() == Items.carrot;
+    }
+    
+    public EntityBoar createChild(EntityAgeable p_90011_1_)
+    {
+        return new EntityBoar(this.worldObj);
     }
     
     
