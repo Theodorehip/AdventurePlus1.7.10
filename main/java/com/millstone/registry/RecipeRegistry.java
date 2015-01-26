@@ -77,12 +77,13 @@ public class RecipeRegistry{
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironShovel, 1), new Object[]{" O ", " I ", " I ", 'I', Items.stick, 'O', Items.iron_ingot});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironHoe, 1), new Object[]{" OO", " I ", " I ", 'I', Items.stick, 'O', Items.iron_ingot});
 	
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintHatchet, 1), new Object[]{" OL", "  I", 'I', Items.stick, 'O', Items.flint, 'L', ItemRegistry.leatherStrip});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.bonePickaxe, 1), new Object[]{"OQO", " I ", " I ", 'I', Items.stick, 'Q', Items.bone, 'O',ItemRegistry.boneShard});
-	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintKnife, 1), new Object[]{"  I", " I ", 'I', Items.flint});	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.boneShard, 1), new Object[]{ItemRegistry.flintKnife, Items.bone});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintHatchet, 1), new Object[]{" FF", "  S", 'S', Items.stick, 'F', Items.flint});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.bonePickaxe, 1), new Object[]{"-B-", " S ", " S ", 'S', Items.stick, 'B', Items.bone, '-',ItemRegistry.boneShard});
+	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintKnife, 1), new Object[]{"  I", " I ", 'I', Items.flint});	
+	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.boneShard, 1), new Object[]{ItemRegistry.flintKnife, Items.bone});
 	//GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironRod, 6), new Object[]{" I ", " I ", " I ", 'I', Items.iron_ingot});
 	
-	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.leatherStrip, 3), new Object[]{ItemRegistry.flintKnife, Items.leather});
+	//GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.leatherStrip, 3), new Object[]{ItemRegistry.flintKnife, Items.leather});
 	
 	//Armor
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.armorCopperHelm, 1), new Object[]{"OOO", "O O", "   ", 'O', copperIngot});
@@ -113,7 +114,7 @@ public class RecipeRegistry{
 	
 	//Misc
 	GameRegistry.addShapedRecipe(new ItemStack(BlockRegistry.obsidianBlock, 1), new Object[]{"XXX", "XXX", "XXX", 'X', ItemRegistry.obsidianDust});
-	GameRegistry.addShapedRecipe(new ItemStack(Items.string, 1), new Object[]{"   ", "CCC", "   ", 'C', ItemRegistry.cotton});
+	GameRegistry.addShapedRecipe(new ItemStack(Items.string, 1), new Object[]{"CCC", 'C', ItemRegistry.cotton});
 	GameRegistry.addShapedRecipe(new ItemStack(Blocks.wool, 1), new Object[]{"   ", "CC ", "CC ", 'C', ItemRegistry.cotton});
   //  GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.riceBowl,1), new Object[] {"x", "y", 'x', ItemRegistry.riceCrop, 'y', Items.bowl});
    // GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.sushi,1), new Object[] {new ItemStack(ItemRegistry.riceCrop, 1), Items.fish});

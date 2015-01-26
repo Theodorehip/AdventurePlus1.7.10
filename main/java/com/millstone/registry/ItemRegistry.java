@@ -42,6 +42,7 @@ import com.millstone.items.Sapphire;
 import com.millstone.items.SilverDust;
 import com.millstone.items.SilverIngot;
 import com.millstone.items.StoneDust;
+import com.millstone.items.Straw;
 import com.millstone.items.Tomato;
 import com.millstone.items.rottenArrow;
 import com.millstone.items.sushi;
@@ -210,6 +211,7 @@ public class ItemRegistry{
 	public static Item leatherStrip = new LeatherStrip();
 	public static Item grenade = new ItemGrenade();
 	public static Item rottenArrow = new rottenArrow();
+	public static Item straw = new Straw();
 	
 	//Gears
 	public static Item woodGear = new com.millstone.items.ItemGear().setMaxDamage(500).setTextureName(References.MODID + ":" + "woodGear").setUnlocalizedName("woodGear");
@@ -353,7 +355,7 @@ public class ItemRegistry{
 	GameRegistry.registerItem(grenade, "grenade");
 	GameRegistry.registerItem(coloredBed, "coloredBed");
 	GameRegistry.registerItem(rawHide, "rawHide");
-
+	GameRegistry.registerItem(straw, "straw");
 		
 	//Plants
 	GameRegistry.registerBlock(ricePlant, "ricePlant");

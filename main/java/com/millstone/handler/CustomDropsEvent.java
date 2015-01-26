@@ -28,16 +28,36 @@ public class CustomDropsEvent {
 	@SubscribeEvent
 	public void onDrops(BlockEvent.HarvestDropsEvent event) {
 
-		if (event.block == Blocks.stone
-				&& event.harvester.getHeldItem() != null
-				&& event.harvester.getHeldItem().getItem() == Items.wooden_pickaxe) {
-			event.drops.add(new ItemStack(
-					com.millstone.registry.ItemRegistry.Rock));
+		if (event.block == Blocks.stone && event.harvester.getHeldItem() != null && event.harvester.getHeldItem().getItem() == ItemRegistry.bonePickaxe) {
+			event.drops.clear();
+			event.drops.add(new ItemStack(ItemRegistry.Rock));
 		}
 
 		if (event.block == Blocks.glass && event.harvester.getHeldItem() == null) {
-
 			event.harvester.attackEntityFrom(DamageSource.generic, 2);
+
+		}
+		
+		if(event.block == Blocks.tallgrass && event.harvester.getHeldItem() != null && event.harvester.getHeldItem().getItem() == ItemRegistry.flintKnife){
+			event.drops.clear();
+			event.drops.add(new ItemStack(ItemRegistry.straw));
+			
+		}
+		
+		if ((event.block == Blocks.leaves || event.block == Blocks.leaves2)) {
+
+			if (r.nextInt(4) == 1) {
+				event.drops.add(new ItemStack(Items.stick));
+				event.drops.add(new ItemStack(Items.stick));
+				event.drops.add(new ItemStack(Items.stick));
+			}
+		}
+
+		if (event.block == Blocks.iron_ore && event.harvester.getHeldItem() != null && event.harvester.getHeldItem().getItem() == Items.stone_pickaxe) {
+			event.drops.clear();
+			for (int i = 0; i < 3 + r.nextInt(3); i++) {
+				event.drops.add(new ItemStack(ItemRegistry.ironNugget));
+			}
 
 		}
 
@@ -47,18 +67,13 @@ public class CustomDropsEvent {
 
 		if (event.entityLiving instanceof EntitySkeleton) {
 
-			event.drops.clear(); // Clears all the drops of the entity DON'T
-									// FORGET TO DO THIS! ALWAYS PUT IT, EVEN
-									// FOR RARE DROPS!
+			event.drops.clear(); // Clears all the drops of the entity
 			event.entityLiving.dropItem(Items.bone, r.nextInt(2));
 			event.entityLiving.dropItem(ItemRegistry.rottenArrow, r.nextInt(2));
+			event.entityLiving.dropItem(ItemRegistry.boneShard, r.nextInt(2));
 
 		}
 
 	}
-
-	/*
-	 * Here is the "Rare Drops put them under this if statement"
-	 */
 
 }

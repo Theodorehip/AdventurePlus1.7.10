@@ -10,6 +10,7 @@ entity.Scarecrow.name=Scarecrow
 entity.Boar.name=Boar
 
 item.rock.name=Rock
+item.straw.name=Straw
 item.woodGear.name=Wooden Gear
 item.stoneGear.name=Stone Gear
 item.ironGear.name=Iron Gear
