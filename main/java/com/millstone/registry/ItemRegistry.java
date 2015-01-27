@@ -249,14 +249,11 @@ public class ItemRegistry{
 	
 	public static Item rawHide = new RawHide();
 
-	 
-		
-	
 	//GameRegistry
     public static void Register()
     {  
+    	
 	//Tools
-    
     GameRegistry.registerItem(bonePickaxe, "bonePickaxe");
     GameRegistry.registerItem(flintKnife, "flintKnife");
     GameRegistry.registerItem(flintHatchet, "flintAxe");
@@ -300,7 +297,6 @@ public class ItemRegistry{
 
 	
 	//Armors
-	
 	GameRegistry.registerItem(armorCopperHelm, "CopperHelm");	
 	GameRegistry.registerItem(armorCopperChest, "Copperchest");
 	GameRegistry.registerItem(armorCopperLegs, "CopperLegs");
@@ -325,8 +321,6 @@ public class ItemRegistry{
 	GameRegistry.registerItem(armorObsidianChest, "Obsidianchest");
 	GameRegistry.registerItem(armorObsidianLegs, "ObsidianLegs");
 	GameRegistry.registerItem(armorObsidianBoots, "ObsidianBoots");
-	
-
 	
 	//OreItems
 	GameRegistry.registerItem(copperIngot, "copperBar");
@@ -375,7 +369,7 @@ public class ItemRegistry{
 	GameRegistry.registerItem(cottonSeeds, "cottonSeeds");
 	GameRegistry.registerItem(flaxSeeds, "flaxSeeds");
 
-	//food
+	//Food
 	GameRegistry.registerItem(riceBowl, "riceBowl");
 	GameRegistry.registerItem(sushi, "sushi");
 
@@ -384,10 +378,7 @@ public class ItemRegistry{
 	GameRegistry.registerItem(stoneGear, "stoneGear");	
 	GameRegistry.registerItem(ironGear, "ironGear");
 	GameRegistry.registerItem(goldGear, "goldGear");
-	GameRegistry.registerItem(diamondGear, "diamondGear");
-	
-	
-		
+	GameRegistry.registerItem(diamondGear, "diamondGear");	
 	
 	}
 }

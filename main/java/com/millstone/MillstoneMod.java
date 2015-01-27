@@ -60,11 +60,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @Mod(modid = References.MODID, version = References.VERSION, name = References.Name)
 public class MillstoneMod
 {
-	
-	
     //Whenever making a new GUI, do this same thing but put a number higher than the previous ID.
-	
-	
 	
     public static final int guiIDMillstone = 1;
     public static final int guiIDCutter = 2;
@@ -161,7 +157,6 @@ public class MillstoneMod
 
     }  
 
-    
     /*
     @SubscribeEvent
     public void on(BlockEvent.HarvestDropsEvent event){

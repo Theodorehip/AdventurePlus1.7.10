@@ -42,13 +42,13 @@ public class CustomDropsEvent {
 			event.drops.clear();
 
 		}
-		
+		/*
 		if(event.block == Blocks.tallgrass && event.harvester.getHeldItem() != null && event.harvester.getHeldItem().getItem() == ItemRegistry.flintKnife){
 			event.drops.clear();
 			event.drops.add(new ItemStack(ItemRegistry.straw));
 			
 		}
-		
+		*/
 		if ((event.block == Blocks.leaves || event.block == Blocks.leaves2)) {
 
 			if (r.nextInt(4) == 1) {
