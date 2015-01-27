@@ -38,8 +38,10 @@ public class CustomDropsEvent {
 
 		}
 		
-		if ((event.block == Blocks.log || event.block == Blocks.log2)  && event.harvester.getHeldItem() == null) {
-			event.drops.clear();
+		if ((event.block == Blocks.log || event.block == Blocks.log2) && event.harvester.getHeldItem() == null ) {
+			 event.drops.clear();
+			 event.harvester.attackEntityFrom(DamageSource.generic, 1);
+			 
 
 		}
 		/*
