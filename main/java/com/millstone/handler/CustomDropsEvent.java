@@ -37,32 +37,31 @@ public class CustomDropsEvent {
 			event.harvester.attackEntityFrom(DamageSource.generic, 2);
 
 		}
-		/*
-		if ((event.block == Blocks.log || event.block == Blocks.log2) || (event.harvester.getHeldItem() != null)) 
-		{
-			
-			
+		if ((event.block == Blocks.log || event.block == Blocks.log2) && event.harvester.getHeldItem() != null && ((event.harvester.getHeldItem().getItem() == ItemRegistry.sapphireAxe 
+				|| event.harvester.getHeldItem().getItem() == ItemRegistry.copperAxe || event.harvester.getHeldItem().getItem() == ItemRegistry.emeraldAxe 
+				|| event.harvester.getHeldItem().getItem() == ItemRegistry.obsidianAxe || event.harvester.getHeldItem().getItem() == ItemRegistry.rubyAxe 
+				|| event.harvester.getHeldItem().getItem() == Items.wooden_axe || event.harvester.getHeldItem().getItem() == Items.stone_axe
+				|| event.harvester.getHeldItem().getItem() == Items.diamond_axe || event.harvester.getHeldItem().getItem() == Items.golden_axe
+				|| event.harvester.getHeldItem().getItem() == Items.iron_axe || event.harvester.getHeldItem().getItem() == ItemRegistry.copperAxe
+				|| event.harvester.getHeldItem().getItem() == ItemRegistry.flintHatchet))) {
+		
 		}
-		/*
-		else if ((event.block == Blocks.log || event.block == Blocks.log2)){
-			
-			 event.drops.clear();
-			 event.harvester.attackEntityFrom(DamageSource.generic, 1);
+		else if ((event.block == Blocks.log || event.block == Blocks.log2)) {
+
+			event.drops.clear();
+
+			if (event.harvester.getHeldItem() == null) {
+				event.harvester.attackEntityFrom(DamageSource.generic, 1);
+			}
 		}
-		*/
+
 		/*
 		if(event.block == Blocks.tallgrass && event.harvester.getHeldItem() != null && event.harvester.getHeldItem().getItem() == ItemRegistry.flintKnife){
 			event.drops.clear();
 			event.drops.add(new ItemStack(ItemRegistry.straw));	
 			
 			
-			(event.harvester.getHeldItem().getItem() == ItemRegistry.sapphireAxe 
-				|| event.harvester.getHeldItem().getItem() == ItemRegistry.copperAxe || event.harvester.getHeldItem().getItem() == ItemRegistry.emeraldAxe 
-				|| event.harvester.getHeldItem().getItem() == ItemRegistry.obsidianAxe || event.harvester.getHeldItem().getItem() == ItemRegistry.rubyAxe 
-				|| event.harvester.getHeldItem().getItem() == Items.wooden_axe || event.harvester.getHeldItem().getItem() == Items.stone_axe
-				|| event.harvester.getHeldItem().getItem() == Items.diamond_axe || event.harvester.getHeldItem().getItem() == Items.golden_axe
-				|| event.harvester.getHeldItem().getItem() == Items.iron_axe || event.harvester.getHeldItem().getItem() == ItemRegistry.copperAxe
-				|| event.harvester.getHeldItem().getItem() == ItemRegistry.flintHatchet)
+			
 			
 		}
 		*/
