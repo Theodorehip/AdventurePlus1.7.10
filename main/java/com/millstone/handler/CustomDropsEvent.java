@@ -37,20 +37,36 @@ public class CustomDropsEvent {
 			event.harvester.attackEntityFrom(DamageSource.generic, 2);
 
 		}
-		
-		if ((event.block == Blocks.log || event.block == Blocks.log2) && event.harvester.getHeldItem() == null ) {
+		/*
+		if ((event.block == Blocks.log || event.block == Blocks.log2) || (event.harvester.getHeldItem() != null)) 
+		{
+			
+			
+		}
+		/*
+		else if ((event.block == Blocks.log || event.block == Blocks.log2)){
+			
 			 event.drops.clear();
 			 event.harvester.attackEntityFrom(DamageSource.generic, 1);
-			 
-
 		}
+		*/
 		/*
 		if(event.block == Blocks.tallgrass && event.harvester.getHeldItem() != null && event.harvester.getHeldItem().getItem() == ItemRegistry.flintKnife){
 			event.drops.clear();
-			event.drops.add(new ItemStack(ItemRegistry.straw));
+			event.drops.add(new ItemStack(ItemRegistry.straw));	
+			
+			
+			(event.harvester.getHeldItem().getItem() == ItemRegistry.sapphireAxe 
+				|| event.harvester.getHeldItem().getItem() == ItemRegistry.copperAxe || event.harvester.getHeldItem().getItem() == ItemRegistry.emeraldAxe 
+				|| event.harvester.getHeldItem().getItem() == ItemRegistry.obsidianAxe || event.harvester.getHeldItem().getItem() == ItemRegistry.rubyAxe 
+				|| event.harvester.getHeldItem().getItem() == Items.wooden_axe || event.harvester.getHeldItem().getItem() == Items.stone_axe
+				|| event.harvester.getHeldItem().getItem() == Items.diamond_axe || event.harvester.getHeldItem().getItem() == Items.golden_axe
+				|| event.harvester.getHeldItem().getItem() == Items.iron_axe || event.harvester.getHeldItem().getItem() == ItemRegistry.copperAxe
+				|| event.harvester.getHeldItem().getItem() == ItemRegistry.flintHatchet)
 			
 		}
 		*/
+		
 		if ((event.block == Blocks.leaves || event.block == Blocks.leaves2)) {
 
 			if (r.nextInt(4) == 1) {
@@ -69,15 +85,17 @@ public class CustomDropsEvent {
 		}
 
 	}
-
+	
+	@SubscribeEvent
 	public void onEntityDrop(LivingDropsEvent event) {
 
 		if (event.entityLiving instanceof EntitySkeleton) {
 
 			event.drops.clear(); // Clears all the drops of the entity
-			event.entityLiving.dropItem(Items.bone, r.nextInt(2));
-			event.entityLiving.dropItem(ItemRegistry.rottenArrow, r.nextInt(2));
-			event.entityLiving.dropItem(ItemRegistry.boneShard, r.nextInt(2));
+			event.entityLiving.dropItem(Items.bone, r.nextInt(3));
+			event.entityLiving.dropItem(ItemRegistry.rottenArrow, r.nextInt(3));
+			event.entityLiving.dropItem(Items.arrow, r.nextInt(2));
+			event.entityLiving.dropItem(ItemRegistry.boneShard, r.nextInt(3));
 
 		}
 
