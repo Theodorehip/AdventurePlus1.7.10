@@ -55,15 +55,6 @@ public class CustomDropsEvent {
 			}
 		}
 
-	/*	
-		if (event.block == Blocks.tallgrass && event.harvester.getHeldItem().getItem() == ItemRegistry.flintKnife) {
-
-			if () {
-				event.drops.clear();
-				event.drops.add(new ItemStack(ItemRegistry.straw));
-			}
-		}
-		*/
 		if ((event.block == Blocks.leaves || event.block == Blocks.leaves2)) {
 
 			if (r.nextInt(4) == 1) {
