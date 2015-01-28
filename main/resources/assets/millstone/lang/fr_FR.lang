@@ -10,6 +10,7 @@ entity.Scarecrow.name=Epouvantail
 entity.Boar.name=Sanglier
 
 item.woodGear.name=Engrenage en bois
+item.straw.name=Paille
 item.stoneGear.name=Engrenage en pierre
 item.ironGear.name=Engrenage en fer
 item.goldGear.name=Engrenage en or
