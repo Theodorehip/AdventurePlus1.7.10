@@ -55,10 +55,15 @@ public class CustomDropsEvent {
 			}
 		}
 		
+		if (event.block == Blocks.coal_ore && event.harvester.getHeldItem() != null && ((event.harvester.getHeldItem().getItem() == ItemRegistry.sapphirePickaxe
+				|| event.harvester.getHeldItem().getItem() == ItemRegistry.copperPickaxe  || event.harvester.getHeldItem().getItem() == ItemRegistry.emeraldPickaxe 
+				|| event.harvester.getHeldItem().getItem() == ItemRegistry.obsidianPickaxe  || event.harvester.getHeldItem().getItem() == ItemRegistry.rubyPickaxe 
+				|| event.harvester.getHeldItem().getItem() == Items.stone_pickaxe || event.harvester.getHeldItem().getItem() == Items.diamond_pickaxe  
+				|| event.harvester.getHeldItem().getItem() == Items.golden_pickaxe || event.harvester.getHeldItem().getItem() == Items.iron_pickaxe  
+				|| event.harvester.getHeldItem().getItem() == ItemRegistry.copperPickaxe ))) {
 		
-		if(event.block == Blocks.coal_ore && event.harvester.getHeldItem() != null  && event.harvester.getHeldItem().getItem() == Items.stone_pickaxe){
-			
-		}else{
+		}
+		else if ((event.block == Blocks.log || event.block == Blocks.log2)) {
 			event.drops.clear();
 			
 		}
