@@ -54,6 +54,14 @@ public class CustomDropsEvent {
 				event.harvester.attackEntityFrom(DamageSource.generic, 1);
 			}
 		}
+		
+		
+		if(event.block == Blocks.coal_ore && event.harvester.getHeldItem() != null  && event.harvester.getHeldItem().getItem() == Items.stone_pickaxe){
+			
+		}else{
+			event.drops.clear();
+			
+		}
 
 		if ((event.block == Blocks.leaves || event.block == Blocks.leaves2)) {
 
