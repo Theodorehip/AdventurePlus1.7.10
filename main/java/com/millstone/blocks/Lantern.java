@@ -21,26 +21,11 @@ public class Lantern extends Block{
 	
 	private static final String __OBFID = "CL_00000250";
 	
-	
 	@SideOnly(Side.CLIENT)
-	private IIcon top;
-	@SideOnly(Side.CLIENT)
-	private IIcon bottom;
-
-	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int side, int p_149691_2_)
-	{
-	return side == 1 ? this.top : ( side == 0 ? this.bottom :this.blockIcon);
+	public void registerBlockIcons(IIconRegister iconRegister){
+		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "paper_lantern");
+		
 	}
-	
-	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister iconRegister)
-	{
-	this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "LanternSide");
-	this.top = iconRegister.registerIcon(References.MODID + ":" + "LanternTop");
-	this.bottom = iconRegister.registerIcon((References.MODID + ":" + "LanternBottom"));
-	}
-	
 
     public Lantern(Material p_i45409_1_)
     {
