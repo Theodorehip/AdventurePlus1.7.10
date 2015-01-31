@@ -119,6 +119,7 @@ public class RecipeRegistry{
   //  GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.riceBowl,1), new Object[] {"x", "y", 'x', ItemRegistry.riceCrop, 'y', Items.bowl});
    // GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.sushi,1), new Object[] {new ItemStack(ItemRegistry.riceCrop, 1), Items.fish});
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.iron_bars, 4), new Object[] {"   ", "###", "###", '#', ItemRegistry.ironRod});
+    GameRegistry.addShapedRecipe(new ItemStack(Items.lead, 2), new Object[] {"FF ", "FS ", "  F", 'S', Items.slime_ball , 'F' , ItemRegistry.flax});
     
     //Re-done Rails
     GameRegistry.addShapedRecipe(new ItemStack(Blocks.rail, 16), new Object[]{"X X", "XIX", "X X", 'X', ItemRegistry.ironRod, 'I', Items.stick});
@@ -270,6 +271,7 @@ public class RecipeRegistry{
 		
 		//redoing Recipes
 		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.iron_bars));
+		RemoveRecipes.removeRecipes(Items.lead);
 		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.rail));
 		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.activator_rail));
 		RemoveRecipes.removeRecipes(Item.getItemFromBlock(Blocks.detector_rail));

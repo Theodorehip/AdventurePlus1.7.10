@@ -7,11 +7,14 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import com.millstone.MillstoneMod;
 import com.millstone.lib.References;
+import com.millstone.registry.ItemRegistry;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -50,6 +53,11 @@ public class Firerack extends Block{
     {
         return 0;
     }
+    
+	public Item getItemDropped(int i, Random random, int j) {
+
+		return Items.brick;
+	}
     
     protected boolean canSilkHarvest()
     {

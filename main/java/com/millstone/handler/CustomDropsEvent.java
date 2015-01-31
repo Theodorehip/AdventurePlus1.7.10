@@ -84,7 +84,16 @@ public class CustomDropsEvent {
 			}
 
 		}
-
+		if(event.block == Blocks.tallgrass){
+			
+			if(r.nextInt(25) == 1){
+				event.drops.add(new ItemStack(ItemRegistry.flax));
+				event.drops.add(new ItemStack(ItemRegistry.flax));
+				event.drops.add(new ItemStack(ItemRegistry.flax));
+				event.drops.add(new ItemStack(ItemRegistry.flaxSeeds));
+				
+			}
+		}
 	}
 	
 	@SubscribeEvent
