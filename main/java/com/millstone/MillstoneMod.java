@@ -9,25 +9,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.millstone.crafting.CraftingHandler;
-import com.millstone.creativetab.tabMillstone;
-import com.millstone.creativetab.tabMillstoneArmor;
-import com.millstone.creativetab.tabMillstoneDeco;
-import com.millstone.creativetab.tabMillstoneFood;
-import com.millstone.creativetab.tabMillstoneMaterials;
-import com.millstone.creativetab.tabMillstoneMisc;
-import com.millstone.creativetab.tabMillstoneTools;
+import com.millstone.creativetab.*;
 import com.millstone.enchantments.Piercing;
 import com.millstone.entities.EntityGrenade;
 import com.millstone.handler.CustomDropsEvent;
 import com.millstone.handler.GuiHandler;
 import com.millstone.lib.CommonProxy;
 import com.millstone.lib.References;
-import com.millstone.registry.BlockRegistry;
-import com.millstone.registry.ChestGenRegistry;
-import com.millstone.registry.EntityRegistryMod;
-import com.millstone.registry.ItemRegistry;
-import com.millstone.registry.RecipeRegistry;
-import com.millstone.registry.TabsRegistry;
+import com.millstone.registry.*;
 import com.millstone.tileentity.TileEntityMillstone;
 import com.millstone.worldgen.MillstoneModWorldGen;
 
