@@ -3,7 +3,10 @@ package com.millstone.blocks;
 import java.util.List;
 
 import com.millstone.MillstoneMod;
+import com.millstone.lib.References;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -20,4 +23,5 @@ public class StairsBlock extends BlockStairs
         this.setStepSound(block.stepSound);
 		this.setCreativeTab(MillstoneMod.tabMillstone);
 	}
+	
 }

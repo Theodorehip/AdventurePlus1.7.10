@@ -12,7 +12,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class StairsWool extends BlockStairs{
+public class StairsWool extends BlockStairs {
 	
 	public StairsWool(String unlocalizedName, Block block, int meta) 
 	{
@@ -29,17 +29,19 @@ public class StairsWool extends BlockStairs{
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta)
 	{
-		
 		return this.blockIcon;
-		
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister)
 	{
 		
-		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + "woolStairs_blue");
+		String name = References.MODID + ":" + this.getUnlocalizedName().substring(5);
+		 
+		this.blockIcon = iconRegister.registerIcon(name);
+		
+		}
 		
 	}
 	
-}
+
