@@ -1,19 +1,9 @@
 package com.millstone;
 
-import java.util.Random;
-
-import net.minecraft.block.BlockStone;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.entity.EntityList;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.world.BlockEvent;
-import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,9 +17,7 @@ import com.millstone.creativetab.tabMillstoneMaterials;
 import com.millstone.creativetab.tabMillstoneMisc;
 import com.millstone.creativetab.tabMillstoneTools;
 import com.millstone.enchantments.Piercing;
-import com.millstone.entities.EntityBoar;
 import com.millstone.entities.EntityGrenade;
-import com.millstone.entities.EntityScarecrow;
 import com.millstone.handler.CustomDropsEvent;
 import com.millstone.handler.GuiHandler;
 import com.millstone.lib.CommonProxy;
@@ -49,7 +37,6 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -152,6 +139,7 @@ public class MillstoneMod
 		
 		//Register your renderer in your proxy.
 		proxy.registerRenderThings();
+		proxy.registerTileEntitySpecialRenderer();
 		
 		logger.info("Mod loaded");
 

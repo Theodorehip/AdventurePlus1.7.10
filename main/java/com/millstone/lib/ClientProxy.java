@@ -7,6 +7,7 @@ import com.millstone.entities.EntityBoar;
 import com.millstone.entities.EntityScarecrow;
 import com.millstone.entities.render.RenderBoar;
 import com.millstone.entities.render.RenderScarecrow;
+import com.millstone.registry.TileEntityRegistry;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
@@ -21,6 +22,8 @@ public class ClientProxy extends CommonProxy {
 	}	
 	
 	public void registerTileEntitySpecialRenderer() {
+		
+		TileEntityRegistry.Register();
 		
 	}
 	

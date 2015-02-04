@@ -13,6 +13,7 @@ import com.millstone.blocks.LavaBrick;
 import com.millstone.blocks.Millstone;
 import com.millstone.blocks.ObsidianBlock;
 import com.millstone.blocks.StairsBlock;
+import com.millstone.blocks.StairsWool;
 import com.millstone.blocks.WallBlock;
 import com.millstone.blocks.ores.CopperOre;
 import com.millstone.blocks.ores.Halite;
@@ -85,7 +86,24 @@ public class BlockRegistry {
 	public static Block applewoodStairs = new StairsBlock(planks, 4).setBlockName("applewoodStairs");
 	public static Block cherryStairs = new StairsBlock(planks, 5).setBlockName("cherryStairs");
 	public static Block baobabStairs = new StairsBlock(planks, 6).setBlockName("baobabStairs");
-
+	
+	//Wool Stairs
+	public static Block woolStairs_white = new StairsWool("woolStairs_white", Blocks.wool, 7).setBlockName("woolStairs_white");
+	public static Block woolStairs_magenta = new StairsWool("woolStairs_magenta", Blocks.wool, 8).setBlockName("woolStairs_magenta");
+	public static Block woolStairs_orange = new StairsWool("woolStairs_orange", Blocks.wool, 9).setBlockName("woolStairs_orange");
+	public static Block woolStairs_green = new StairsWool("woolStairs_green", Blocks.wool, 10).setBlockName("woolStairs_green");
+	public static Block woolStairs_purple = new StairsWool("woolStairs_purple", Blocks.wool, 11).setBlockName("woolStairs_purple");
+	public static Block woolStairs_blue = new StairsWool("woolStairs_blue", Blocks.wool, 12).setBlockName("woolStairs_blue");
+	public static Block woolStairs_lime = new StairsWool("woolStairs_lime", Blocks.wool, 13).setBlockName("woolStairs_lime");
+	public static Block woolStairs_yellow = new StairsWool("woolStairs_yellow", Blocks.wool, 14).setBlockName("woolStairs_yellow");
+	public static Block woolStairs_red = new StairsWool("woolStairs_red", Blocks.wool, 15).setBlockName("woolStairs_red");
+	public static Block woolStairs_cyan = new StairsWool("woolStairs_cyan", Blocks.wool, 16).setBlockName("woolStairs_cyan");
+	public static Block woolStairs_black = new StairsWool("woolStairs_black", Blocks.wool, 17).setBlockName("woolStairs_black");
+	public static Block woolStairs_brown = new StairsWool("woolStairs_brown", Blocks.wool, 18).setBlockName("woolStairs_brown");
+	public static Block woolStairs_gray = new StairsWool("woolStairs_gray", Blocks.wool, 19).setBlockName("woolStairs_gray");
+	public static Block woolStairs_pink = new StairsWool("woolStairs_pink", Blocks.wool, 20).setBlockName("woolStairs_pink");
+	public static Block woolStairs_lightblue = new StairsWool("woolStairs_lightblue", Blocks.wool, 21).setBlockName("woolStairs_lightblue");
+	public static Block woolStairs_lightgray = new StairsWool("woolStairs_lightgray", Blocks.wool, 22).setBlockName("woolStairs_lightgray");
 	
 	public static Block[] coloredBeds;
 	
@@ -130,7 +148,7 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(doubleSlab, SlabBlockItem.class, "doubleSlab");
 		GameRegistry.registerBlock(singleSlab, SlabBlockItem.class, "singleSlab");
 		
-		//Walls
+		//Stairs
 		GameRegistry.registerBlock(willowStairs, "willowStairs");
 		GameRegistry.registerBlock(palmStairs, "palmStairs");
 		GameRegistry.registerBlock(dreadwoodStairs, "dreadwoodStairs");
@@ -139,8 +157,25 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(cherryStairs, "cherryStairs");
 		GameRegistry.registerBlock(baobabStairs, "baobabStairs");
 		
+		//Wool Stairs
+		GameRegistry.registerBlock(woolStairs_white, "woolStairs_white");
+		GameRegistry.registerBlock(woolStairs_magenta, "woolStairs_magenta");
+		GameRegistry.registerBlock(woolStairs_orange, "woolStairs_orange");
+		GameRegistry.registerBlock(woolStairs_green, "woolStairs_green");
+		GameRegistry.registerBlock(woolStairs_purple, "woolStairs_purple");
+		GameRegistry.registerBlock(woolStairs_blue, "woolStairs_blue");
+		GameRegistry.registerBlock(woolStairs_lime, "woolStairs_lime");
+		GameRegistry.registerBlock(woolStairs_yellow, "woolStairs_yellow");
+		GameRegistry.registerBlock(woolStairs_red, "woolStairs_red");
+		GameRegistry.registerBlock(woolStairs_cyan, "woolStairs_cyan");
+		GameRegistry.registerBlock(woolStairs_black, "woolStairs_black");
+		GameRegistry.registerBlock(woolStairs_brown, "woolStairs_brown");
+		GameRegistry.registerBlock(woolStairs_gray, "woolStairs_gray");
+		GameRegistry.registerBlock(woolStairs_pink, "woolStairs_pink");
+		GameRegistry.registerBlock(woolStairs_lightblue, "woolStairs_lightblue");
+		GameRegistry.registerBlock(woolStairs_lightgray, "woolStairs_lightgray");
 		
-
+	
 		//Weird thingy for beds...
 		coloredBeds = new Block[16];
 		for (int colorIndex = 0; colorIndex < coloredBeds.length; colorIndex++){
