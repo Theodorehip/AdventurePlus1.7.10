@@ -81,7 +81,7 @@ public class RecipeRegistry{
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.bonePickaxe, 1), new Object[]{"-B-", " S ", " S ", 'S', Items.stick, 'B', Items.bone, '-',ItemRegistry.boneShard});
 	GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.flintKnife, 1), new Object[]{"  I", " I ", 'I', Items.flint});	
 	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.boneShard, 1), new Object[]{ItemRegistry.flintKnife, Items.bone});
-	GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.boneShard, 1), new Object[]{ItemRegistry.Rock, ItemRegistry.Rock, ItemRegistry.Rock, ItemRegistry.Rock});
+	GameRegistry.addShapelessRecipe(new ItemStack(Blocks.cobblestone, 1), new Object[]{ItemRegistry.Rock, ItemRegistry.Rock, ItemRegistry.Rock, ItemRegistry.Rock});
 	//GameRegistry.addShapedRecipe(new ItemStack(ItemRegistry.ironRod, 6), new Object[]{" I ", " I ", " I ", 'I', Items.iron_ingot});
 	
 	//GameRegistry.addShapelessRecipe(new ItemStack(ItemRegistry.leatherStrip, 3), new Object[]{ItemRegistry.flintKnife, Items.leather});
