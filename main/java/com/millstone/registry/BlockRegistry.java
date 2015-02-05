@@ -5,33 +5,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 
 import com.millstone.MillstoneMod;
-import com.millstone.blocks.BlockColoredBed;
-import com.millstone.blocks.Cutter;
-import com.millstone.blocks.Firerack;
-import com.millstone.blocks.Lantern;
-import com.millstone.blocks.LavaBrick;
-import com.millstone.blocks.Millstone;
-import com.millstone.blocks.ObsidianBlock;
-import com.millstone.blocks.StairsBlock;
-import com.millstone.blocks.StairsWool;
-import com.millstone.blocks.WallBlock;
-import com.millstone.blocks.ores.CopperOre;
-import com.millstone.blocks.ores.Halite;
-import com.millstone.blocks.ores.Jade;
-import com.millstone.blocks.ores.NetherRubyOre;
-import com.millstone.blocks.ores.SapphireOre;
-import com.millstone.blocks.ores.SilverOre;
+import com.millstone.blocks.*;
+import com.millstone.blocks.ores.*;
 import com.millstone.lib.References;
-import com.millstone.trees.LeafBlock;
-import com.millstone.trees.LeafBlockItem;
-import com.millstone.trees.LogBlock;
-import com.millstone.trees.LogBlockItem;
-import com.millstone.trees.PlanksBlock;
-import com.millstone.trees.PlanksBlockItem;
-import com.millstone.trees.SaplingBlock;
-import com.millstone.trees.SaplingBlockItem;
-import com.millstone.trees.SlabBlock;
-import com.millstone.trees.SlabBlockItem;
+import com.millstone.trees.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
